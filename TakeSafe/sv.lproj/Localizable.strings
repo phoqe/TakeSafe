@@ -1,0 +1,16 @@
+/*
+ Localizable.strings
+ TakeSafe
+ 
+ Created by Linus Långberg on 2020-09-07.
+ 
+ */
+
+"onboardingScreen1Title" = "TakeSafe. Ta droger säkert.";
+"onboardingScreen1Description" = "Sömnproblem? Känner du dig trött? Ta kontroll över ditt liv genom att spåra rörelsen och effekter av droger som koffein. Allt från din iPhone.";
+
+"onboardingScreen2Title" = "Från absorption till exkretion.";
+"onboardingScreen2Description" = "Följ tidsförloppet för en drogs absorption, biotillgänglighet, distribution, metabolism, och exkretion. Vi gör utbildade gissningar baserat på många faktorer.";
+
+"onboardingScreen3Title" = "Rådgivning i realtid från experter.";
+"onboardingScreen3Description" = "En till kopp kaffe? Vi berättar för dig hur det kommer påverka resten av dagen och om det kommer störa din sömn. För att hälsa och sömn hänger ihop och är viktigt.";

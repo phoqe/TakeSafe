@@ -17,6 +17,7 @@
 		9FA381ED25064E0B0053C3F4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381EC25064E0B0053C3F4 /* PageViewController.swift */; };
 		9FA381EF25064E9F0053C3F4 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381EE25064E9F0053C3F4 /* PageView.swift */; };
 		9FC04666250655EF000B2AAC /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC04665250655EF000B2AAC /* PageControl.swift */; };
+		9FC0466F250664EF000B2AAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FC04671250664EF000B2AAC /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		9FA381EC25064E0B0053C3F4 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		9FA381EE25064E9F0053C3F4 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		9FC04665250655EF000B2AAC /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		9FC04670250664EF000B2AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9FC04672250664F8000B2AAC /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,7 @@
 				9FA381D5250629850053C3F4 /* Assets.xcassets */,
 				9FA381DA250629850053C3F4 /* Info.plist */,
 				9FA381D7250629850053C3F4 /* Preview Content */,
+				9FC04671250664EF000B2AAC /* Localizable.strings */,
 			);
 			path = TakeSafe;
 			sourceTree = "<group>";
@@ -162,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FA381E225062BAF0053C3F4 /* Launch Screen.storyboard in Resources */,
+				9FC0466F250664EF000B2AAC /* Localizable.strings in Resources */,
 				9FA381D9250629850053C3F4 /* Preview Assets.xcassets in Resources */,
 				9FA381D6250629850053C3F4 /* Assets.xcassets in Resources */,
 			);
@@ -185,6 +190,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9FC04671250664EF000B2AAC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FC04670250664EF000B2AAC /* en */,
+				9FC04672250664F8000B2AAC /* sv */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9FA381DB250629850053C3F4 /* Debug */ = {

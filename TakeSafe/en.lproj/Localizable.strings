@@ -1,0 +1,16 @@
+/*
+ Localizable.strings
+ TakeSafe
+ 
+ Created by Linus Långberg on 2020-09-07.
+ 
+ */
+
+"onboardingScreen1Title" = "TakeSafe. Take drugs safely.";
+"onboardingScreen1Description" = "Trouble sleeping? Feeling fatigued? Take control of your life by tracking the motion and effects of drugs like caffeine. All from your iPhone.";
+
+"onboardingScreen2Title" = "From absorption to excretion.";
+"onboardingScreen2Description" = "Follow the time course of a drug’s absorption, bioavailability, distribution, metabolism, and excretion. We make educated guesses based on numerous factors.";
+
+"onboardingScreen3Title" = "Realtime advice from experts.";
+"onboardingScreen3Description" = "Another cup of coffee? We’ll tell you how it will impact the rest of your day and if it’ll disturb your sleep. Because health and sleep are connected and is important.";
