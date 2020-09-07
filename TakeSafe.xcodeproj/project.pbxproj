@@ -22,6 +22,7 @@
 		9FFD21662506D327002F01B9 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD21652506D327002F01B9 /* OnboardingPageView.swift */; };
 		9FFD21682506DA3F002F01B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD21672506DA3F002F01B9 /* AppDelegate.swift */; };
 		9FFD216B2506DBBD002F01B9 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD216A2506DBBD002F01B9 /* UIColorExtensions.swift */; };
+		9FFD21712506E577002F01B9 /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD21702506E577002F01B9 /* OnboardingState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		9FFD21652506D327002F01B9 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		9FFD21672506DA3F002F01B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FFD216A2506DBBD002F01B9 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		9FFD21702506E577002F01B9 /* OnboardingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				9FA381E425062CB50053C3F4 /* OnboardingView.swift */,
 				9FA381E625062CC70053C3F4 /* OnboardingScreen.swift */,
 				9FFD21652506D327002F01B9 /* OnboardingPageView.swift */,
+				9FFD21702506E577002F01B9 /* OnboardingState.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				9FA381E525062CB50053C3F4 /* OnboardingView.swift in Sources */,
 				9FFD21662506D327002F01B9 /* OnboardingPageView.swift in Sources */,
 				9FA381D4250629840053C3F4 /* ContentView.swift in Sources */,
+				9FFD21712506E577002F01B9 /* OnboardingState.swift in Sources */,
 				9FA381D2250629840053C3F4 /* TakeSafeApp.swift in Sources */,
 				9FFD216B2506DBBD002F01B9 /* UIColorExtensions.swift in Sources */,
 			);
