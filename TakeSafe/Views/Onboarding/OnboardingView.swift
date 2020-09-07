@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     var body: some View {
-        PageView([
+        OnboardingPageView([
             OnboardingScreen(image: "Medical Care", title: NSLocalizedString("onboardingScreen1Title", comment: ""), description: NSLocalizedString("onboardingScreen1Description", comment: "")),
             
             OnboardingScreen(image: "Time Management", title: NSLocalizedString("onboardingScreen2Title", comment: ""), description: NSLocalizedString("onboardingScreen2Description", comment: "")),

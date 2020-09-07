@@ -15,11 +15,11 @@
 		9FA381E525062CB50053C3F4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381E425062CB50053C3F4 /* OnboardingView.swift */; };
 		9FA381E725062CC70053C3F4 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381E625062CC70053C3F4 /* OnboardingScreen.swift */; };
 		9FA381ED25064E0B0053C3F4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381EC25064E0B0053C3F4 /* PageViewController.swift */; };
-		9FA381EF25064E9F0053C3F4 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381EE25064E9F0053C3F4 /* PageView.swift */; };
 		9FC04666250655EF000B2AAC /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC04665250655EF000B2AAC /* PageControl.swift */; };
 		9FC0466F250664EF000B2AAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FC04671250664EF000B2AAC /* Localizable.strings */; };
 		9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD215625069AF5002F01B9 /* ContainedButton.swift */; };
 		9FFD215E2506CB34002F01B9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFD215D2506CB34002F01B9 /* HealthKit.framework */; };
+		9FFD21662506D327002F01B9 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD21652506D327002F01B9 /* OnboardingPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +33,13 @@
 		9FA381E425062CB50053C3F4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9FA381E625062CC70053C3F4 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
 		9FA381EC25064E0B0053C3F4 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		9FA381EE25064E9F0053C3F4 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		9FC04665250655EF000B2AAC /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		9FC04670250664EF000B2AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9FC04672250664F8000B2AAC /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9FFD215625069AF5002F01B9 /* ContainedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedButton.swift; sourceTree = "<group>"; };
 		9FFD215B2506CB34002F01B9 /* TakeSafe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TakeSafe.entitlements; sourceTree = "<group>"; };
 		9FFD215D2506CB34002F01B9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		9FFD21652506D327002F01B9 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,6 @@
 				9FA381D3250629840053C3F4 /* ContentView.swift */,
 				9FA381E125062BAF0053C3F4 /* Launch Screen.storyboard */,
 				9FA381EC25064E0B0053C3F4 /* PageViewController.swift */,
-				9FA381EE25064E9F0053C3F4 /* PageView.swift */,
 				9FC04665250655EF000B2AAC /* PageControl.swift */,
 			);
 			path = Views;
@@ -112,6 +111,7 @@
 			children = (
 				9FA381E425062CB50053C3F4 /* OnboardingView.swift */,
 				9FA381E625062CC70053C3F4 /* OnboardingScreen.swift */,
+				9FFD21652506D327002F01B9 /* OnboardingPageView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -207,9 +207,9 @@
 				9FA381E725062CC70053C3F4 /* OnboardingScreen.swift in Sources */,
 				9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */,
 				9FC04666250655EF000B2AAC /* PageControl.swift in Sources */,
-				9FA381EF25064E9F0053C3F4 /* PageView.swift in Sources */,
 				9FA381ED25064E0B0053C3F4 /* PageViewController.swift in Sources */,
 				9FA381E525062CB50053C3F4 /* OnboardingView.swift in Sources */,
+				9FFD21662506D327002F01B9 /* OnboardingPageView.swift in Sources */,
 				9FA381D4250629840053C3F4 /* ContentView.swift in Sources */,
 				9FA381D2250629840053C3F4 /* TakeSafeApp.swift in Sources */,
 			);

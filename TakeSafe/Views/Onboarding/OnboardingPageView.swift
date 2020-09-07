@@ -1,5 +1,5 @@
 //
-//  PageView.swift
+//  OnboardingPageView.swift
 //  TakeSafe
 //
 //  Created by Linus Långberg on 2020-09-07.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct PageView<Page: View>: View {
+import SwiftUI
+
+struct OnboardingPageView<Page: View>: View {
     var viewControllers: [UIHostingController<Page>]
     @State var currentPage = 0
     
@@ -16,10 +18,25 @@ struct PageView<Page: View>: View {
     }
     
     var body: some View {
-        ZStack(alignment: .bottomTrailing) {
+        let showButton = currentPage == 3
+        
+        VStack {
             PageViewController(controllers: viewControllers, currentPage: $currentPage)
+            
+            if showButton {
+                ContainedButton(title: "Get Started") {
+                    
+                }
+            } else {
+                ContainedButton(title: "Get Started") {
+                    
+                }
+                .hidden()
+            }
+            
             PageControl(numberOfPages: viewControllers.count, currentPage: $currentPage)
-                .padding(.trailing)
+                .padding(.vertical)
         }
     }
 }
+
