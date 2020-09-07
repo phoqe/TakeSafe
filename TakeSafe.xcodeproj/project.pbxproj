@@ -19,6 +19,7 @@
 		9FC04666250655EF000B2AAC /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC04665250655EF000B2AAC /* PageControl.swift */; };
 		9FC0466F250664EF000B2AAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FC04671250664EF000B2AAC /* Localizable.strings */; };
 		9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD215625069AF5002F01B9 /* ContainedButton.swift */; };
+		9FFD215E2506CB34002F01B9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFD215D2506CB34002F01B9 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		9FC04670250664EF000B2AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9FC04672250664F8000B2AAC /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9FFD215625069AF5002F01B9 /* ContainedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedButton.swift; sourceTree = "<group>"; };
+		9FFD215B2506CB34002F01B9 /* TakeSafe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TakeSafe.entitlements; sourceTree = "<group>"; };
+		9FFD215D2506CB34002F01B9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FFD215E2506CB34002F01B9 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +59,7 @@
 			children = (
 				9FA381D0250629840053C3F4 /* TakeSafe */,
 				9FA381CF250629840053C3F4 /* Products */,
+				9FFD215C2506CB34002F01B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +74,7 @@
 		9FA381D0250629840053C3F4 /* TakeSafe */ = {
 			isa = PBXGroup;
 			children = (
+				9FFD215B2506CB34002F01B9 /* TakeSafe.entitlements */,
 				9FA381E0250629FB0053C3F4 /* Views */,
 				9FA381D1250629840053C3F4 /* TakeSafeApp.swift */,
 				9FA381D5250629850053C3F4 /* Assets.xcassets */,
@@ -116,6 +122,14 @@
 				9FFD215625069AF5002F01B9 /* ContainedButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		9FFD215C2506CB34002F01B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FFD215D2506CB34002F01B9 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TakeSafe/TakeSafe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TakeSafe/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Q3B697V;
@@ -359,6 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TakeSafe/TakeSafe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TakeSafe/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Q3B697V;
