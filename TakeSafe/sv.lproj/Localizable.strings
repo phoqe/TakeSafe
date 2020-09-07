@@ -7,7 +7,7 @@
  */
 
 "onboardingScreen1Title" = "TakeSafe. Ta droger säkert.";
-"onboardingScreen1Description" = "Sömnproblem? Känner du dig trött? Ta kontroll över ditt liv genom att spåra rörelsen och effekter av droger som koffein. Allt från din iPhone.";
+"onboardingScreen1Description" = "Känner du dig trött? Har du sömnproblem? Ta kontroll över ditt liv genom att spåra rörelsen och effekter av droger som koffein. Allt från din iPhone.";
 
 "onboardingScreen2Title" = "Från absorption till exkretion.";
 "onboardingScreen2Description" = "Följ tidsförloppet för en drogs absorption, biotillgänglighet, distribution, metabolism, och exkretion. Vi gör utbildade gissningar baserat på många faktorer.";
