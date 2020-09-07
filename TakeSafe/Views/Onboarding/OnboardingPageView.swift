@@ -22,11 +22,11 @@ struct OnboardingPageView<Page: View>: View {
             PageViewController(controllers: viewControllers, currentPage: $currentPage)
             
             if showButton {
-                ContainedButton(title: "Get Started") {
+                ContainedButton(title: NSLocalizedString("onboardingPageViewButton", comment: "")) {
                     
                 }
             } else {
-                ContainedButton(title: "Get Started") {
+                ContainedButton(title: NSLocalizedString("onboardingPageViewButton", comment: "")) {
                     
                 }
                 .hidden()
