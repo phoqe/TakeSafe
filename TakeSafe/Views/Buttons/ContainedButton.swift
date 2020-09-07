@@ -26,8 +26,8 @@ struct ContainedButton: View {
 
 struct ContainedButton_Previews: PreviewProvider {
     static var previews: some View {
-        ContainedButton(title: "Get Started", action: {
+        ContainedButton(title: "Get Started") {
             
-        })
+        }
     }
 }
