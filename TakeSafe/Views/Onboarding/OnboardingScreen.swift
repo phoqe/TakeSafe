@@ -29,8 +29,10 @@ struct OnboardingScreen: View {
                     .font(.body)
                     .foregroundColor(.secondary)
             }
-            .padding()
+            .padding(.top)
+            .padding(.horizontal)
         }
+        .padding(.vertical)
     }
 }
 
