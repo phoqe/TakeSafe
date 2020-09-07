@@ -12,6 +12,8 @@
 		9FA381D6250629850053C3F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA381D5250629850053C3F4 /* Assets.xcassets */; };
 		9FA381D9250629850053C3F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA381D8250629850053C3F4 /* Preview Assets.xcassets */; };
 		9FA381E225062BAF0053C3F4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FA381E125062BAF0053C3F4 /* Launch Screen.storyboard */; };
+		9FA381E525062CB50053C3F4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381E425062CB50053C3F4 /* OnboardingView.swift */; };
+		9FA381E725062CC70053C3F4 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381E625062CC70053C3F4 /* OnboardingScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		9FA381D8250629850053C3F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FA381DA250629850053C3F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FA381E125062BAF0053C3F4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		9FA381E425062CB50053C3F4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		9FA381E625062CC70053C3F4 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +78,20 @@
 		9FA381E0250629FB0053C3F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9FA381E325062CA50053C3F4 /* Onboarding */,
 				9FA381D3250629840053C3F4 /* ContentView.swift */,
 				9FA381E125062BAF0053C3F4 /* Launch Screen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9FA381E325062CA50053C3F4 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				9FA381E425062CB50053C3F4 /* OnboardingView.swift */,
+				9FA381E625062CC70053C3F4 /* OnboardingScreen.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA381E725062CC70053C3F4 /* OnboardingScreen.swift in Sources */,
+				9FA381E525062CB50053C3F4 /* OnboardingView.swift in Sources */,
 				9FA381D4250629840053C3F4 /* ContentView.swift in Sources */,
 				9FA381D2250629840053C3F4 /* TakeSafeApp.swift in Sources */,
 			);
