@@ -38,8 +38,11 @@ struct OnboardingScreen: View {
 
 struct OnboardingScreen_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingScreen(image: "Medical Care", title: "TakeSafe. Take drugs safely.", description: "Trouble sleeping? Feeling fatigued? Take control of your life by tracking the motion and effects of drugs like caffeine. All from your iPhone.")
+        let image = "Medicine"
+        let title = "We need to access Apple Health."
+        let description = "Trouble sleeping? Feeling fatigued? Take control of your life by tracking the motion and effects of drugs like caffeine. All from your iPhone."
         
-        OnboardingScreen(image: "Medical Care", title: "TakeSafe. Take drugs safely.", description: "Trouble sleeping? Feeling fatigued? Take control of your life by tracking the motion and effects of drugs like caffeine. All from your iPhone.").preferredColorScheme(.dark)
+        OnboardingScreen(image: image, title: title, description: description)
+        OnboardingScreen(image: image, title: title, description: description).preferredColorScheme(.dark)
     }
 }
