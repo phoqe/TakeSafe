@@ -18,6 +18,7 @@
 		9FA381EF25064E9F0053C3F4 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381EE25064E9F0053C3F4 /* PageView.swift */; };
 		9FC04666250655EF000B2AAC /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC04665250655EF000B2AAC /* PageControl.swift */; };
 		9FC0466F250664EF000B2AAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FC04671250664EF000B2AAC /* Localizable.strings */; };
+		9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD215625069AF5002F01B9 /* ContainedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		9FC04665250655EF000B2AAC /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		9FC04670250664EF000B2AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9FC04672250664F8000B2AAC /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9FFD215625069AF5002F01B9 /* ContainedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		9FA381E0250629FB0053C3F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9FFD215525069ADB002F01B9 /* Buttons */,
 				9FA381E325062CA50053C3F4 /* Onboarding */,
 				9FA381D3250629840053C3F4 /* ContentView.swift */,
 				9FA381E125062BAF0053C3F4 /* Launch Screen.storyboard */,
@@ -105,6 +108,14 @@
 				9FA381E625062CC70053C3F4 /* OnboardingScreen.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		9FFD215525069ADB002F01B9 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				9FFD215625069AF5002F01B9 /* ContainedButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FA381E725062CC70053C3F4 /* OnboardingScreen.swift in Sources */,
+				9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */,
 				9FC04666250655EF000B2AAC /* PageControl.swift in Sources */,
 				9FA381EF25064E9F0053C3F4 /* PageView.swift in Sources */,
 				9FA381ED25064E0B0053C3F4 /* PageViewController.swift in Sources */,
