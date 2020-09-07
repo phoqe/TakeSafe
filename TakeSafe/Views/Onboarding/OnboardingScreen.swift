@@ -16,7 +16,7 @@ struct OnboardingScreen: View {
         VStack {
             Image(image)
                 .resizable()
-                .frame(width: 300, height: 200)
+                .frame(width: 275, height: 200)
             
             VStack {
                 Text(title)
@@ -38,8 +38,8 @@ struct OnboardingScreen: View {
 
 struct OnboardingScreen_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingScreen(image: "Medical Care", title: "TakeSafe. Take drugs safely.", description: "Track the drugs you take. Make sure they don’t interfere with your life. All from your phone.")
+        OnboardingScreen(image: "Medical Care", title: "TakeSafe. Take drugs safely.", description: "Trouble sleeping? Feeling fatigued? Take control of your life by tracking the motion and effects of drugs like caffeine. All from your iPhone.")
         
-        OnboardingScreen(image: "Medical Care", title: "TakeSafe. Take drugs safely.", description: "Track the drugs you take. Make sure they don’t interfere with your life. All from your phone.").preferredColorScheme(.dark)
+        OnboardingScreen(image: "Medical Care", title: "TakeSafe. Take drugs safely.", description: "Trouble sleeping? Feeling fatigued? Take control of your life by tracking the motion and effects of drugs like caffeine. All from your iPhone.").preferredColorScheme(.dark)
     }
 }
