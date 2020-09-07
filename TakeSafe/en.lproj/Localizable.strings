@@ -6,16 +6,16 @@
  
  */
 
-"onboardingScreen1Title" = "TakeSafe. Take drugs safely.";
-"onboardingScreen1Description" = "Feeling fatigued? Trouble sleeping? Take control of your life by tracking the motion and effects of drugs like caffeine. All from your iPhone.";
+"onboardingPage1Title" = "TakeSafe. Take drugs safely.";
+"onboardingPage1Description" = "Feeling fatigued? Trouble sleeping? Take control of your life by tracking the motion and effects of drugs like caffeine. All from your iPhone.";
 
-"onboardingScreen2Title" = "From absorption to excretion.";
-"onboardingScreen2Description" = "Follow the time course of a drug’s absorption, bioavailability, distribution, metabolism, and excretion. We make educated guesses based on numerous factors.";
+"onboardingPage2Title" = "From absorption to excretion.";
+"onboardingPage2Description" = "Follow the time course of a drug’s absorption, bioavailability, distribution, metabolism, and excretion. We make educated guesses based on numerous factors.";
 
-"onboardingScreen3Title" = "Realtime advice from experts.";
-"onboardingScreen3Description" = "Another cup of coffee? We’ll tell you how it will impact the rest of your day and if it’ll disturb your sleep. Because health and sleep are connected and is important.";
+"onboardingPage3Title" = "Realtime advice from experts.";
+"onboardingPage3Description" = "Another cup of coffee? We’ll tell you how it will impact the rest of your day and if it’ll disturb your sleep. Because health and sleep are connected and is important.";
 
-"onboardingScreen4Title" = "Ready to get started?";
-"onboardingScreen4Description" = "Because we are! We want to help you catch the day, perform at your best, and get a good night’s sleep. Let’s get to know each other!";
+"onboardingPage4Title" = "Ready to get started?";
+"onboardingPage4Description" = "Because we are! We want to help you catch the day, perform at your best, and get a good night’s sleep. Let’s get to know each other!";
 
 "onboardingPageViewButton" = "Get Started";

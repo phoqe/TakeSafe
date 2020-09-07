@@ -6,16 +6,16 @@
  
  */
 
-"onboardingScreen1Title" = "TakeSafe. Ta droger säkert.";
-"onboardingScreen1Description" = "Känner du dig trött? Har du sömnproblem? Ta kontroll över ditt liv genom att spåra rörelsen och effekter av droger som koffein. Allt från din iPhone.";
+"onboardingPage1Title" = "TakeSafe. Ta droger säkert.";
+"onboardingPage1Description" = "Känner du dig trött? Har du sömnproblem? Ta kontroll över ditt liv genom att spåra rörelsen och effekter av droger som koffein. Allt från din iPhone.";
 
-"onboardingScreen2Title" = "Från absorption till exkretion.";
-"onboardingScreen2Description" = "Följ tidsförloppet för en drogs absorption, biotillgänglighet, distribution, metabolism, och exkretion. Vi gör utbildade gissningar baserat på många faktorer.";
+"onboardingPage2Title" = "Från absorption till exkretion.";
+"onboardingPage2Description" = "Följ tidsförloppet för en drogs absorption, biotillgänglighet, distribution, metabolism, och exkretion. Vi gör utbildade gissningar baserat på många faktorer.";
 
-"onboardingScreen3Title" = "Rådgivning i realtid från experter.";
-"onboardingScreen3Description" = "En till kopp kaffe? Vi berättar för dig hur det kommer påverka resten av dagen och om det kommer störa din sömn. För att hälsa och sömn hänger ihop och är viktigt.";
+"onboardingPage3Title" = "Rådgivning i realtid från experter.";
+"onboardingPage3Description" = "En till kopp kaffe? Vi berättar för dig hur det kommer påverka resten av dagen och om det kommer störa din sömn. För att hälsa och sömn hänger ihop och är viktigt.";
 
-"onboardingScreen4Title" = "Redo att komma igång?";
-"onboardingScreen4Description" = "Vi vill hjälpa dig att fånga dagen, prestera på topp, och få en god nattssömn. Låt oss lära känna varandra!";
+"onboardingPage4Title" = "Redo att komma igång?";
+"onboardingPage4Description" = "Vi vill hjälpa dig att fånga dagen, prestera på topp, och få en god nattssömn. Låt oss lära känna varandra!";
 
 "onboardingPageViewButton" = "Kom igång";
