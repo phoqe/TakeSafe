@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OnboardingScreen: View {
+struct OnboardingPage: View {
     var image: String
     var title: String
     var description: String
@@ -36,13 +36,13 @@ struct OnboardingScreen: View {
     }
 }
 
-struct OnboardingScreen_Previews: PreviewProvider {
+struct OnboardingPage_Previews: PreviewProvider {
     static var previews: some View {
         let image = "Profile Details"
         let title = "Ready to get started?"
         let description = "Because we are! We want to help you catch the day, perform at your best, and go to sleep unscathed. Let’s get to know each other!"
         
-        OnboardingScreen(image: image, title: title, description: description)
-        OnboardingScreen(image: image, title: title, description: description).preferredColorScheme(.dark)
+        OnboardingPage(image: image, title: title, description: description)
+        OnboardingPage(image: image, title: title, description: description).preferredColorScheme(.dark)
     }
 }

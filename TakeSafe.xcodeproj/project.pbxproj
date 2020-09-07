@@ -13,7 +13,7 @@
 		9FA381D9250629850053C3F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA381D8250629850053C3F4 /* Preview Assets.xcassets */; };
 		9FA381E225062BAF0053C3F4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FA381E125062BAF0053C3F4 /* Launch Screen.storyboard */; };
 		9FA381E525062CB50053C3F4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381E425062CB50053C3F4 /* OnboardingView.swift */; };
-		9FA381E725062CC70053C3F4 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381E625062CC70053C3F4 /* OnboardingScreen.swift */; };
+		9FA381E725062CC70053C3F4 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381E625062CC70053C3F4 /* OnboardingPage.swift */; };
 		9FA381ED25064E0B0053C3F4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381EC25064E0B0053C3F4 /* PageViewController.swift */; };
 		9FC04666250655EF000B2AAC /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC04665250655EF000B2AAC /* PageControl.swift */; };
 		9FC0466F250664EF000B2AAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FC04671250664EF000B2AAC /* Localizable.strings */; };
@@ -34,7 +34,7 @@
 		9FA381DA250629850053C3F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FA381E125062BAF0053C3F4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9FA381E425062CB50053C3F4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		9FA381E625062CC70053C3F4 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
+		9FA381E625062CC70053C3F4 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		9FA381EC25064E0B0053C3F4 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		9FC04665250655EF000B2AAC /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		9FC04670250664EF000B2AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				9FA381E425062CB50053C3F4 /* OnboardingView.swift */,
-				9FA381E625062CC70053C3F4 /* OnboardingScreen.swift */,
+				9FA381E625062CC70053C3F4 /* OnboardingPage.swift */,
 				9FFD21652506D327002F01B9 /* OnboardingPageView.swift */,
 				9FFD21702506E577002F01B9 /* OnboardingState.swift */,
 			);
@@ -221,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FA381E725062CC70053C3F4 /* OnboardingScreen.swift in Sources */,
+				9FA381E725062CC70053C3F4 /* OnboardingPage.swift in Sources */,
 				9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */,
 				9FC04666250655EF000B2AAC /* PageControl.swift in Sources */,
 				9FFD21682506DA3F002F01B9 /* AppDelegate.swift in Sources */,

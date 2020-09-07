@@ -10,13 +10,13 @@ import SwiftUI
 struct OnboardingView: View {
     var body: some View {
         OnboardingPageView([
-            OnboardingScreen(image: "Medical Care", title: NSLocalizedString("onboardingScreen1Title", comment: ""), description: NSLocalizedString("onboardingScreen1Description", comment: "")),
+            OnboardingPage(image: "Medical Care", title: NSLocalizedString("onboardingScreen1Title", comment: ""), description: NSLocalizedString("onboardingScreen1Description", comment: "")),
             
-            OnboardingScreen(image: "Time Management", title: NSLocalizedString("onboardingScreen2Title", comment: ""), description: NSLocalizedString("onboardingScreen2Description", comment: "")),
+            OnboardingPage(image: "Time Management", title: NSLocalizedString("onboardingScreen2Title", comment: ""), description: NSLocalizedString("onboardingScreen2Description", comment: "")),
             
-            OnboardingScreen(image: "Doctors", title: NSLocalizedString("onboardingScreen3Title", comment: ""), description: NSLocalizedString("onboardingScreen3Description", comment: "")),
+            OnboardingPage(image: "Doctors", title: NSLocalizedString("onboardingScreen3Title", comment: ""), description: NSLocalizedString("onboardingScreen3Description", comment: "")),
             
-            OnboardingScreen(image: "Profile Details", title: NSLocalizedString("onboardingScreen4Title", comment: ""), description: NSLocalizedString("onboardingScreen4Description", comment: ""))
+            OnboardingPage(image: "Profile Details", title: NSLocalizedString("onboardingScreen4Title", comment: ""), description: NSLocalizedString("onboardingScreen4Description", comment: ""))
         ])
     }
 }
