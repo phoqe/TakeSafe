@@ -19,3 +19,6 @@
 "onboardingPage4Description" = "Vi vill hjälpa dig att fånga dagen, prestera på topp, och få en god nattssömn. Låt oss lära känna varandra!";
 
 "onboardingPageViewButton" = "Kom igång";
+
+"onboardingSetupPage1Title" = "Tillåt användning av Apple Health.";
+"onboardingSetupPage1Description" = "Vi kan arbeta med Apple Health-appen för att få mer insikt och förbättra våra förutsägelser. Data som kroppsmätningar, hjärtfrekvens, och sängtid kan vara till nytta för oss.";
