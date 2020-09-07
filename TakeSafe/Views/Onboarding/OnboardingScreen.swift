@@ -11,7 +11,6 @@ struct OnboardingScreen: View {
     var image: String
     var title: String
     var description: String
-    var showGetStartedButton: Bool = false
     
     var body: some View {
         VStack {
@@ -29,13 +28,6 @@ struct OnboardingScreen: View {
                 Text(description)
                     .font(.body)
                     .foregroundColor(.secondary)
-                
-                if showGetStartedButton {
-                    ContainedButton(title: NSLocalizedString("onboardingScreenButtonTitle", comment: "")) {
-                        
-                    }
-                    .padding()
-                }
             }
             .padding(.top)
             .padding(.horizontal)

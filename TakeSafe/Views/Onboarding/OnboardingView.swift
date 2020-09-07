@@ -16,7 +16,7 @@ struct OnboardingView: View {
             
             OnboardingScreen(image: "Doctors", title: NSLocalizedString("onboardingScreen3Title", comment: ""), description: NSLocalizedString("onboardingScreen3Description", comment: "")),
             
-            OnboardingScreen(image: "Profile Details", title: NSLocalizedString("onboardingScreen4Title", comment: ""), description: NSLocalizedString("onboardingScreen4Description", comment: ""), showGetStartedButton: true)
+            OnboardingScreen(image: "Profile Details", title: NSLocalizedString("onboardingScreen4Title", comment: ""), description: NSLocalizedString("onboardingScreen4Description", comment: ""))
         ])
     }
 }
