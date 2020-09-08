@@ -29,3 +29,7 @@
 "onboardingSetupPage1Description" = "Vi kan använda din hälsoinformation för att förbättra våra förutsägelser.";
 
 "setupPageViewAppleHealthAccessButtonTitle" = "Tillåt Apple Health tillgång";
+
+"healthDataUnavailableAlertTitle" = "Apple Health ej tillgängligt";
+"healthDataUnavailableAlertMessage" = "Apple Health är inte tillgängligt på din enhet.";
+"healthDataUnavailableAlertButtonText" = "OK";

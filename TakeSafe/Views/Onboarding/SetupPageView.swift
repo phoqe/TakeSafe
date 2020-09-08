@@ -11,6 +11,7 @@ import HealthKit
 struct SetupPageView<Page: View>: View {
     var viewControllers: [UIHostingController<Page>]
     @State var currentPage = 0
+    @State var showHealthDataUnavailableAlert = false
     
     init(_ views: [Page]) {
         self.viewControllers = views.map { UIHostingController(rootView: $0) }
@@ -22,7 +23,9 @@ struct SetupPageView<Page: View>: View {
             
             VStack {
                 ContainedButton(title: NSLocalizedString("setupPageViewAppleHealthAccessButtonTitle", comment: "")) {
-                    if !HKHealthStore.isHealthDataAvailable() {
+                    if HKHealthStore.isHealthDataAvailable() {
+                        showHealthDataUnavailableAlert = true
+                        
                         return
                     }
                     
@@ -60,6 +63,9 @@ struct SetupPageView<Page: View>: View {
                     }
                 }
                 .padding(.bottom)
+                .alert(isPresented: $showHealthDataUnavailableAlert) {
+                    Alert(title: Text(NSLocalizedString("healthDataUnavailableAlertTitle", comment: "")), message: Text(NSLocalizedString("healthDataUnavailableAlertMessage", comment: "")), dismissButton: .default(Text(NSLocalizedString("healthDataUnavailableAlertButtonText", comment: ""))))
+                }
                 
                 Button(action: {
                     

@@ -26,3 +26,7 @@
 "onboardingSetupPage1Description" = "We can use your health data to improve our predictions.";
 
 "setupPageViewAppleHealthAccessButtonTitle" = "Allow Apple Health Access";
+
+"healthDataUnavailableAlertTitle" = "Apple Health Unavailable";
+"healthDataUnavailableAlertMessage" = "Apple Health is not available on your device.";
+"healthDataUnavailableAlertButtonText" = "OK";
