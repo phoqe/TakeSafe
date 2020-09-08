@@ -7,6 +7,8 @@
  */
 
 "introPage1Title" = "TakeSafe. Ta droger säkert.";
+
+"onboardingSetupPage1Title" = "Tillåt åtkomst till Apple Health.";
 "introPage1Description" = "Känner du dig trött? Har du sömnproblem? Ta kontroll över ditt liv genom att spåra rörelsen och effekter av droger som koffein. Allt från din iPhone.";
 
 "introPage2Title" = "Från absorption till exkretion.";
@@ -21,10 +23,10 @@
 "introPageViewButton" = "Kom igång";
 
 "onboardingSetupPage1Title" = "Tillåt användning av Apple Health.";
-"onboardingSetupPage1Description" = "Vi kan arbeta med Apple Health-appen för att få mer insikt och förbättra våra förutsägelser. Data som kroppsmätningar, hjärtfrekvens, och sängtid kan vara till nytta för oss.";
-
-"onboardingSetupPage1Title" = "Tillåt åtkomst till Apple Health.";
 "onboardingSetupPage1Description" = "Vi kan använda din hälsoinformation för att förbättra våra förutsägelser.";
+
+"onboardingSetupPage2Title" = "När lägger du dig?";
+"onboardingSetupPage2Description" = "Vi kan använda tiden för att ge dig inblick i hur droger påverkar din sömn.";
 
 "setupPageViewAppleHealthAccessButton" = "Tillåt Apple Health tillgång";
 "setupPageViewSkipButton" = "Skippa";

@@ -21,6 +21,7 @@ struct OnboardingView: View {
     ]
     
     let setupPages = [
+        IntroPage(image: "Sleep Analysis", title: NSLocalizedString("onboardingSetupPage2Title", comment: ""), description: NSLocalizedString("onboardingSetupPage2Description", comment: "")),
         IntroPage(image: "Medicine", title: NSLocalizedString("onboardingSetupPage1Title", comment: ""), description: NSLocalizedString("onboardingSetupPage1Description", comment: ""))
     ]
     
