@@ -23,7 +23,7 @@ struct SetupPageView<Page: View>: View {
             
             VStack {
                 ContainedButton(title: NSLocalizedString("setupPageViewAppleHealthAccessButton", comment: "")) {
-                    if HKHealthStore.isHealthDataAvailable() {
+                    if !HKHealthStore.isHealthDataAvailable() {
                         showHealthDataUnavailableAlert = true
                         
                         return
@@ -64,7 +64,7 @@ struct SetupPageView<Page: View>: View {
                 }
                 .padding(.bottom)
                 .alert(isPresented: $showHealthDataUnavailableAlert) {
-                    Alert(title: Text(NSLocalizedString("healthDataUnavailableAlertTitle", comment: "")), message: Text(NSLocalizedString("healthDataUnavailableAlertMessage", comment: "")), dismissButton: .default(Text(NSLocalizedString("healthDataUnavailableAlertButtonText", comment: ""))))
+                    Alert(title: Text(NSLocalizedString("healthDataUnavailableAlertTitle", comment: "")), message: Text(NSLocalizedString("healthDataUnavailableAlertMessage", comment: "")), dismissButton: .default(Text(NSLocalizedString("healthDataUnavailableAlertButton", comment: ""))))
                 }
                 
                 Button(action: {
