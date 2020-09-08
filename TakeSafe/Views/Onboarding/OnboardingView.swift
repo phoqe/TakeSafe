@@ -11,24 +11,24 @@ struct OnboardingView: View {
     @State var state: OnboardingState = .intro
     
     let introPages = [
-        OnboardingPage(image: "Medical Care", title: NSLocalizedString("onboardingPage1Title", comment: ""), description: NSLocalizedString("onboardingPage1Description", comment: "")),
+        IntroPage(image: "Medical Care", title: NSLocalizedString("introPage1Title", comment: ""), description: NSLocalizedString("introPage1Description", comment: "")),
         
-        OnboardingPage(image: "Time Management", title: NSLocalizedString("onboardingPage2Title", comment: ""), description: NSLocalizedString("onboardingPage2Description", comment: "")),
+        IntroPage(image: "Time Management", title: NSLocalizedString("introPage2Title", comment: ""), description: NSLocalizedString("introPage2Description", comment: "")),
         
-        OnboardingPage(image: "Doctors", title: NSLocalizedString("onboardingPage3Title", comment: ""), description: NSLocalizedString("onboardingPage3Description", comment: "")),
+        IntroPage(image: "Doctors", title: NSLocalizedString("introPage3Title", comment: ""), description: NSLocalizedString("introPage3Description", comment: "")),
         
-        OnboardingPage(image: "Profile Details", title: NSLocalizedString("onboardingPage4Title", comment: ""), description: NSLocalizedString("onboardingPage4Description", comment: ""))
+        IntroPage(image: "Profile Details", title: NSLocalizedString("introPage4Title", comment: ""), description: NSLocalizedString("introPage4Description", comment: ""))
     ]
     
     let setupPages = [
-        OnboardingPage(image: "Medicine", title: NSLocalizedString("onboardingSetupPage1Title", comment: ""), description: NSLocalizedString("onboardingSetupPage1Description", comment: ""))
+        IntroPage(image: "Medicine", title: NSLocalizedString("onboardingSetupPage1Title", comment: ""), description: NSLocalizedString("onboardingSetupPage1Description", comment: ""))
     ]
     
     var body: some View {
         if state == .intro {
-            OnboardingPageView(introPages)
+            IntroPageView(introPages)
         } else if state == .setup {
-            OnboardingPageView(setupPages)
+            IntroPageView(setupPages)
         }
     }
 }

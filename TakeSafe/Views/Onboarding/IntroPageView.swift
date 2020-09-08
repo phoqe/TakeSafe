@@ -1,5 +1,5 @@
 //
-//  OnboardingPageView.swift
+//  IntroPageView.swift
 //  TakeSafe
 //
 //  Created by Linus Långberg on 2020-09-07.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OnboardingPageView<Page: View>: View {
+struct IntroPageView<Page: View>: View {
     var viewControllers: [UIHostingController<Page>]
     @State var currentPage = 0
     
@@ -22,11 +22,11 @@ struct OnboardingPageView<Page: View>: View {
             PageViewController(controllers: viewControllers, currentPage: $currentPage)
             
             if showButton {
-                ContainedButton(title: NSLocalizedString("onboardingPageViewButton", comment: "")) {
+                ContainedButton(title: NSLocalizedString("introPageViewButton", comment: "")) {
                     
                 }
             } else {
-                ContainedButton(title: NSLocalizedString("onboardingPageViewButton", comment: "")) {
+                ContainedButton(title: NSLocalizedString("introPageViewButton", comment: "")) {
                     
                 }
                 .hidden()
