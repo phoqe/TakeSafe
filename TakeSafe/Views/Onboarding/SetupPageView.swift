@@ -13,9 +13,11 @@ struct SetupPageView<Page: View>: View {
     @State var currentPage = 0
     @State var showHealthDataUnavailableAlert = false
     @State var showAppleHealthAuthErrorAlert = false
+    @Binding var onboardingState: OnboardingState
     
-    init(_ views: [Page]) {
+    init(_ views: [Page], _ onboardingState: Binding<OnboardingState>) {
         self.viewControllers = views.map { UIHostingController(rootView: $0) }
+        self._onboardingState = onboardingState
     }
     
     var body: some View {

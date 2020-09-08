@@ -28,6 +28,9 @@
 "onboardingSetupPage2Title" = "När lägger du dig?";
 "onboardingSetupPage2Description" = "Vi kan använda tiden för att ge dig inblick i hur droger påverkar din sömn.";
 
+"onboardingCompletedTitle" = "Tack! Det räcker.";
+"onboardingCompletedDescription" = "Vi har nu tillräckligt med information för att göra nogranna förutsägelser. Du är redo att börja använda TakeSafe.";
+
 "setupPageViewAppleHealthAccessButton" = "Tillåt tillgång till Apple Health";
 "setupPageViewSkipButton" = "Skippa";
 

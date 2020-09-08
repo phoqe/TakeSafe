@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    @State var state: OnboardingState = .setup
+    @State var state: OnboardingState = .completed
     
     let introPages = [
         IntroPage(image: "Medical Care", title: NSLocalizedString("introPage1Title", comment: ""), description: NSLocalizedString("introPage1Description", comment: "")),
@@ -21,15 +21,17 @@ struct OnboardingView: View {
     ]
     
     let setupPages = [
-        IntroPage(image: "Sleep Analysis", title: NSLocalizedString("onboardingSetupPage2Title", comment: ""), description: NSLocalizedString("onboardingSetupPage2Description", comment: "")),
-        IntroPage(image: "Medicine", title: NSLocalizedString("onboardingSetupPage1Title", comment: ""), description: NSLocalizedString("onboardingSetupPage1Description", comment: ""))
+        IntroPage(image: "Medicine", title: NSLocalizedString("onboardingSetupPage1Title", comment: ""), description: NSLocalizedString("onboardingSetupPage1Description", comment: "")),
+        IntroPage(image: "Sleep Analysis", title: NSLocalizedString("onboardingSetupPage2Title", comment: ""), description: NSLocalizedString("onboardingSetupPage2Description", comment: ""))
     ]
     
     var body: some View {
         if state == .intro {
-            IntroPageView(introPages)
+            IntroPageView(introPages, $state)
         } else if state == .setup {
-            SetupPageView(setupPages)
+            SetupPageView(setupPages, $state)
+        } else if state == .completed {
+            IntroPage(image: "Finish Line", title: NSLocalizedString("onboardingCompletedTitle", comment: ""), description: NSLocalizedString("onboardingCompletedDescription", comment: ""))
         }
     }
 }
