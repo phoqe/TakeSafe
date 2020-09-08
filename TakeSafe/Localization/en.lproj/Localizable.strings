@@ -26,7 +26,7 @@
 "onboardingSetupPage2Title" = "When do you go to bed?";
 "onboardingSetupPage2Description" = "We can use your bedtime to give you insight into how drugs will affect your sleep.";
 
-"setupPageViewAppleHealthAccessButton" = "Allow Apple Health Access";
+"setupPageViewAppleHealthAccessButton" = "Allow Access to Apple Health";
 "setupPageViewSkipButton" = "Skip";
 
 "healthDataUnavailableAlertTitle" = "Apple Health Unavailable";
