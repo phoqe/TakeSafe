@@ -32,3 +32,7 @@
 "healthDataUnavailableAlertTitle" = "Apple Health Unavailable";
 "healthDataUnavailableAlertMessage" = "Apple Health is not available on your device.";
 "healthDataUnavailableAlertButton" = "OK";
+
+"appleHealthAuthErrorAlertTitle" = "Apple Health Error";
+"appleHealthAuthErrorAlertMessage" = "Something went wrong when allowing us access to your health data. You can try again later in Settings.";
+"appleHealthAuthErrorAlertButton" = "OK";

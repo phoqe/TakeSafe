@@ -34,3 +34,7 @@
 "healthDataUnavailableAlertTitle" = "Apple Health ej tillgängligt";
 "healthDataUnavailableAlertMessage" = "Apple Health är inte tillgängligt på din enhet.";
 "healthDataUnavailableAlertButton" = "OK";
+
+"appleHealthAuthErrorAlertTitle" = "Fel med Apple Health";
+"appleHealthAuthErrorAlertMessage" = "Något gick fel när du gav oss tillgång till din hälsoinformation. Du kan försöka igen senare i Inställningar.";
+"appleHealthAuthErrorAlertButton" = "OK";

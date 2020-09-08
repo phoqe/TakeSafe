@@ -12,6 +12,7 @@ struct SetupPageView<Page: View>: View {
     var viewControllers: [UIHostingController<Page>]
     @State var currentPage = 0
     @State var showHealthDataUnavailableAlert = false
+    @State var showAppleHealthAuthErrorAlert = false
     
     init(_ views: [Page]) {
         self.viewControllers = views.map { UIHostingController(rootView: $0) }
@@ -59,16 +60,25 @@ struct SetupPageView<Page: View>: View {
                     ])
                     
                     healthStore.requestAuthorization(toShare: nil, read: types) { (success, error) in
+                        if error != nil || !success {
+                            showAppleHealthAuthErrorAlert = true
+                            
+                            return
+                        }
                         
+                        // TODO: Proceed.
                     }
                 }
                 .padding(.bottom)
                 .alert(isPresented: $showHealthDataUnavailableAlert) {
                     Alert(title: Text(NSLocalizedString("healthDataUnavailableAlertTitle", comment: "")), message: Text(NSLocalizedString("healthDataUnavailableAlertMessage", comment: "")), dismissButton: .default(Text(NSLocalizedString("healthDataUnavailableAlertButton", comment: ""))))
                 }
+                .alert(isPresented: $showAppleHealthAuthErrorAlert) {
+                    Alert(title: Text(NSLocalizedString("appleHealthAuthErrorAlertTitle", comment: "")), message: Text(NSLocalizedString("appleHealthAuthErrorAlertMessage", comment: "")), dismissButton: .default(Text(NSLocalizedString("appleHealthAuthErrorAlertButton", comment: ""))))
+                }
                 
                 Button(action: {
-                    
+                    // TODO: Skip.
                 }, label: {
                     Text(NSLocalizedString("setupPageViewSkipButton", comment: ""))
                         .foregroundColor(.secondary)
