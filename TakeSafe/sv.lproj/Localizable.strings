@@ -22,3 +22,6 @@
 
 "onboardingSetupPage1Title" = "Tillåt användning av Apple Health.";
 "onboardingSetupPage1Description" = "Vi kan arbeta med Apple Health-appen för att få mer insikt och förbättra våra förutsägelser. Data som kroppsmätningar, hjärtfrekvens, och sängtid kan vara till nytta för oss.";
+
+"onboardingSetupPage1Title" = "Tillåt åtkomst till Apple Health.";
+"onboardingSetupPage1Description" = "Vi kan använda din hälsoinformation för att förbättra våra förutsägelser.";

@@ -21,7 +21,7 @@ struct OnboardingView: View {
     ]
     
     let setupPages = [
-        IntroPage(image: "Medicine", title: "Allow access to Apple Health.", description: "We can work with the Apple Health app to improve our predictions and gain more insight. Data such as body measurements, heart rate, and bed time may be used.")
+        IntroPage(image: "Medicine", title: NSLocalizedString("onboardingSetupPage1Title", comment: ""), description: NSLocalizedString("onboardingSetupPage1Description", comment: ""))
     ]
     
     var body: some View {

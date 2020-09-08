@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct SetupPageView<Page: View>: View {
     var viewControllers: [UIHostingController<Page>]
@@ -20,9 +21,45 @@ struct SetupPageView<Page: View>: View {
             PageViewController(controllers: viewControllers, currentPage: $currentPage)
             
             VStack {
-                ContainedButton(title: "Review Permission") {
+                ContainedButton(title: "Allow Apple Health Access") {
+                    if !HKHealthStore.isHealthDataAvailable() {
+                        return
+                    }
                     
+                    // TODO: Move to manager.
+                    let healthStore = HKHealthStore()
+                    
+                    // Characteristics
+                    let dateOfBirth = HKObjectType.characteristicType(forIdentifier: .dateOfBirth)
+                    let biologicalSex = HKObjectType.characteristicType(forIdentifier: .biologicalSex)
+                    
+                    // Quantity
+                    let height = HKObjectType.quantityType(forIdentifier: .height)
+                    let bodyMass = HKObjectType.quantityType(forIdentifier: .bodyMass)
+                    let heartRate = HKObjectType.quantityType(forIdentifier: .heartRate)
+                    let restingHeartRate = HKObjectType.quantityType(forIdentifier: .restingHeartRate)
+                    let walkingHearRateAverage = HKObjectType.quantityType(forIdentifier: .walkingHeartRateAverage)
+                    let heartRateVariabilitySDNN = HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN)
+                    let bodyTemperature = HKObjectType.quantityType(forIdentifier: .bodyTemperature)
+                    
+                    let types = Set([
+                        dateOfBirth!,
+                        biologicalSex!,
+                        
+                        height!,
+                        bodyMass!,
+                        heartRate!,
+                        restingHeartRate!,
+                        walkingHearRateAverage!,
+                        heartRateVariabilitySDNN!,
+                        bodyTemperature!
+                    ])
+                    
+                    healthStore.requestAuthorization(toShare: nil, read: types) { (success, error) in
+                        
+                    }
                 }
+                .padding(.bottom)
                 
                 Button(action: {
                     
@@ -31,6 +68,7 @@ struct SetupPageView<Page: View>: View {
                         .foregroundColor(.secondary)
                 })
             }
+            .padding()
         }
     }
 }

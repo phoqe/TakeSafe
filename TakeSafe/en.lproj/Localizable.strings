@@ -20,5 +20,5 @@
 
 "introPageViewButton" = "Get Started";
 
-"onboardingSetupPage1Title" = "Allow usage of Apple Health.";
-"onboardingSetupPage1Description" = "We can work with the Apple Health app to gain more insight and improve our predictions. Data such as body measurements, heart rate, and bed time can be of use to us.";
+"onboardingSetupPage1Title" = "Allow access to Apple Health.";
+"onboardingSetupPage1Description" = "We can use your health data to improve our predictions.";
