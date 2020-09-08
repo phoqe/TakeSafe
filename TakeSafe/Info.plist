@@ -42,7 +42,7 @@
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>NSHealthShareUsageDescription</key>
-	<string>Access to your Health data improves our predictions and lets us gain more insight.</string>
+	<string>Your health data to improves our predictions.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

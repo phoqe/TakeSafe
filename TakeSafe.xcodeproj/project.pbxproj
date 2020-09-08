@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84D9AE2507809D006C1B77 /* SetupPageView.swift */; };
+		9F84D9B625079153006C1B77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F84D9B825079153006C1B77 /* InfoPlist.strings */; };
 		9FA381D2250629840053C3F4 /* TakeSafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381D1250629840053C3F4 /* TakeSafeApp.swift */; };
 		9FA381D4250629840053C3F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381D3250629840053C3F4 /* ContentView.swift */; };
 		9FA381D6250629850053C3F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA381D5250629850053C3F4 /* Assets.xcassets */; };
@@ -28,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		9F84D9AE2507809D006C1B77 /* SetupPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageView.swift; sourceTree = "<group>"; };
+		9F84D9B725079153006C1B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9F84D9B925079156006C1B77 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9FA381CE250629840053C3F4 /* TakeSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA381D1250629840053C3F4 /* TakeSafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeSafeApp.swift; sourceTree = "<group>"; };
 		9FA381D3250629840053C3F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 				9FA381D7250629850053C3F4 /* Preview Content */,
 				9FC04671250664EF000B2AAC /* Localizable.strings */,
 				9FFD21672506DA3F002F01B9 /* AppDelegate.swift */,
+				9F84D9B825079153006C1B77 /* InfoPlist.strings */,
 			);
 			path = TakeSafe;
 			sourceTree = "<group>";
@@ -214,6 +218,7 @@
 				9FC0466F250664EF000B2AAC /* Localizable.strings in Resources */,
 				9FA381D9250629850053C3F4 /* Preview Assets.xcassets in Resources */,
 				9FA381D6250629850053C3F4 /* Assets.xcassets in Resources */,
+				9F84D9B625079153006C1B77 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +247,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9F84D9B825079153006C1B77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F84D9B725079153006C1B77 /* en */,
+				9F84D9B925079156006C1B77 /* sv */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		9FC04671250664EF000B2AAC /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

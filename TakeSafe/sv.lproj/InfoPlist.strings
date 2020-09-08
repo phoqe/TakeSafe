@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  TakeSafe
+
+  Created by Linus Långberg on 2020-09-08.
+  
+*/
+
+NSHealthShareUsageDescription = "Din hälsoinformation förbättrar våra förutsägelser.";

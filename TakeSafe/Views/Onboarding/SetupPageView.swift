@@ -21,7 +21,7 @@ struct SetupPageView<Page: View>: View {
             PageViewController(controllers: viewControllers, currentPage: $currentPage)
             
             VStack {
-                ContainedButton(title: "Allow Apple Health Access") {
+                ContainedButton(title: NSLocalizedString("setupPageViewAppleHealthAccessButtonTitle", comment: "")) {
                     if !HKHealthStore.isHealthDataAvailable() {
                         return
                     }
@@ -64,7 +64,7 @@ struct SetupPageView<Page: View>: View {
                 Button(action: {
                     
                 }, label: {
-                    Text("Skip")
+                    Text(NSLocalizedString("skip", comment: ""))
                         .foregroundColor(.secondary)
                 })
             }
