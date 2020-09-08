@@ -10,7 +10,6 @@ import SwiftUI
 struct ContainedButton: View {
     var title: String
     var action: () -> Void
-    let primaryColor = UserDefaults.standard.string(forKey: "primaryColor")!
     
     var body: some View {
         Button(action: action, label: {
@@ -20,7 +19,7 @@ struct ContainedButton: View {
                 .foregroundColor(.white)
                 .padding()
         })
-        .background(Color.init(UIColor.init(hexString: primaryColor)))
+        .background(Color("Primary Color"))
         .cornerRadius(5)
     }
 }

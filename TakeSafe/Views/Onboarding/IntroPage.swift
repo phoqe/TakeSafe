@@ -32,7 +32,6 @@ struct IntroPage: View {
             .padding(.top)
             .padding(.horizontal)
         }
-        .padding(.vertical)
     }
 }
 

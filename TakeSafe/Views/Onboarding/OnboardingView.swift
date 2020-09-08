@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    @State var state: OnboardingState = .intro
+    @State var state: OnboardingState = .setup
     
     let introPages = [
         IntroPage(image: "Medical Care", title: NSLocalizedString("introPage1Title", comment: ""), description: NSLocalizedString("introPage1Description", comment: "")),
@@ -21,14 +21,14 @@ struct OnboardingView: View {
     ]
     
     let setupPages = [
-        IntroPage(image: "Medicine", title: NSLocalizedString("onboardingSetupPage1Title", comment: ""), description: NSLocalizedString("onboardingSetupPage1Description", comment: ""))
+        IntroPage(image: "Medicine", title: "Allow access to Apple Health.", description: "We can work with the Apple Health app to improve our predictions and gain more insight. Data such as body measurements, heart rate, and bed time may be used.")
     ]
     
     var body: some View {
         if state == .intro {
             IntroPageView(introPages)
         } else if state == .setup {
-            IntroPageView(setupPages)
+            SetupPageView(setupPages)
         }
     }
 }

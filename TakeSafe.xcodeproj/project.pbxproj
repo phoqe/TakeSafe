@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84D9AE2507809D006C1B77 /* SetupPageView.swift */; };
 		9FA381D2250629840053C3F4 /* TakeSafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381D1250629840053C3F4 /* TakeSafeApp.swift */; };
 		9FA381D4250629840053C3F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381D3250629840053C3F4 /* ContentView.swift */; };
 		9FA381D6250629850053C3F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA381D5250629850053C3F4 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F84D9AE2507809D006C1B77 /* SetupPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageView.swift; sourceTree = "<group>"; };
 		9FA381CE250629840053C3F4 /* TakeSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA381D1250629840053C3F4 /* TakeSafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeSafeApp.swift; sourceTree = "<group>"; };
 		9FA381D3250629840053C3F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				9FA381E625062CC70053C3F4 /* IntroPage.swift */,
 				9FFD21652506D327002F01B9 /* IntroPageView.swift */,
 				9FFD21702506E577002F01B9 /* OnboardingState.swift */,
+				9F84D9AE2507809D006C1B77 /* SetupPageView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				9FA381E725062CC70053C3F4 /* IntroPage.swift in Sources */,
 				9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */,
 				9FC04666250655EF000B2AAC /* PageControl.swift in Sources */,
+				9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */,
 				9FFD21682506DA3F002F01B9 /* AppDelegate.swift in Sources */,
 				9FA381ED25064E0B0053C3F4 /* PageViewController.swift in Sources */,
 				9FA381E525062CB50053C3F4 /* OnboardingView.swift in Sources */,
