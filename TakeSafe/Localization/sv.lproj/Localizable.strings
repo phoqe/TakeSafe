@@ -6,8 +6,6 @@
  
  */
 
-"skip" = "Skippa";
-
 "introPage1Title" = "TakeSafe. Ta droger säkert.";
 "introPage1Description" = "Känner du dig trött? Har du sömnproblem? Ta kontroll över ditt liv genom att spåra rörelsen och effekter av droger som koffein. Allt från din iPhone.";
 
@@ -28,8 +26,9 @@
 "onboardingSetupPage1Title" = "Tillåt åtkomst till Apple Health.";
 "onboardingSetupPage1Description" = "Vi kan använda din hälsoinformation för att förbättra våra förutsägelser.";
 
-"setupPageViewAppleHealthAccessButtonTitle" = "Tillåt Apple Health tillgång";
+"setupPageViewAppleHealthAccessButton" = "Tillåt Apple Health tillgång";
+"setupPageViewSkipButton" = "Skippa";
 
 "healthDataUnavailableAlertTitle" = "Apple Health ej tillgängligt";
 "healthDataUnavailableAlertMessage" = "Apple Health är inte tillgängligt på din enhet.";
-"healthDataUnavailableAlertButtonText" = "OK";
+"healthDataUnavailableAlertButton" = "OK";

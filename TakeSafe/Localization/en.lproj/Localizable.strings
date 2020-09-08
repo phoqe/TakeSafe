@@ -6,8 +6,6 @@
  
  */
 
-"skip" = "Skip";
-
 "introPage1Title" = "TakeSafe. Take drugs safely.";
 "introPage1Description" = "Feeling fatigued? Trouble sleeping? Take control of your life by tracking the motion and effects of drugs like caffeine. All from your iPhone.";
 
@@ -25,8 +23,9 @@
 "onboardingSetupPage1Title" = "Allow access to Apple Health.";
 "onboardingSetupPage1Description" = "We can use your health data to improve our predictions.";
 
-"setupPageViewAppleHealthAccessButtonTitle" = "Allow Apple Health Access";
+"setupPageViewAppleHealthAccessButton" = "Allow Apple Health Access";
+"setupPageViewSkipButton" = "Skip";
 
 "healthDataUnavailableAlertTitle" = "Apple Health Unavailable";
 "healthDataUnavailableAlertMessage" = "Apple Health is not available on your device.";
-"healthDataUnavailableAlertButtonText" = "OK";
+"healthDataUnavailableAlertButton" = "OK";
