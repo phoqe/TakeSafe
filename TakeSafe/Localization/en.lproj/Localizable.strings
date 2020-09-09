@@ -26,6 +26,9 @@
 "onboardingSetupPage2Title" = "When do you go to bed?";
 "onboardingSetupPage2Description" = "We can use your bedtime to give you insight into how drugs will affect your sleep.";
 
+"onboardingSetupPage3Title" = "When do you wake up?";
+"onboardingSetupPage3Description" = "We can use the time you wake up to give you insight into how drugs will affect your day.";
+
 "onboardingCompletedTitle" = "Thank you! That’s enough.";
 "onboardingCompletedDescription" = "We now have enough data to make accurate predictions. You’re ready to start using TakeSafe.";
 
