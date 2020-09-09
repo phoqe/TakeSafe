@@ -36,7 +36,7 @@ struct SetupPageView<Page: View>: View {
         _wakeUp = State(initialValue: Calendar.current.date(from: defaultWakeUp)!)
     }
     
-    func allowAppleHealthAccess() {
+    func requestAppleHealthAccess() {
         if !HKHealthStore.isHealthDataAvailable() {
             showHealthDataUnavailableAlert = true
             
@@ -83,13 +83,23 @@ struct SetupPageView<Page: View>: View {
         }
     }
     
+    func setBedtime() {
+        UserDefaults.standard.set(bedtime, forKey: "bedtime")
+        
+        currentPage = 2
+    }
+    
+    func setWakeUp() {
+        UserDefaults.standard.set(wakeUp, forKey: "wakeUp")
+    }
+    
     var body: some View {
         VStack {
             SetupPageViewController(controllers: viewControllers, currentPage: $currentPage)
             
             if currentPage == 0 {
                 VStack {
-                    ContainedButton(title: NSLocalizedString("setupPageViewAppleHealthAccessButton", comment: ""), action: allowAppleHealthAccess())
+                    ContainedButton(title: NSLocalizedString("setupPageViewAppleHealthAccessButton", comment: ""), action: requestAppleHealthAccess)
                     .padding(.bottom)
                     .alert(isPresented: $showHealthDataUnavailableAlert) {
                         Alert(title: Text(NSLocalizedString("healthDataUnavailableAlertTitle", comment: "")), message: Text(NSLocalizedString("healthDataUnavailableAlertMessage", comment: "")), dismissButton: .default(Text(NSLocalizedString("healthDataUnavailableAlertButton", comment: ""))))
@@ -106,18 +116,24 @@ struct SetupPageView<Page: View>: View {
                     })
                 }
                 .padding()
-            } else if currentPage == 1 {
+            }
+            
+            if currentPage == 1 {
                 DatePicker("", selection: $bedtime, displayedComponents: .hourAndMinute)
                     .datePickerStyle(WheelDatePickerStyle())
                     .labelsHidden()
                 
-                ContainedButton("Set Bedtime") {
-                    
-                }
-            } else if currentPage == 2 {
+                ContainedButton(title: NSLocalizedString("onboardingSetupPage2Button", comment: ""), action: setBedtime, fullWidth: true)
+                    .padding()
+            }
+                
+            if currentPage == 2 {
                 DatePicker("", selection: $wakeUp, displayedComponents: .hourAndMinute)
                     .datePickerStyle(WheelDatePickerStyle())
                     .labelsHidden()
+                
+                ContainedButton(title: NSLocalizedString("onboardingSetupPage3Button", comment: ""), action: setWakeUp, fullWidth: true)
+                    .padding()
             }
         }
     }

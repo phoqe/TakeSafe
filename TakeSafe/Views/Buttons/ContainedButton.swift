@@ -10,14 +10,24 @@ import SwiftUI
 struct ContainedButton: View {
     var title: String
     var action: () -> Void
+    var fullWidth: Bool = false
+    
+    var text: some View {
+        Text(title)
+            .font(.body)
+            .fontWeight(.semibold)
+            .foregroundColor(.white)
+            .padding()
+    }
     
     var body: some View {
         Button(action: action, label: {
-            Text(title)
-                .font(.body)
-                .fontWeight(.semibold)
-                .foregroundColor(.white)
-                .padding()
+            if fullWidth {
+                text
+                    .frame(maxWidth: .infinity)
+            } else {
+                text
+            }
         })
         .background(Color("Primary Color"))
         .cornerRadius(5)
