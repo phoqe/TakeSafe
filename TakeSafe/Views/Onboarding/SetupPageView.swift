@@ -22,7 +22,7 @@ struct SetupPageView<Page: View>: View {
     
     var body: some View {
         VStack {
-            PageViewController(controllers: viewControllers, currentPage: $currentPage)
+            SetupPageViewController(controllers: viewControllers, currentPage: $currentPage)
             
             VStack {
                 ContainedButton(title: NSLocalizedString("setupPageViewAppleHealthAccessButton", comment: "")) {

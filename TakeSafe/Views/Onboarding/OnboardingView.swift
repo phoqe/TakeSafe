@@ -8,15 +8,12 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    @State var state: OnboardingState = .completed
+    @State var state: OnboardingState = .intro
     
     let introPages = [
         IntroPage(image: "Medical Care", title: NSLocalizedString("introPage1Title", comment: ""), description: NSLocalizedString("introPage1Description", comment: "")),
-        
         IntroPage(image: "Time Management", title: NSLocalizedString("introPage2Title", comment: ""), description: NSLocalizedString("introPage2Description", comment: "")),
-        
         IntroPage(image: "Doctors", title: NSLocalizedString("introPage3Title", comment: ""), description: NSLocalizedString("introPage3Description", comment: "")),
-        
         IntroPage(image: "Profile Details", title: NSLocalizedString("introPage4Title", comment: ""), description: NSLocalizedString("introPage4Description", comment: ""))
     ]
     
