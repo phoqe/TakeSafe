@@ -119,21 +119,41 @@ struct SetupPageView<Page: View>: View {
             }
             
             if currentPage == 1 {
-                DatePicker("", selection: $bedtime, displayedComponents: .hourAndMinute)
-                    .datePickerStyle(WheelDatePickerStyle())
-                    .labelsHidden()
-                
-                ContainedButton(title: NSLocalizedString("onboardingSetupPage2Button", comment: ""), action: setBedtime, fullWidth: true)
+                VStack {
+                    DatePicker("", selection: $bedtime, displayedComponents: .hourAndMinute)
+                        .datePickerStyle(WheelDatePickerStyle())
+                        .labelsHidden()
+                        .background(Color.secondary.opacity(0.1))
+                        .cornerRadius(15)
+                        .padding()
+                    
+                    Button(action: setBedtime, label: {
+                        Text(NSLocalizedString("onboardingSetupPage2Button", comment: ""))
+                            .font(.title3)
+                            .foregroundColor(Color("Primary Color"))
+                    })
                     .padding()
+                }
+                .padding()
             }
                 
             if currentPage == 2 {
-                DatePicker("", selection: $wakeUp, displayedComponents: .hourAndMinute)
-                    .datePickerStyle(WheelDatePickerStyle())
-                    .labelsHidden()
-                
-                ContainedButton(title: NSLocalizedString("onboardingSetupPage3Button", comment: ""), action: setWakeUp, fullWidth: true)
+                VStack {
+                    DatePicker("", selection: $wakeUp, displayedComponents: .hourAndMinute)
+                        .datePickerStyle(WheelDatePickerStyle())
+                        .labelsHidden()
+                        .background(Color.secondary.opacity(0.1))
+                        .cornerRadius(15)
+                        .padding()
+                    
+                    Button(action: setWakeUp, label: {
+                        Text(NSLocalizedString("onboardingSetupPage3Button", comment: ""))
+                            .font(.title3)
+                            .foregroundColor(Color("Primary Color"))
+                    })
                     .padding()
+                }
+                .padding()
             }
         }
     }
