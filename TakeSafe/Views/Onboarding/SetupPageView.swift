@@ -130,6 +130,7 @@ struct SetupPageView<Page: View>: View {
                     Button(action: setBedtime, label: {
                         Text(NSLocalizedString("onboardingSetupPage2Button", comment: ""))
                             .font(.title3)
+                            .fontWeight(.semibold)
                             .foregroundColor(Color("Primary Color"))
                     })
                     .padding()
@@ -149,6 +150,7 @@ struct SetupPageView<Page: View>: View {
                     Button(action: setWakeUp, label: {
                         Text(NSLocalizedString("onboardingSetupPage3Button", comment: ""))
                             .font(.title3)
+                            .fontWeight(.semibold)
                             .foregroundColor(Color("Primary Color"))
                     })
                     .padding()
