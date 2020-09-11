@@ -11,7 +11,7 @@ import HealthKit
 struct SetupPageView<Page: View>: View {
     var viewControllers: [UIHostingController<Page>]
 
-    @State var currentPage = 1
+    @State var currentPage = 3
     @State var showHealthDataUnavailableAlert = false
     @State var showAppleHealthAuthErrorAlert = false
     @Binding var onboardingState: OnboardingState
@@ -91,6 +91,8 @@ struct SetupPageView<Page: View>: View {
     
     func setWakeUp() {
         UserDefaults.standard.set(wakeUp, forKey: "wakeUp")
+        
+        currentPage = 3
     }
     
     var body: some View {
@@ -154,6 +156,13 @@ struct SetupPageView<Page: View>: View {
                             .foregroundColor(Color("Primary Color"))
                     })
                     .padding()
+                }
+                .padding()
+            }
+            
+            if currentPage == 3 {
+                ContainedButton(title: NSLocalizedString("onboardingSetupPage4Button", comment: "")) {
+                    
                 }
                 .padding()
             }

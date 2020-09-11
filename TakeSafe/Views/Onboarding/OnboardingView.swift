@@ -20,7 +20,8 @@ struct OnboardingView: View {
     let setupPages = [
         IntroPage(image: "Medicine", title: NSLocalizedString("onboardingSetupPage1Title", comment: ""), description: NSLocalizedString("onboardingSetupPage1Description", comment: "")),
         IntroPage(image: "Sleep Analysis", title: NSLocalizedString("onboardingSetupPage2Title", comment: ""), description: NSLocalizedString("onboardingSetupPage2Description", comment: "")),
-        IntroPage(image: "Breakfast", title: NSLocalizedString("onboardingSetupPage3Title", comment: ""), description: NSLocalizedString("onboardingSetupPage3Description", comment: ""))
+        IntroPage(image: "Breakfast", title: NSLocalizedString("onboardingSetupPage3Title", comment: ""), description: NSLocalizedString("onboardingSetupPage3Description", comment: "")),
+        IntroPage(image: "Finish Line", title: NSLocalizedString("onboardingSetupPage4Title", comment: ""), description: NSLocalizedString("onboardingSetupPage4Description", comment: ""))
     ]
     
     var body: some View {
@@ -28,8 +29,6 @@ struct OnboardingView: View {
             IntroPageView(introPages, $state)
         } else if state == .setup {
             SetupPageView(setupPages, $state)
-        } else if state == .completed {
-            IntroPage(image: "Finish Line", title: NSLocalizedString("onboardingCompletedTitle", comment: ""), description: NSLocalizedString("onboardingCompletedDescription", comment: ""))
         }
     }
 }

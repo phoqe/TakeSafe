@@ -26,15 +26,16 @@
 "onboardingSetupPage1Description" = "Vi kan använda din hälsoinformation för att förbättra våra förutsägelser.";
 
 "onboardingSetupPage2Title" = "När lägger du dig?";
-"onboardingSetupPage2Description" = "Vi kan använda tiden du lägger dig för att ge dig inblick i hur droger påverkar din sömn.";
+"onboardingSetupPage2Description" = "Vi använder tiden du lägger dig för att ge dig inblick i hur droger påverkar din sömn.";
 "onboardingSetupPage2Button" = "Ställ in läggdags";
 
 "onboardingSetupPage3Title" = "När vaknar du?";
-"onboardingSetupPage3Description" = "Vi kan använda tiden du vaknar för att ge dig inblick i hur droger kommer påverka din dag.";
+"onboardingSetupPage3Description" = "Vi använder tiden du vaknar för att ge dig inblick i hur droger kommer påverka din dag.";
 "onboardingSetupPage3Button" = "Ställ in väckningstid";
 
-"onboardingCompletedTitle" = "Tack! Det räcker.";
-"onboardingCompletedDescription" = "Vi har nu tillräckligt med information för att göra nogranna förutsägelser. Du är redo att börja använda TakeSafe.";
+"onboardingSetupPage4Title" = "Tack! Det räcker.";
+"onboardingSetupPage4Description" = "Vi har nu tillräckligt med information för att göra nogranna förutsägelser. Du är redo att börja använda TakeSafe.";
+"onboardingSetupPage4Button" = "Fortsätt";
 
 "setupPageViewAppleHealthAccessButton" = "Tillåt tillgång till Apple Health";
 "setupPageViewSkipButton" = "Skippa";

@@ -8,5 +8,4 @@
 enum OnboardingState {
     case intro
     case setup
-    case completed
 }
