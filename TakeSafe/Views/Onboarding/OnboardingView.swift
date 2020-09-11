@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    @State var state: OnboardingState = .setup
+    @Binding var state: OnboardingState
     
     let introPages = [
         IntroPage(image: "Medical Care", title: NSLocalizedString("introPage1Title", comment: ""), description: NSLocalizedString("introPage1Description", comment: "")),
@@ -30,12 +30,5 @@ struct OnboardingView: View {
         } else if state == .setup {
             SetupPageView(setupPages, $state)
         }
-    }
-}
-
-struct OnboardingView_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingView()
-        OnboardingView().preferredColorScheme(.dark)
     }
 }

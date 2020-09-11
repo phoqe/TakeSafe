@@ -11,7 +11,7 @@ import HealthKit
 struct SetupPageView<Page: View>: View {
     var viewControllers: [UIHostingController<Page>]
 
-    @State var currentPage = 3
+    @State var currentPage = 0
     @State var showHealthDataUnavailableAlert = false
     @State var showAppleHealthAuthErrorAlert = false
     @Binding var onboardingState: OnboardingState
@@ -95,6 +95,12 @@ struct SetupPageView<Page: View>: View {
         currentPage = 3
     }
     
+    func finish() {
+        UserDefaults.standard.set(true, forKey: "hasOnboarded")
+        
+        onboardingState = .finished
+    }
+    
     var body: some View {
         VStack {
             SetupPageViewController(controllers: viewControllers, currentPage: $currentPage)
@@ -161,10 +167,8 @@ struct SetupPageView<Page: View>: View {
             }
             
             if currentPage == 3 {
-                ContainedButton(title: NSLocalizedString("onboardingSetupPage4Button", comment: "")) {
-                    
-                }
-                .padding()
+                ContainedButton(title: NSLocalizedString("onboardingSetupPage4Button", comment: ""), action: finish)
+                    .padding()
             }
         }
     }

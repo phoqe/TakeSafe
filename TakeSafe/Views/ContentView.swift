@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var onboardingState: OnboardingState = .intro
+    let hasOnboarded = UserDefaults.standard.bool(forKey: "hasOnboarded")
+    
     var body: some View {
-        OnboardingView()
+        if !hasOnboarded {
+            OnboardingView(state: $onboardingState)
+        }
+    
+        if hasOnboarded || onboardingState == .finished {
+            Text("Hello")
+        }
     }
 }
 
