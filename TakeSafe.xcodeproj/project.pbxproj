@@ -11,6 +11,7 @@
 		9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84D9AE2507809D006C1B77 /* SetupPageView.swift */; };
 		9F84D9B625079153006C1B77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F84D9B825079153006C1B77 /* InfoPlist.strings */; };
 		9F9E6BDA252DF3050091ABAF /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 9F9E6BD9252DF3050091ABAF /* BetterSafariView */; };
+		9F9E6BDE252DFB9D0091ABAF /* TakeDrugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E6BDD252DFB9D0091ABAF /* TakeDrugView.swift */; };
 		9FA381D2250629840053C3F4 /* TakeSafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381D1250629840053C3F4 /* TakeSafeApp.swift */; };
 		9FA381D4250629840053C3F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381D3250629840053C3F4 /* ContentView.swift */; };
 		9FA381D6250629850053C3F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA381D5250629850053C3F4 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		9F84D9AE2507809D006C1B77 /* SetupPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageView.swift; sourceTree = "<group>"; };
 		9F84D9B725079153006C1B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9F84D9B925079156006C1B77 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9F9E6BDD252DFB9D0091ABAF /* TakeDrugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeDrugView.swift; sourceTree = "<group>"; };
 		9FA381CE250629840053C3F4 /* TakeSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA381D1250629840053C3F4 /* TakeSafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeSafeApp.swift; sourceTree = "<group>"; };
 		9FA381D3250629840053C3F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				9FD46F1C252CC19900FB5754 /* DrugView.swift */,
+				9F9E6BDD252DFB9D0091ABAF /* TakeDrugView.swift */,
 			);
 			path = Drugs;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				9FA381E525062CB50053C3F4 /* OnboardingView.swift in Sources */,
 				9FC5B42D2508D06700DDF30A /* SetupPageViewController.swift in Sources */,
 				9FFD21662506D327002F01B9 /* IntroPageView.swift in Sources */,
+				9F9E6BDE252DFB9D0091ABAF /* TakeDrugView.swift in Sources */,
 				9FA381D4250629840053C3F4 /* ContentView.swift in Sources */,
 				9FFD21712506E577002F01B9 /* OnboardingState.swift in Sources */,
 				9FA381D2250629840053C3F4 /* TakeSafeApp.swift in Sources */,

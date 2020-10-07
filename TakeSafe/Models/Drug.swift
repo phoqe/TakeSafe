@@ -21,4 +21,6 @@ struct Drug {
     
     let onset: DateComponents
     let duration: DateComponents
+    
+    let massUnit: UnitMass
 }
