@@ -15,7 +15,6 @@ struct DrugView: View {
     @State var showDrugClassAlert = false
     @State var showDependenceAlert = false
     @State var showAddictionAlert = false
-    @State var showBioavailabilityAlert = false
     
     var body: some View {
         NavigationView {
@@ -77,23 +76,6 @@ struct DrugView: View {
                     .foregroundColor(.accentColor)
                     .alert(isPresented: $showAddictionAlert) {
                         Alert(title: Text("Addiction"), message: Text("Addiction is a brain disorder characterized by compulsive engagement in rewarding stimuli despite adverse consequences."), dismissButton: .default(Text("OK")))
-                    }
-                }
-                
-                HStack {
-                    Text("Bioavailability")
-                        .bold()
-                    Spacer()
-                    Text("\(drug.bioavailability)%")
-                    Button(action: {
-                        showBioavailabilityAlert = true
-                    }, label: {
-                        Image(systemName: "info.circle")
-                    })
-                    .buttonStyle(PlainButtonStyle())
-                    .foregroundColor(.accentColor)
-                    .alert(isPresented: $showBioavailabilityAlert) {
-                        Alert(title: Text("Bioavailability"), message: Text("The proportion of a drug which enters the circulation when introduced into the body and so is able to have an active effect."), dismissButton: .default(Text("OK")))
                     }
                 }
                 
