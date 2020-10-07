@@ -9,7 +9,13 @@ import SwiftUI
 
 struct Timeline: View {
     var body: some View {
-        ProgressView(value: 0.5)
+        HStack {
+            Rectangle()
+                .foregroundColor(.blue)
+            Rectangle()
+                .foregroundColor(.green)
+        }
+        .frame(height: 8)
     }
 }
 

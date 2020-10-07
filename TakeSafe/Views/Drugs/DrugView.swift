@@ -99,9 +99,3 @@ struct DrugView: View {
         }
     }
 }
-
-struct DrugView_Previews: PreviewProvider {
-    static var previews: some View {
-        DrugView(drug: Drug(name: "Caffeine", aliases: ["Guaranine", "Methyltheobromine", "1,3,7-Trimethylxanthine", "Theine"], description: "Caffeine is a central nervous system stimulant of the methylxanthine class. It is the world’s most widely consumed psychoactive drug.", learnMoreUrl: "https://en.wikipedia.org/wiki/Caffeine", dependence: .low, addiction: .low, bioavailability: 99, drugClass: .stimulant, onset: DateComponents(hour: 1), duration: DateComponents(hour: 4), massUnit: UnitMass.milligrams))
-    }
-}

@@ -16,7 +16,7 @@ struct Drug {
     let dependence: Dependence
     let addiction: Addiction
     
-    let bioavailability: Int
+    let bioavailability: Double
     let drugClass: DrugClass
     
     let onset: DateComponents
