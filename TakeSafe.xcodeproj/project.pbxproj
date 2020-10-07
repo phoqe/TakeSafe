@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F4BAA4A252DCF9200EADD73 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4BAA49252DCF9200EADD73 /* Timeline.swift */; };
 		9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84D9AE2507809D006C1B77 /* SetupPageView.swift */; };
 		9F84D9B625079153006C1B77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F84D9B825079153006C1B77 /* InfoPlist.strings */; };
+		9F9E6BDA252DF3050091ABAF /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 9F9E6BD9252DF3050091ABAF /* BetterSafariView */; };
 		9FA381D2250629840053C3F4 /* TakeSafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381D1250629840053C3F4 /* TakeSafeApp.swift */; };
 		9FA381D4250629840053C3F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381D3250629840053C3F4 /* ContentView.swift */; };
 		9FA381D6250629850053C3F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA381D5250629850053C3F4 /* Assets.xcassets */; };
@@ -20,6 +22,11 @@
 		9FC04666250655EF000B2AAC /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC04665250655EF000B2AAC /* PageControl.swift */; };
 		9FC0466F250664EF000B2AAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FC04671250664EF000B2AAC /* Localizable.strings */; };
 		9FC5B42D2508D06700DDF30A /* SetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5B42C2508D06700DDF30A /* SetupPageViewController.swift */; };
+		9FD46F1D252CC19900FB5754 /* DrugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD46F1C252CC19900FB5754 /* DrugView.swift */; };
+		9FD46F21252CC1C700FB5754 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD46F20252CC1C700FB5754 /* Drug.swift */; };
+		9FD46F25252CD7D200FB5754 /* DrugClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD46F24252CD7D200FB5754 /* DrugClass.swift */; };
+		9FD46F28252CDA5700FB5754 /* Dependence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD46F27252CDA5700FB5754 /* Dependence.swift */; };
+		9FD46F2B252CDB1000FB5754 /* Addiction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD46F2A252CDB1000FB5754 /* Addiction.swift */; };
 		9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD215625069AF5002F01B9 /* ContainedButton.swift */; };
 		9FFD215E2506CB34002F01B9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFD215D2506CB34002F01B9 /* HealthKit.framework */; };
 		9FFD21662506D327002F01B9 /* IntroPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD21652506D327002F01B9 /* IntroPageView.swift */; };
@@ -28,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F4BAA49252DCF9200EADD73 /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		9F84D9AE2507809D006C1B77 /* SetupPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageView.swift; sourceTree = "<group>"; };
 		9F84D9B725079153006C1B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9F84D9B925079156006C1B77 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -45,6 +53,11 @@
 		9FC04670250664EF000B2AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9FC04672250664F8000B2AAC /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9FC5B42C2508D06700DDF30A /* SetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageViewController.swift; sourceTree = "<group>"; };
+		9FD46F1C252CC19900FB5754 /* DrugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugView.swift; sourceTree = "<group>"; };
+		9FD46F20252CC1C700FB5754 /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
+		9FD46F24252CD7D200FB5754 /* DrugClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugClass.swift; sourceTree = "<group>"; };
+		9FD46F27252CDA5700FB5754 /* Dependence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependence.swift; sourceTree = "<group>"; };
+		9FD46F2A252CDB1000FB5754 /* Addiction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addiction.swift; sourceTree = "<group>"; };
 		9FFD215625069AF5002F01B9 /* ContainedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedButton.swift; sourceTree = "<group>"; };
 		9FFD215B2506CB34002F01B9 /* TakeSafe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TakeSafe.entitlements; sourceTree = "<group>"; };
 		9FFD215D2506CB34002F01B9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -59,12 +72,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FFD215E2506CB34002F01B9 /* HealthKit.framework in Frameworks */,
+				9F9E6BDA252DF3050091ABAF /* BetterSafariView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F4BAA48252DCF7F00EADD73 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				9F4BAA49252DCF9200EADD73 /* Timeline.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
 		9F84D9BA25079197006C1B77 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +116,7 @@
 		9FA381D0250629840053C3F4 /* TakeSafe */ = {
 			isa = PBXGroup;
 			children = (
+				9FD46F1F252CC1B800FB5754 /* Models */,
 				9F84D9BA25079197006C1B77 /* Localization */,
 				9FFD215B2506CB34002F01B9 /* TakeSafe.entitlements */,
 				9FA381E0250629FB0053C3F4 /* Views */,
@@ -117,6 +140,8 @@
 		9FA381E0250629FB0053C3F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F4BAA48252DCF7F00EADD73 /* Timeline */,
+				9FD46F1B252CC18A00FB5754 /* Drugs */,
 				9FFD215525069ADB002F01B9 /* Buttons */,
 				9FA381E325062CA50053C3F4 /* Onboarding */,
 				9FA381D3250629840053C3F4 /* ContentView.swift */,
@@ -138,6 +163,25 @@
 				9FC5B42C2508D06700DDF30A /* SetupPageViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		9FD46F1B252CC18A00FB5754 /* Drugs */ = {
+			isa = PBXGroup;
+			children = (
+				9FD46F1C252CC19900FB5754 /* DrugView.swift */,
+			);
+			path = Drugs;
+			sourceTree = "<group>";
+		};
+		9FD46F1F252CC1B800FB5754 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9FD46F20252CC1C700FB5754 /* Drug.swift */,
+				9FD46F24252CD7D200FB5754 /* DrugClass.swift */,
+				9FD46F27252CDA5700FB5754 /* Dependence.swift */,
+				9FD46F2A252CDB1000FB5754 /* Addiction.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9FFD215525069ADB002F01B9 /* Buttons */ = {
@@ -173,6 +217,7 @@
 			);
 			name = TakeSafe;
 			packageProductDependencies = (
+				9F9E6BD9252DF3050091ABAF /* BetterSafariView */,
 			);
 			productName = TakeSafe;
 			productReference = 9FA381CE250629840053C3F4 /* TakeSafe.app */;
@@ -203,6 +248,7 @@
 			);
 			mainGroup = 9FA381C5250629840053C3F4;
 			packageReferences = (
+				9F9E6BD8252DF3050091ABAF /* XCRemoteSwiftPackageReference "BetterSafariView" */,
 			);
 			productRefGroup = 9FA381CF250629840053C3F4 /* Products */;
 			projectDirPath = "";
@@ -233,11 +279,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4BAA4A252DCF9200EADD73 /* Timeline.swift in Sources */,
+				9FD46F2B252CDB1000FB5754 /* Addiction.swift in Sources */,
 				9FA381E725062CC70053C3F4 /* IntroPage.swift in Sources */,
+				9FD46F1D252CC19900FB5754 /* DrugView.swift in Sources */,
 				9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */,
 				9FC04666250655EF000B2AAC /* PageControl.swift in Sources */,
 				9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */,
+				9FD46F21252CC1C700FB5754 /* Drug.swift in Sources */,
+				9FD46F28252CDA5700FB5754 /* Dependence.swift in Sources */,
 				9FFD21682506DA3F002F01B9 /* AppDelegate.swift in Sources */,
+				9FD46F25252CD7D200FB5754 /* DrugClass.swift in Sources */,
 				9FA381ED25064E0B0053C3F4 /* PageViewController.swift in Sources */,
 				9FA381E525062CB50053C3F4 /* OnboardingView.swift in Sources */,
 				9FC5B42D2508D06700DDF30A /* SetupPageViewController.swift in Sources */,
@@ -462,6 +514,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9F9E6BD8252DF3050091ABAF /* XCRemoteSwiftPackageReference "BetterSafariView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stleamist/BetterSafariView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F9E6BD9252DF3050091ABAF /* BetterSafariView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F9E6BD8252DF3050091ABAF /* XCRemoteSwiftPackageReference "BetterSafariView" */;
+			productName = BetterSafariView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9FA381C6250629840053C3F4 /* Project object */;
 }
