@@ -11,9 +11,16 @@ import Foundation
 struct TakeDrugView: View {
     var drug: Drug
     
-    @State var dose = 0
+    @State var dose: Int
     @State var showMedianLethalDoseAlert = false
     @State var showBioavailabilityAlert = false
+    @Binding var presented: Bool
+    
+    init(drug: Drug, presented: Binding<Bool>) {
+        self.drug = drug
+        _presented = presented
+        _dose = State(initialValue: drug.defaultDose)
+    }
     
     var body: some View {
         NavigationView {
@@ -56,7 +63,7 @@ struct TakeDrugView: View {
                     HStack {
                         Text("Dose")
                             .bold()
-                        Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: 0...400, step: 50)
+                        Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: 50...400, step: drug.doseStep)
                     }
                     
                     HStack {
@@ -75,6 +82,11 @@ struct TakeDrugView: View {
                     .padding(.top)
                 }
                 .padding(.vertical)
+                
+                Button("Take \(dose) \(drug.massUnit.symbol) of \(drug.name)") {
+                    self.presented = false
+                }
+                .foregroundColor(.accentColor)
             }
             .navigationBarTitle(Text("Take \(drug.name)"), displayMode: .inline)
         }

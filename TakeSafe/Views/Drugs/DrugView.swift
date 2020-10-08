@@ -89,6 +89,7 @@ struct DrugView: View {
             Button("Take \(drug.name)") {
                 showTakeDrugView = true
             }
+            .foregroundColor(.accentColor)
         }
         .navigationBarTitle(Text(drug.name))
         .safariView(isPresented: $showLearnMore) {
@@ -97,7 +98,7 @@ struct DrugView: View {
             ))
         }
         .sheet(isPresented: $showTakeDrugView) {
-            TakeDrugView(drug: drug)
+            TakeDrugView(drug: drug, presented: $showTakeDrugView)
         }
     }
 }
