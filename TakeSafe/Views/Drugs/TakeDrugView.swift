@@ -89,6 +89,9 @@ struct TakeDrugView: View {
                 .foregroundColor(.accentColor)
             }
             .navigationBarTitle(Text("Take \(drug.name)"), displayMode: .inline)
+            .navigationBarItems(leading: Button("Cancel") {
+                self.presented = false
+            })
         }
     }
 }
