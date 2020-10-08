@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F014FFB252F107E00B51ABA /* DrugListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F014FFA252F107E00B51ABA /* DrugListView.swift */; };
 		9F4BAA4A252DCF9200EADD73 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4BAA49252DCF9200EADD73 /* Timeline.swift */; };
 		9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84D9AE2507809D006C1B77 /* SetupPageView.swift */; };
 		9F84D9B625079153006C1B77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F84D9B825079153006C1B77 /* InfoPlist.strings */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F014FFA252F107E00B51ABA /* DrugListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugListView.swift; sourceTree = "<group>"; };
 		9F4BAA49252DCF9200EADD73 /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		9F84D9AE2507809D006C1B77 /* SetupPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageView.swift; sourceTree = "<group>"; };
 		9F84D9B725079153006C1B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				9FD46F1C252CC19900FB5754 /* DrugView.swift */,
 				9F9E6BDD252DFB9D0091ABAF /* TakeDrugView.swift */,
+				9F014FFA252F107E00B51ABA /* DrugListView.swift */,
 			);
 			path = Drugs;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				9FD46F1D252CC19900FB5754 /* DrugView.swift in Sources */,
 				9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */,
 				9FC04666250655EF000B2AAC /* PageControl.swift in Sources */,
+				9F014FFB252F107E00B51ABA /* DrugListView.swift in Sources */,
 				9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */,
 				9FD46F21252CC1C700FB5754 /* Drug.swift in Sources */,
 				9FD46F28252CDA5700FB5754 /* Dependence.swift in Sources */,

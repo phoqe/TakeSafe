@@ -10,18 +10,37 @@ import SwiftUI
 struct TakeDrugView: View {
     var drug: Drug
     
-    @State var dosage: String = ""
+    @State var dosage = 0
+    @State var showMedianLethalDoseAlert = false
     
     var body: some View {
-        VStack {
+        NavigationView {
             List {
                 HStack {
-                    TextField("Dosage", text: $dosage)
-                        .keyboardType(.decimalPad)
-                    Text(drug.massUnit.symbol)
+                    Text("Median lethal dose")
+                        .bold()
+                    Spacer()
+                    Text("\(Int(round(drug.medianLethalDose.value))) \(drug.medianLethalDose.unit.symbol)/\(UnitMass.kilograms.symbol)")
+                    Button(action: {
+                        showMedianLethalDoseAlert = true
+                    }, label: {
+                        Image(systemName: "info.circle")
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                    .foregroundColor(.accentColor)
+                    .alert(isPresented: $showMedianLethalDoseAlert) {
+                        Alert(title: Text("Median lethal dose"), message: Text("The median lethal dose for a substance is the dose required to kill half the members of a tested population after a specified test duration."), dismissButton: .default(Text("OK")))
+                    }
                 }
+                
+                HStack {
+                    Text("Dosage")
+                        .bold()
+                    Stepper("\(dosage) \(drug.massUnit.symbol)", value: $dosage, in: 0...400, step: 50)
+                }
+                .padding(.vertical)
             }
+            .navigationBarTitle(Text("Take \(drug.name)"), displayMode: .inline)
         }
-        .navigationBarTitle(Text("Take \(drug.name)"))
     }
 }
