@@ -11,8 +11,9 @@ import Foundation
 struct TakeDrugView: View {
     var drug: Drug
     
-    @State var dosage = 0
+    @State var dose = 0
     @State var showMedianLethalDoseAlert = false
+    @State var showBioavailabilityAlert = false
     
     var body: some View {
         NavigationView {
@@ -35,9 +36,43 @@ struct TakeDrugView: View {
                 }
                 
                 HStack {
-                    Text("Dosage")
+                    Text("Bioavailability")
                         .bold()
-                    Stepper("\(dosage) \(drug.massUnit.symbol)", value: $dosage, in: 0...400, step: 50)
+                    Spacer()
+                    Text("\(Int(round(drug.bioavailability * 100)))%")
+                    Button(action: {
+                        showBioavailabilityAlert = true
+                    }, label: {
+                        Image(systemName: "info.circle")
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                    .foregroundColor(.accentColor)
+                    .alert(isPresented: $showBioavailabilityAlert) {
+                        Alert(title: Text("Bioavailability"), message: Text("The proportion of a drug which enters the circulation when introduced into the body and so is able to have an active effect."), dismissButton: .default(Text("OK")))
+                    }
+                }
+                
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Dose")
+                            .bold()
+                        Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: 0...400, step: 50)
+                    }
+                    
+                    HStack {
+                        Text("Common doses")
+                            .bold()
+                        Spacer()
+                        ForEach(drug.commonDoses, id: \.self) { dose in
+                            Button("\(dose)") {
+                                self.dose = dose
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            .foregroundColor(.accentColor)
+                            .disabled(self.dose == dose)
+                        }
+                    }
+                    .padding(.top)
                 }
                 .padding(.vertical)
             }

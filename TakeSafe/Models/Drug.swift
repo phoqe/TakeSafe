@@ -23,5 +23,7 @@ struct Drug {
     let duration: DateComponents
     
     let massUnit: UnitMass
+    
     let medianLethalDose: Measurement<UnitMass>
+    let commonDoses: [Int]
 }
