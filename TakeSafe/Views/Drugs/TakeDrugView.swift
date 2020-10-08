@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct TakeDrugView: View {
     var drug: Drug
