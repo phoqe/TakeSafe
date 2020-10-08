@@ -18,6 +18,7 @@ struct TakeDrugView: View {
     
     init(drug: Drug, presented: Binding<Bool>) {
         self.drug = drug
+        
         _presented = presented
         _dose = State(initialValue: drug.defaultDose)
     }
@@ -28,8 +29,11 @@ struct TakeDrugView: View {
                 HStack {
                     Text("Median lethal dose")
                         .bold()
+                    
                     Spacer()
+                    
                     Text("\(Int(round(drug.ld50.value))) \(drug.ld50.unit.symbol)/\(UnitMass.kilograms.symbol)")
+                    
                     Button(action: {
                         showMedianLethalDoseAlert = true
                     }, label: {
@@ -45,8 +49,11 @@ struct TakeDrugView: View {
                 HStack {
                     Text("Bioavailability")
                         .bold()
+                    
                     Spacer()
+                    
                     Text("\(Int(round(drug.bioavailability * 100)))%")
+                    
                     Button(action: {
                         showBioavailabilityAlert = true
                     }, label: {
@@ -63,13 +70,16 @@ struct TakeDrugView: View {
                     HStack {
                         Text("Dose")
                             .bold()
+                        
                         Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: 50...400, step: drug.doseStep)
                     }
                     
                     HStack {
                         Text("Common doses")
                             .bold()
+                        
                         Spacer()
+                        
                         ForEach(drug.commonDoses, id: \.self) { dose in
                             Button("\(dose)") {
                                 self.dose = dose
@@ -80,10 +90,20 @@ struct TakeDrugView: View {
                         }
                     }
                     .padding(.top)
+                    
+                    HStack {
+                        Text("Circulation")
+                            .bold()
+                        
+                        Spacer()
+                        
+                        Text("\(Int(drug.bioavailability * Double(dose))) \(drug.massUnit.symbol)")
+                    }
+                    .padding(.top)
                 }
                 .padding(.vertical)
                 
-                Button("Take \(dose) \(drug.massUnit.symbol) of \(drug.name)") {
+                Button("Take \(dose) \(drug.massUnit.symbol)") {
                     self.presented = false
                 }
                 .foregroundColor(.accentColor)
