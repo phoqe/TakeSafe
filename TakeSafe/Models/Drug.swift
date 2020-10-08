@@ -24,7 +24,7 @@ struct Drug {
     
     let massUnit: UnitMass
     
-    let medianLethalDose: Measurement<UnitMass>
+    let ld50: Measurement<UnitMass>
     let defaultDose: Int
     let doseStep: Int
     let commonDoses: [Int]

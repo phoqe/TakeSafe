@@ -29,7 +29,7 @@ struct TakeDrugView: View {
                     Text("Median lethal dose")
                         .bold()
                     Spacer()
-                    Text("\(Int(round(drug.medianLethalDose.value))) \(drug.medianLethalDose.unit.symbol)/\(UnitMass.kilograms.symbol)")
+                    Text("\(Int(round(drug.ld50.value))) \(drug.ld50.unit.symbol)/\(UnitMass.kilograms.symbol)")
                     Button(action: {
                         showMedianLethalDoseAlert = true
                     }, label: {
