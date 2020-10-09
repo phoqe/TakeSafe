@@ -1,5 +1,5 @@
 //
-//  DrugListView.swift
+//  DrugsView.swift
 //  TakeSafe
 //
 //  Created by Linus Långberg on 2020-10-08.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DrugListView: View {
+struct DrugsView: View {
     var body: some View {
         NavigationView {
             List {
@@ -20,8 +20,8 @@ struct DrugListView: View {
     }
 }
 
-struct DrugListView_Previews: PreviewProvider {
+struct DrugsView_Previews: PreviewProvider {
     static var previews: some View {
-        DrugListView()
+        DrugsView()
     }
 }

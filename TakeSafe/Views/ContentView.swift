@@ -17,7 +17,24 @@ struct ContentView: View {
         }
     
         if hasOnboarded || onboardingState == .finished {
-            DrugListView()
+            TabView {
+                DrugsView()
+                    .tabItem {
+                        Image(systemName: "list.dash")
+                        Text("Drugs")
+                    }
+                Text("Profile")
+                    .tabItem {
+                        Image(systemName: "person.crop.circle")
+                        Text("Profile")
+                    }
+                
+                Text("Settings")
+                    .tabItem {
+                        Image(systemName: "gear")
+                        Text("Settings")
+                    }
+            }
         }
     }
 }
