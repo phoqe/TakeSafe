@@ -92,6 +92,9 @@ struct DrugView: View {
                 VStack(alignment: .leading) {
                     Text("Timeline")
                         .bold()
+                    
+                    Timeline(onset: drug.onset, duration: drug.duration)
+                        .padding(.bottom)
                 }
             }
             
