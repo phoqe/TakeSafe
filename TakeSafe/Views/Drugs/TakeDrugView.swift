@@ -92,7 +92,7 @@ struct TakeDrugView: View {
                     .padding(.top)
                     
                     HStack {
-                        Text("Circulation")
+                        Text("In circulation")
                             .bold()
                         
                         Spacer()

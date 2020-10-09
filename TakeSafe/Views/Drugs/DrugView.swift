@@ -80,6 +80,15 @@ struct DrugView: View {
             }
             
             HStack {
+                Text("Legal")
+                    .bold()
+                
+                Spacer()
+                
+                Text(drug.legal() ? "Yes" : "No")
+            }
+            
+            HStack {
                 VStack(alignment: .leading) {
                     Text("Timeline")
                         .bold()

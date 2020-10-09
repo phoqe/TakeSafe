@@ -8,6 +8,7 @@
 import Foundation
 
 struct Drug {
+    let id: String
     let name: String
     let aliases: [String]?
     let description: String
@@ -28,4 +29,12 @@ struct Drug {
     let defaultDose: Int
     let doseStep: Int
     let commonDoses: [Int]
+    
+    func legal() -> Bool {
+        if self.id == "caffeine" {
+            return true
+        }
+        
+        return false
+    }
 }
