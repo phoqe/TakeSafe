@@ -104,7 +104,7 @@ struct TakeDrugView: View {
                 .padding(.vertical)
                 
                 Button("Take \(dose) \(drug.massUnit.symbol)") {
-                    self.presented = false
+                    presented = false
                 }
                 .foregroundColor(.accentColor)
             }
