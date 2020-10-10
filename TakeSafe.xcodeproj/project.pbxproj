@@ -25,6 +25,7 @@
 		9FC04666250655EF000B2AAC /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC04665250655EF000B2AAC /* PageControl.swift */; };
 		9FC0466F250664EF000B2AAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FC04671250664EF000B2AAC /* Localizable.strings */; };
 		9FC5B42D2508D06700DDF30A /* SetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5B42C2508D06700DDF30A /* SetupPageViewController.swift */; };
+		9FC76C5A2531F47800603314 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC76C592531F47800603314 /* ProfileView.swift */; };
 		9FD46F1D252CC19900FB5754 /* DrugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD46F1C252CC19900FB5754 /* DrugView.swift */; };
 		9FD46F21252CC1C700FB5754 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD46F20252CC1C700FB5754 /* Drug.swift */; };
 		9FD46F25252CD7D200FB5754 /* DrugClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD46F24252CD7D200FB5754 /* DrugClass.swift */; };
@@ -59,6 +60,7 @@
 		9FC04670250664EF000B2AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9FC04672250664F8000B2AAC /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9FC5B42C2508D06700DDF30A /* SetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageViewController.swift; sourceTree = "<group>"; };
+		9FC76C592531F47800603314 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		9FD46F1C252CC19900FB5754 /* DrugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugView.swift; sourceTree = "<group>"; };
 		9FD46F20252CC1C700FB5754 /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
 		9FD46F24252CD7D200FB5754 /* DrugClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugClass.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				9FA381EC25064E0B0053C3F4 /* PageViewController.swift */,
 				9FC04665250655EF000B2AAC /* PageControl.swift */,
 				9F6A0B272531006600872936 /* SettingsView.swift */,
+				9FC76C592531F47800603314 /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				9F9E6BDE252DFB9D0091ABAF /* TakeDrugView.swift in Sources */,
 				9FA381D4250629840053C3F4 /* ContentView.swift in Sources */,
 				9FFD21712506E577002F01B9 /* OnboardingState.swift in Sources */,
+				9FC76C5A2531F47800603314 /* ProfileView.swift in Sources */,
 				9FA381D2250629840053C3F4 /* TakeSafeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

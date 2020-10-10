@@ -23,7 +23,8 @@ struct ContentView: View {
                         Image(systemName: "list.dash")
                         Text("Drugs")
                     }
-                Text("Profile")
+                
+                ProfileView()
                     .tabItem {
                         Image(systemName: "person.crop.circle")
                         Text("Profile")
