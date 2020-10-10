@@ -80,12 +80,10 @@ struct DrugView: View {
             }
             
             HStack {
-                Text("Legal")
+                Text("Legality")
                     .bold()
                 
                 Spacer()
-                
-                Text(drug.legal() ? "Yes" : "No")
             }
             
             HStack {

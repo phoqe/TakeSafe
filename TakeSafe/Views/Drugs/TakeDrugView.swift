@@ -102,15 +102,15 @@ struct TakeDrugView: View {
                     .padding(.top)
                 }
                 .padding(.vertical)
-                
-                Button("Take \(dose) \(drug.massUnit.symbol)") {
-                    presented = false
-                }
-                .foregroundColor(.accentColor)
             }
             .navigationBarTitle(Text("Take \(drug.name)"), displayMode: .inline)
+//            .navigationBarItems(leading: Button("Cancel") {
+//                self.presented = false
+//            })
             .navigationBarItems(leading: Button("Cancel") {
-                self.presented = false
+                presented = false
+            }, trailing: Button("Take") {
+                presented = false
             })
         }
     }

@@ -29,7 +29,7 @@ struct ContainedButton: View {
                 text
             }
         })
-        .background(Color("Primary Color"))
+        .background(Color("PrimaryColor"))
         .cornerRadius(5)
     }
 }

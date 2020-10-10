@@ -139,7 +139,7 @@ struct SetupPageView<Page: View>: View {
                         Text(NSLocalizedString("onboardingSetupPage2Button", comment: ""))
                             .font(.title3)
                             .fontWeight(.semibold)
-                            .foregroundColor(Color("Primary Color"))
+                            .foregroundColor(Color("PrimaryColor"))
                     })
                     .padding()
                 }
@@ -159,7 +159,7 @@ struct SetupPageView<Page: View>: View {
                         Text(NSLocalizedString("onboardingSetupPage3Button", comment: ""))
                             .font(.title3)
                             .fontWeight(.semibold)
-                            .foregroundColor(Color("Primary Color"))
+                            .foregroundColor(Color("PrimaryColor"))
                     })
                     .padding()
                 }
