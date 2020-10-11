@@ -95,13 +95,11 @@ struct DrugView: View {
                         .padding(.bottom)
                 }
             }
-            
-            Button("Take \(drug.name)") {
-                showTakeDrugView = true
-            }
-            .foregroundColor(.accentColor)
         }
         .navigationBarTitle(Text(drug.name))
+        .navigationBarItems(trailing: Button("Take") {
+            showTakeDrugView = true
+        })
         .safariView(isPresented: $showLearnMore) {
             SafariView(url: URL(string: drug.learnMoreUrl)!, configuration: SafariView.Configuration(
                 entersReaderIfAvailable: true

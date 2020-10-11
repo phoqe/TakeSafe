@@ -26,6 +26,7 @@
 		9FC0466F250664EF000B2AAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FC04671250664EF000B2AAC /* Localizable.strings */; };
 		9FC5B42D2508D06700DDF30A /* SetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5B42C2508D06700DDF30A /* SetupPageViewController.swift */; };
 		9FC76C5A2531F47800603314 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC76C592531F47800603314 /* ProfileView.swift */; };
+		9FD003B4253396590038E549 /* AppleHealthSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD003B3253396590038E549 /* AppleHealthSettingView.swift */; };
 		9FD46F1D252CC19900FB5754 /* DrugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD46F1C252CC19900FB5754 /* DrugView.swift */; };
 		9FD46F21252CC1C700FB5754 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD46F20252CC1C700FB5754 /* Drug.swift */; };
 		9FD46F25252CD7D200FB5754 /* DrugClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD46F24252CD7D200FB5754 /* DrugClass.swift */; };
@@ -61,6 +62,7 @@
 		9FC04672250664F8000B2AAC /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9FC5B42C2508D06700DDF30A /* SetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageViewController.swift; sourceTree = "<group>"; };
 		9FC76C592531F47800603314 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		9FD003B3253396590038E549 /* AppleHealthSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleHealthSettingView.swift; sourceTree = "<group>"; };
 		9FD46F1C252CC19900FB5754 /* DrugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugView.swift; sourceTree = "<group>"; };
 		9FD46F20252CC1C700FB5754 /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
 		9FD46F24252CD7D200FB5754 /* DrugClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugClass.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		9FA381E0250629FB0053C3F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9FD003B2253396420038E549 /* Settings */,
 				9F4BAA48252DCF7F00EADD73 /* Timeline */,
 				9FD46F1B252CC18A00FB5754 /* Drugs */,
 				9FFD215525069ADB002F01B9 /* Buttons */,
@@ -156,7 +159,6 @@
 				9FA381E125062BAF0053C3F4 /* Launch Screen.storyboard */,
 				9FA381EC25064E0B0053C3F4 /* PageViewController.swift */,
 				9FC04665250655EF000B2AAC /* PageControl.swift */,
-				9F6A0B272531006600872936 /* SettingsView.swift */,
 				9FC76C592531F47800603314 /* ProfileView.swift */,
 			);
 			path = Views;
@@ -173,6 +175,15 @@
 				9FC5B42C2508D06700DDF30A /* SetupPageViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		9FD003B2253396420038E549 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9F6A0B272531006600872936 /* SettingsView.swift */,
+				9FD003B3253396590038E549 /* AppleHealthSettingView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		9FD46F1B252CC18A00FB5754 /* Drugs */ = {
@@ -295,6 +306,7 @@
 				9F4BAA4A252DCF9200EADD73 /* Timeline.swift in Sources */,
 				9FD46F2B252CDB1000FB5754 /* Addiction.swift in Sources */,
 				9FA381E725062CC70053C3F4 /* IntroPage.swift in Sources */,
+				9FD003B4253396590038E549 /* AppleHealthSettingView.swift in Sources */,
 				9FD46F1D252CC19900FB5754 /* DrugView.swift in Sources */,
 				9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */,
 				9FC04666250655EF000B2AAC /* PageControl.swift in Sources */,
