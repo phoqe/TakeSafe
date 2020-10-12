@@ -8,15 +8,64 @@
 import SwiftUI
 
 struct DrugsView: View {
+    @State var loading = false
+    @State var error = false
+    @State var drugs: [Drug]? = nil
+    
+    func getDrugs() {
+        loading = true
+        error = false
+        drugs = nil
+        
+        guard let url = URL(string: "https://takesafe.app/api/drugs") else {
+            loading = false
+            error = true
+            drugs = nil
+            
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            loading = false
+            
+            if error != nil {
+                self.error = true
+                
+                return
+            }
+            
+            guard let data = data else {
+                self.drugs = nil
+                
+                return
+            }
+            
+//            guard let drugs = try? JSONDecoder().decode([Drug].self, from: data) else {
+//                self.error = true
+//            }
+//
+//            self.drugs = drugs
+        }.resume()
+    }
+    
     var body: some View {
         NavigationView {
-            List {
-                NavigationLink(destination: DrugView(drug: Drug(id: "caffeine", name: "Caffeine", aliases: ["Guaranine", "Methyltheobromine", "1,3,7-Trimethylxanthine", "Theine"], description: "Caffeine is a central nervous system stimulant of the methylxanthine class. It is the world’s most widely consumed psychoactive drug.", learnMoreUrl: "https://en.wikipedia.org/wiki/Caffeine", dependence: .low, addiction: .low, bioavailability: 0.99, drugClass: .stimulant, onset: DateComponents(hour: 1), duration: DateComponents(hour: 4), massUnit: UnitMass.milligrams, ld50: Measurement(value: 192, unit: UnitMass.milligrams), defaultDose: 100, doseStep: 50, commonDoses: [100, 200]))) {
-                    Text("Caffeine")
+            Group {
+                if loading {
+                    ProgressView()
+                } else if error {
+                    Text("Error")
+                } else if drugs == nil {
+                    Text("Empty")
+                } else {
+                    List {
+                        
+                    }
                 }
             }
-            .navigationBarTitle(Text("Drugs"))
+            .navigationBarTitle("Drugs")
         }
+        .onAppear(perform: getDrugs)
     }
 }
 
