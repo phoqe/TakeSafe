@@ -53,8 +53,10 @@ struct SettingsView: View {
                     DatePicker("Wake up", selection: $wakeUpTime, displayedComponents: .hourAndMinute)
                 }
                     
-                NavigationLink(destination: AboutView()) {
-                    Text("About \(name)")
+                Section(footer: Text("Made with ❤️ by Phoqe")) {
+                    NavigationLink(destination: AboutView()) {
+                        Text("About \(name)")
+                    }
                 }
             }
             .navigationBarTitle("Settings")
