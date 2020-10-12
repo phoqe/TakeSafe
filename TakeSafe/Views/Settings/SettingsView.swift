@@ -48,7 +48,7 @@ struct SettingsView: View {
                     }
                 }
                 
-                Section(header: Text("Sleep"), footer: Text("We use your sleep and wake up time to present information when drugs may disturb your sleep.")) {
+                Section(header: Text("Sleep"), footer: Text("We use the time you go to sleep and wake up to provide recommendations when drugs may disturb your sleep.")) {
                     DatePicker("Go to sleep", selection: $goToSleepTime, displayedComponents: .hourAndMinute)
                     DatePicker("Wake up", selection: $wakeUpTime, displayedComponents: .hourAndMinute)
                 }
