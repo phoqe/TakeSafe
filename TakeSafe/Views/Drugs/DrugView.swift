@@ -18,15 +18,14 @@ struct DrugView: View {
     @State var showTakeDrugView = false
     
     var body: some View {
-        List {
-            HStack {
-                Button(action: {
-                    showLearnMore = true
-                }, label: {
-                    Text(drug.description)
-                        .padding(.vertical, 8)
-                })
-            }
+        Form {
+            Button(action: {
+                showLearnMore = true
+            }, label: {
+                Text(drug.description)
+                    .padding(.vertical, 8)
+            })
+            .foregroundColor(.primary)
             
             HStack {
                 Text("Drug class")
@@ -95,11 +94,12 @@ struct DrugView: View {
                         .padding(.bottom)
                 }
             }
+            
+            Button("Take \(drug.name)") {
+                showTakeDrugView = true
+            }
         }
-        .navigationBarTitle(Text(drug.name))
-        .navigationBarItems(trailing: Button("Take") {
-            showTakeDrugView = true
-        })
+        .navigationBarTitle(drug.name)
         .safariView(isPresented: $showLearnMore) {
             SafariView(url: URL(string: drug.learnMoreUrl)!, configuration: SafariView.Configuration(
                 entersReaderIfAvailable: true
