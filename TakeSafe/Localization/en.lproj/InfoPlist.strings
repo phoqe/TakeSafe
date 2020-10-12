@@ -7,3 +7,4 @@
 */
 
 NSHealthShareUsageDescription = "Your health data improves our predictions.";
+NSHealthUpdateUsageDescription = "Your health data improves our predictions.";
