@@ -104,9 +104,6 @@ struct TakeDrugView: View {
                 .padding(.vertical)
             }
             .navigationBarTitle(Text("Take \(drug.name)"), displayMode: .inline)
-//            .navigationBarItems(leading: Button("Cancel") {
-//                self.presented = false
-//            })
             .navigationBarItems(leading: Button("Cancel") {
                 presented = false
             }, trailing: Button("Take") {
