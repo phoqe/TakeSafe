@@ -15,6 +15,7 @@ struct SettingsView: View {
     @State var wakeUpTime = Date()
     
     let isAppleHealthConnected = UserDefaults.standard.bool(forKey: "isAppleHealthConnected")
+    let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
     
     var body: some View {
         NavigationView {
@@ -47,9 +48,20 @@ struct SettingsView: View {
                     }
                 }
                 
-                Section(header: Text("Sleep"), footer: Text("We use your sleep and wake up time to provide information on drugs that may disturb your sleep.")) {
+                Section(header: Text("Sleep"), footer: Text("We use your sleep and wake up time to present information when drugs may disturb your sleep.")) {
                     DatePicker("Go to sleep", selection: $bedtime, displayedComponents: .hourAndMinute)
                     DatePicker("Wake up", selection: $wakeUpTime, displayedComponents: .hourAndMinute)
+                }
+                
+                Section(header: Text("About")) {
+                    HStack {
+                        Text("Version")
+                        
+                        Spacer()
+                        
+                        Text(version)
+                            .foregroundColor(.secondary)
+                    }
                 }
             }
             .navigationBarTitle("Settings")
