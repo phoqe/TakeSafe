@@ -22,7 +22,7 @@ struct SettingsView: View {
             Form {
                 if HKHealthStore.isHealthDataAvailable() {
                     Section(header: Text("Apple Health"), footer: Text("We use Apple Health to improve pharmacological calculations.")) {
-                        NavigationLink(destination: AppleHealthSettingView()) {
+                        NavigationLink(destination: AppleHealthView()) {
                             Text("Apple Health")
                             
                             Spacer()
