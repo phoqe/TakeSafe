@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct AboutView: View {
+    @State var showBuild = false
+    
     let name = Bundle.main.infoDictionary!["CFBundleName"] as! String
     let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+    let build = Bundle.main.infoDictionary!["CFBundleVersion"] as! String
     
     var body: some View {
         Form {
@@ -25,8 +28,11 @@ struct AboutView: View {
                     
                     Spacer()
                     
-                    Text(version)
-                        .foregroundColor(.secondary)
+                    Button(showBuild ? "\(version) (\(build))" : version) {
+                        showBuild.toggle()
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .foregroundColor(.secondary)
                 }
             }
         }
