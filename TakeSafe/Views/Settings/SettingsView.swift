@@ -54,7 +54,7 @@ struct SettingsView: View {
                 }
                 
                 Section(header: Text("About")) {
-                    Link("Website", destination: URL(string: "https://takesafe.app")!)
+                    Link("Website", destination: URL(string: ProcessInfo.processInfo.environment["website"]!)!)
 
                     HStack {
                         Text("Version")
