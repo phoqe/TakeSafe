@@ -16,12 +16,6 @@ struct AboutView: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Links")) {
-                Link("Website", destination: URL(string: "https://takesafe.app")!)
-                Link("Terms and Conditions", destination: URL(string: "https://takesafe.app/terms")!)
-                Link("Privacy Policy", destination: URL(string: "https://takesafe.app/privacy")!)
-            }
-            
             Section(header: Text("Version")) {
                 HStack {
                     Text("Version")
@@ -34,6 +28,12 @@ struct AboutView: View {
                     .buttonStyle(PlainButtonStyle())
                     .foregroundColor(.secondary)
                 }
+            }
+            
+            Section(header: Text("Links")) {
+                Link("Website", destination: URL(string: "https://takesafe.app")!)
+                Link("Terms and Conditions", destination: URL(string: "https://takesafe.app/terms")!)
+                Link("Privacy Policy", destination: URL(string: "https://takesafe.app/privacy")!)
             }
         }
         .navigationBarTitle("About \(name)", displayMode: .inline)
