@@ -53,7 +53,7 @@ struct SettingsView: View {
                     DatePicker("Wake up", selection: $wakeUpTime, displayedComponents: .hourAndMinute)
                 }
                     
-                Section(footer: Text("Made with ❤️ by Phoqe")) {
+                Section(header: Text("About"), footer: Text("Made with ❤️ by Phoqe")) {
                     NavigationLink(destination: AboutView()) {
                         Text("About \(name)")
                     }
