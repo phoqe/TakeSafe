@@ -14,14 +14,14 @@ struct SettingsView: View {
     @State var goToSleepTime = UserDefaults.standard.data(forKey: "goToSleepTime") as! Date? ?? Date()
     @State var wakeUpTime = UserDefaults.standard.data(forKey: "wakeUpTime") as! Date? ?? Date()
     
+    let name = Bundle.main.infoDictionary!["CFBundleName"] as! String
     let isAppleHealthConnected = UserDefaults.standard.bool(forKey: "isAppleHealthConnected")
-    let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
     
     var body: some View {
         NavigationView {
             Form {
                 if HKHealthStore.isHealthDataAvailable() {
-                    Section(header: Text("Apple Health"), footer: Text("We use Apple Health to improve pharmacological calculations. The data includes your height and weight.")) {
+                    Section(header: Text("Apple Health"), footer: Text("We use Apple Health to improve pharmacological calculations.")) {
                         NavigationLink(destination: AppleHealthSettingView()) {
                             Text("Apple Health")
                             
@@ -52,18 +52,9 @@ struct SettingsView: View {
                     DatePicker("Go to sleep", selection: $goToSleepTime, displayedComponents: .hourAndMinute)
                     DatePicker("Wake up", selection: $wakeUpTime, displayedComponents: .hourAndMinute)
                 }
-                
-                Section(header: Text("About")) {
-                    Link("Website", destination: URL(string: ProcessInfo.processInfo.environment["website"]!)!)
-
-                    HStack {
-                        Text("Version")
-                        
-                        Spacer()
-                        
-                        Text(version)
-                            .foregroundColor(.secondary)
-                    }
+                    
+                NavigationLink(destination: AboutView()) {
+                    Text("About \(name)")
                 }
             }
             .navigationBarTitle("Settings")
