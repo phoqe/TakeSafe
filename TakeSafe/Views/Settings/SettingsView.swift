@@ -9,8 +9,6 @@ import SwiftUI
 import HealthKit
 
 struct SettingsView: View {
-    @State var height = UserDefaults.standard.string(forKey: "height") ?? ""
-    @State var weight = UserDefaults.standard.string(forKey: "weight") ?? ""
     @State var goToSleepTime = UserDefaults.standard.data(forKey: "goToSleepTime") as! Date? ?? Date()
     @State var wakeUpTime = UserDefaults.standard.data(forKey: "wakeUpTime") as! Date? ?? Date()
     
@@ -20,31 +18,15 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
-                if HKHealthStore.isHealthDataAvailable() {
-                    Section(header: Text("Apple Health"), footer: Text("We use Apple Health to improve pharmacological calculations.")) {
-                        NavigationLink(destination: AppleHealthView()) {
-                            Text("Apple Health")
-                            
-                            Spacer()
-                            
-                            Text(isAppleHealthConnected ? "Connected" : "Not Connected")
-                                .foregroundColor(.secondary)
-                                .fixedSize(horizontal: true, vertical: false)
-                        }
-                    }
-                } else {
-                    Section(header: Text("Body Measurements"), footer: Text("We use your body measurements to improve pharmacological calculations.")) {
-                        HStack {
-                            TextField("Height", text: $height)
-                                .keyboardType(.decimalPad)
-                            Text(UnitLength.centimeters.symbol)
-                        }
+                Section(header: Text("Apple Health"), footer: Text("We use Apple Health to improve pharmacological calculations.")) {
+                    NavigationLink(destination: AppleHealthView()) {
+                        Text("Apple Health")
                         
-                        HStack {
-                            TextField("Weight", text: $weight)
-                                .keyboardType(.decimalPad)
-                            Text(UnitMass.kilograms.symbol)
-                        }
+                        Spacer()
+                        
+                        Text(isAppleHealthConnected ? "Connected" : "Not Connected")
+                            .foregroundColor(.secondary)
+                            .fixedSize(horizontal: true, vertical: false)
                     }
                 }
                 
