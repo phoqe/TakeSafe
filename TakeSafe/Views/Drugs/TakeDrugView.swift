@@ -25,7 +25,7 @@ struct TakeDrugView: View {
     
     var body: some View {
         NavigationView {
-            List {
+            Form {
                 HStack {
                     Text("Median lethal dose")
                         .bold()
@@ -102,11 +102,13 @@ struct TakeDrugView: View {
                     .padding(.top)
                 }
                 .padding(.vertical)
+                
+                Button("Take \(dose) \(drug.massUnit.symbol)") {
+                    presented = false
+                }
             }
             .navigationBarTitle(Text("Take \(drug.name)"), displayMode: .inline)
             .navigationBarItems(leading: Button("Cancel") {
-                presented = false
-            }, trailing: Button("Take") {
                 presented = false
             })
         }
