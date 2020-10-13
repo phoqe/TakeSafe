@@ -22,6 +22,7 @@
 		9FA381E525062CB50053C3F4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381E425062CB50053C3F4 /* OnboardingView.swift */; };
 		9FA381E725062CC70053C3F4 /* IntroPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381E625062CC70053C3F4 /* IntroPage.swift */; };
 		9FA381ED25064E0B0053C3F4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381EC25064E0B0053C3F4 /* PageViewController.swift */; };
+		9FB630E92535A1D200397152 /* Swift-ISO8601-DurationParser in Frameworks */ = {isa = PBXBuildFile; productRef = 9FB630E82535A1D200397152 /* Swift-ISO8601-DurationParser */; };
 		9FC04666250655EF000B2AAC /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC04665250655EF000B2AAC /* PageControl.swift */; };
 		9FC0466F250664EF000B2AAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FC04671250664EF000B2AAC /* Localizable.strings */; };
 		9FC5B42D2508D06700DDF30A /* SetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5B42C2508D06700DDF30A /* SetupPageViewController.swift */; };
@@ -83,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB630E92535A1D200397152 /* Swift-ISO8601-DurationParser in Frameworks */,
 				9FFD215E2506CB34002F01B9 /* HealthKit.framework in Frameworks */,
 				9F9E6BDA252DF3050091ABAF /* BetterSafariView in Frameworks */,
 			);
@@ -244,6 +246,7 @@
 			name = TakeSafe;
 			packageProductDependencies = (
 				9F9E6BD9252DF3050091ABAF /* BetterSafariView */,
+				9FB630E82535A1D200397152 /* Swift-ISO8601-DurationParser */,
 			);
 			productName = TakeSafe;
 			productReference = 9FA381CE250629840053C3F4 /* TakeSafe.app */;
@@ -275,6 +278,7 @@
 			mainGroup = 9FA381C5250629840053C3F4;
 			packageReferences = (
 				9F9E6BD8252DF3050091ABAF /* XCRemoteSwiftPackageReference "BetterSafariView" */,
+				9FB630E72535A1D200397152 /* XCRemoteSwiftPackageReference "Swift-ISO8601-DurationParser" */,
 			);
 			productRefGroup = 9FA381CF250629840053C3F4 /* Products */;
 			projectDirPath = "";
@@ -558,6 +562,14 @@
 				minimumVersion = 2.2.2;
 			};
 		};
+		9FB630E72535A1D200397152 /* XCRemoteSwiftPackageReference "Swift-ISO8601-DurationParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/leonx98/Swift-ISO8601-DurationParser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -565,6 +577,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9F9E6BD8252DF3050091ABAF /* XCRemoteSwiftPackageReference "BetterSafariView" */;
 			productName = BetterSafariView;
+		};
+		9FB630E82535A1D200397152 /* Swift-ISO8601-DurationParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FB630E72535A1D200397152 /* XCRemoteSwiftPackageReference "Swift-ISO8601-DurationParser" */;
+			productName = "Swift-ISO8601-DurationParser";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
