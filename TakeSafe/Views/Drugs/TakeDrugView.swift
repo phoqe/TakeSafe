@@ -32,7 +32,7 @@ struct TakeDrugView: View {
                     
                     Spacer()
                     
-                    Text("\(Int(round(drug.ld50.value))) \(drug.ld50.unit.symbol)/\(UnitMass.kilograms.symbol)")
+                    Text("\(drug.ld50)")
                     
                     Button(action: {
                         showMedianLethalDoseAlert = true
@@ -52,7 +52,7 @@ struct TakeDrugView: View {
                     
                     Spacer()
                     
-                    Text("\(Int(round(drug.bioavailability * 100)))%")
+                    Text("\(drug.bioavailability)%")
                     
                     Button(action: {
                         showBioavailabilityAlert = true
@@ -71,7 +71,7 @@ struct TakeDrugView: View {
                         Text("Dose")
                             .bold()
                         
-                        Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: 50...400, step: drug.doseStep)
+                        Stepper("\(dose) \(drug.massUnit)", value: $dose, in: 50...400, step: drug.doseStep)
                     }
                     
                     HStack {
@@ -97,13 +97,13 @@ struct TakeDrugView: View {
                         
                         Spacer()
                         
-                        Text("\(Int(drug.bioavailability * Double(dose))) \(drug.massUnit.symbol)")
+                        Text("\(drug.bioavailability * dose / 100)")
                     }
                     .padding(.top)
                 }
                 .padding(.vertical)
                 
-                Button("Take \(dose) \(drug.massUnit.symbol)") {
+                Button("Take \(dose) \(drug.massUnit)") {
                     presented = false
                 }
             }

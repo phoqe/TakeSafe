@@ -10,41 +10,49 @@ import SwiftUI
 struct DrugsView: View {
     @State var loading = false
     @State var error = false
-    @State var drugs: [Drug]? = nil
+    @State var drugs: [Drug] = []
     
     func getDrugs() {
+        if !drugs.isEmpty {
+            return
+        }
+        
         loading = true
         error = false
-        drugs = nil
+        drugs = []
         
         guard let url = URL(string: "https://takesafe.app/api/drugs") else {
             loading = false
             error = true
-            drugs = nil
+            drugs = []
             
             return
         }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
-            loading = false
-            
             if error != nil {
+                loading = false
                 self.error = true
                 
                 return
             }
             
             guard let data = data else {
-                self.drugs = nil
+                loading = false
+                self.drugs = []
                 
                 return
             }
             
-//            guard let drugs = try? JSONDecoder().decode([Drug].self, from: data) else {
-//                self.error = true
-//            }
-//
-//            self.drugs = drugs
+            guard let drugs = try? JSONDecoder().decode([Drug].self, from: data) else {
+                loading = false
+                self.error = true
+                
+                return
+            }
+
+            loading = false
+            self.drugs = drugs
         }.resume()
     }
     
@@ -55,11 +63,13 @@ struct DrugsView: View {
                     ProgressView()
                 } else if error {
                     Text("Error")
-                } else if drugs == nil {
+                } else if drugs.isEmpty {
                     Text("Empty")
                 } else {
-                    List {
-                        
+                    List(drugs) { drug in
+                        NavigationLink(destination: DrugView(drug: drug)) {
+                            Text(drug.name)
+                        }
                     }
                 }
             }

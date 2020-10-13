@@ -31,7 +31,7 @@ struct DrugView: View {
                 Text("Drug class")
                     .bold()
                 Spacer()
-                Text(drug.drugClass.rawValue)
+                Text(drug.drugClass)
                 Button(action: {
                     showDrugClassAlert = true
                 }, label: {
@@ -48,7 +48,7 @@ struct DrugView: View {
                 Text("Dependence")
                     .bold()
                 Spacer()
-                Text(drug.dependence.rawValue)
+                Text(drug.dependence)
                 Button(action: {
                     showDependenceAlert = true
                 }, label: {
@@ -65,7 +65,7 @@ struct DrugView: View {
                 Text("Addiction")
                     .bold()
                 Spacer()
-                Text(drug.addiction.rawValue)
+                Text(drug.addiction)
                 Button(action: {
                     showAddictionAlert = true
                 }, label: {
@@ -89,9 +89,6 @@ struct DrugView: View {
                 VStack(alignment: .leading) {
                     Text("Timeline")
                         .bold()
-                    
-                    Timeline(onset: drug.onset, duration: drug.duration)
-                        .padding(.bottom)
                 }
             }
             

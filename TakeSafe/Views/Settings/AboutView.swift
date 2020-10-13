@@ -32,7 +32,7 @@ struct AboutView: View {
             
             Section(header: Text("Links")) {
                 Link("Website", destination: URL(string: "https://takesafe.app")!)
-                Link("Terms and Conditions", destination: URL(string: "https://takesafe.app/terms")!)
+                Link("Terms of Use", destination: URL(string: "https://takesafe.app/terms")!)
                 Link("Privacy Policy", destination: URL(string: "https://takesafe.app/privacy")!)
             }
         }

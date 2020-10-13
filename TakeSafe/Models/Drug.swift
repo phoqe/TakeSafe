@@ -7,25 +7,25 @@
 
 import Foundation
 
-struct Drug {
+struct Drug: Codable, Identifiable {
     let id: String
     let name: String
     let aliases: [String]?
     let description: String
     let learnMoreUrl: String
     
-    let dependence: Dependence
-    let addiction: Addiction
+    let dependence: String
+    let addiction: String
     
-    let bioavailability: Double
-    let drugClass: DrugClass
+    let bioavailability: Int
+    let drugClass: String
     
-    let onset: DateComponents
-    let duration: DateComponents
+    let onset: Int
+    let duration: Int
     
-    let massUnit: UnitMass
+    let massUnit: String
     
-    let ld50: Measurement<UnitMass>
+    let ld50: Int
     let defaultDose: Int
     let doseStep: Int
     let commonDoses: [Int]
