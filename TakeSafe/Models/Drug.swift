@@ -14,17 +14,15 @@ struct Drug: Codable, Identifiable {
     let description: String
     let learnMoreUrl: URL
     
-    let dependence: String
-    let addiction: String
-    
-    let bioavailability: Int
-    let drugClass: String
-    
+    let drugClass: DrugClass
+    let dependence: Dependence
+    let addiction: Addiction
+        
     let onset: Int
     let duration: Int
     
     let massUnit: String
-    
+    let bioavailability: Int
     let ld50: Int
     let defaultDose: Int
     let doseStep: Int

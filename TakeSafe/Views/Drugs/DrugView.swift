@@ -31,7 +31,7 @@ struct DrugView: View {
                 Text("Drug class")
                     .bold()
                 Spacer()
-                Text(drug.drugClass)
+                Text(drug.drugClass.rawValue)
                 Button(action: {
                     showDrugClassAlert = true
                 }, label: {
@@ -48,7 +48,7 @@ struct DrugView: View {
                 Text("Dependence")
                     .bold()
                 Spacer()
-                Text(drug.dependence)
+                Text(drug.dependence.rawValue)
                 Button(action: {
                     showDependenceAlert = true
                 }, label: {
@@ -65,7 +65,7 @@ struct DrugView: View {
                 Text("Addiction")
                     .bold()
                 Spacer()
-                Text(drug.addiction)
+                Text(drug.addiction.rawValue)
                 Button(action: {
                     showAddictionAlert = true
                 }, label: {
