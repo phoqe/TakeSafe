@@ -69,7 +69,7 @@ struct DrugsView: View {
                     Form {
                         List(drugs) { drug in
                             NavigationLink(destination: DrugView(drug: drug)) {
-                                Text(drug.name)
+                                DrugListItem(drug: drug)
                             }
                         }
                     }
