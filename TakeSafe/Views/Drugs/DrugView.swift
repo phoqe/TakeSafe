@@ -19,81 +19,110 @@ struct DrugView: View {
     
     var body: some View {
         Form {
-            Button(action: {
-                showLearnMore = true
-            }, label: {
-                Text(drug.description)
-                    .padding(.vertical, 8)
-            })
-            .foregroundColor(.primary)
-            
-            HStack {
-                Text("Drug class")
-                    .bold()
-                Spacer()
-                Text(drug.drugClass.rawValue)
+            Section() {
                 Button(action: {
-                    showDrugClassAlert = true
+                    showLearnMore = true
                 }, label: {
-                    Image(systemName: "info.circle")
+                    HStack {
+                        Text(drug.description)
+                            .padding(.trailing)
+                        Image(systemName: "chevron.right")
+                            .foregroundColor(.secondary)
+                    }
                 })
-                .buttonStyle(PlainButtonStyle())
-                .foregroundColor(.accentColor)
-                .alert(isPresented: $showDrugClassAlert) {
-                    Alert(title: Text("Stimulant"), message: Text("A substance that raises levels of physiological or nervous activity in the body."), dismissButton: .default(Text("OK")))
-                }
-            }
-            
-            HStack {
-                Text("Dependence")
-                    .bold()
-                Spacer()
-                Text(drug.dependence.rawValue)
-                Button(action: {
-                    showDependenceAlert = true
-                }, label: {
-                    Image(systemName: "info.circle")
-                })
-                .buttonStyle(PlainButtonStyle())
-                .foregroundColor(.accentColor)
-                .alert(isPresented: $showDependenceAlert) {
-                    Alert(title: Text("Dependence"), message: Text("Dependence is an adaptive state that develops from repeated drug administration and results in withdrawal upon cessation of drug use."), dismissButton: .default(Text("OK")))
-                }
-            }
-            
-            HStack {
-                Text("Addiction")
-                    .bold()
-                Spacer()
-                Text(drug.addiction.rawValue)
-                Button(action: {
-                    showAddictionAlert = true
-                }, label: {
-                    Image(systemName: "info.circle")
-                })
-                .buttonStyle(PlainButtonStyle())
-                .foregroundColor(.accentColor)
-                .alert(isPresented: $showAddictionAlert) {
-                    Alert(title: Text("Addiction"), message: Text("Addiction is a brain disorder characterized by compulsive engagement in rewarding stimuli despite adverse consequences."), dismissButton: .default(Text("OK")))
-                }
-            }
-            
-            HStack {
-                Text("Legality")
-                    .bold()
+                .padding(.vertical)
+                .foregroundColor(.primary)
                 
-                Spacer()
-            }
-            
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("Timeline")
+                HStack {
+                    Text("Drug class")
                         .bold()
+                    
+                    Spacer()
+                    
+                    Text(drug.drugClass.rawValue)
+                    
+                    Button(action: {
+                        showDrugClassAlert = true
+                    }, label: {
+                        Image(systemName: "info.circle")
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                    .foregroundColor(.accentColor)
+                    .alert(isPresented: $showDrugClassAlert) {
+                        Alert(title: Text("Stimulant"), message: Text("A substance that raises levels of physiological or nervous activity in the body."), dismissButton: .default(Text("OK")))
+                    }
+                }
+                
+                HStack {
+                    Text("Dependence")
+                        .bold()
+                    
+                    Spacer()
+                    
+                    Text(drug.dependence.rawValue)
+                    
+                    Button(action: {
+                        showDependenceAlert = true
+                    }, label: {
+                        Image(systemName: "info.circle")
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                    .foregroundColor(.accentColor)
+                    .alert(isPresented: $showDependenceAlert) {
+                        Alert(title: Text("Dependence"), message: Text("Dependence is an adaptive state that develops from repeated drug administration and results in withdrawal upon cessation of drug use."), dismissButton: .default(Text("OK")))
+                    }
+                }
+                
+                HStack {
+                    Text("Addiction")
+                        .bold()
+                    
+                    Spacer()
+                    
+                    Text(drug.addiction.rawValue)
+                    
+                    Button(action: {
+                        showAddictionAlert = true
+                    }, label: {
+                        Image(systemName: "info.circle")
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                    .foregroundColor(.accentColor)
+                    .alert(isPresented: $showAddictionAlert) {
+                        Alert(title: Text("Addiction"), message: Text("Addiction is a brain disorder characterized by compulsive engagement in rewarding stimuli despite adverse consequences."), dismissButton: .default(Text("OK")))
+                    }
+                }
+                
+                HStack {
+                    Text("Legality")
+                        .bold()
+                    
+                    Spacer()
+                }
+                
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Timeline")
+                            .bold()
+                        
+                        HStack {
+                            Text("0")
+                            
+                            ProgressView(value: Double(drug.onset), total: Double(drug.onset + drug.duration))
+                                .padding(.horizontal, 5)
+                            
+                            Text("\(drug.duration)")
+                        }
+                        .padding(.bottom)
+                        .padding(.horizontal, 5)
+                    }
                 }
             }
             
-            Button("Take \(drug.name)") {
-                showTakeDrugView = true
+            Section() {
+                Button("Take \(drug.name)") {
+                    showTakeDrugView = true
+                }
             }
         }
         .navigationBarTitle(drug.name)

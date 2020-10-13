@@ -24,7 +24,7 @@ struct EmptyState: View {
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.primary)
-                    .padding(.bottom, -2)
+                    .padding(.bottom, -2.5)
                 
                 Text(description)
                     .font(.body)
