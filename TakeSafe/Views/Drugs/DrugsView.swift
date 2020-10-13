@@ -62,18 +62,20 @@ struct DrugsView: View {
                 if loading {
                     ProgressView()
                 } else if error {
-                    Text("Error")
+                    EmptyState(image: "Server Down", title: "Couldn’t fetch drug list.", description: "Try again later. It may be fixed by then.")
                 } else if drugs.isEmpty {
-                    Text("Empty")
+                    EmptyState(image: "Empty", title: "No drugs in store.", description: "Looks like there are no drugs available.")
                 } else {
-                    List(drugs) { drug in
-                        NavigationLink(destination: DrugView(drug: drug)) {
-                            Text(drug.name)
+                    Form {
+                        List(drugs) { drug in
+                            NavigationLink(destination: DrugView(drug: drug)) {
+                                Text(drug.name)
+                            }
                         }
                     }
                 }
             }
-            .navigationBarTitle("Drugs")
+            .navigationBarTitle("Drugs", displayMode: .inline)
         }
         .onAppear(perform: getDrugs)
     }
