@@ -16,18 +16,16 @@ struct AboutView: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Version")) {
-                HStack {
-                    Text("Version")
-                    
-                    Spacer()
-                    
-                    Button(showBuild ? "\(version) (\(build))" : version) {
-                        showBuild.toggle()
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .foregroundColor(.secondary)
+            HStack {
+                Text("Version")
+                
+                Spacer()
+                
+                Button(showBuild ? "\(version) (\(build))" : version) {
+                    showBuild.toggle()
                 }
+                .buttonStyle(PlainButtonStyle())
+                .foregroundColor(.secondary)
             }
             
             Section(header: Text("Links")) {

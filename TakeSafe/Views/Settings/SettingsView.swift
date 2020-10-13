@@ -18,27 +18,23 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Apple Health"), footer: Text("We use Apple Health to improve pharmacological calculations.")) {
-                    NavigationLink(destination: AppleHealthView()) {
-                        Text("Apple Health")
-                        
-                        Spacer()
-                        
-                        Text(isAppleHealthConnected ? "Connected" : "Not Connected")
-                            .foregroundColor(.secondary)
-                            .fixedSize(horizontal: true, vertical: false)
-                    }
+                NavigationLink(destination: AppleHealthView()) {
+                    Text("Apple Health")
+                    
+                    Spacer()
+                    
+                    Text(isAppleHealthConnected ? "Connected" : "Not Connected")
+                        .foregroundColor(.secondary)
+                        .fixedSize(horizontal: true, vertical: false)
                 }
                 
-                Section(header: Text("Sleep"), footer: Text("We use the time you go to sleep and wake up to provide recommendations when drugs may disturb your sleep.")) {
+                Section(header: Text("Sleep")) {
                     DatePicker("Go to sleep", selection: $goToSleepTime, displayedComponents: .hourAndMinute)
                     DatePicker("Wake up", selection: $wakeUpTime, displayedComponents: .hourAndMinute)
                 }
                     
-                Section(header: Text("About"), footer: Text("Made with ❤️ by Phoqe")) {
-                    NavigationLink(destination: AboutView()) {
-                        Text("About \(name)")
-                    }
+                NavigationLink(destination: AboutView()) {
+                    Text("About \(name)")
                 }
             }
             .navigationBarTitle("Settings", displayMode: .inline)
