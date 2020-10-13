@@ -26,88 +26,92 @@ struct TakeDrugView: View {
     var body: some View {
         NavigationView {
             Form {
-                HStack {
-                    Text("Median lethal dose")
-                        .bold()
-                    
-                    Spacer()
-                    
-                    Text("\(drug.ld50)")
-                    
-                    Button(action: {
-                        showMedianLethalDoseAlert = true
-                    }, label: {
-                        Image(systemName: "info.circle")
-                    })
-                    .buttonStyle(PlainButtonStyle())
-                    .foregroundColor(.accentColor)
-                    .alert(isPresented: $showMedianLethalDoseAlert) {
-                        Alert(title: Text("Median lethal dose"), message: Text("The median lethal dose for a substance is the dose required to kill half the members of a tested population after a specified test duration."), dismissButton: .default(Text("OK")))
-                    }
-                }
-                
-                HStack {
-                    Text("Bioavailability")
-                        .bold()
-                    
-                    Spacer()
-                    
-                    Text("\(drug.bioavailability)%")
-                    
-                    Button(action: {
-                        showBioavailabilityAlert = true
-                    }, label: {
-                        Image(systemName: "info.circle")
-                    })
-                    .buttonStyle(PlainButtonStyle())
-                    .foregroundColor(.accentColor)
-                    .alert(isPresented: $showBioavailabilityAlert) {
-                        Alert(title: Text("Bioavailability"), message: Text("The proportion of a drug which enters the circulation when introduced into the body and so is able to have an active effect."), dismissButton: .default(Text("OK")))
-                    }
-                }
-                
-                VStack(alignment: .leading) {
+                Section() {
                     HStack {
-                        Text("Dose")
-                            .bold()
-                        
-                        Stepper("\(dose) \(drug.massUnit)", value: $dose, in: 50...400, step: drug.doseStep)
-                    }
-                    
-                    HStack {
-                        Text("Common doses")
+                        Text("Median lethal dose")
                             .bold()
                         
                         Spacer()
                         
-                        ForEach(drug.commonDoses, id: \.self) { dose in
-                            Button("\(dose)") {
-                                self.dose = dose
-                            }
-                            .buttonStyle(PlainButtonStyle())
-                            .foregroundColor(.accentColor)
-                            .disabled(self.dose == dose)
+                        Text("\(drug.ld50)")
+                        
+                        Button(action: {
+                            showMedianLethalDoseAlert = true
+                        }, label: {
+                            Image(systemName: "info.circle")
+                        })
+                        .buttonStyle(PlainButtonStyle())
+                        .foregroundColor(.accentColor)
+                        .alert(isPresented: $showMedianLethalDoseAlert) {
+                            Alert(title: Text("Median lethal dose"), message: Text("The median lethal dose for a substance is the dose required to kill half the members of a tested population after a specified test duration."), dismissButton: .default(Text("OK")))
                         }
                     }
-                    .padding(.top)
                     
                     HStack {
-                        Text("In circulation")
+                        Text("Bioavailability")
                             .bold()
                         
                         Spacer()
                         
-                        Text("\(drug.bioavailability * dose / 100)")
+                        Text("\(drug.bioavailability)%")
+                        
+                        Button(action: {
+                            showBioavailabilityAlert = true
+                        }, label: {
+                            Image(systemName: "info.circle")
+                        })
+                        .buttonStyle(PlainButtonStyle())
+                        .foregroundColor(.accentColor)
+                        .alert(isPresented: $showBioavailabilityAlert) {
+                            Alert(title: Text("Bioavailability"), message: Text("The proportion of a drug which enters the circulation when introduced into the body and so is able to have an active effect."), dismissButton: .default(Text("OK")))
+                        }
                     }
-                    .padding(.top)
+                    
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("Dose")
+                                .bold()
+                            
+                            Stepper("\(dose) \(drug.massUnit)", value: $dose, in: 50...400, step: drug.doseStep)
+                        }
+                        
+                        HStack {
+                            Text("Common doses")
+                                .bold()
+                            
+                            Spacer()
+                            
+                            ForEach(drug.commonDoses, id: \.self) { dose in
+                                Button("\(dose)") {
+                                    self.dose = dose
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                                .foregroundColor(.accentColor)
+                                .disabled(self.dose == dose)
+                            }
+                        }
+                        .padding(.top)
+                        
+                        HStack {
+                            Text("In circulation")
+                                .bold()
+                            
+                            Spacer()
+                            
+                            Text("\(drug.bioavailability * dose / 100)")
+                        }
+                        .padding(.top)
+                    }
+                    .padding(.vertical)
                 }
-                .padding(.vertical)
-                
-                Button("Take \(dose) \(drug.massUnit)") {
-                    presented = false
+
+                Section() {
+                    Button("Take \(dose) \(drug.massUnit)") {
+                        presented = false
+                    }
                 }
             }
-            .navigationBarTitle(Text("Take \(drug.name)"), displayMode: .inline)
+            .navigationBarTitle("Take \(drug.name)", displayMode: .inline)
             .navigationBarItems(leading: Button("Cancel") {
                 presented = false
             })
