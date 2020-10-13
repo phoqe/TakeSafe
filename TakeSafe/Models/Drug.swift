@@ -12,7 +12,7 @@ struct Drug: Codable, Identifiable {
     let name: String
     let aliases: [String]?
     let description: String
-    let learnMoreUrl: String
+    let learnMoreUrl: URL
     
     let dependence: String
     let addiction: String

@@ -98,7 +98,7 @@ struct DrugView: View {
         }
         .navigationBarTitle(drug.name)
         .safariView(isPresented: $showLearnMore) {
-            SafariView(url: URL(string: drug.learnMoreUrl)!, configuration: SafariView.Configuration(
+            SafariView(url: drug.learnMoreUrl, configuration: SafariView.Configuration(
                 entersReaderIfAvailable: true
             ))
         }
