@@ -63,7 +63,7 @@ struct DrugsView: View {
                     ProgressView()
                 } else if error {
                     EmptyState(title: "Couldn’t fetch drug list.", description: "Something went wrong. Try again later.")
-                } else if !drugs.isEmpty {
+                } else if drugs.isEmpty {
                     EmptyState(title: "No drugs in store.", description: "Looks like there are no drugs available.")
                 } else {
                     Form {
