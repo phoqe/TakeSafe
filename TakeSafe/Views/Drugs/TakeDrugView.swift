@@ -33,7 +33,7 @@ struct TakeDrugView: View {
                         
                         Spacer()
                         
-                        Text("\(drug.ld50)")
+                        Text("\(drug.ld50.value)")
                         
                         Button(action: {
                             showMedianLethalDoseAlert = true

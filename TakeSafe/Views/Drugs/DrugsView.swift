@@ -71,7 +71,7 @@ struct DrugsView: View {
                     }
                 }
             }
-            .navigationBarTitle("Drugs", displayMode: .inline)
+            .navigationBarTitle("Drugs")
         }
         .onAppear(perform: getDrugs)
     }

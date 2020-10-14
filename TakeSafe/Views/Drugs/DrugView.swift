@@ -104,7 +104,7 @@ struct DrugView: View {
                     Text("Timeline")
                         .bold()
                     
-                    Timeline(onset: Double(drug.onset), duration: Double(drug.duration))
+                    Timeline(onset: Double(drug.onset.hour!), duration: Double(drug.duration.hour!))
                 }
                 .padding(.top, 5)
                 .padding(.bottom)
