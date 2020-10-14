@@ -100,23 +100,14 @@ struct DrugView: View {
                     Spacer()
                 }
                 
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text("Timeline")
-                            .bold()
-                        
-                        HStack {
-                            Text("0")
-                            
-                            ProgressView(value: Double(drug.onset), total: Double(drug.onset + drug.duration))
-                                .padding(.horizontal, 5)
-                            
-                            Text("\(drug.duration)")
-                        }
-                        .padding(.bottom)
-                        .padding(.horizontal, 5)
-                    }
+                VStack(alignment: .leading) {
+                    Text("Timeline")
+                        .bold()
+                    
+                    Timeline(onset: Double(drug.onset), duration: Double(drug.duration))
                 }
+                .padding(.top, 5)
+                .padding(.bottom)
             }
             
             Section() {
