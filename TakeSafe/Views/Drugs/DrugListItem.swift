@@ -13,6 +13,7 @@ struct DrugListItem: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(drug.name)
+                .padding(.bottom, -2.5)
             Text(drug.drugClass.rawValue)
                 .foregroundColor(.secondary)
         }
