@@ -9,6 +9,8 @@ import Foundation
 
 enum Addiction: String, Codable {
     case low = "Low"
+    case moderate = "Moderate"
+    case high = "High"
     case unknown = "Unknown"
     
     init(from decoder: Decoder) throws {
@@ -18,6 +20,10 @@ enum Addiction: String, Codable {
         switch addiction {
         case "low":
             self = .low
+        case "moderate":
+            self = .moderate
+        case "high":
+            self = .high
         default:
             self = .unknown
         }

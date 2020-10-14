@@ -72,7 +72,7 @@ struct TakeDrugView: View {
                             Text("Dose")
                                 .bold()
                             
-                            Stepper("\(dose) \(drug.massUnit)", value: $dose, in: 50...400, step: drug.doseStep)
+                            Stepper("\(dose) \(drug.massUnit)", value: $dose, in: 0...1000, step: drug.doseStep)
                         }
                         
                         HStack {

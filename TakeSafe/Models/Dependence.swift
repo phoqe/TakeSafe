@@ -9,6 +9,8 @@ import Foundation
 
 enum Dependence: String, Codable {
     case low = "Low"
+    case moderate = "Moderate"
+    case high = "High"
     case unknown = "Unknown"
     
     init(from decoder: Decoder) throws {
@@ -18,6 +20,10 @@ enum Dependence: String, Codable {
         switch dependence {
             case "low":
                 self = .low
+            case "moderate":
+                self = .moderate
+            case "high":
+                self = .high
             default:
                 self = .unknown
         }
