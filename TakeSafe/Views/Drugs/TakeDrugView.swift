@@ -33,7 +33,7 @@ struct TakeDrugView: View {
                         
                         Spacer()
                         
-                        Text("\(drug.ld50.value)")
+                        Text("\(drug.ld50.value) \(drug.ld50.unit.symbol)/\(UnitMass.kilograms.symbol)")
                         
                         Button(action: {
                             showMedianLethalDoseAlert = true
@@ -72,7 +72,7 @@ struct TakeDrugView: View {
                             Text("Dose")
                                 .bold()
                             
-                            Stepper("\(dose) \(drug.massUnit)", value: $dose, in: 0...1000, step: drug.doseStep)
+                            Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: 0...1000, step: drug.doseStep)
                         }
                         
                         HStack {
@@ -106,7 +106,7 @@ struct TakeDrugView: View {
                 }
 
                 Section() {
-                    Button("Take \(dose) \(drug.massUnit)") {
+                    Button("Take \(dose) \(drug.massUnit.symbol)") {
                         presented = false
                     }
                 }

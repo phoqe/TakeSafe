@@ -8,7 +8,7 @@
 import Foundation
 import Swift_ISO8601_DurationParser
 
-struct Drug: Codable, Identifiable {
+struct Drug: Decodable, Identifiable {
     let id: String
     let name: String
     let aliases: [String]?
@@ -22,7 +22,7 @@ struct Drug: Codable, Identifiable {
     let onset: DateComponents
     let duration: DateComponents
     
-    let massUnit: String
+    let massUnit: UnitMass
     let bioavailability: Int
     let ld50: LD50
     let defaultDose: Int
@@ -67,9 +67,9 @@ struct Drug: Codable, Identifiable {
         onset = try DateComponents.durationFrom8601String(container.decode(String.self, forKey: .onset))!
         duration = try DateComponents.durationFrom8601String(container.decode(String.self, forKey: .duration))!
         
-        massUnit = try container.decode(String.self, forKey: .massUnit)
+        massUnit = try container.decode(String.self, forKey: .massUnit).unitMass()!
         bioavailability = try container.decode(Int.self, forKey: .bioavailability)
-        ld50 = try container.nestedContainer(keyedBy: LD50.CodingKeys.self, forKey: .ld50)
+        ld50 = try container.decode(LD50.self, forKey: .ld50)
         defaultDose = try container.decode(Int.self, forKey: .defaultDose)
         doseStep = try container.decode(Int.self, forKey: .doseStep)
         commonDoses = try container.decode([Int].self, forKey: .commonDoses)
