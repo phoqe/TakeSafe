@@ -9,17 +9,16 @@ import Foundation
 
 enum DrugClass: String, Codable {
     case stimulant = "Stimulant"
-    case unknown = "Unknown"
     
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let drugClass = try container.decode(String.self)
         
         switch drugClass {
-        case "stimulant":
-            self = .stimulant
-        default:
-            self = .unknown
+            case "stimulant":
+                self = .stimulant
+            default:
+                fatalError()
         }
     }
 }

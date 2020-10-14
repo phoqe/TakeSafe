@@ -18,14 +18,14 @@ enum Addiction: String, Codable {
         let addiction = try container.decode(String.self)
         
         switch addiction {
-        case "low":
-            self = .low
-        case "moderate":
-            self = .moderate
-        case "high":
-            self = .high
-        default:
-            self = .unknown
+            case "low":
+                self = .low
+            case "moderate":
+                self = .moderate
+            case "high":
+                self = .high
+            default:
+                fatalError()
         }
     }
 }

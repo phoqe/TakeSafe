@@ -25,7 +25,7 @@ enum Dependence: String, Codable {
             case "high":
                 self = .high
             default:
-                self = .unknown
+                fatalError()
         }
     }
 }
