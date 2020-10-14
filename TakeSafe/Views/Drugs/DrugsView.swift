@@ -50,7 +50,7 @@ struct DrugsView: View {
                 
                 return
             }
-
+            
             loading = false
             self.drugs = drugs
         }.resume()
@@ -67,11 +67,7 @@ struct DrugsView: View {
                     EmptyState(image: "Empty", title: "No drugs in store.", description: "Looks like there are no drugs available.")
                 } else {
                     Form {
-                        List(drugs) { drug in
-                            NavigationLink(destination: DrugView(drug: drug)) {
-                                DrugListItem(drug: drug)
-                            }
-                        }
+                        DrugList(drugs: drugs)
                     }
                 }
             }
