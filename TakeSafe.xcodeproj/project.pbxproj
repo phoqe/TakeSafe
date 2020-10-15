@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F5C67BC2538CE0E0025FE15 /* UnitMassExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C67BB2538CE0E0025FE15 /* UnitMassExtension.swift */; };
 		9F6A0B282531006600872936 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A0B272531006600872936 /* SettingsView.swift */; };
 		9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84D9AE2507809D006C1B77 /* SetupPageView.swift */; };
 		9F84D9B625079153006C1B77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F84D9B825079153006C1B77 /* InfoPlist.strings */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F5C67BB2538CE0E0025FE15 /* UnitMassExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitMassExtension.swift; sourceTree = "<group>"; };
 		9F6A0B272531006600872936 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9F84D9AE2507809D006C1B77 /* SetupPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageView.swift; sourceTree = "<group>"; };
 		9F84D9B725079153006C1B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				9FC6330A2537954200DA145B /* StringExtension.swift */,
 				9FB75787253845CB002EBB0E /* DateComponentsExtension.swift */,
+				9F5C67BB2538CE0E0025FE15 /* UnitMassExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				9FB630F02535E86600397152 /* DrugListItem.swift in Sources */,
 				9FB630EC2535A87900397152 /* EmptyState.swift in Sources */,
 				9FC76C5A2531F47800603314 /* ProfileView.swift in Sources */,
+				9F5C67BC2538CE0E0025FE15 /* UnitMassExtension.swift in Sources */,
 				9FA381D2250629840053C3F4 /* TakeSafeApp.swift in Sources */,
 				9FB75788253845CB002EBB0E /* DateComponentsExtension.swift in Sources */,
 			);

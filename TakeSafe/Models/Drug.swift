@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Drug: Decodable, Identifiable {
+struct Drug: Codable, Identifiable {
     let id: String
     let name: String
     let aliases: [String]?
@@ -72,5 +72,29 @@ struct Drug: Decodable, Identifiable {
         defaultDose = try container.decode(Int.self, forKey: .defaultDose)
         doseStep = try container.decode(Int.self, forKey: .doseStep)
         commonDoses = try container.decode([Int].self, forKey: .commonDoses)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        
+        try container.encode(id, forKey: .id)
+        try container.encode(name, forKey: .name)
+        try container.encode(aliases, forKey: .aliases)
+        try container.encode(description, forKey: .description)
+        try container.encode(learnMoreUrl, forKey: .learnMoreUrl)
+        
+        try container.encode(drugClass, forKey: .drugClass)
+        try container.encode(dependence, forKey: .dependence)
+        try container.encode(addiction, forKey: .addiction)
+        
+        try container.encode(onset, forKey: .onset)
+        try container.encode(duration, forKey: .duration)
+        
+        try container.encode(massUnit.string(), forKey: .massUnit)
+        try container.encode(bioavailability, forKey: .bioavailability)
+        try container.encode(ld50, forKey: .ld50)
+        try container.encode(defaultDose, forKey: .defaultDose)
+        try container.encode(doseStep, forKey: .doseStep)
+        try container.encode(commonDoses, forKey: .commonDoses)
     }
 }

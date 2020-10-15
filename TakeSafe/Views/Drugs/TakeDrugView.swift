@@ -23,6 +23,12 @@ struct TakeDrugView: View {
         _dose = State(initialValue: drug.defaultDose)
     }
     
+    func takeDrug() {
+        if let drug = try? JSONEncoder().encode(drug) {
+            
+        }
+    }
+    
     var body: some View {
         NavigationView {
             Form {
@@ -72,7 +78,7 @@ struct TakeDrugView: View {
                             Text("Dose")
                                 .bold()
                             
-                            Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: 0...1000, step: drug.doseStep)
+                            Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: drug.doseStep...1000, step: drug.doseStep)
                         }
                         
                         HStack {
