@@ -52,6 +52,7 @@ struct DrugView: View {
                         Alert(title: Text("Stimulant"), message: Text("A substance that raises levels of physiological or nervous activity in the body."), dismissButton: .default(Text("OK")))
                     }
                 }
+                .padding(.vertical, 7.5)
                 
                 HStack {
                     Text("Dependence")
@@ -72,6 +73,7 @@ struct DrugView: View {
                         Alert(title: Text("Dependence"), message: Text("Dependence is an adaptive state that develops from repeated drug administration and results in withdrawal upon cessation of drug use."), dismissButton: .default(Text("OK")))
                     }
                 }
+                .padding(.vertical, 7.5)
                 
                 HStack {
                     Text("Addiction")
@@ -92,22 +94,10 @@ struct DrugView: View {
                         Alert(title: Text("Addiction"), message: Text("Addiction is a brain disorder characterized by compulsive engagement in rewarding stimuli despite adverse consequences."), dismissButton: .default(Text("OK")))
                     }
                 }
+                .padding(.vertical, 7.5)
                 
-                HStack {
-                    Text("Legality")
-                        .bold()
-                    
-                    Spacer()
-                }
-                
-                VStack(alignment: .leading) {
-                    Text("Timeline")
-                        .bold()
-                    
-                    Timeline(onset: Double(drug.onset.hour!), duration: Double(drug.duration.hour!))
-                }
-                .padding(.top, 5)
-                .padding(.bottom)
+                Timeline(onset: Double(drug.onset.hour!), duration: Double(drug.duration.hour!))
+                    .padding(.vertical)
             }
             
             Section() {
