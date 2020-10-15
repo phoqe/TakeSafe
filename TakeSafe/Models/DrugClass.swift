@@ -14,7 +14,7 @@ enum DrugClass: String, Codable {
         let container = try decoder.singleValueContainer()
         let drugClass = try container.decode(String.self)
         
-        switch drugClass {
+        switch drugClass.lowercased() {
             case "stimulant":
                 self = .stimulant
             default:

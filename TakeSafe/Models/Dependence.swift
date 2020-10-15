@@ -17,7 +17,7 @@ enum Dependence: String, Codable {
         let container = try decoder.singleValueContainer()
         let dependence = try container.decode(String.self)
         
-        switch dependence {
+        switch dependence.lowercased() {
             case "low":
                 self = .low
             case "moderate":

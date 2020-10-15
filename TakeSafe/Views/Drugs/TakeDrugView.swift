@@ -24,9 +24,36 @@ struct TakeDrugView: View {
     }
     
     func takeDrug() {
-        if let drug = try? JSONEncoder().encode(drug) {
+        if let data = UserDefaults.standard.data(forKey: "activeDrugs") {
             
+            // There are already active drugs, let’s add another one, why not?
+            
+            let decoder = JSONDecoder()
+            
+            if var activeDrugs = try? decoder.decode([Drug].self, from: data) {
+                activeDrugs.append(drug)
+                
+                let encoder = JSONEncoder()
+                
+                if let data = try? encoder.encode(activeDrugs) {
+                    UserDefaults.standard.set(data, forKey: "activeDrugs")
+                    
+                    presented = false
+                }
+            }
+            
+            return
         }
+        
+        // There are no active drugs, let’s create it.
+        
+        let encoder = JSONEncoder()
+        
+        if let data = try? encoder.encode([drug]) {
+            UserDefaults.standard.set(data, forKey: "activeDrugs")
+        }
+        
+        presented = false
     }
     
     var body: some View {
@@ -112,8 +139,8 @@ struct TakeDrugView: View {
                 }
 
                 Section() {
-                    Button("Take \(dose) \(drug.massUnit.symbol)") {
-                        presented = false
+                    Button(action: takeDrug) {
+                        Text("Take \(dose) \(drug.massUnit.symbol)")
                     }
                 }
             }

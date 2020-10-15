@@ -17,7 +17,7 @@ enum Addiction: String, Codable {
         let container = try decoder.singleValueContainer()
         let addiction = try container.decode(String.self)
         
-        switch addiction {
+        switch addiction.lowercased() {
             case "low":
                 self = .low
             case "moderate":
