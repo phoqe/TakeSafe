@@ -17,10 +17,13 @@ extension String {
     }
     
     func unitMass() -> UnitMass? {
-        if self == "milligrams" {
-            return UnitMass.milligrams
+        switch self {
+            case "milligrams":
+                return UnitMass.milligrams
+            case "kilograms":
+                return UnitMass.kilograms
+            default:
+                return nil
         }
-        
-        return nil
     }
 }

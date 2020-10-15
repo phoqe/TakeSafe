@@ -9,17 +9,20 @@ import Foundation
 
 struct LD50: Decodable {
     let value: Int
-    let unit: UnitMass
+    let unitDividend: UnitMass
+    let unitDivisor: UnitMass
     
     enum CodingKeys: String, CodingKey {
         case value
-        case unit
+        case unitDividend = "unit_dividend"
+        case unitDivisor = "unit_divisor"
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         value = try container.decode(Int.self, forKey: .value)
-        unit = try container.decode(String.self, forKey: .unit).unitMass()!
+        unitDividend = try container.decode(String.self, forKey: .unitDividend).unitMass()!
+        unitDivisor = try container.decode(String.self, forKey: .unitDivisor).unitMass()!
     }
 }
