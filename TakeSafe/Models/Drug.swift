@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Swift_ISO8601_DurationParser
 
 struct Drug: Decodable, Identifiable {
     let id: String

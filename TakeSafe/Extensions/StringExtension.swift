@@ -1,5 +1,5 @@
 //
-//  StringExtensions.swift
+//  StringExtension.swift
 //  TakeSafe
 //
 //  Created by Linus Långberg on 2020-10-14.
