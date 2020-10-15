@@ -63,8 +63,8 @@ struct Drug: Decodable, Identifiable {
         dependence = try container.decode(Dependence.self, forKey: .dependence)
         addiction = try container.decode(Addiction.self, forKey: .addiction)
         
-        onset = try DateComponents.durationFrom8601String(container.decode(String.self, forKey: .onset))!
-        duration = try DateComponents.durationFrom8601String(container.decode(String.self, forKey: .duration))!
+        onset = try container.decode(String.self, forKey: .onset).iso8601Duration()!
+        duration = try container.decode(String.self, forKey: .duration).iso8601Duration()!
         
         massUnit = try container.decode(String.self, forKey: .massUnit).unitMass()!
         bioavailability = try container.decode(Int.self, forKey: .bioavailability)
