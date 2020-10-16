@@ -17,8 +17,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
-                
-                Section(header: Text("Sleep")) {
+                Section() {
                     DatePicker("Go to sleep", selection: $goToSleepTime, displayedComponents: .hourAndMinute)
                     DatePicker("Wake up", selection: $wakeUpTime, displayedComponents: .hourAndMinute)
                 }
