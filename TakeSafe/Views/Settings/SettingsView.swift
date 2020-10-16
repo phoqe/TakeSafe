@@ -13,20 +13,10 @@ struct SettingsView: View {
     @State var wakeUpTime = UserDefaults.standard.data(forKey: "wakeUpTime") as! Date? ?? Date()
     
     let name = Bundle.main.infoDictionary!["CFBundleName"] as! String
-    let isAppleHealthConnected = UserDefaults.standard.bool(forKey: "isAppleHealthConnected")
     
     var body: some View {
         NavigationView {
             Form {
-                NavigationLink(destination: AppleHealthView()) {
-                    Text("Apple Health")
-                    
-                    Spacer()
-                    
-                    Text(isAppleHealthConnected ? "Connected" : "Not Connected")
-                        .foregroundColor(.secondary)
-                        .fixedSize(horizontal: true, vertical: false)
-                }
                 
                 Section(header: Text("Sleep")) {
                     DatePicker("Go to sleep", selection: $goToSleepTime, displayedComponents: .hourAndMinute)
