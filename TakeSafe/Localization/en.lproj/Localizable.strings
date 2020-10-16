@@ -46,8 +46,15 @@
 "appleHealthAuthErrorAlertMessage" = "Something went wrong when allowing us access to your health data. You can try again later in Settings.";
 "appleHealthAuthErrorAlertButton" = "OK";
 
+// Common
+"ok" = "OK";
+
 // Drugs
 "drugsTitle" = "Drugs";
+"drugsErrorTitle" = "Couldn’t fetch drug list.";
+"drugsErrorDescription" = "Something went wrong. Try again later.";
+"drugsEmptyTitle" = "No drugs in store.";
+"drugsEmptyDescription" = "Looks like there are no drugs available.";
 
 // Drug
 "drugDrugClass" = "Drug class";
@@ -65,10 +72,11 @@
 "takeDrugBioavailabilityDescription" = "The proportion of a drug which enters the circulation when introduced into the body and so is able to have an active effect.";
 "takeDrugDose" = "Dose";
 "takeDrugCommonDoses" = "Common doses";
-"takeDrugInCirculation" = "In circulation";
+"takeDrugInCirculation" = "Circulation";
 "takeDrugMedianLethalDoseName" = "Lethal dose 50%";
 "takeDrugMedianLethalDoseDescription" = "The median lethal dose for a substance is the dose required to kill half the members of a tested population after a specified test duration.";
 "takeDrugTake" = "Take %d %@";
+"takeDrugCancel" = "Cancel";
 
 // Profile
 "profileTitle" = "Profile";

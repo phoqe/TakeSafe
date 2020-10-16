@@ -48,8 +48,15 @@
 "appleHealthAuthErrorAlertMessage" = "Något gick fel när du gav oss tillgång till din hälsoinformation. Du kan försöka igen senare i Inställningar.";
 "appleHealthAuthErrorAlertButton" = "OK";
 
+// Common
+"ok" = "OK";
+
 // Drugs
 "drugsTitle" = "Läkemedel";
+"drugsErrorTitle" = "Kunde inte hämta läkemedelslista.";
+"drugsErrorDescription" = "Någonting gick fel. Försök igen senare.";
+"drugsEmptyTitle" = "Inga läkemedel i lager.";
+"drugsEmptyDescription" = "Det verkar inte finnas några läkemedel inlagda.";
 
 // Drug
 "drugDrugClass" = "Drogklass";
@@ -64,10 +71,11 @@
 "takeDrugBioavailabilityDescription" = "Hur stor del av ett läkemedel som når systemkretsloppet i en organism.";
 "takeDrugDose" = "Dos";
 "takeDrugCommonDoses" = "Vanliga doser";
-"takeDrugInCirculation" = "I cirkulation";
+"takeDrugInCirculation" = "Cirkulation";
 "takeDrugMedianLethalDoseName" = "Dödlig dos 50%";
 "takeDrugMedianLethalDoseDescription" = "Värdet en specifik substans erhålls genom att i djurförsök utsätta olika grupper av försöksdjur för varierande doser av substansen, varpå en del av försöksdjuren dör.";
 "takeDrugTake" = "Ta %d %@";
+"takeDrugCancel" = "Avbryt";
 
 // Timeline
 "timelineOnset" = "Början";

@@ -49,7 +49,7 @@ struct DrugView: View {
                     .buttonStyle(PlainButtonStyle())
                     .foregroundColor(.accentColor)
                     .alert(isPresented: $showDrugClassAlert) {
-                        Alert(title: Text(drug.drugClass.localizedName()), message: Text(drug.drugClass.localizedDescription()), dismissButton: .default(Text("OK")))
+                        Alert(title: Text(drug.drugClass.localizedName()), message: Text(drug.drugClass.localizedDescription()), dismissButton: .default(Text("ok".localized())))
                     }
                 }
                 .padding(.vertical, 7.5)
@@ -70,7 +70,7 @@ struct DrugView: View {
                     .buttonStyle(PlainButtonStyle())
                     .foregroundColor(.accentColor)
                     .alert(isPresented: $showDependenceAlert) {
-                        Alert(title: Text(NSLocalizedString("drugDependenceName", comment: "")), message: Text(NSLocalizedString("drugDependenceDescription", comment: "")), dismissButton: .default(Text("OK")))
+                        Alert(title: Text(NSLocalizedString("drugDependenceName", comment: "")), message: Text(NSLocalizedString("drugDependenceDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
                     }
                 }
                 .padding(.vertical, 7.5)
@@ -91,7 +91,7 @@ struct DrugView: View {
                     .buttonStyle(PlainButtonStyle())
                     .foregroundColor(.accentColor)
                     .alert(isPresented: $showAddictionAlert) {
-                        Alert(title: Text(NSLocalizedString("drugAddictionName", comment: "")), message: Text(NSLocalizedString("drugAddictionDescription", comment: "")), dismissButton: .default(Text("OK")))
+                        Alert(title: Text(NSLocalizedString("drugAddictionName", comment: "")), message: Text(NSLocalizedString("drugAddictionDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
                     }
                 }
                 .padding(.vertical, 7.5)

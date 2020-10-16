@@ -21,15 +21,7 @@ struct DrugsView: View {
         error = false
         drugs = []
         
-        guard let url = URL(string: "https://takesafe.app/api/drugs") else {
-            loading = false
-            error = true
-            drugs = []
-            
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        URLSession.shared.dataTask(with: API.drugsUrl()) { data, response, error in
             if error != nil {
                 loading = false
                 self.error = true
@@ -44,7 +36,9 @@ struct DrugsView: View {
                 return
             }
             
-            guard let drugs = try? JSONDecoder().decode([Drug].self, from: data) else {
+            let decoder = JSONDecoder()
+            
+            guard let drugs = try? decoder.decode([Drug].self, from: data) else {
                 loading = false
                 self.error = true
                 
@@ -62,9 +56,9 @@ struct DrugsView: View {
                 if loading {
                     ProgressView()
                 } else if error {
-                    EmptyState(title: "Couldn’t fetch drug list.", description: "Something went wrong. Try again later.")
+                    EmptyState(title: NSLocalizedString("drugsErrorTitle", comment: ""), description: NSLocalizedString("drugsErrorDescription", comment: ""))
                 } else if drugs.isEmpty {
-                    EmptyState(title: "No drugs in store.", description: "Looks like there are no drugs available.")
+                    EmptyState(title: NSLocalizedString("drugsEmptyTitle", comment: ""), description: NSLocalizedString("drugsEmptyDescription", comment: ""))
                 } else {
                     Form {
                         DrugList(drugs: drugs)

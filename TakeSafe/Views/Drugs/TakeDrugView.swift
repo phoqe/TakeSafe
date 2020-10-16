@@ -47,7 +47,7 @@ struct TakeDrugView: View {
                         .buttonStyle(PlainButtonStyle())
                         .foregroundColor(.accentColor)
                         .alert(isPresented: $showBioavailabilityAlert) {
-                            Alert(title: Text(NSLocalizedString("takeDrugBioavailabilityName", comment: "")), message: Text(NSLocalizedString("takeDrugBioavailabilityDescription", comment: "")), dismissButton: .default(Text("OK")))
+                            Alert(title: Text(NSLocalizedString("takeDrugBioavailabilityName", comment: "")), message: Text(NSLocalizedString("takeDrugBioavailabilityDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
                         }
                     }
                     
@@ -102,7 +102,7 @@ struct TakeDrugView: View {
                             .buttonStyle(PlainButtonStyle())
                             .foregroundColor(.accentColor)
                             .alert(isPresented: $showMedianLethalDoseAlert) {
-                                Alert(title: Text(NSLocalizedString("takeDrugMedianLethalDoseName", comment: "")), message: Text(NSLocalizedString("takeDrugMedianLethalDoseDescription", comment: "")), dismissButton: .default(Text("OK")))
+                                Alert(title: Text(NSLocalizedString("takeDrugMedianLethalDoseName", comment: "")), message: Text(NSLocalizedString("takeDrugMedianLethalDoseDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
                             }
                         }
                         .padding(.top)
@@ -117,7 +117,7 @@ struct TakeDrugView: View {
                 }
             }
             .navigationBarTitle(String(format: NSLocalizedString("drugTakeDrug", comment: ""), drug.name), displayMode: .inline)
-            .navigationBarItems(leading: Button("Cancel") {
+            .navigationBarItems(leading: Button(NSLocalizedString("takeDrugCancel", comment: "")) {
                 presented = false
             })
         }
