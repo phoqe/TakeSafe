@@ -32,7 +32,7 @@ struct TakeDrugView: View {
             Form {
                 Section() {
                     HStack {
-                        Text("Bioavailability")
+                        Text(NSLocalizedString("takeDrugBioavailabilityName", comment: ""))
                             .bold()
                         
                         Spacer()
@@ -47,20 +47,20 @@ struct TakeDrugView: View {
                         .buttonStyle(PlainButtonStyle())
                         .foregroundColor(.accentColor)
                         .alert(isPresented: $showBioavailabilityAlert) {
-                            Alert(title: Text("Bioavailability"), message: Text("The proportion of a drug which enters the circulation when introduced into the body and so is able to have an active effect."), dismissButton: .default(Text("OK")))
+                            Alert(title: Text(NSLocalizedString("takeDrugBioavailabilityName", comment: "")), message: Text(NSLocalizedString("takeDrugBioavailabilityDescription", comment: "")), dismissButton: .default(Text("OK")))
                         }
                     }
                     
                     VStack(alignment: .leading) {
                         HStack {
-                            Text("Dose")
+                            Text(NSLocalizedString("takeDrugDose", comment: ""))
                                 .bold()
                             
                             Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: drug.doseStep...Int.max, step: drug.doseStep)
                         }
                         
                         HStack {
-                            Text("Common doses")
+                            Text(NSLocalizedString("takeDrugCommonDoses", comment: ""))
                                 .bold()
                             
                             Spacer()
@@ -77,7 +77,17 @@ struct TakeDrugView: View {
                         .padding(.top)
                         
                         HStack {
-                            Text("Median lethal dose")
+                            Text(NSLocalizedString("takeDrugInCirculation", comment: ""))
+                                .bold()
+                            
+                            Spacer()
+                            
+                            Text("\(drug.bioavailability * dose / 100) \(drug.massUnit.symbol)")
+                        }
+                        .padding(.top)
+                        
+                        HStack {
+                            Text(NSLocalizedString("takeDrugMedianLethalDoseName", comment: ""))
                                 .bold()
                             
                             Spacer()
@@ -92,18 +102,8 @@ struct TakeDrugView: View {
                             .buttonStyle(PlainButtonStyle())
                             .foregroundColor(.accentColor)
                             .alert(isPresented: $showMedianLethalDoseAlert) {
-                                Alert(title: Text("Median lethal dose"), message: Text("The median lethal dose for a substance is the dose required to kill half the members of a tested population after a specified test duration."), dismissButton: .default(Text("OK")))
+                                Alert(title: Text(NSLocalizedString("takeDrugMedianLethalDoseName", comment: "")), message: Text(NSLocalizedString("takeDrugMedianLethalDoseDescription", comment: "")), dismissButton: .default(Text("OK")))
                             }
-                        }
-                        .padding(.top)
-                        
-                        HStack {
-                            Text("In circulation")
-                                .bold()
-                            
-                            Spacer()
-                            
-                            Text("\(drug.bioavailability * dose / 100) \(drug.massUnit.symbol)")
                         }
                         .padding(.top)
                     }
@@ -112,11 +112,11 @@ struct TakeDrugView: View {
 
                 Section() {
                     Button(action: takeDrug) {
-                        Text("Take \(dose) \(drug.massUnit.symbol)")
+                        Text(String(format: NSLocalizedString("takeDrugTake", comment: ""), dose, drug.massUnit.symbol))
                     }
                 }
             }
-            .navigationBarTitle("Take \(drug.name)", displayMode: .inline)
+            .navigationBarTitle(String(format: NSLocalizedString("drugTakeDrug", comment: ""), drug.name), displayMode: .inline)
             .navigationBarItems(leading: Button("Cancel") {
                 presented = false
             })

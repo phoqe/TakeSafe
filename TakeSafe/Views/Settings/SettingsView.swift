@@ -18,15 +18,15 @@ struct SettingsView: View {
         NavigationView {
             Form {
                 Section() {
-                    DatePicker("Go to sleep", selection: $goToSleepTime, displayedComponents: .hourAndMinute)
-                    DatePicker("Wake up", selection: $wakeUpTime, displayedComponents: .hourAndMinute)
+                    DatePicker(NSLocalizedString("settingsGoToSleep", comment: ""), selection: $goToSleepTime, displayedComponents: .hourAndMinute)
+                    DatePicker(NSLocalizedString("settingsWakeUp", comment: ""), selection: $wakeUpTime, displayedComponents: .hourAndMinute)
                 }
-                    
+                
                 NavigationLink(destination: AboutView()) {
-                    Text("About")
+                    Text(NSLocalizedString("settingsAbout", comment: ""))
                 }
             }
-            .navigationBarTitle("Settings", displayMode: .inline)
+            .navigationBarTitle(NSLocalizedString("settingsTitle", comment: ""), displayMode: .inline)
         }
     }
 }

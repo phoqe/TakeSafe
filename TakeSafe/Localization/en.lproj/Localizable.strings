@@ -45,3 +45,58 @@
 "appleHealthAuthErrorAlertTitle" = "Apple Health Error";
 "appleHealthAuthErrorAlertMessage" = "Something went wrong when allowing us access to your health data. You can try again later in Settings.";
 "appleHealthAuthErrorAlertButton" = "OK";
+
+// Drugs
+"drugsTitle" = "Drugs";
+
+// Drug
+"drugDrugClass" = "Drug class";
+"drugDependenceName" = "Dependence";
+"drugDependenceDescription" = "Dependence is an adaptive state that develops from repeated drug administration and results in withdrawal upon cessation of drug use.";
+"drugAddictionName" = "Addiction";
+"drugAddictionDescription" = "Addiction is a brain disorder characterized by compulsive engagement in rewarding stimuli despite adverse consequences.";
+"drugTakeDrug" = "Take %@";
+
+// Timeline
+"timelineOnset" = "Onset";
+
+// Take Drug
+"takeDrugBioavailabilityName" = "Bioavailability";
+"takeDrugBioavailabilityDescription" = "The proportion of a drug which enters the circulation when introduced into the body and so is able to have an active effect.";
+"takeDrugDose" = "Dose";
+"takeDrugCommonDoses" = "Common doses";
+"takeDrugInCirculation" = "In circulation";
+"takeDrugMedianLethalDoseName" = "Lethal dose 50%";
+"takeDrugMedianLethalDoseDescription" = "The median lethal dose for a substance is the dose required to kill half the members of a tested population after a specified test duration.";
+"takeDrugTake" = "Take %d %@";
+
+// Profile
+"profileTitle" = "Profile";
+
+// Settings
+"settingsTitle" = "Settings";
+"settingsGoToSleep" = "Bedtime";
+"settingsWakeUp" = "Wake up";
+"settingsAbout" = "About";
+
+// About
+"aboutTitle" = "About";
+"aboutVersion" = "Version";
+"aboutLinks" = "Links";
+"aboutWebsite" = "Website";
+"aboutTermsOfService" = "Terms of Service";
+"aboutPrivacyPolicy" = "Privacy Policy";
+
+// Drug Classes
+"drugClassStimulantName" = "Stimulant";
+"drugClassStimulantDescription" = "A substance that raises levels of physiological or nervous activity in the body.";
+
+// Addiction
+"addictionLow" = "Low";
+"addictionModerate" = "Moderate";
+"addictionHigh" = "High";
+
+// Dependence
+"dependenceLow" = "Low";
+"dependenceModerate" = "Moderate";
+"dependenceHigh" = "High";

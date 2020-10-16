@@ -21,19 +21,19 @@ struct ContentView: View {
                 DrugsView()
                     .tabItem {
                         Image(systemName: "list.dash")
-                        Text("Drugs")
+                        Text(NSLocalizedString("drugsTitle", comment: ""))
                     }
                 
                 ProfileView()
                     .tabItem {
                         Image(systemName: "person.crop.circle")
-                        Text("Profile")
+                        Text(NSLocalizedString("profileTitle", comment: ""))
                     }
                 
                 SettingsView()
                     .tabItem {
                         Image(systemName: "gear")
-                        Text("Settings")
+                        Text(NSLocalizedString("settingsTitle", comment: ""))
                     }
             }
         }

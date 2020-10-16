@@ -19,7 +19,7 @@ struct AboutView: View {
     var body: some View {
         Form {
             HStack {
-                Text("Version")
+                Text(NSLocalizedString("aboutVersion", comment: ""))
                 
                 Spacer()
                 
@@ -30,12 +30,12 @@ struct AboutView: View {
                 .foregroundColor(.secondary)
             }
             
-            Section(header: Text("Links")) {
+            Section(header: Text(NSLocalizedString("aboutLinks", comment: ""))) {
                 Button(action: {
                     safariView = (isPresented: true, url: URL(string: "https://takesafe.app")!)
                 }, label: {
                     HStack {
-                        Text("Website")
+                        Text(NSLocalizedString("aboutWebsite", comment: ""))
                         
                         Spacer()
                         
@@ -49,7 +49,7 @@ struct AboutView: View {
                     safariView = (isPresented: true, url: URL(string: "https://takesafe.app/terms")!)
                 }, label: {
                     HStack {
-                        Text("Terms of Service")
+                        Text(NSLocalizedString("aboutTermsOfService", comment: ""))
                         
                         Spacer()
                         
@@ -63,7 +63,7 @@ struct AboutView: View {
                     safariView = (isPresented: true, url: URL(string: "https://takesafe.app/privacy")!)
                 }, label: {
                     HStack {
-                        Text("Privacy Policy")
+                        Text(NSLocalizedString("aboutPrivacyPolicy", comment: ""))
                         
                         Spacer()
                         
@@ -79,7 +79,7 @@ struct AboutView: View {
                 entersReaderIfAvailable: true
             ))
         }
-        .navigationBarTitle("About", displayMode: .inline)
+        .navigationBarTitle(NSLocalizedString("aboutTitle", comment: ""), displayMode: .inline)
     }
 }
 

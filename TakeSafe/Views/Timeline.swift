@@ -26,7 +26,7 @@ struct Timeline: View {
             
             HStack {
                 Label(title: {
-                    Text("Onset")
+                    Text(NSLocalizedString("timelineOnset", comment: ""))
                 },icon: {
                     Image(systemName: "circle.fill")
                         .foregroundColor(.accentColor)

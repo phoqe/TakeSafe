@@ -47,3 +47,58 @@
 "appleHealthAuthErrorAlertTitle" = "Fel med Apple Health";
 "appleHealthAuthErrorAlertMessage" = "Något gick fel när du gav oss tillgång till din hälsoinformation. Du kan försöka igen senare i Inställningar.";
 "appleHealthAuthErrorAlertButton" = "OK";
+
+// Drugs
+"drugsTitle" = "Läkemedel";
+
+// Drug
+"drugDrugClass" = "Drogklass";
+"drugDependenceName" = "Beroende";
+"drugDependenceDescription" = "Beroende är ett fenomen som innebär de fysiska och psykiska mekanismerna bakom att en person återkommande utsätter sig för något som den vet är skadligt.";
+"drugAddictionName" = "Missbruk";
+"drugAddictionDescription" = "Ett missbruk är felanvändning av exempelvis droger, förtroenden eller andra saker som anses skadligt eller sjukligt.";
+"drugTakeDrug" = "Ta %@";
+
+// Take Drug
+"takeDrugBioavailabilityName" = "Biotillgänglighet";
+"takeDrugBioavailabilityDescription" = "Hur stor del av ett läkemedel som når systemkretsloppet i en organism.";
+"takeDrugDose" = "Dos";
+"takeDrugCommonDoses" = "Vanliga doser";
+"takeDrugInCirculation" = "I cirkulation";
+"takeDrugMedianLethalDoseName" = "Dödlig dos 50%";
+"takeDrugMedianLethalDoseDescription" = "Värdet en specifik substans erhålls genom att i djurförsök utsätta olika grupper av försöksdjur för varierande doser av substansen, varpå en del av försöksdjuren dör.";
+"takeDrugTake" = "Ta %d %@";
+
+// Timeline
+"timelineOnset" = "Början";
+
+// Profile
+"profileTitle" = "Profil";
+
+// Settings
+"settingsTitle" = "Inställningar";
+"settingsGoToSleep" = "Läggdags";
+"settingsWakeUp" = "Väckningstid";
+"settingsAbout" = "Om";
+
+// About
+"aboutTitle" = "Om";
+"aboutVersion" = "Version";
+"aboutLinks" = "Länkar";
+"aboutWebsite" = "Hemsida";
+"aboutTermsOfService" = "Användarvillkor";
+"aboutPrivacyPolicy" = "Integritetspolicy";
+
+// Drug Classes
+"drugClassStimulantName" = "Stimulant";
+"drugClassStimulantDescription" = "Preparaten i denna grupp förstärker så väl sinnesförnimmelser som tankar och beteenden.";
+
+// Addiction
+"addictionLow" = "Låg";
+"addictionModerate" = "Måttlig";
+"addictionHigh" = "Hög";
+
+// Dependence
+"dependenceLow" = "Låg";
+"dependenceModerate" = "Måttlig";
+"dependenceHigh" = "Hög";

@@ -34,12 +34,12 @@ struct DrugView: View {
                 .foregroundColor(.primary)
                 
                 HStack {
-                    Text("Drug class")
+                    Text(NSLocalizedString("drugDrugClass", comment: ""))
                         .bold()
                     
                     Spacer()
                     
-                    Text(drug.drugClass.rawValue)
+                    Text(drug.drugClass.localizedName())
                     
                     Button(action: {
                         showDrugClassAlert = true
@@ -49,18 +49,18 @@ struct DrugView: View {
                     .buttonStyle(PlainButtonStyle())
                     .foregroundColor(.accentColor)
                     .alert(isPresented: $showDrugClassAlert) {
-                        Alert(title: Text("Stimulant"), message: Text("A substance that raises levels of physiological or nervous activity in the body."), dismissButton: .default(Text("OK")))
+                        Alert(title: Text(drug.drugClass.localizedName()), message: Text(drug.drugClass.localizedDescription()), dismissButton: .default(Text("OK")))
                     }
                 }
                 .padding(.vertical, 7.5)
                 
                 HStack {
-                    Text("Dependence")
+                    Text(NSLocalizedString("drugDependenceName", comment: ""))
                         .bold()
                     
                     Spacer()
                     
-                    Text(drug.dependence.rawValue)
+                    Text(drug.dependence.localizedString())
                     
                     Button(action: {
                         showDependenceAlert = true
@@ -70,18 +70,18 @@ struct DrugView: View {
                     .buttonStyle(PlainButtonStyle())
                     .foregroundColor(.accentColor)
                     .alert(isPresented: $showDependenceAlert) {
-                        Alert(title: Text("Dependence"), message: Text("Dependence is an adaptive state that develops from repeated drug administration and results in withdrawal upon cessation of drug use."), dismissButton: .default(Text("OK")))
+                        Alert(title: Text(NSLocalizedString("drugDependenceName", comment: "")), message: Text(NSLocalizedString("drugDependenceDescription", comment: "")), dismissButton: .default(Text("OK")))
                     }
                 }
                 .padding(.vertical, 7.5)
                 
                 HStack {
-                    Text("Addiction")
+                    Text(NSLocalizedString("drugAddictionName", comment: ""))
                         .bold()
                     
                     Spacer()
                     
-                    Text(drug.addiction.rawValue)
+                    Text(drug.addiction.localizedName())
                     
                     Button(action: {
                         showAddictionAlert = true
@@ -91,7 +91,7 @@ struct DrugView: View {
                     .buttonStyle(PlainButtonStyle())
                     .foregroundColor(.accentColor)
                     .alert(isPresented: $showAddictionAlert) {
-                        Alert(title: Text("Addiction"), message: Text("Addiction is a brain disorder characterized by compulsive engagement in rewarding stimuli despite adverse consequences."), dismissButton: .default(Text("OK")))
+                        Alert(title: Text(NSLocalizedString("drugAddictionName", comment: "")), message: Text(NSLocalizedString("drugAddictionDescription", comment: "")), dismissButton: .default(Text("OK")))
                     }
                 }
                 .padding(.vertical, 7.5)
@@ -101,7 +101,7 @@ struct DrugView: View {
             }
             
             Section() {
-                Button("Take \(drug.name)") {
+                Button(String(format: NSLocalizedString("drugTakeDrug", comment: ""), drug.name)) {
                     showTakeDrugView = true
                 }
             }

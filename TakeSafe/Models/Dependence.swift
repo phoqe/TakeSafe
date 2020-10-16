@@ -8,16 +8,15 @@
 import Foundation
 
 enum Dependence: String, Codable {
-    case low = "Low"
-    case moderate = "Moderate"
-    case high = "High"
-    case unknown = "Unknown"
+    case low
+    case moderate
+    case high
     
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let dependence = try container.decode(String.self)
         
-        switch dependence.lowercased() {
+        switch dependence {
             case "low":
                 self = .low
             case "moderate":
@@ -26,6 +25,17 @@ enum Dependence: String, Codable {
                 self = .high
             default:
                 fatalError()
+        }
+    }
+    
+    func localizedString() -> String {
+        switch self {
+            case .low:
+                return NSLocalizedString("dependenceLow", comment: "")
+            case .moderate:
+                return NSLocalizedString("dependenceModerate", comment: "")
+            case .high:
+                return NSLocalizedString("dependenceHigh", comment: "")
         }
     }
 }
