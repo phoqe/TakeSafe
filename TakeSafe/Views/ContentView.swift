@@ -12,11 +12,11 @@ struct ContentView: View {
     let hasOnboarded = UserDefaults.standard.bool(forKey: "hasOnboarded")
     
     var body: some View {
-        if !hasOnboarded {
-            OnboardingView(state: $onboardingState)
-        }
+//        if !hasOnboarded {
+//            OnboardingView(state: $onboardingState)
+//        }
     
-        if hasOnboarded || onboardingState == .finished {
+//        if hasOnboarded || onboardingState == .finished {
             TabView {
                 DrugsView()
                     .tabItem {
@@ -36,6 +36,6 @@ struct ContentView: View {
                         Text(NSLocalizedString("settingsTitle", comment: ""))
                     }
             }
-        }
+//        }
     }
 }

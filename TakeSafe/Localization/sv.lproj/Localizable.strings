@@ -82,6 +82,8 @@
 
 // Profile
 "profileTitle" = "Profil";
+"profileEmptyTitle" = "Inga aktiva läkemedel.";
+"profileEmptyDescription" = "Lägg till en drog så dyker den upp här.";
 
 // Settings
 "settingsTitle" = "Inställningar";

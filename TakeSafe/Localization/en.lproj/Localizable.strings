@@ -80,6 +80,8 @@
 
 // Profile
 "profileTitle" = "Profile";
+"profileEmptyTitle" = "No active drugs.";
+"profileEmptyDescription" = "Add a drug and it’ll appear here.";
 
 // Settings
 "settingsTitle" = "Settings";

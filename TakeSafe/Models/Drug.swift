@@ -18,8 +18,8 @@ struct Drug: Codable, Identifiable {
     let dependence: Dependence
     let addiction: Addiction
         
-    let onset: DateComponents
-    let duration: DateComponents
+    let onset: Double
+    let duration: Double
     
     let massUnit: UnitMass
     let bioavailability: Int
@@ -63,8 +63,8 @@ struct Drug: Codable, Identifiable {
         dependence = try container.decode(Dependence.self, forKey: .dependence)
         addiction = try container.decode(Addiction.self, forKey: .addiction)
         
-        onset = try container.decode(String.self, forKey: .onset).iso8601Duration()!
-        duration = try container.decode(String.self, forKey: .duration).iso8601Duration()!
+        onset = try container.decode(Double.self, forKey: .onset)
+        duration = try container.decode(Double.self, forKey: .duration)
         
         massUnit = try container.decode(String.self, forKey: .massUnit).unitMass()!
         bioavailability = try container.decode(Int.self, forKey: .bioavailability)

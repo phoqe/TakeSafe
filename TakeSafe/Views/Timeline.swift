@@ -8,26 +8,26 @@
 import SwiftUI
 
 struct Timeline: View {
-    var onset: DateComponents
-    var duration: DateComponents
+    var onset: Double
+    var duration: Double
     
     var body: some View {
         VStack {
             HStack {
-                Text("\(Int(onset.hour!))")
+                Text("\(Int(onset))")
                     .padding(.leading, 5)
                 
-                ProgressView(value: Double(onset.hour!), total: Double(duration.hour! + onset.hour!))
+                ProgressView(value: onset, total: duration + onset)
                     .padding(.horizontal)
                 
-                Text("\(Int(duration.hour!))")
+                Text("\(Int(duration))")
                     .padding(.trailing, 5)
             }
             
             HStack {
                 Label(title: {
                     Text(NSLocalizedString("timelineOnset", comment: ""))
-                },icon: {
+                }, icon: {
                     Image(systemName: "circle.fill")
                         .foregroundColor(.accentColor)
                 })

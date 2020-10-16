@@ -65,7 +65,7 @@ struct DrugsView: View {
                     }
                 }
             }
-            .navigationBarTitle(NSLocalizedString("drugsTitle", comment: ""))
+            .navigationBarTitle(NSLocalizedString("drugsTitle", comment: ""), displayMode: .inline)
         }
         .onAppear(perform: getDrugs)
     }

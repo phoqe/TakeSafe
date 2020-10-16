@@ -24,6 +24,8 @@ struct TakeDrugView: View {
     }
     
     func takeDrug() {
+        DrugManager.addDrug(drug: drug)
+        
         presented = false
     }
     
