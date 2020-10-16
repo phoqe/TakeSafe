@@ -23,7 +23,7 @@ struct SettingsView: View {
                 }
                     
                 NavigationLink(destination: AboutView()) {
-                    Text("About \(name)")
+                    Text("About")
                 }
             }
             .navigationBarTitle("Settings", displayMode: .inline)

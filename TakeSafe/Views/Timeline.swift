@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct Timeline: View {
-    var onset: Double
-    var duration: Double
+    var onset: DateComponents
+    var duration: DateComponents
     
     var body: some View {
         VStack {
             HStack {
-                Text("\(Int(onset))")
+                Text("\(Int(onset.hour!))")
                     .padding(.leading, 5)
                 
-                ProgressView(value: onset, total: duration + onset)
+                ProgressView(value: Double(onset.hour!), total: Double(duration.hour! + onset.hour!))
                     .padding(.horizontal)
                 
-                Text("\(Int(duration))")
+                Text("\(Int(duration.hour!))")
                     .padding(.trailing, 5)
             }
             
@@ -33,11 +33,5 @@ struct Timeline: View {
                 })
             }
         }
-    }
-}
-
-struct Timeline_Previews: PreviewProvider {
-    static var previews: some View {
-        Timeline(onset: 1, duration: 4)
     }
 }

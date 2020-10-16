@@ -96,7 +96,7 @@ struct DrugView: View {
                 }
                 .padding(.vertical, 7.5)
                 
-                Timeline(onset: Double(drug.onset.hour!), duration: Double(drug.duration.hour!))
+                Timeline(onset: drug.onset, duration: drug.duration)
                     .padding(.vertical)
             }
             

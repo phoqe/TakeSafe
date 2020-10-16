@@ -32,26 +32,6 @@ struct TakeDrugView: View {
             Form {
                 Section() {
                     HStack {
-                        Text("Median lethal dose")
-                            .bold()
-                        
-                        Spacer()
-                        
-                        Text("\(drug.ld50.value) \(drug.ld50.unitDividend.symbol)/\(drug.ld50.unitDivisor.symbol)")
-                        
-                        Button(action: {
-                            showMedianLethalDoseAlert = true
-                        }, label: {
-                            Image(systemName: "info.circle")
-                        })
-                        .buttonStyle(PlainButtonStyle())
-                        .foregroundColor(.accentColor)
-                        .alert(isPresented: $showMedianLethalDoseAlert) {
-                            Alert(title: Text("Median lethal dose"), message: Text("The median lethal dose for a substance is the dose required to kill half the members of a tested population after a specified test duration."), dismissButton: .default(Text("OK")))
-                        }
-                    }
-                    
-                    HStack {
                         Text("Bioavailability")
                             .bold()
                         
@@ -76,7 +56,7 @@ struct TakeDrugView: View {
                             Text("Dose")
                                 .bold()
                             
-                            Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: drug.doseStep...1000, step: drug.doseStep)
+                            Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: drug.doseStep...Int.max, step: drug.doseStep)
                         }
                         
                         HStack {
@@ -97,12 +77,33 @@ struct TakeDrugView: View {
                         .padding(.top)
                         
                         HStack {
+                            Text("Median lethal dose")
+                                .bold()
+                            
+                            Spacer()
+                            
+                            Text("\(drug.ld50.value) \(drug.ld50.unitDividend.symbol)/\(drug.ld50.unitDivisor.symbol)")
+                            
+                            Button(action: {
+                                showMedianLethalDoseAlert = true
+                            }, label: {
+                                Image(systemName: "info.circle")
+                            })
+                            .buttonStyle(PlainButtonStyle())
+                            .foregroundColor(.accentColor)
+                            .alert(isPresented: $showMedianLethalDoseAlert) {
+                                Alert(title: Text("Median lethal dose"), message: Text("The median lethal dose for a substance is the dose required to kill half the members of a tested population after a specified test duration."), dismissButton: .default(Text("OK")))
+                            }
+                        }
+                        .padding(.top)
+                        
+                        HStack {
                             Text("In circulation")
                                 .bold()
                             
                             Spacer()
                             
-                            Text("\(drug.bioavailability * dose / 100)")
+                            Text("\(drug.bioavailability * dose / 100) \(drug.massUnit.symbol)")
                         }
                         .padding(.top)
                     }

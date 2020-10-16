@@ -79,7 +79,7 @@ struct AboutView: View {
                 entersReaderIfAvailable: true
             ))
         }
-        .navigationBarTitle("About \(name)", displayMode: .inline)
+        .navigationBarTitle("About", displayMode: .inline)
     }
 }
 
