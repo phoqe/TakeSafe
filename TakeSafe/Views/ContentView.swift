@@ -20,7 +20,7 @@ struct ContentView: View {
             TabView {
                 DrugsView()
                     .tabItem {
-                        Image(systemName: "list.dash")
+                        Image(systemName: "pills.fill")
                         Text(NSLocalizedString("drugsTitle", comment: ""))
                     }
                 

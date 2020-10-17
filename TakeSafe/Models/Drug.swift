@@ -13,6 +13,7 @@ class Drug: Codable, Identifiable {
     let aliases: [String]?
     let description: String
     let learnMoreUrl: URL
+    let icon: Icon
     
     let drugClass: DrugClass
     let dependence: Dependence
@@ -34,6 +35,7 @@ class Drug: Codable, Identifiable {
         case aliases
         case description
         case learnMoreUrl = "learn_more_url"
+        case icon
         
         case drugClass = "drug_class"
         case dependence
@@ -53,17 +55,21 @@ class Drug: Codable, Identifiable {
         case ingestion
     }
     
-    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, bioavailability: Int, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int]) {
+    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, icon: Icon, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, bioavailability: Int, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int]) {
         self.id = id
         self.name = name
         self.aliases = aliases
         self.description = description
         self.learnMoreUrl = learnMoreUrl
+        self.icon = icon
+        
         self.drugClass = drugClass
         self.dependence = dependence
         self.addiction = addiction
+        
         self.onset = onset
         self.duration = duration
+        
         self.massUnit = massUnit
         self.bioavailability = bioavailability
         self.ld50 = ld50
@@ -80,6 +86,7 @@ class Drug: Codable, Identifiable {
         aliases = try container.decode([String].self, forKey: .aliases)
         description = try container.decode(String.self, forKey: .description)
         learnMoreUrl = try container.decode(URL.self, forKey: .learnMoreUrl)
+        icon = try container.decode(Icon.self, forKey: .icon)
         
         drugClass = try container.decode(DrugClass.self, forKey: .drugClass)
         dependence = try container.decode(Dependence.self, forKey: .dependence)
@@ -104,6 +111,7 @@ class Drug: Codable, Identifiable {
         try container.encode(aliases, forKey: .aliases)
         try container.encode(description, forKey: .description)
         try container.encode(learnMoreUrl, forKey: .learnMoreUrl)
+        try container.encode(icon, forKey: .icon)
         
         try container.encode(drugClass, forKey: .drugClass)
         try container.encode(dependence, forKey: .dependence)

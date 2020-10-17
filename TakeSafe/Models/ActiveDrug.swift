@@ -15,7 +15,7 @@ class ActiveDrug: Drug {
         self.dose = dose
         self.ingestion = ingestion
         
-        super.init(id: UUID().uuidString, name: drug.name, aliases: drug.aliases, description: drug.description, learnMoreUrl: drug.learnMoreUrl, drugClass: drug.drugClass, dependence: drug.dependence, addiction: drug.addiction, onset: drug.onset, duration: drug.duration, massUnit: drug.massUnit, bioavailability: drug.bioavailability, ld50: drug.ld50, defaultDose: drug.defaultDose, doseStep: drug.doseStep, commonDoses: drug.commonDoses)
+        super.init(id: UUID().uuidString, name: drug.name, aliases: drug.aliases, description: drug.description, learnMoreUrl: drug.learnMoreUrl, icon: drug.icon, drugClass: drug.drugClass, dependence: drug.dependence, addiction: drug.addiction, onset: drug.onset, duration: drug.duration, massUnit: drug.massUnit, bioavailability: drug.bioavailability, ld50: drug.ld50, defaultDose: drug.defaultDose, doseStep: drug.doseStep, commonDoses: drug.commonDoses)
     }
     
     required init(from decoder: Decoder) throws {
@@ -38,6 +38,7 @@ class ActiveDrug: Drug {
         try container.encode(aliases, forKey: .aliases)
         try container.encode(description, forKey: .description)
         try container.encode(learnMoreUrl, forKey: .learnMoreUrl)
+        try container.encode(icon, forKey: .icon)
         
         try container.encode(drugClass, forKey: .drugClass)
         try container.encode(dependence, forKey: .dependence)

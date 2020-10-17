@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2011E0253B545400B47701 /* ActiveDrugListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2011DF253B545400B47701 /* ActiveDrugListItem.swift */; };
+		9F2011E3253B720D00B47701 /* IconImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2011E2253B720D00B47701 /* IconImage.swift */; };
+		9F2011E6253B733B00B47701 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2011E5253B733B00B47701 /* Icon.swift */; };
 		9F5372B8253AEA6B0043375D /* ActiveDrug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5372B7253AEA6B0043375D /* ActiveDrug.swift */; };
 		9F5372BC253AF30A0043375D /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5372BB253AF30A0043375D /* SampleData.swift */; };
 		9F5C67BC2538CE0E0025FE15 /* UnitMassExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C67BB2538CE0E0025FE15 /* UnitMassExtension.swift */; };
@@ -51,6 +54,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F2011DF253B545400B47701 /* ActiveDrugListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDrugListItem.swift; sourceTree = "<group>"; };
+		9F2011E2253B720D00B47701 /* IconImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconImage.swift; sourceTree = "<group>"; };
+		9F2011E5253B733B00B47701 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		9F5372B7253AEA6B0043375D /* ActiveDrug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDrug.swift; sourceTree = "<group>"; };
 		9F5372BB253AF30A0043375D /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		9F5C67BB2538CE0E0025FE15 /* UnitMassExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitMassExtension.swift; sourceTree = "<group>"; };
@@ -179,6 +185,7 @@
 				9FC76C592531F47800603314 /* ProfileView.swift */,
 				9FB630EB2535A87900397152 /* EmptyState.swift */,
 				9FC632EE2537459C00DA145B /* Timeline.swift */,
+				9F2011E2253B720D00B47701 /* IconImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +230,7 @@
 				9FB630EF2535E86600397152 /* DrugListItem.swift */,
 				9FC632F525374F6A00DA145B /* DrugList.swift */,
 				9FC632F825374F9300DA145B /* DrugsView.swift */,
+				9F2011DF253B545400B47701 /* ActiveDrugListItem.swift */,
 			);
 			path = Drugs;
 			sourceTree = "<group>";
@@ -236,6 +244,7 @@
 				9FD46F2A252CDB1000FB5754 /* Addiction.swift */,
 				9FC633062537918000DA145B /* LD50.swift */,
 				9F5372B7253AEA6B0043375D /* ActiveDrug.swift */,
+				9F2011E5253B733B00B47701 /* Icon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -344,9 +353,11 @@
 				9FC04666250655EF000B2AAC /* PageControl.swift in Sources */,
 				9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */,
 				9F5372BC253AF30A0043375D /* SampleData.swift in Sources */,
+				9F2011E0253B545400B47701 /* ActiveDrugListItem.swift in Sources */,
 				9FD46F21252CC1C700FB5754 /* Drug.swift in Sources */,
 				9FC632EF2537459C00DA145B /* Timeline.swift in Sources */,
 				9FD46F28252CDA5700FB5754 /* Dependence.swift in Sources */,
+				9F2011E6253B733B00B47701 /* Icon.swift in Sources */,
 				9F5372B8253AEA6B0043375D /* ActiveDrug.swift in Sources */,
 				9FFD21682506DA3F002F01B9 /* AppDelegate.swift in Sources */,
 				9FD46F25252CD7D200FB5754 /* DrugClass.swift in Sources */,
@@ -364,6 +375,7 @@
 				9FC632F625374F6A00DA145B /* DrugList.swift in Sources */,
 				9FF4B357253A23650040720A /* DrugManager.swift in Sources */,
 				9FB630F02535E86600397152 /* DrugListItem.swift in Sources */,
+				9F2011E3253B720D00B47701 /* IconImage.swift in Sources */,
 				9FB630EC2535A87900397152 /* EmptyState.swift in Sources */,
 				9FC76C5A2531F47800603314 /* ProfileView.swift in Sources */,
 				9F5C67BC2538CE0E0025FE15 /* UnitMassExtension.swift in Sources */,

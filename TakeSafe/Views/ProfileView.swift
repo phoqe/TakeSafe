@@ -24,15 +24,8 @@ struct ProfileView: View {
                 } else {
                     Form {
                         List(activeDrugs) { activeDrug in
-                            HStack {
-                                Text(activeDrug.name)
-                                    .bold()
-                                
-                                Spacer()
-                                
-                                Text("\(activeDrug.dose) \(activeDrug.massUnit.symbol)")
-                                    .bold()
-                            }
+                            ActiveDrugListItem(activeDrug: activeDrug)
+                                .padding(.vertical)
                         }
                     }
                 }
