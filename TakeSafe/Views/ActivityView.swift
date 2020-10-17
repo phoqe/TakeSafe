@@ -1,5 +1,5 @@
 //
-//  ProfileView.swift
+//  ActivityView.swift
 //  TakeSafe
 //
 //  Created by Linus Långberg on 2020-10-10.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct ActivityView: View {
     @State var activeDrugs: [ActiveDrug] = []
     
     func getActiveDrugs() {

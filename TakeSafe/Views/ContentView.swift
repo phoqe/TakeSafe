@@ -24,9 +24,9 @@ struct ContentView: View {
                         Text(NSLocalizedString("drugsTitle", comment: ""))
                     }
                 
-                ProfileView()
+                ActivityView()
                     .tabItem {
-                        Image(systemName: "person.crop.circle")
+                        Image(systemName: "bolt.fill")
                         Text(NSLocalizedString("profileTitle", comment: ""))
                     }
                 

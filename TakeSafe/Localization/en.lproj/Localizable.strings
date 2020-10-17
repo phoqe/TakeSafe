@@ -79,7 +79,7 @@
 "takeDrugCancel" = "Cancel";
 
 // Profile
-"profileTitle" = "Profile";
+"profileTitle" = "Activity";
 "profileEmptyTitle" = "No active drugs.";
 "profileEmptyDescription" = "Add a drug and it’ll appear here.";
 

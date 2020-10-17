@@ -81,7 +81,7 @@
 "timelineOnset" = "Början";
 
 // Profile
-"profileTitle" = "Profil";
+"profileTitle" = "Aktivitet";
 "profileEmptyTitle" = "Inga aktiva läkemedel.";
 "profileEmptyDescription" = "Lägg till ett läkemedel så dyker det upp här.";
 
