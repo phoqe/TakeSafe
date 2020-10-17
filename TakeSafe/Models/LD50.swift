@@ -18,6 +18,12 @@ struct LD50: Codable {
         case unitDivisor = "unit_divisor"
     }
     
+    init(value: Int, unitDividend: UnitMass, unitDivisor: UnitMass) {
+        self.value = value
+        self.unitDividend = unitDividend
+        self.unitDivisor = unitDivisor
+    }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Drug: Codable, Identifiable {
+class Drug: Codable, Identifiable {
     let id: String
     let name: String
     let aliases: [String]?
@@ -48,9 +48,31 @@ struct Drug: Codable, Identifiable {
         case defaultDose = "default_dose"
         case doseStep = "dose_step"
         case commonDoses = "common_doses"
+        
+        case dose
+        case ingestion
     }
     
-    init(from decoder: Decoder) throws {
+    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, bioavailability: Int, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int]) {
+        self.id = id
+        self.name = name
+        self.aliases = aliases
+        self.description = description
+        self.learnMoreUrl = learnMoreUrl
+        self.drugClass = drugClass
+        self.dependence = dependence
+        self.addiction = addiction
+        self.onset = onset
+        self.duration = duration
+        self.massUnit = massUnit
+        self.bioavailability = bioavailability
+        self.ld50 = ld50
+        self.defaultDose = defaultDose
+        self.doseStep = doseStep
+        self.commonDoses = commonDoses
+    }
+    
+    required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         id = try container.decode(String.self, forKey: .id)

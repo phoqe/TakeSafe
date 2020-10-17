@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F5372B8253AEA6B0043375D /* ActiveDrug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5372B7253AEA6B0043375D /* ActiveDrug.swift */; };
+		9F5372BC253AF30A0043375D /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5372BB253AF30A0043375D /* SampleData.swift */; };
 		9F5C67BC2538CE0E0025FE15 /* UnitMassExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C67BB2538CE0E0025FE15 /* UnitMassExtension.swift */; };
 		9F6A0B282531006600872936 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A0B272531006600872936 /* SettingsView.swift */; };
 		9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84D9AE2507809D006C1B77 /* SetupPageView.swift */; };
@@ -41,7 +43,6 @@
 		9FD46F2B252CDB1000FB5754 /* Addiction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD46F2A252CDB1000FB5754 /* Addiction.swift */; };
 		9FF4B3542539F9BD0040720A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4B3532539F9BD0040720A /* API.swift */; };
 		9FF4B357253A23650040720A /* DrugManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4B356253A23650040720A /* DrugManager.swift */; };
-		9FF4B35A253A29BA0040720A /* DrugGroupBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4B359253A29BA0040720A /* DrugGroupBox.swift */; };
 		9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD215625069AF5002F01B9 /* ContainedButton.swift */; };
 		9FFD215E2506CB34002F01B9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFD215D2506CB34002F01B9 /* HealthKit.framework */; };
 		9FFD21662506D327002F01B9 /* IntroPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD21652506D327002F01B9 /* IntroPageView.swift */; };
@@ -50,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F5372B7253AEA6B0043375D /* ActiveDrug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDrug.swift; sourceTree = "<group>"; };
+		9F5372BB253AF30A0043375D /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		9F5C67BB2538CE0E0025FE15 /* UnitMassExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitMassExtension.swift; sourceTree = "<group>"; };
 		9F6A0B272531006600872936 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9F84D9AE2507809D006C1B77 /* SetupPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageView.swift; sourceTree = "<group>"; };
@@ -87,7 +90,6 @@
 		9FD46F2A252CDB1000FB5754 /* Addiction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addiction.swift; sourceTree = "<group>"; };
 		9FF4B3532539F9BD0040720A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9FF4B356253A23650040720A /* DrugManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugManager.swift; sourceTree = "<group>"; };
-		9FF4B359253A29BA0040720A /* DrugGroupBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugGroupBox.swift; sourceTree = "<group>"; };
 		9FFD215625069AF5002F01B9 /* ContainedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedButton.swift; sourceTree = "<group>"; };
 		9FFD215B2506CB34002F01B9 /* TakeSafe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TakeSafe.entitlements; sourceTree = "<group>"; };
 		9FFD215D2506CB34002F01B9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -150,6 +152,7 @@
 				9FFD21672506DA3F002F01B9 /* AppDelegate.swift */,
 				9FF4B3532539F9BD0040720A /* API.swift */,
 				9FF4B356253A23650040720A /* DrugManager.swift */,
+				9F5372BB253AF30A0043375D /* SampleData.swift */,
 			);
 			path = TakeSafe;
 			sourceTree = "<group>";
@@ -220,7 +223,6 @@
 				9FB630EF2535E86600397152 /* DrugListItem.swift */,
 				9FC632F525374F6A00DA145B /* DrugList.swift */,
 				9FC632F825374F9300DA145B /* DrugsView.swift */,
-				9FF4B359253A29BA0040720A /* DrugGroupBox.swift */,
 			);
 			path = Drugs;
 			sourceTree = "<group>";
@@ -233,6 +235,7 @@
 				9FD46F27252CDA5700FB5754 /* Dependence.swift */,
 				9FD46F2A252CDB1000FB5754 /* Addiction.swift */,
 				9FC633062537918000DA145B /* LD50.swift */,
+				9F5372B7253AEA6B0043375D /* ActiveDrug.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -340,16 +343,17 @@
 				9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */,
 				9FC04666250655EF000B2AAC /* PageControl.swift in Sources */,
 				9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */,
+				9F5372BC253AF30A0043375D /* SampleData.swift in Sources */,
 				9FD46F21252CC1C700FB5754 /* Drug.swift in Sources */,
 				9FC632EF2537459C00DA145B /* Timeline.swift in Sources */,
 				9FD46F28252CDA5700FB5754 /* Dependence.swift in Sources */,
+				9F5372B8253AEA6B0043375D /* ActiveDrug.swift in Sources */,
 				9FFD21682506DA3F002F01B9 /* AppDelegate.swift in Sources */,
 				9FD46F25252CD7D200FB5754 /* DrugClass.swift in Sources */,
 				9FC6330B2537954200DA145B /* StringExtension.swift in Sources */,
 				9FC633072537918000DA145B /* LD50.swift in Sources */,
 				9FA381ED25064E0B0053C3F4 /* PageViewController.swift in Sources */,
 				9FA381E525062CB50053C3F4 /* OnboardingView.swift in Sources */,
-				9FF4B35A253A29BA0040720A /* DrugGroupBox.swift in Sources */,
 				9FD29B312534725700F90F04 /* AboutView.swift in Sources */,
 				9FC5B42D2508D06700DDF30A /* SetupPageViewController.swift in Sources */,
 				9FFD21662506D327002F01B9 /* IntroPageView.swift in Sources */,

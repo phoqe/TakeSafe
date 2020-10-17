@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State var activeDrugs: [Drug] = []
+    @State var activeDrugs: [ActiveDrug] = []
     
     func getActiveDrugs() {
         if let activeDrugs = DrugManager.activeDrugs() {
@@ -20,16 +20,20 @@ struct ProfileView: View {
         NavigationView {
             Group {
                 if activeDrugs.isEmpty {
-                    EmptyState(title: "No active drugs.", description: "Add a drug and it’ll appear here.")
+                    EmptyState(title: "profileEmptyTitle".localized(), description: "profileEmptyDescription".localized())
                 } else {
-                    ScrollView {
-                        VStack(spacing: 10) {
-                            ForEach(activeDrugs) { activeDrug in
-                                DrugGroupBox(drug: activeDrug)
+                    Form {
+                        List(activeDrugs) { activeDrug in
+                            HStack {
+                                Text(activeDrug.name)
+                                    .bold()
+                                
+                                Spacer()
+                                
+                                Text("\(activeDrug.dose) \(activeDrug.massUnit.symbol)")
+                                    .bold()
                             }
                         }
-                        .padding(.horizontal)
-                        .padding(.top)
                     }
                 }
             }

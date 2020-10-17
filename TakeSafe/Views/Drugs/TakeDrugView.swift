@@ -24,7 +24,9 @@ struct TakeDrugView: View {
     }
     
     func takeDrug() {
-        DrugManager.addDrug(drug: drug)
+        let activeDrug = ActiveDrug(drug: drug, dose: dose, ingestion: Date())
+        
+        DrugManager.addActiveDrug(activeDrug: activeDrug)
         
         presented = false
     }

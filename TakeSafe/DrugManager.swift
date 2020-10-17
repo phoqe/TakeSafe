@@ -10,17 +10,17 @@ import Foundation
 struct DrugManager {
     static let activeDrugsUserDefaultsKey = "activeDrugs"
     
-    static func addDrug(drug: Drug) {
+    static func addActiveDrug(activeDrug: ActiveDrug) {
         let encoder = JSONEncoder()
         
         if let data = UserDefaults.standard.data(forKey: activeDrugsUserDefaultsKey) {
             let decoder = JSONDecoder()
             
-            guard var oldActiveDrugs = try? decoder.decode([Drug].self, from: data) else {
+            guard var oldActiveDrugs = try? decoder.decode([ActiveDrug].self, from: data) else {
                 return
             }
             
-            oldActiveDrugs.append(drug)
+            oldActiveDrugs.append(activeDrug)
             
             guard let newActiveDrugs = try? encoder.encode(oldActiveDrugs) else {
                 return
@@ -28,7 +28,7 @@ struct DrugManager {
             
             UserDefaults.standard.set(newActiveDrugs, forKey: activeDrugsUserDefaultsKey)
         } else {
-            guard let newActiveDrugs = try? encoder.encode([drug]) else {
+            guard let newActiveDrugs = try? encoder.encode([activeDrug]) else {
                 return
             }
             
@@ -36,14 +36,14 @@ struct DrugManager {
         }
     }
     
-    static func activeDrugs() -> [Drug]? {
+    static func activeDrugs() -> [ActiveDrug]? {
         let decoder = JSONDecoder()
         
         guard let data = UserDefaults.standard.data(forKey: activeDrugsUserDefaultsKey) else {
             return nil
         }
         
-        guard let activeDrugs = try? decoder.decode([Drug].self, from: data) else {
+        guard let activeDrugs = try? decoder.decode([ActiveDrug].self, from: data) else {
             return nil
         }
         
