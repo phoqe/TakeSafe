@@ -33,33 +33,34 @@ struct TakeDrugView: View {
         NavigationView {
             Form {
                 Section() {
-                    HStack {
-                        Text(NSLocalizedString("takeDrugBioavailabilityName", comment: ""))
-                            .bold()
-                        
-                        Spacer()
-                        
-                        Text("\(drug.bioavailability)%")
-                        
-                        Button(action: {
-                            showBioavailabilityAlert = true
-                        }, label: {
-                            Image(systemName: "info.circle")
-                        })
-                        .buttonStyle(PlainButtonStyle())
-                        .foregroundColor(.accentColor)
-                        .alert(isPresented: $showBioavailabilityAlert) {
-                            Alert(title: Text(NSLocalizedString("takeDrugBioavailabilityName", comment: "")), message: Text(NSLocalizedString("takeDrugBioavailabilityDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
-                        }
-                    }
-                    
                     VStack(alignment: .leading) {
+                        HStack {
+                            Text(NSLocalizedString("takeDrugBioavailabilityName", comment: ""))
+                                .bold()
+                            
+                            Spacer()
+                            
+                            Text("\(drug.bioavailability)%")
+                            
+                            Button(action: {
+                                showBioavailabilityAlert = true
+                            }, label: {
+                                Image(systemName: "info.circle")
+                            })
+                            .buttonStyle(PlainButtonStyle())
+                            .foregroundColor(.accentColor)
+                            .alert(isPresented: $showBioavailabilityAlert) {
+                                Alert(title: Text(NSLocalizedString("takeDrugBioavailabilityName", comment: "")), message: Text(NSLocalizedString("takeDrugBioavailabilityDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
+                            }
+                        }
+                        
                         HStack {
                             Text(NSLocalizedString("takeDrugDose", comment: ""))
                                 .bold()
                             
                             Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: drug.doseStep...Int.max, step: drug.doseStep)
                         }
+                        .padding(.top)
                         
                         HStack {
                             Text(NSLocalizedString("takeDrugCommonDoses", comment: ""))
