@@ -24,7 +24,9 @@ struct DrugView: View {
                 }, label: {
                     HStack {
                         Text(drug.description)
-                            .padding(.trailing)
+                        
+                        Spacer()
+                        
                         Image(systemName: "chevron.right")
                             .foregroundColor(.secondary)
                     }
@@ -40,7 +42,6 @@ struct DrugView: View {
                     
                     Text(drug.drugClass.localizedName)
                 }
-                .padding(.vertical, 7.5)
                 
                 HStack {
                     Text(NSLocalizedString("drugDependenceName", comment: ""))
@@ -61,7 +62,6 @@ struct DrugView: View {
                         Alert(title: Text(NSLocalizedString("drugDependenceName", comment: "")), message: Text(NSLocalizedString("drugDependenceDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
                     }
                 }
-                .padding(.vertical, 7.5)
                 
                 HStack {
                     Text(NSLocalizedString("drugAddictionName", comment: ""))
@@ -82,7 +82,6 @@ struct DrugView: View {
                         Alert(title: Text(NSLocalizedString("drugAddictionName", comment: "")), message: Text(NSLocalizedString("drugAddictionDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
                     }
                 }
-                .padding(.vertical, 7.5)
                 
                 Timeline(onset: drug.onset, duration: drug.duration)
                     .padding(.vertical)
