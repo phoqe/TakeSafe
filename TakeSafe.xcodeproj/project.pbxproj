@@ -16,6 +16,7 @@
 		9F6A0B282531006600872936 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A0B272531006600872936 /* SettingsView.swift */; };
 		9F73F6D1253C3F6A00B93569 /* AdministrationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73F6D0253C3F6A00B93569 /* AdministrationRoute.swift */; };
 		9F73F6D4253CBB1500B93569 /* ActiveDrugList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73F6D3253CBB1500B93569 /* ActiveDrugList.swift */; };
+		9F73F6D7253CC1A600B93569 /* ActiveDrugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73F6D6253CC1A600B93569 /* ActiveDrugView.swift */; };
 		9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84D9AE2507809D006C1B77 /* SetupPageView.swift */; };
 		9F84D9B625079153006C1B77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F84D9B825079153006C1B77 /* InfoPlist.strings */; };
 		9F9E6BDA252DF3050091ABAF /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 9F9E6BD9252DF3050091ABAF /* BetterSafariView */; };
@@ -65,6 +66,7 @@
 		9F6A0B272531006600872936 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9F73F6D0253C3F6A00B93569 /* AdministrationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdministrationRoute.swift; sourceTree = "<group>"; };
 		9F73F6D3253CBB1500B93569 /* ActiveDrugList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDrugList.swift; sourceTree = "<group>"; };
+		9F73F6D6253CC1A600B93569 /* ActiveDrugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDrugView.swift; sourceTree = "<group>"; };
 		9F84D9AE2507809D006C1B77 /* SetupPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageView.swift; sourceTree = "<group>"; };
 		9F84D9B725079153006C1B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9F84D9B925079156006C1B77 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				9FC632F825374F9300DA145B /* DrugsView.swift */,
 				9F2011DF253B545400B47701 /* ActiveDrugListItem.swift */,
 				9F73F6D3253CBB1500B93569 /* ActiveDrugList.swift */,
+				9F73F6D6253CC1A600B93569 /* ActiveDrugView.swift */,
 			);
 			path = Drugs;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				9FD46F28252CDA5700FB5754 /* Dependence.swift in Sources */,
 				9F2011E6253B733B00B47701 /* Icon.swift in Sources */,
 				9F5372B8253AEA6B0043375D /* ActiveDrug.swift in Sources */,
+				9F73F6D7253CC1A600B93569 /* ActiveDrugView.swift in Sources */,
 				9FFD21682506DA3F002F01B9 /* AppDelegate.swift in Sources */,
 				9FD46F25252CD7D200FB5754 /* DrugClass.swift in Sources */,
 				9FC6330B2537954200DA145B /* StringExtension.swift in Sources */,

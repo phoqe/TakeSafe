@@ -11,7 +11,7 @@ struct ActiveDrugListItem: View {
     var activeDrug: ActiveDrug
     
     var body: some View {
-        NavigationLink(destination: Text(activeDrug.name)) {
+        NavigationLink(destination: ActiveDrugView(activeDrug: activeDrug)) {
             IconImage(icon: activeDrug.icon)
                 .padding(.trailing, 7.5)
             
