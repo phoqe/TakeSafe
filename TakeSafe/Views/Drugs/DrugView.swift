@@ -105,3 +105,9 @@ struct DrugView: View {
         }
     }
 }
+
+struct DrugView_Previews: PreviewProvider {
+    static var previews: some View {
+        DrugView(drug: SampleData.drug)
+    }
+}

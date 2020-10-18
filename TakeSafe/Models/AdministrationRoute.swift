@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+struct AdministrationRoute {
+    let name: String
+    let bioavailability: Int
+}
+
 enum AdministrationRoute: String, Codable, CaseIterable, Equatable {
     case oral = "administrationRouteOral"
     case insufflation = "administrationRouteInsufflation"

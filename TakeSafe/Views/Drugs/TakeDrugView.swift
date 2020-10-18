@@ -36,91 +36,36 @@ struct TakeDrugView: View {
     var body: some View {
         NavigationView {
             Form {
-                Picker(selection: $administrationRoute, label: Text("takeDrugRouteOfAdministration".localized())) {
-                    ForEach(drug.administrationRoutes, id: \.self) { administrationRoute in
-                        Text(administrationRoute.localizedName)
+                Section() {
+                    HStack {
+                        Text("takeDrugMedianLethalDoseName")
+                            .bold()
+                        
+                        Spacer()
+                        
+                        Text("\(drug.ld50.value) \(drug.ld50.unitDividend.symbol)/\(drug.ld50.unitDivisor.symbol)")
+                        
+                        Button(action: {
+                            showMedianLethalDoseAlert = true
+                        }, label: {
+                            Image(systemName: "info.circle")
+                        })
+                        .buttonStyle(PlainButtonStyle())
+                        .foregroundColor(.accentColor)
+                        .alert(isPresented: $showMedianLethalDoseAlert) {
+                            Alert(title: Text(NSLocalizedString("takeDrugMedianLethalDoseName", comment: "")), message: Text(NSLocalizedString("takeDrugMedianLethalDoseDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
+                        }
                     }
                 }
                 
-                Section() {
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text(NSLocalizedString("takeDrugBioavailabilityName", comment: ""))
-                                .bold()
-                            
-                            Spacer()
-                            
-                            Text("\(drug.bioavailability)%")
-                            
-                            Button(action: {
-                                showBioavailabilityAlert = true
-                            }, label: {
-                                Image(systemName: "info.circle")
-                            })
-                            .buttonStyle(PlainButtonStyle())
-                            .foregroundColor(.accentColor)
-                            .alert(isPresented: $showBioavailabilityAlert) {
-                                Alert(title: Text(NSLocalizedString("takeDrugBioavailabilityName", comment: "")), message: Text(NSLocalizedString("takeDrugBioavailabilityDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
-                            }
+                Section(header: Text("takeDrugDosage"), footer: Text(String(format: "takeDrugDosageFooter".localized(), drug.bioavailability * dose / 100, drug.massUnit.symbol, drug.name.lowercased(), drug.bioavailability))) {
+                    Picker(selection: $administrationRoute, label: Text("takeDrugRouteOfAdministration".localized())) {
+                        ForEach(drug.administrationRoutes, id: \.self) { administrationRoute in
+                            Text(administrationRoute.localizedName)
                         }
-                        
-                        HStack {
-                            Text(NSLocalizedString("takeDrugDose", comment: ""))
-                                .bold()
-                            
-                            Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: drug.doseStep...Int.max, step: drug.doseStep)
-                        }
-                        .padding(.top)
-                        
-                        HStack {
-                            Text(NSLocalizedString("takeDrugCommonDoses", comment: ""))
-                                .bold()
-                            
-                            Spacer()
-                            
-                            ForEach(drug.commonDoses, id: \.self) { dose in
-                                Button("\(dose)") {
-                                    self.dose = dose
-                                }
-                                .buttonStyle(PlainButtonStyle())
-                                .foregroundColor(.accentColor)
-                                .disabled(self.dose == dose)
-                            }
-                        }
-                        .padding(.top)
-                        
-                        HStack {
-                            Text(NSLocalizedString("takeDrugInCirculation", comment: ""))
-                                .bold()
-                            
-                            Spacer()
-                            
-                            Text("\(drug.bioavailability * dose / 100) \(drug.massUnit.symbol)")
-                        }
-                        .padding(.top)
-                        
-                        HStack {
-                            Text(NSLocalizedString("takeDrugMedianLethalDoseName", comment: ""))
-                                .bold()
-                            
-                            Spacer()
-                            
-                            Text("\(drug.ld50.value) \(drug.ld50.unitDividend.symbol)/\(drug.ld50.unitDivisor.symbol)")
-                            
-                            Button(action: {
-                                showMedianLethalDoseAlert = true
-                            }, label: {
-                                Image(systemName: "info.circle")
-                            })
-                            .buttonStyle(PlainButtonStyle())
-                            .foregroundColor(.accentColor)
-                            .alert(isPresented: $showMedianLethalDoseAlert) {
-                                Alert(title: Text(NSLocalizedString("takeDrugMedianLethalDoseName", comment: "")), message: Text(NSLocalizedString("takeDrugMedianLethalDoseDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
-                            }
-                        }
-                        .padding(.top)
                     }
-                    .padding(.vertical)
+                    
+                    Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: drug.doseStep...Int.max, step: drug.doseStep)
                 }
 
                 Section() {
@@ -134,5 +79,11 @@ struct TakeDrugView: View {
                 presented = false
             })
         }
+    }
+}
+
+struct TakeDrugView_Previews: PreviewProvider {
+    static var previews: some View {
+        TakeDrugView(drug: SampleData.drug, presented: .constant(true))
     }
 }
