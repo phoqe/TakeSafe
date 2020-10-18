@@ -544,7 +544,7 @@
 				CODE_SIGN_ENTITLEMENTS = TakeSafe/TakeSafe.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"TakeSafe/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Q3B697V;
 				ENABLE_PREVIEWS = YES;
@@ -572,7 +572,7 @@
 				CODE_SIGN_ENTITLEMENTS = TakeSafe/TakeSafe.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"TakeSafe/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Q3B697V;
 				ENABLE_PREVIEWS = YES;
