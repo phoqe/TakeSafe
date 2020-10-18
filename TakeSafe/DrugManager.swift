@@ -8,14 +8,13 @@
 import Foundation
 
 struct DrugManager {
+    private static let encoder = JSONEncoder()
+    private static let decoder = JSONDecoder()
+    
     static let activeDrugsUserDefaultsKey = "activeDrugs"
     
     static func addActiveDrug(activeDrug: ActiveDrug) {
-        let encoder = JSONEncoder()
-        
         if let data = UserDefaults.standard.data(forKey: activeDrugsUserDefaultsKey) {
-            let decoder = JSONDecoder()
-            
             guard var oldActiveDrugs = try? decoder.decode([ActiveDrug].self, from: data) else {
                 return
             }
@@ -37,8 +36,6 @@ struct DrugManager {
     }
     
     static func activeDrugs() -> [ActiveDrug]? {
-        let decoder = JSONDecoder()
-        
         guard let data = UserDefaults.standard.data(forKey: activeDrugsUserDefaultsKey) else {
             return nil
         }

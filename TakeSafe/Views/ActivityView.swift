@@ -23,9 +23,7 @@ struct ActivityView: View {
                     EmptyState(title: "profileEmptyTitle".localized(), description: "profileEmptyDescription".localized())
                 } else {
                     Form {
-                        List(activeDrugs) { activeDrug in
-                            ActiveDrugListItem(activeDrug: activeDrug)
-                        }
+                        ActiveDrugList(activeDrugs: activeDrugs)
                     }
                 }
             }
