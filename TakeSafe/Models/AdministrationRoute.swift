@@ -7,37 +7,33 @@
 
 import SwiftUI
 
-struct AdministrationRoute {
-    let name: String
+struct AdministrationRoute: Codable, Identifiable, Hashable {
+    let id: String
     let bioavailability: Int
-}
-
-enum AdministrationRoute: String, Codable, CaseIterable, Equatable {
-    case oral = "administrationRouteOral"
-    case insufflation = "administrationRouteInsufflation"
-    case enema = "administrationRouteEnema"
-    case rectal = "administrationRouteRectal"
-    case intravenous = "administrationRouteIntravenous"
     
-    var localizedName: LocalizedStringKey { LocalizedStringKey(rawValue) }
+    var localizedName: LocalizedStringKey { LocalizedStringKey(id) }
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case bioavailability
+    }
+    
+    init(id: String, bioavailability: Int) {
+        self.id = id
+        self.bioavailability = bioavailability
+    }
     
     init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        let administrationRoute = try container.decode(String.self)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        switch administrationRoute {
-            case "oral", "administrationRouteOral":
-                self = .oral
-            case "insufflation", "administrationRouteInsufflation":
-                self = .insufflation
-            case "enema", "administrationRouteEnema":
-                self = .enema
-            case "rectal", "administrationRouteRectal":
-                self = .rectal
-            case "intravenous", "administrationRouteIntravenous":
-                self = .intravenous
-            default:
-                fatalError()
-        }
+        id = try container.decode(String.self, forKey: .id)
+        bioavailability = try container.decode(Int.self, forKey: .bioavailability)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        
+        try container.encode(id, forKey: .id)
+        try container.encode(bioavailability, forKey: .bioavailability)
     }
 }

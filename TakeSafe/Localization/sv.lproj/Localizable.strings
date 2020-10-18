@@ -78,7 +78,7 @@
 "takeDrugCancel" = "Avbryt";
 "takeDrugRouteOfAdministration" = "Administreringsväg";
 "takeDrugDosage" = "Dosering";
-"takeDrugDosageFooter" = "Din kropp kommer absorbera omkring %d %@ av %@ på grund av dess %d%% biotillgänglighet.";
+"takeDrugDosageFooter" = "Din kropp kommer absorbera omkring %d %@ av %@ på grund av dess %d%% biotillgänglighet i den valda administreringsvägen.";
 
 // Timeline
 "timelineOnset" = "Början";
@@ -116,9 +116,9 @@
 "dependenceModerate" = "Måttlig";
 "dependenceHigh" = "Hög";
 
-// Administration Route
-"administrationRouteOral" = "Oral";
-"administrationRouteInsufflation" = "Inblåsning";
-"administrationRouteEnema" = "Lavemang";
-"administrationRouteRectal" = "Rektal";
-"administrationRouteIntravenous" = "Intravenöst";
+// Administration RoutŁ
+"oral" = "Oral";
+"insufflation" = "Inblåsning";
+"enema" = "Lavemang";
+"rectal" = "Rektal";
+"intravenous" = "Intravenöst";

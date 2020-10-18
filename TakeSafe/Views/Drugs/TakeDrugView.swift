@@ -12,7 +12,7 @@ struct TakeDrugView: View {
     var drug: Drug
     
     @State var administrationRoute: AdministrationRoute
-    @State var dose: Int
+    @State var dose: Int = 0
     @State var showMedianLethalDoseAlert = false
     @State var showBioavailabilityAlert = false
     @Binding var presented: Bool
@@ -21,8 +21,7 @@ struct TakeDrugView: View {
         self.drug = drug
         
         _presented = presented
-        _dose = State(initialValue: drug.defaultDose)
-        _administrationRoute = State(initialValue: drug.defaultAdministrationRoute)
+        _administrationRoute = State(initialValue: drug.administrationRoutes[0])
     }
     
     func takeDrug() {
@@ -58,19 +57,22 @@ struct TakeDrugView: View {
                     }
                 }
                 
-                Section(header: Text("takeDrugDosage"), footer: Text(String(format: "takeDrugDosageFooter".localized(), drug.bioavailability * dose / 100, drug.massUnit.symbol, drug.name.lowercased(), drug.bioavailability))) {
-                    Picker(selection: $administrationRoute, label: Text("takeDrugRouteOfAdministration".localized())) {
-                        ForEach(drug.administrationRoutes, id: \.self) { administrationRoute in
+                Section(header: Text("takeDrugDosage"), footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.name.lowercased(), administrationRoute.bioavailability))) {
+                    Picker(selection: $administrationRoute, label: Text("takeDrugRouteOfAdministration")) {
+                        ForEach(drug.administrationRoutes) { administrationRoute in
                             Text(administrationRoute.localizedName)
+                                .tag(administrationRoute)
                         }
                     }
                     
-                    Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: drug.doseStep...Int.max, step: drug.doseStep)
+                    Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: 0...Int.max, step: drug.doseStep)
                 }
 
-                Section() {
-                    Button(action: takeDrug) {
-                        Text(String(format: NSLocalizedString("takeDrugTake", comment: ""), dose, drug.massUnit.symbol))
+                if dose != 0 {
+                    Section() {
+                        Button(action: takeDrug) {
+                            Text(String(format: NSLocalizedString("takeDrugTake", comment: ""), dose, drug.massUnit.symbol))
+                        }
                     }
                 }
             }
