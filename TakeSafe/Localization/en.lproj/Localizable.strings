@@ -77,6 +77,7 @@
 "takeDrugMedianLethalDoseDescription" = "The median lethal dose for a substance is the dose required to kill half the members of a tested population after a specified test duration.";
 "takeDrugTake" = "Take %d %@";
 "takeDrugCancel" = "Cancel";
+"takeDrugRouteOfAdministration" = "Administration route";
 
 // Profile
 "profileTitle" = "Activity";
@@ -98,7 +99,7 @@
 "aboutPrivacyPolicy" = "Privacy Policy";
 
 // Drug Classes
-"drugClassStimulantName" = "Stimulant";
+"drugClassStimulant" = "Stimulant";
 "drugClassStimulantDescription" = "A substance that raises levels of physiological or nervous activity in the body.";
 
 // Addiction
@@ -110,3 +111,10 @@
 "dependenceLow" = "Low";
 "dependenceModerate" = "Moderate";
 "dependenceHigh" = "High";
+
+// Administration Route
+"administrationRouteOral" = "Oral";
+"administrationRouteInsufflation" = "Insufflation";
+"administrationRouteEnema" = "Enema";
+"administrationRouteRectal" = "Rectal";
+"administrationRouteIntravenous" = "Intravenous";

@@ -5,12 +5,14 @@
 //  Created by Linus Långberg on 2020-10-06.
 //
 
-import Foundation
+import SwiftUI
 
 enum Dependence: String, Codable {
-    case low
-    case moderate
-    case high
+    case low = "dependenceLow"
+    case moderate = "dependenceModerate"
+    case high = "dependenceHigh"
+    
+    var localizedName: LocalizedStringKey { LocalizedStringKey(rawValue) }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -25,17 +27,6 @@ enum Dependence: String, Codable {
                 self = .high
             default:
                 fatalError()
-        }
-    }
-    
-    func localizedString() -> String {
-        switch self {
-            case .low:
-                return NSLocalizedString("dependenceLow", comment: "")
-            case .moderate:
-                return NSLocalizedString("dependenceModerate", comment: "")
-            case .high:
-                return NSLocalizedString("dependenceHigh", comment: "")
         }
     }
 }

@@ -12,7 +12,6 @@ struct DrugView: View {
     var drug: Drug
     
     @State var showLearnMore = false
-    @State var showDrugClassAlert = false
     @State var showDependenceAlert = false
     @State var showAddictionAlert = false
     @State var showTakeDrugView = false
@@ -39,18 +38,7 @@ struct DrugView: View {
                     
                     Spacer()
                     
-                    Text(drug.drugClass.localizedName())
-                    
-                    Button(action: {
-                        showDrugClassAlert = true
-                    }, label: {
-                        Image(systemName: "info.circle")
-                    })
-                    .buttonStyle(PlainButtonStyle())
-                    .foregroundColor(.accentColor)
-                    .alert(isPresented: $showDrugClassAlert) {
-                        Alert(title: Text(drug.drugClass.localizedName()), message: Text(drug.drugClass.localizedDescription()), dismissButton: .default(Text("ok".localized())))
-                    }
+                    Text(drug.drugClass.localizedName)
                 }
                 .padding(.vertical, 7.5)
                 
@@ -60,7 +48,7 @@ struct DrugView: View {
                     
                     Spacer()
                     
-                    Text(drug.dependence.localizedString())
+                    Text(drug.dependence.localizedName)
                     
                     Button(action: {
                         showDependenceAlert = true
@@ -81,7 +69,7 @@ struct DrugView: View {
                     
                     Spacer()
                     
-                    Text(drug.addiction.localizedName())
+                    Text(drug.addiction.localizedName)
                     
                     Button(action: {
                         showAddictionAlert = true

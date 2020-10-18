@@ -11,6 +11,7 @@ import Foundation
 struct TakeDrugView: View {
     var drug: Drug
     
+    @State var administrationRoute: AdministrationRoute
     @State var dose: Int
     @State var showMedianLethalDoseAlert = false
     @State var showBioavailabilityAlert = false
@@ -21,10 +22,11 @@ struct TakeDrugView: View {
         
         _presented = presented
         _dose = State(initialValue: drug.defaultDose)
+        _administrationRoute = State(initialValue: drug.defaultAdministrationRoute)
     }
     
     func takeDrug() {
-        let activeDrug = ActiveDrug(drug: drug, dose: dose, ingestion: Date())
+        let activeDrug = ActiveDrug(drug: drug, dose: dose, ingestion: Date(), administrationRoute: administrationRoute)
         
         DrugManager.addActiveDrug(activeDrug: activeDrug)
         
@@ -34,6 +36,12 @@ struct TakeDrugView: View {
     var body: some View {
         NavigationView {
             Form {
+                Picker(selection: $administrationRoute, label: Text("takeDrugRouteOfAdministration".localized())) {
+                    ForEach(drug.administrationRoutes, id: \.self) { administrationRoute in
+                        Text(administrationRoute.localizedName)
+                    }
+                }
+                
                 Section() {
                     VStack(alignment: .leading) {
                         HStack {

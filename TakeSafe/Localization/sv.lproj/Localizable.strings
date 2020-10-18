@@ -76,6 +76,7 @@
 "takeDrugMedianLethalDoseDescription" = "Värdet en specifik substans erhålls genom att i djurförsök utsätta olika grupper av försöksdjur för varierande doser av substansen, varpå en del av försöksdjuren dör.";
 "takeDrugTake" = "Ta %d %@";
 "takeDrugCancel" = "Avbryt";
+"takeDrugRouteOfAdministration" = "Administreringsväg";
 
 // Timeline
 "timelineOnset" = "Början";
@@ -100,7 +101,7 @@
 "aboutPrivacyPolicy" = "Integritetspolicy";
 
 // Drug Classes
-"drugClassStimulantName" = "Stimulant";
+"drugClassStimulant" = "Stimulant";
 "drugClassStimulantDescription" = "Preparaten i denna grupp förstärker så väl sinnesförnimmelser som tankar och beteenden.";
 
 // Addiction
@@ -112,3 +113,10 @@
 "dependenceLow" = "Låg";
 "dependenceModerate" = "Måttlig";
 "dependenceHigh" = "Hög";
+
+// Administration Route
+"administrationRouteOral" = "Oral";
+"administrationRouteInsufflation" = "Inblåsning";
+"administrationRouteEnema" = "Lavemang";
+"administrationRouteRectal" = "Rektal";
+"administrationRouteIntravenous" = "Intravenöst";

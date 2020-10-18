@@ -5,10 +5,12 @@
 //  Created by Linus Långberg on 2020-10-06.
 //
 
-import Foundation
+import SwiftUI
 
 enum DrugClass: String, Codable {
-    case stimulant
+    case stimulant = "drugClassStimulant"
+    
+    var localizedName: LocalizedStringKey { LocalizedStringKey(rawValue) }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -19,20 +21,6 @@ enum DrugClass: String, Codable {
                 self = .stimulant
             default:
                 fatalError()
-        }
-    }
-    
-    func localizedName() -> String {
-        switch self {
-            case .stimulant:
-                return NSLocalizedString("drugClassStimulantName", comment: "")
-        }
-    }
-    
-    func localizedDescription() -> String {
-        switch self {
-            case .stimulant:
-                return NSLocalizedString("drugClassStimulantDescription", comment: "")
         }
     }
 }
