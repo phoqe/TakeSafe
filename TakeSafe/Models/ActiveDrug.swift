@@ -35,6 +35,8 @@ class ActiveDrug: Drug {
         
         try container.encode(dose, forKey: .dose)
         try container.encode(ingestion, forKey: .ingestion)
+        try container.encode(administrationRoute, forKey: .administrationRoute)
+        
         try container.encode(id, forKey: .id)
         try container.encode(name, forKey: .name)
         try container.encode(aliases, forKey: .aliases)
@@ -53,5 +55,6 @@ class ActiveDrug: Drug {
         try container.encode(doseStep, forKey: .doseStep)
         try container.encode(commonDoses, forKey: .commonDoses)
         try container.encode(administrationRoutes, forKey: .administrationRoutes)
+        try container.encode(defaultAdministrationRoute, forKey: .defaultAdministrationRoute)
     }
 }

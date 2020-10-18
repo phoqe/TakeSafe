@@ -25,7 +25,6 @@ struct ActivityView: View {
                     Form {
                         List(activeDrugs) { activeDrug in
                             ActiveDrugListItem(activeDrug: activeDrug)
-                                .padding(.vertical)
                         }
                     }
                 }

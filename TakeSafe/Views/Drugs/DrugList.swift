@@ -12,9 +12,7 @@ struct DrugList: View {
     
     var body: some View {
         List(drugs) { drug in
-            NavigationLink(destination: DrugView(drug: drug)) {
-                DrugListItem(drug: drug)
-            }
+            DrugListItem(drug: drug)
         }
     }
 }

@@ -21,15 +21,15 @@ enum AdministrationRoute: String, Codable, CaseIterable, Equatable {
         let administrationRoute = try container.decode(String.self)
         
         switch administrationRoute {
-            case "oral":
+            case "oral", "administrationRouteOral":
                 self = .oral
-            case "insufflation":
+            case "insufflation", "administrationRouteInsufflation":
                 self = .insufflation
-            case "enema":
+            case "enema", "administrationRouteEnema":
                 self = .enema
-            case "rectal":
+            case "rectal", "administrationRouteRectal":
                 self = .rectal
-            case "intravenous":
+            case "intravenous", "administrationRouteIntravenous":
                 self = .intravenous
             default:
                 fatalError()

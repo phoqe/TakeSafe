@@ -17,7 +17,7 @@ enum DrugClass: String, Codable {
         let drugClass = try container.decode(String.self)
         
         switch drugClass {
-            case "stimulant":
+            case "stimulant", "drugClassStimulant":
                 self = .stimulant
             default:
                 fatalError()

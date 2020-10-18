@@ -19,11 +19,11 @@ enum Addiction: String, Codable {
         let addiction = try container.decode(String.self)
         
         switch addiction {
-            case "low":
+            case "low", "addictionLow":
                 self = .low
-            case "moderate":
+            case "moderate", "addictionModerate":
                 self = .moderate
-            case "high":
+            case "high", "addictionHigh":
                 self = .high
             default:
                 fatalError()

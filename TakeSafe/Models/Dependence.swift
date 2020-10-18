@@ -19,11 +19,11 @@ enum Dependence: String, Codable {
         let dependence = try container.decode(String.self)
         
         switch dependence {
-            case "low":
+            case "low", "dependenceLow":
                 self = .low
-            case "moderate":
+            case "moderate", "dependenceModerate":
                 self = .moderate
-            case "high":
+            case "high", "dependenceHigh":
                 self = .high
             default:
                 fatalError()

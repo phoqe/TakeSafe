@@ -11,12 +11,20 @@ struct DrugListItem: View {
     var drug: Drug
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(drug.name)
-                .padding(.bottom, -5)
-            Text(drug.drugClass.localizedName)
-                .foregroundColor(.secondary)
+        NavigationLink(destination: DrugView(drug: drug)) {
+            IconImage(icon: drug.icon)
+                .padding(.trailing, 7.5)
+            
+            VStack(alignment: .leading) {
+                Text(drug.name)
+                    .bold()
+                    .foregroundColor(.accentColor)
+                    .padding(.bottom, -2.5)
+                
+                Text(drug.drugClass.localizedName)
+                    .foregroundColor(.secondary)
+            }
         }
-        .padding(.vertical, 5)
+        .padding(.vertical)
     }
 }
