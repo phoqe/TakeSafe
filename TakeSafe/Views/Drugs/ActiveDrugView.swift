@@ -10,10 +10,13 @@ import SwiftUI
 struct ActiveDrugView: View {
     var activeDrug: ActiveDrug
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     var body: some View {
         Form {
             Button("remove") {
                 DrugManager.removeActiveDrug(id: activeDrug.id)
+                presentationMode.wrappedValue.dismiss()
             }
             .foregroundColor(.red)
         }
