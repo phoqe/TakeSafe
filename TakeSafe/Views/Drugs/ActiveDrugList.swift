@@ -15,6 +15,9 @@ struct ActiveDrugList: View {
             ForEach(activeDrugs) { activeDrug in
                 ActiveDrugListItem(activeDrug: activeDrug)
             }
+            .onDelete(perform: { indexSet in
+                
+            })
         }
     }
 }

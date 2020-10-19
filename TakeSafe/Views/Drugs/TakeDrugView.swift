@@ -38,7 +38,6 @@ struct TakeDrugView: View {
                 Section() {
                     HStack {
                         Text("takeDrugMedianLethalDoseName")
-                            .bold()
                         
                         Spacer()
                         

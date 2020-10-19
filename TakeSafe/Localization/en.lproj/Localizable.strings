@@ -48,6 +48,7 @@
 
 // Common
 "ok" = "OK";
+"remove" = "Remove";
 
 // Drugs
 "drugsTitle" = "Drugs";
@@ -91,6 +92,7 @@
 "settingsGoToSleep" = "Bedtime";
 "settingsWakeUp" = "Wake up";
 "settingsAbout" = "About";
+"settingsSleep" = "Sleep";
 
 // About
 "aboutTitle" = "About";

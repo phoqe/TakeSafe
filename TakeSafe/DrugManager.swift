@@ -35,6 +35,24 @@ struct DrugManager {
         }
     }
     
+    static func removeActiveDrug(id: String) {
+        guard let data = UserDefaults.standard.data(forKey: activeDrugsUserDefaultsKey) else {
+            return
+        }
+        
+        guard let oldActiveDrugs = try? decoder.decode([ActiveDrug].self, from: data) else {
+            return
+        }
+        
+        let activeDrugs = oldActiveDrugs.filter { $0.id != id }
+        
+        guard let newActiveDrugs = try? encoder.encode(activeDrugs) else {
+            return
+        }
+        
+        UserDefaults.standard.set(newActiveDrugs, forKey: activeDrugsUserDefaultsKey)
+    }
+    
     static func activeDrugs() -> [ActiveDrug]? {
         guard let data = UserDefaults.standard.data(forKey: activeDrugsUserDefaultsKey) else {
             return nil

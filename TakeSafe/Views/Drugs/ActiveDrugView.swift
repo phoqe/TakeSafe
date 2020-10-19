@@ -12,8 +12,10 @@ struct ActiveDrugView: View {
     
     var body: some View {
         Form {
-            Timeline(onset: activeDrug.onset, duration: activeDrug.duration)
-                .padding(.vertical)
+            Button("remove") {
+                DrugManager.removeActiveDrug(id: activeDrug.id)
+            }
+            .foregroundColor(.red)
         }
         .navigationBarTitle(activeDrug.name)
     }

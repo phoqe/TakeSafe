@@ -50,6 +50,7 @@
 
 // Common
 "ok" = "OK";
+"remove" = "Ta bort";
 
 // Drugs
 "drugsTitle" = "Läkemedel";
@@ -93,6 +94,7 @@
 "settingsGoToSleep" = "Läggdags";
 "settingsWakeUp" = "Väckningstid";
 "settingsAbout" = "Om";
+"settingsSleep" = "Sömn";
 
 // About
 "aboutTitle" = "Om";

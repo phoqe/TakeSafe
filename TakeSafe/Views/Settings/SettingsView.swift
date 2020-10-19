@@ -17,9 +17,24 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section() {
-                    DatePicker(NSLocalizedString("settingsGoToSleep", comment: ""), selection: $goToSleepTime, displayedComponents: .hourAndMinute)
-                    DatePicker(NSLocalizedString("settingsWakeUp", comment: ""), selection: $wakeUpTime, displayedComponents: .hourAndMinute)
+                Section(header: Text("settingsSleep")) {
+                    HStack {
+                        Text("settingsGoToSleep")
+                        
+                        Spacer()
+                        
+                        DatePicker(NSLocalizedString("settingsGoToSleep", comment: ""), selection: $goToSleepTime, displayedComponents: .hourAndMinute)
+                            .datePickerStyle(GraphicalDatePickerStyle())
+                    }
+                    
+                    HStack {
+                        Text("settingsWakeUp")
+                        
+                        Spacer()
+                        
+                        DatePicker(NSLocalizedString("settingsWakeUp", comment: ""), selection: $wakeUpTime, displayedComponents: .hourAndMinute)
+                            .datePickerStyle(GraphicalDatePickerStyle())
+                    }
                 }
                 
                 NavigationLink(destination: AboutView()) {
