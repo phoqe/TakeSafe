@@ -25,6 +25,7 @@ class Drug: Codable, Identifiable {
     let doseStep: Int
     let commonDoses: [Int]
     let administrationRoutes: [AdministrationRoute]
+    let rdi: Int
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -47,9 +48,10 @@ class Drug: Codable, Identifiable {
         case ingestion
         case administrationRoutes = "administration_routes"
         case administrationRoute = "administration_route"
+        case rdi
     }
     
-    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, icon: Icon, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int], administrationRoutes: [AdministrationRoute]) {
+    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, icon: Icon, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int], administrationRoutes: [AdministrationRoute], rdi: Int) {
         self.id = id
         self.name = name
         self.aliases = aliases
@@ -67,6 +69,7 @@ class Drug: Codable, Identifiable {
         self.doseStep = doseStep
         self.commonDoses = commonDoses
         self.administrationRoutes = administrationRoutes
+        self.rdi = rdi
     }
     
     required init(from decoder: Decoder) throws {
@@ -89,6 +92,7 @@ class Drug: Codable, Identifiable {
         doseStep = try container.decode(Int.self, forKey: .doseStep)
         commonDoses = try container.decode([Int].self, forKey: .commonDoses)
         administrationRoutes = try container.decode([AdministrationRoute].self, forKey: .administrationRoutes)
+        rdi = try container.decode(Int.self, forKey: .rdi)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -111,5 +115,6 @@ class Drug: Codable, Identifiable {
         try container.encode(doseStep, forKey: .doseStep)
         try container.encode(commonDoses, forKey: .commonDoses)
         try container.encode(administrationRoutes, forKey: .administrationRoutes)
+        try container.encode(rdi, forKey: .rdi)
     }
 }
