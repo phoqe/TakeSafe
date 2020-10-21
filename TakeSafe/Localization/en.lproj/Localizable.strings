@@ -79,7 +79,7 @@
 "takeDrugMedianLethalDoseDescription" = "The dose required to kill half the members of a tested population after a specified test duration.";
 "takeDrugTake" = "Take %d %@";
 "takeDrugCancel" = "Cancel";
-"takeDrugRouteOfAdministration" = "Route of administration";
+"takeDrugRouteOfAdministration" = "Route";
 "takeDrugDosage" = "Dosage";
 "takeDrugDosageFooter" = "Your body will absorb around %d %@ of %@ due to its %d%% bioavailability in the selected administration route.";
 
