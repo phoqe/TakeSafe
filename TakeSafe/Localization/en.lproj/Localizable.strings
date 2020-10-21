@@ -49,6 +49,7 @@
 // Common
 "ok" = "OK";
 "remove" = "Remove";
+"rdi" = "RDI";
 
 // Drugs
 "drugsTitle" = "Drugs";

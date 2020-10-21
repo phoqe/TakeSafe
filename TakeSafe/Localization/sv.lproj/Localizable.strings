@@ -51,6 +51,7 @@
 // Common
 "ok" = "OK";
 "remove" = "Ta bort";
+"rdi" = "RDI";
 
 // Drugs
 "drugsTitle" = "Läkemedel";

@@ -37,6 +37,14 @@ struct TakeDrugView: View {
             Form {
                 Section() {
                     HStack {
+                        Text("rdi")
+                        
+                        Spacer()
+                        
+                        Text("\(drug.rdi) \(drug.massUnit.symbol)")
+                    }
+                    
+                    HStack {
                         Text("takeDrugMedianLethalDoseName")
                         
                         Spacer()
