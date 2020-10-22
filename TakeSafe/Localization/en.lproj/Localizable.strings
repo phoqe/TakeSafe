@@ -123,3 +123,8 @@
 "enema" = "Enema";
 "rectal" = "Rectal";
 "intravenous" = "Intravenous";
+
+// Drug Interactions
+"minor" = "Minor";
+"moderate" = "Moderate";
+"major" = "Major";

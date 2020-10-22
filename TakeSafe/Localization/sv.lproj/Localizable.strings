@@ -125,3 +125,8 @@
 "enema" = "Lavemang";
 "rectal" = "Rektal";
 "intravenous" = "Intravenöst";
+
+// Drug Interactions
+"minor" = "Lindrig";
+"moderate" = "Måttlig";
+"major" = "Allvarlig";
