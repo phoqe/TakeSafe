@@ -21,6 +21,8 @@
 		9F84D9B625079153006C1B77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F84D9B825079153006C1B77 /* InfoPlist.strings */; };
 		9F9E6BDA252DF3050091ABAF /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 9F9E6BD9252DF3050091ABAF /* BetterSafariView */; };
 		9F9E6BDE252DFB9D0091ABAF /* TakeDrugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E6BDD252DFB9D0091ABAF /* TakeDrugView.swift */; };
+		9FA282EE2541C835005021FC /* DrugInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA282ED2541C835005021FC /* DrugInteraction.swift */; };
+		9FA282F12541C899005021FC /* DrugInteractionSeverity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA282F02541C899005021FC /* DrugInteractionSeverity.swift */; };
 		9FA381D2250629840053C3F4 /* TakeSafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381D1250629840053C3F4 /* TakeSafeApp.swift */; };
 		9FA381D4250629840053C3F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381D3250629840053C3F4 /* ContentView.swift */; };
 		9FA381D6250629850053C3F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA381D5250629850053C3F4 /* Assets.xcassets */; };
@@ -72,6 +74,8 @@
 		9F84D9B725079153006C1B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9F84D9B925079156006C1B77 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9F9E6BDD252DFB9D0091ABAF /* TakeDrugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeDrugView.swift; sourceTree = "<group>"; };
+		9FA282ED2541C835005021FC /* DrugInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugInteraction.swift; sourceTree = "<group>"; };
+		9FA282F02541C899005021FC /* DrugInteractionSeverity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugInteractionSeverity.swift; sourceTree = "<group>"; };
 		9FA381CE250629840053C3F4 /* TakeSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA381D1250629840053C3F4 /* TakeSafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeSafeApp.swift; sourceTree = "<group>"; };
 		9FA381D3250629840053C3F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -257,6 +261,8 @@
 				9F5372B7253AEA6B0043375D /* ActiveDrug.swift */,
 				9F2011E5253B733B00B47701 /* Icon.swift */,
 				9F73F6D0253C3F6A00B93569 /* AdministrationRoute.swift */,
+				9FA282ED2541C835005021FC /* DrugInteraction.swift */,
+				9FA282F02541C899005021FC /* DrugInteractionSeverity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -360,8 +366,10 @@
 				9FC632F925374F9300DA145B /* DrugsView.swift in Sources */,
 				9FD46F2B252CDB1000FB5754 /* Addiction.swift in Sources */,
 				9F73F6D4253CBB1500B93569 /* ActiveDrugList.swift in Sources */,
+				9FA282F12541C899005021FC /* DrugInteractionSeverity.swift in Sources */,
 				9FA381E725062CC70053C3F4 /* IntroPage.swift in Sources */,
 				9FD46F1D252CC19900FB5754 /* DrugView.swift in Sources */,
+				9FA282EE2541C835005021FC /* DrugInteraction.swift in Sources */,
 				9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */,
 				9FC04666250655EF000B2AAC /* PageControl.swift in Sources */,
 				9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */,
