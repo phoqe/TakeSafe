@@ -14,13 +14,21 @@ struct SettingsView: View {
     @State var pregnancyMode = UserDefaults.standard.bool(forKey: "pregnancyMode")
     
     let name = Bundle.main.infoDictionary!["CFBundleName"] as! String
+    let appleHealthConnected = UserDefaults.standard.bool(forKey: "appleHealthConnected")
     
     var body: some View {
         NavigationView {
             Form {
                 Section() {
                     NavigationLink(destination: Text("Apple Health")) {
-                        Text("Apple Health")
+                        HStack {
+                            Text("Apple Health")
+                            
+                            Spacer()
+                            
+                            Text(appleHealthConnected ? "Connected" : "Not Connected")
+                                .foregroundColor(.secondary)
+                        }
                     }
                 }
                 
@@ -30,7 +38,7 @@ struct SettingsView: View {
                     }
                 }
                 
-                Section(header: Text("settingsSleep")) {
+                Section() {
                     HStack {
                         Text("settingsGoToSleep")
                         

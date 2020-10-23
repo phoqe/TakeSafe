@@ -1,7 +1,0 @@
-default_platform(:ios)
-
-platform :ios do
-  lane :beta do
-    build_app(scheme: "TakeSafe")
-  end
-end

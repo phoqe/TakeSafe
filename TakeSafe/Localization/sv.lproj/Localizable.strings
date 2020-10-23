@@ -102,6 +102,8 @@
 "Pregnancy Mode" = "Graviditetsläge";
 "We tailor drug and dosage information in regards to your pregnancy." = "Vi skräddarsyr läkemedels- och dosinformation med avseende på din graviditet.";
 "Apple Health" = "Apple Health";
+"Connected" = "Ansluten";
+"Not Connected" = "Ej ansluten";
 
 // About
 "aboutTitle" = "Om";
@@ -138,5 +140,5 @@
 "major" = "Allvarlig";
 
 // Active Drug View
-"Remove active drug?" = "Ta bort aktivt läkemedel?";
+"Remove active drug?" = "Ta bort “%@”?";
 "You will no longer be able to track this drug." = "Du kommer inte längre kunna spåra detta läkemedel.";
