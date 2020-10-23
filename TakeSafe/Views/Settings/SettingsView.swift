@@ -18,6 +18,12 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
+                Section() {
+                    NavigationLink(destination: Text("Apple Health")) {
+                        Text("Apple Health")
+                    }
+                }
+                
                 Section(footer: Text("We tailor drug and dosage information in regards to your pregnancy.")) {
                     Toggle(isOn: $pregnancyMode) {
                         Text("Pregnancy Mode")
