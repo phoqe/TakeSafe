@@ -17,7 +17,7 @@ struct DrugView: View {
     @State var showTakeDrugView = false
     
     var body: some View {
-        Form {
+        List {
             Section() {
                 Button(action: {
                     showLearnMore = true
@@ -93,6 +93,7 @@ struct DrugView: View {
                 }
             }
         }
+        .listStyle(InsetGroupedListStyle())
         .navigationBarTitle(drug.name)
         .safariView(isPresented: $showLearnMore) {
             SafariView(url: drug.learnMoreUrl, configuration: SafariView.Configuration(

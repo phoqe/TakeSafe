@@ -82,6 +82,8 @@
 "takeDrugRouteOfAdministration" = "Route";
 "takeDrugDosage" = "Dosage";
 "takeDrugDosageFooter" = "Your body will absorb around %d %@ of %@ due to its %d%% bioavailability in the selected administration route.";
+"referenceDailyIntake" = "Reference Daily Intake";
+"referenceDailyIntakeMessage" = "The daily intake level of a nutrient that is considered to be sufficient to meet the requirements of 97–98% of healthy individuals.";
 
 // Profile
 "profileTitle" = "Activity";

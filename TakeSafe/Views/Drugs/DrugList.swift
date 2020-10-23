@@ -14,5 +14,12 @@ struct DrugList: View {
         List(drugs) { drug in
             DrugListItem(drug: drug)
         }
+        .listStyle(InsetGroupedListStyle())
+    }
+}
+
+struct DrugList_Previews: PreviewProvider {
+    static var previews: some View {
+        DrugList(drugs: [SampleData.drug])
     }
 }

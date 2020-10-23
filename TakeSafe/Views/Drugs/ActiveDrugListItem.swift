@@ -29,6 +29,7 @@ struct ActiveDrugListItem: View {
             
             Text(activeDrug.ingestion, style: .timer)
                 .foregroundColor(.secondary)
+                .padding(.trailing, 5)
         }
         .padding(.vertical)
     }

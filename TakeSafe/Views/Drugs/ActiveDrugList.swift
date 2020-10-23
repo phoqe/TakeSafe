@@ -19,5 +19,6 @@ struct ActiveDrugList: View {
                 
             })
         }
+        .listStyle(InsetGroupedListStyle())
     }
 }

@@ -15,6 +15,7 @@ struct TakeDrugView: View {
     @State var dose: Int = 0
     @State var showMedianLethalDoseAlert = false
     @State var showBioavailabilityAlert = false
+    @State var showRdiAlert = false
     @Binding var presented: Bool
     
     init(drug: Drug, presented: Binding<Bool>) {
@@ -43,6 +44,17 @@ struct TakeDrugView: View {
                             Spacer()
                             
                             Text("\(rdi) \(drug.massUnit.symbol)")
+                            
+                            Button(action: {
+                                showRdiAlert = true
+                            }, label: {
+                                Image(systemName: "info.circle")
+                            })
+                            .buttonStyle(PlainButtonStyle())
+                            .foregroundColor(.accentColor)
+                            .alert(isPresented: $showRdiAlert) {
+                                Alert(title: Text(NSLocalizedString("referenceDailyIntake", comment: "")), message: Text(NSLocalizedString("referenceDailyIntakeMessage", comment: "")), dismissButton: .default(Text("ok".localized())))
+                            }
                         }
                     }
                     
@@ -76,7 +88,7 @@ struct TakeDrugView: View {
                     
                     Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: 0...Int.max, step: drug.doseStep)
                 }
-
+                
                 if dose != 0 {
                     Section() {
                         Button(action: takeDrug) {

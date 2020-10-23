@@ -60,9 +60,7 @@ struct DrugsView: View {
                 } else if drugs.isEmpty {
                     EmptyState(title: NSLocalizedString("drugsEmptyTitle", comment: ""), description: NSLocalizedString("drugsEmptyDescription", comment: ""))
                 } else {
-                    Form {
-                        DrugList(drugs: drugs)
-                    }
+                    DrugList(drugs: drugs)
                 }
             }
             .navigationBarTitle(NSLocalizedString("drugsTitle", comment: ""), displayMode: .inline)
