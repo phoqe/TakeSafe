@@ -9,9 +9,9 @@ import SwiftUI
 import HealthKit
 
 struct SettingsView: View {
-    @State var goToSleepTime = UserDefaults.standard.data(forKey: "goToSleepTime") as! Date? ?? Date()
-    @State var wakeUpTime = UserDefaults.standard.data(forKey: "wakeUpTime") as! Date? ?? Date()
-    @State var pregnancyMode = false
+    @State var bedtime = UserDefaults.standard.object(forKey: "bedtime") as! Date
+    @State var waketime = UserDefaults.standard.object(forKey: "waketime") as! Date
+    @State var pregnancyMode = UserDefaults.standard.bool(forKey: "pregnancyMode")
     
     let name = Bundle.main.infoDictionary!["CFBundleName"] as! String
     
@@ -36,7 +36,7 @@ struct SettingsView: View {
                         
                         Spacer()
                         
-                        DatePicker(NSLocalizedString("settingsGoToSleep", comment: ""), selection: $goToSleepTime, displayedComponents: .hourAndMinute)
+                        DatePicker(NSLocalizedString("settingsGoToSleep", comment: ""), selection: $bedtime, displayedComponents: .hourAndMinute)
                             .datePickerStyle(GraphicalDatePickerStyle())
                     }
                     
@@ -45,7 +45,7 @@ struct SettingsView: View {
                         
                         Spacer()
                         
-                        DatePicker(NSLocalizedString("settingsWakeUp", comment: ""), selection: $wakeUpTime, displayedComponents: .hourAndMinute)
+                        DatePicker(NSLocalizedString("settingsWakeUp", comment: ""), selection: $waketime, displayedComponents: .hourAndMinute)
                             .datePickerStyle(GraphicalDatePickerStyle())
                     }
                 }
