@@ -97,6 +97,8 @@
 "settingsWakeUp" = "Wake up";
 "settingsAbout" = "About";
 "settingsSleep" = "Sleep";
+"Pregnancy Mode" = "Pregnancy Mode";
+"We tailor drug and dosage information in regards to your pregnancy." = "We tailor drug and dosage information with regards to your pregnancy.";
 
 // About
 "aboutTitle" = "About";

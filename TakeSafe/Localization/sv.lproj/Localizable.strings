@@ -99,6 +99,8 @@
 "settingsWakeUp" = "Väckningstid";
 "settingsAbout" = "Om";
 "settingsSleep" = "Sömn";
+"Pregnancy Mode" = "Graviditetsläge";
+"We tailor drug and dosage information in regards to your pregnancy." = "Vi skräddarsyr läkemedels- och dosinformation med avseende på din graviditet.";
 
 // About
 "aboutTitle" = "Om";

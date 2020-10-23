@@ -11,12 +11,19 @@ import HealthKit
 struct SettingsView: View {
     @State var goToSleepTime = UserDefaults.standard.data(forKey: "goToSleepTime") as! Date? ?? Date()
     @State var wakeUpTime = UserDefaults.standard.data(forKey: "wakeUpTime") as! Date? ?? Date()
+    @State var pregnancyMode = false
     
     let name = Bundle.main.infoDictionary!["CFBundleName"] as! String
     
     var body: some View {
         NavigationView {
             Form {
+                Section(footer: Text("We tailor drug and dosage information in regards to your pregnancy.")) {
+                    Toggle(isOn: $pregnancyMode) {
+                        Text("Pregnancy Mode")
+                    }
+                }
+                
                 Section(header: Text("settingsSleep")) {
                     HStack {
                         Text("settingsGoToSleep")
