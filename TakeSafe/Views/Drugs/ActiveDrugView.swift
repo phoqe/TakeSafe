@@ -20,7 +20,7 @@ struct ActiveDrugView: View {
             }
             .foregroundColor(.red)
             .alert(isPresented: $showRemoveAlert) {
-                Alert(title: Text("Remove active drug?"), message: Text("You will no longer be able to track this drug."), primaryButton: .destructive(Text("Remove")) {
+                Alert(title: Text(String(format: "Remove active drug?".localized(), activeDrug.name)), message: Text("You will no longer be able to track this drug."), primaryButton: .destructive(Text("Remove")) {
                     DrugManager.removeActiveDrug(id: activeDrug.id)
                     presentationMode.wrappedValue.dismiss()
                 }, secondaryButton: .cancel())

@@ -28,7 +28,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             "pregnancyMode": false,
             "bedtime": Calendar.current.date(from: bedtime)!,
             "waketime": Calendar.current.date(from: waketime)!,
-            "activeDrugs": []
+            "activeDrugs": [],
+            "appleHealthConnected": false
         ])
     }
 }
