@@ -27,7 +27,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         UserDefaults.standard.register(defaults: [
             "pregnancyMode": false,
             "bedtime": Calendar.current.date(from: bedtime)!,
-            "waketime": Calendar.current.date(from: waketime)!
+            "waketime": Calendar.current.date(from: waketime)!,
+            "activeDrugs": []
         ])
     }
 }
