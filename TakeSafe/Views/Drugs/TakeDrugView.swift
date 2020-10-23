@@ -36,12 +36,14 @@ struct TakeDrugView: View {
         NavigationView {
             Form {
                 Section() {
-                    HStack {
-                        Text("rdi")
-                        
-                        Spacer()
-                        
-                        Text("\(drug.rdi) \(drug.massUnit.symbol)")
+                    if let rdi = drug.rdi {
+                        HStack {
+                            Text("rdi")
+                            
+                            Spacer()
+                            
+                            Text("\(rdi) \(drug.massUnit.symbol)")
+                        }
                     }
                     
                     HStack {

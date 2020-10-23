@@ -25,7 +25,7 @@ class Drug: Codable, Identifiable {
     let doseStep: Int
     let commonDoses: [Int]
     let administrationRoutes: [AdministrationRoute]
-    let rdi: Int
+    let rdi: Int?
     let interactions: [DrugInteraction]?
     
     enum CodingKeys: String, CodingKey {
@@ -53,7 +53,7 @@ class Drug: Codable, Identifiable {
         case interactions
     }
     
-    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, icon: Icon, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int], administrationRoutes: [AdministrationRoute], rdi: Int, interactions: [DrugInteraction]?) {
+    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, icon: Icon, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int], administrationRoutes: [AdministrationRoute], rdi: Int?, interactions: [DrugInteraction]?) {
         self.id = id
         self.name = name
         self.aliases = aliases
