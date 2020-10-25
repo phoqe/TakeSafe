@@ -29,9 +29,3 @@ struct ActiveDrugView: View {
         .navigationBarTitle(activeDrug.name)
     }
 }
-
-struct ActiveDrugView_Previews: PreviewProvider {
-    static var previews: some View {
-        ActiveDrugView(activeDrug: SampleData.activeDrug)
-    }
-}

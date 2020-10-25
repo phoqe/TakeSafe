@@ -105,6 +105,9 @@
 "Connected" = "Ansluten";
 "Not Connected" = "Ej ansluten";
 
+// Apple Health View
+"Connect Apple Health" = "Anslut Apple Health";
+
 // About
 "aboutTitle" = "Om";
 "aboutVersion" = "Version";

@@ -103,6 +103,11 @@
 "Connected" = "Connected";
 "Not Connected" = "Not Connected";
 
+// Apple Health View
+"Connect Apple Health" = "Connect Apple Health";
+"Connect us with Apple Health." = "Connect us with Apple Health.";
+"We can use data from Apple Health to give you info and advice in realtime. For example, we’ll tell you if a drug will disturb your sleep before you take it." = "We can use data from Apple Health to give you info and advice in realtime. For example, we’ll tell you if a drug will disturb your sleep before you take it.";
+
 // About
 "aboutTitle" = "About";
 "aboutVersion" = "Version";

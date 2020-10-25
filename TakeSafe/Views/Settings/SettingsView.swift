@@ -11,7 +11,8 @@ import HealthKit
 struct SettingsView: View {
     @State var bedtime = UserDefaults.standard.object(forKey: "bedtime") as! Date
     @State var waketime = UserDefaults.standard.object(forKey: "waketime") as! Date
-    @State var pregnancyMode = UserDefaults.standard.bool(forKey: "pregnancyMode")
+    
+    @AppStorage("pregnancyMode") var pregnancyMode: Bool = UserDefaults.standard.bool(forKey: "pregnancyMode")
     
     let name = Bundle.main.infoDictionary!["CFBundleName"] as! String
     let appleHealthConnected = UserDefaults.standard.bool(forKey: "appleHealthConnected")
@@ -20,7 +21,7 @@ struct SettingsView: View {
         NavigationView {
             Form {
                 Section() {
-                    NavigationLink(destination: Text("Apple Health")) {
+                    NavigationLink(destination: AppleHealthView()) {
                         HStack {
                             Text("Apple Health")
                             
@@ -33,9 +34,7 @@ struct SettingsView: View {
                 }
                 
                 Section(footer: Text("We tailor drug and dosage information in regards to your pregnancy.")) {
-                    Toggle(isOn: $pregnancyMode) {
-                        Text("Pregnancy Mode")
-                    }
+                    Toggle("Pregnancy Mode", isOn: $pregnancyMode)
                 }
                 
                 Section() {

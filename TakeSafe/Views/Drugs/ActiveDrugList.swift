@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ActiveDrugList: View {
-    @State var activeDrugs: [ActiveDrug]
+    @Binding var activeDrugs: [ActiveDrug]
     
     var body: some View {
         List {
