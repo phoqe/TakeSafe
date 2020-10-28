@@ -102,6 +102,8 @@
 "Apple Health" = "Apple Health";
 "Connected" = "Connected";
 "Not Connected" = "Not Connected";
+"Connect Apple Health..." = "Connect Apple Health...";
+"We can use data from Apple Health to give you info and advice in realtime." = "We can use data from Apple Health to give you info and advice in realtime.";
 
 // Apple Health View
 "Connect Apple Health" = "Connect Apple Health";

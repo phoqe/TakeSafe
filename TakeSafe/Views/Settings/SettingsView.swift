@@ -20,15 +20,29 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section() {
-                    NavigationLink(destination: AppleHealthView()) {
-                        HStack {
-                            Text("Apple Health")
-                            
-                            Spacer()
-                            
-                            Text(appleHealthConnected ? "Connected" : "Not Connected")
-                                .foregroundColor(.secondary)
+                Section(footer: appleHealthConnected ? nil : Text("We can use data from Apple Health to give you info and advice in realtime.")) {
+                    if appleHealthConnected {
+                        NavigationLink(destination: AppleHealthView()) {
+                            HStack {
+                                Text("Apple Health")
+                                
+                                Spacer()
+                                
+                                Text("Connected")
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                    } else {
+                        Button("Connect Apple Health") {
+                            HealthManager.shared.requestAuthorization { (success, error) in
+                                if error != nil || !success {
+//                                    showAppleHealthAuthErrorAlert = true
+                                    
+                                    return
+                                }
+                                
+//                                currentPage = 1
+                            }
                         }
                     }
                 }
