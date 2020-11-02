@@ -11,11 +11,12 @@ import HealthKit
 struct SettingsView: View {
     @State var bedtime = UserDefaults.standard.object(forKey: "bedtime") as! Date
     @State var waketime = UserDefaults.standard.object(forKey: "waketime") as! Date
+    @State var appleHealthConnected = UserDefaults.standard.bool(forKey: "appleHealthConnected")
+    @State var showAppleHealthAlert = true
     
     @AppStorage("pregnancyMode") var pregnancyMode: Bool = UserDefaults.standard.bool(forKey: "pregnancyMode")
     
     let name = Bundle.main.infoDictionary!["CFBundleName"] as! String
-    let appleHealthConnected = UserDefaults.standard.bool(forKey: "appleHealthConnected")
     
     var body: some View {
         NavigationView {
@@ -36,13 +37,18 @@ struct SettingsView: View {
                         Button("Connect Apple Health") {
                             HealthManager.shared.requestAuthorization { (success, error) in
                                 if error != nil || !success {
-//                                    showAppleHealthAuthErrorAlert = true
+                                    appleHealthConnected = false
+                                    showAppleHealthAlert = true
                                     
                                     return
                                 }
                                 
-//                                currentPage = 1
+                                appleHealthConnected = true
+                                showAppleHealthAlert = false
                             }
+                        }
+                        .alert(isPresented: $showAppleHealthAlert) {
+                            Alert(title: Text(NSLocalizedString("appleHealthAuthErrorAlertTitle", comment: "")), message: Text(NSLocalizedString("appleHealthAuthErrorAlertMessage", comment: "")), dismissButton: .default(Text(NSLocalizedString("appleHealthAuthErrorAlertButton", comment: ""))))
                         }
                     }
                 }
