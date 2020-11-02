@@ -21,8 +21,9 @@ struct ActiveDrugListItem: View {
                     .foregroundColor(.accentColor)
                     .padding(.bottom, -2.5)
                 
-                Text("\(activeDrug.dose) \(activeDrug.massUnit.symbol)")
+                Text("\(activeDrug.dose) \(activeDrug.massUnit.symbol) \u{00B7} \(activeDrug.administrationRoute.id.localized())")
                     .foregroundColor(.secondary)
+                    .fixedSize(horizontal: true, vertical: false)
             }
             
             Spacer()
