@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 struct DrugManager {
     private static let encoder = JSONEncoder()
@@ -33,6 +34,8 @@ struct DrugManager {
             
             UserDefaults.standard.set(newActiveDrugs, forKey: activeDrugsUserDefaultsKey)
         }
+        
+        setupTimelineNotifications(activeDrug: activeDrug)
     }
     
     static func removeActiveDrug(id: String) {
@@ -63,5 +66,25 @@ struct DrugManager {
         }
         
         return activeDrugs
+    }
+    
+    private static func setupTimelineNotifications(activeDrug: ActiveDrug) {
+        NotificationManager.shared.requestAuthorization { (granted, error) in
+            if !granted || error != nil {
+                return
+            }
+            
+            let content = UNMutableNotificationContent()
+            
+            content.title = activeDrug.name
+            content.subtitle = "Onset".localized()
+            content.body = "You’ll start to feel the effects shortly.".localized()
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: activeDrug.onset * 3600, repeats: false)
+            
+            NotificationManager.shared.schedule(content: content, trigger: trigger) { (error) in
+                
+            }
+        }
     }
 }

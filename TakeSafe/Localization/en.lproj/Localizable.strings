@@ -98,12 +98,13 @@
 "settingsAbout" = "About";
 "settingsSleep" = "Sleep";
 "Pregnancy Mode" = "Pregnancy Mode";
-"We tailor drug and dosage information in regards to your pregnancy." = "We tailor drug and dosage information with regards to your pregnancy.";
+"We tailor drug and dosage information in regards to your pregnancy." = "We can tailor drug and dosage information with regards to your pregnancy.";
 "Apple Health" = "Apple Health";
 "Connected" = "Connected";
 "Not Connected" = "Not Connected";
 "Connect Apple Health..." = "Connect Apple Health...";
 "We can use data from Apple Health to give you info and advice in realtime." = "We can use data from Apple Health to give you info and advice in realtime.";
+"We use data from Apple Health to give you info and advice in realtime." = "We use data from Apple Health to give you info and advice in realtime.";
 
 // Apple Health View
 "Connect Apple Health" = "Connect Apple Health";
@@ -147,3 +148,7 @@
 // Active Drug View
 "Remove active drug?" = "Remove “%@”?";
 "You will no longer be able to track this drug." = "You will no longer be able to track this drug.";
+
+// Notifications
+"Onset" = "Onset";
+"You’ll start to feel the effects shortly." = "You’ll start to feel the effects shortly.";

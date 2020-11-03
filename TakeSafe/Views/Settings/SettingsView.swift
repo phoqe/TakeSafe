@@ -12,7 +12,7 @@ struct SettingsView: View {
     @State var bedtime = UserDefaults.standard.object(forKey: "bedtime") as! Date
     @State var waketime = UserDefaults.standard.object(forKey: "waketime") as! Date
     @State var appleHealthConnected = UserDefaults.standard.bool(forKey: "appleHealthConnected")
-    @State var showAppleHealthAlert = true
+    @State var showAppleHealthAlert = false
     
     @AppStorage("pregnancyMode") var pregnancyMode: Bool = UserDefaults.standard.bool(forKey: "pregnancyMode")
     
@@ -21,17 +21,15 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(footer: appleHealthConnected ? nil : Text("We can use data from Apple Health to give you info and advice in realtime.")) {
+                Section(footer: Text(appleHealthConnected ? "We use data from Apple Health to give you info and advice in realtime." : "We can use data from Apple Health to give you info and advice in realtime.")) {
                     if appleHealthConnected {
-                        NavigationLink(destination: AppleHealthView()) {
-                            HStack {
-                                Text("Apple Health")
-                                
-                                Spacer()
-                                
-                                Text("Connected")
-                                    .foregroundColor(.secondary)
-                            }
+                        HStack {
+                            Text("Apple Health")
+                            
+                            Spacer()
+                            
+                            Text("Connected")
+                                .foregroundColor(.secondary)
                         }
                     } else {
                         Button("Connect Apple Health") {

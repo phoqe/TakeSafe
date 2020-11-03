@@ -100,12 +100,13 @@
 "settingsAbout" = "Om";
 "settingsSleep" = "Sömn";
 "Pregnancy Mode" = "Graviditetsläge";
-"We tailor drug and dosage information in regards to your pregnancy." = "Vi skräddarsyr läkemedels- och dosinformation med avseende på din graviditet.";
+"We tailor drug and dosage information in regards to your pregnancy." = "Vi kan skräddarsy läkemedels- och dosinformation med avseende på din graviditet.";
 "Apple Health" = "Apple Health";
 "Connected" = "Ansluten";
 "Not Connected" = "Ej ansluten";
 "Connect Apple Health..." = "Anslut Apple Health...";
 "We can use data from Apple Health to give you info and advice in realtime." = "Vi kan använda data från Apple Health för att ge dig information och råd i realtid.";
+"We use data from Apple Health to give you info and advice in realtime." = "Vi använder data från Apple Health för att ge dig information och råd i realtid.";
 
 // Apple Health View
 "Connect Apple Health" = "Anslut Apple Health";
@@ -147,3 +148,7 @@
 // Active Drug View
 "Remove active drug?" = "Ta bort “%@”?";
 "You will no longer be able to track this drug." = "Du kommer inte längre kunna spåra detta läkemedel.";
+
+// Notifications
+"Onset" = "Början";
+"You’ll start to feel the effects shortly." = "Du kommer börja känna effekterna inom kort.";
