@@ -14,7 +14,7 @@ struct NotificationManager {
     let center = UNUserNotificationCenter.current()
     
     func requestAuthorization(completion: @escaping (Bool, Error?) -> Void) {
-        center.requestAuthorization(options: [.alert, .badge]) { (granted, error) in
+        center.requestAuthorization(options: [.alert, .badge, .provisional, .carPlay]) { (granted, error) in
             completion(granted, error)
         }
     }
@@ -22,9 +22,16 @@ struct NotificationManager {
     func schedule(content: UNMutableNotificationContent, trigger: UNNotificationTrigger, completion: @escaping (Error?) -> Void) {
         let identifier = UUID().uuidString
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        
-        center.add(request) { (error) in
-            completion(error)
+
+        center.getNotificationSettings { (settings) in
+            if settings.authorizationStatus == .denied {
+
+                return
+            }
+
+            center.add(request) { (error) in
+                completion(error)
+            }
         }
     }
 }

@@ -34,9 +34,9 @@ struct DrugManager {
             
             UserDefaults.standard.set(newActiveDrugs, forKey: activeDrugsUserDefaultsKey)
         }
-        
-        scheduleNotifications(activeDrug: activeDrug) { (granted, error) in
-            
+
+        scheduleOnsetNotification(activeDrug: activeDrug) { (error) in
+            print(error)
         }
     }
     
@@ -70,31 +70,15 @@ struct DrugManager {
         return activeDrugs
     }
     
-    private static func scheduleNotifications(activeDrug: ActiveDrug, completion: @escaping (Bool, Error?) -> Void) {
-        NotificationManager.shared.requestAuthorization { (granted, error) in
-            if !granted || error != nil {
-                completion(granted, error)
-                
-                return
-            }
-            
-            scheduleOnsetNotification(activeDrug: activeDrug) { (error) in
-                completion(true, error)
-            }
-        }
-    }
-    
-    private static func scheduleOnsetNotification(activeDrug: ActiveDrug, completion: @escaping (Error?) -> Void) {
+    private static func scheduleOnsetNotification(activeDrug: ActiveDrug) {
         let content = UNMutableNotificationContent()
         
         content.title = activeDrug.name
         content.subtitle = "Onset".localized()
         content.body = "You’ll start to feel the effects shortly.".localized()
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: activeDrug.onset, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
-        NotificationManager.shared.schedule(content: content, trigger: trigger) { (error) in
-            completion(error)
-        }
+        NotificationManager.shared.schedule(content: content, trigger: trigger, completion: { _ in })
     }
 }
