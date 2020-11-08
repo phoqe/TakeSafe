@@ -39,7 +39,7 @@ struct DrugManager {
         scheduleExcretionNotification(activeDrug: activeDrug)
     }
     
-    static func removeActiveDrug(id: String) {
+    static func removeActiveDrug(activeDrug: ActiveDrug) {
         guard let data = UserDefaults.standard.data(forKey: activeDrugsUserDefaultsKey) else {
             return
         }
@@ -48,13 +48,14 @@ struct DrugManager {
             return
         }
         
-        let activeDrugs = oldActiveDrugs.filter { $0.id != id }
+        let activeDrugs = oldActiveDrugs.filter { $0.id != activeDrug.id }
         
         guard let newActiveDrugs = try? encoder.encode(activeDrugs) else {
             return
         }
         
         UserDefaults.standard.set(newActiveDrugs, forKey: activeDrugsUserDefaultsKey)
+        cancelNotifications(activeDrug: activeDrug)
     }
     
     static func activeDrugs() -> [ActiveDrug]? {
@@ -70,6 +71,7 @@ struct DrugManager {
     }
     
     private static func scheduleOnsetNotification(activeDrug: ActiveDrug) {
+        let identifier = notificationId(activeDrug: activeDrug, phase: .onset)
         let content = UNMutableNotificationContent()
         
         content.title = activeDrug.name
@@ -84,10 +86,11 @@ struct DrugManager {
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
         
-        NotificationManager.shared.schedule(content: content, trigger: trigger, completion: { _ in })
+        NotificationManager.shared.schedule(withIdentifier: identifier, content: content, trigger: trigger, completion: { _ in })
     }
 
     private static func scheduleExcretionNotification(activeDrug: ActiveDrug) {
+        let identifier = notificationId(activeDrug: activeDrug, phase: .excretion)
         let content = UNMutableNotificationContent()
 
         content.title = activeDrug.name
@@ -102,6 +105,24 @@ struct DrugManager {
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
 
-        NotificationManager.shared.schedule(content: content, trigger: trigger, completion: { _ in })
+        NotificationManager.shared.schedule(withIdentifier: identifier, content: content, trigger: trigger, completion: { _ in })
+    }
+
+    private static func notificationId(activeDrug: ActiveDrug, phase: DrugPhase) -> String {
+        return "\(activeDrug.id)-\(activeDrug.ingestion.timeIntervalSince1970)-\(phase.rawValue)"
+    }
+
+    private static func notificationIdentifiers(activeDrug: ActiveDrug) -> [String] {
+        var identifiers: [String] = []
+
+        for phase in DrugPhase.allCases {
+            identifiers.append(notificationId(activeDrug: activeDrug, phase: phase))
+        }
+
+        return identifiers
+    }
+
+    private static func cancelNotifications(activeDrug: ActiveDrug) {
+        NotificationManager.shared.cancel(withIdentifiers: notificationIdentifiers(activeDrug: activeDrug))
     }
 }

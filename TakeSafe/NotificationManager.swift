@@ -41,6 +41,21 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
         }
     }
 
+    func schedule(withIdentifier identifier: String, content: UNMutableNotificationContent, trigger: UNNotificationTrigger, completion: @escaping (Error?) -> Void) {
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+
+        center.getNotificationSettings { (settings) in
+            if settings.authorizationStatus == .denied {
+
+                return
+            }
+
+            self.center.add(request) { (error) in
+                completion(error)
+            }
+        }
+    }
+
     func cancel(withIdentifiers identifiers: [String]) {
         center.removeDeliveredNotifications(withIdentifiers: identifiers)
     }

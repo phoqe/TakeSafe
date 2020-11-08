@@ -19,7 +19,7 @@ struct ActiveDrugList: View {
                 indexSet.forEach { (index) in
                     let drug = activeDrugs[index]
                     
-                    DrugManager.removeActiveDrug(id: drug.id)
+                    DrugManager.removeActiveDrug(activeDrug: drug)
                     activeDrugs.remove(at: index)
                 }
             })
