@@ -36,6 +36,7 @@ struct DrugManager {
         }
 
         scheduleOnsetNotification(activeDrug: activeDrug)
+        scheduleExcretionNotification(activeDrug: activeDrug)
     }
     
     static func removeActiveDrug(id: String) {
@@ -77,6 +78,18 @@ struct DrugManager {
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: activeDrug.onset * 3600, repeats: false)
         
+        NotificationManager.shared.schedule(content: content, trigger: trigger, completion: { _ in })
+    }
+
+    private static func scheduleExcretionNotification(activeDrug: ActiveDrug) {
+        let content = UNMutableNotificationContent()
+
+        content.title = activeDrug.name
+        content.subtitle = "Excretion".localized()
+        content.body = "The effects have worn off.".localized()
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: activeDrug.duration * 3600, repeats: false)
+
         NotificationManager.shared.schedule(content: content, trigger: trigger, completion: { _ in })
     }
 }
