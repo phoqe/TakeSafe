@@ -35,9 +35,7 @@ struct DrugManager {
             UserDefaults.standard.set(newActiveDrugs, forKey: activeDrugsUserDefaultsKey)
         }
 
-        scheduleOnsetNotification(activeDrug: activeDrug) { (error) in
-            print(error)
-        }
+        scheduleOnsetNotification(activeDrug: activeDrug)
     }
     
     static func removeActiveDrug(id: String) {
@@ -77,7 +75,7 @@ struct DrugManager {
         content.subtitle = "Onset".localized()
         content.body = "You’ll start to feel the effects shortly.".localized()
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: activeDrug.onset * 3600, repeats: false)
         
         NotificationManager.shared.schedule(content: content, trigger: trigger, completion: { _ in })
     }
