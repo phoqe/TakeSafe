@@ -40,4 +40,8 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
             }
         }
     }
+
+    func cancel(withIdentifiers identifiers: [String]) {
+        center.removeDeliveredNotifications(withIdentifiers: identifiers)
+    }
 }

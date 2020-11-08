@@ -49,12 +49,6 @@ struct HealthManager {
         
         healthStore = HKHealthStore()
     }
-
-    func canAccess() {
-        guard let healthStore = healthStore else {
-            return
-        }
-    }
     
     func requestAuthorization(completion: @escaping (Bool, Error?) -> Void) {
         guard let healthStore = healthStore else {
