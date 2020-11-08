@@ -11,21 +11,21 @@ struct ActiveDrugView: View {
     var activeDrug: ActiveDrug
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State var showRemoveAlert = false
     
     var body: some View {
         Form {
             Button("remove") {
-                DrugManager.removeActiveDrug(id: activeDrug.id)
-                presentationMode.wrappedValue.dismiss()
+                showRemoveAlert = true
             }
             .foregroundColor(.red)
+            .alert(isPresented: $showRemoveAlert) {
+                Alert(title: Text(String(format: "Remove active drug?".localized(), activeDrug.name)), message: Text("You will no longer be able to track this drug."), primaryButton: .destructive(Text("Remove")) {
+                    DrugManager.removeActiveDrug(activeDrug: activeDrug)
+                    presentationMode.wrappedValue.dismiss()
+                }, secondaryButton: .cancel())
+            }
         }
         .navigationBarTitle(activeDrug.name)
-    }
-}
-
-struct ActiveDrugView_Previews: PreviewProvider {
-    static var previews: some View {
-        ActiveDrugView(activeDrug: SampleData.activeDrug)
     }
 }

@@ -9,21 +9,59 @@ import SwiftUI
 import HealthKit
 
 struct SettingsView: View {
-    @State var goToSleepTime = UserDefaults.standard.data(forKey: "goToSleepTime") as! Date? ?? Date()
-    @State var wakeUpTime = UserDefaults.standard.data(forKey: "wakeUpTime") as! Date? ?? Date()
+    @State var bedtime = UserDefaults.standard.object(forKey: "bedtime") as! Date
+    @State var waketime = UserDefaults.standard.object(forKey: "waketime") as! Date
+    @State var appleHealthConnected = UserDefaults.standard.bool(forKey: "appleHealthConnected")
+    @State var showAppleHealthAlert = false
+    
+    @AppStorage("pregnancyMode") var pregnancyMode: Bool = UserDefaults.standard.bool(forKey: "pregnancyMode")
     
     let name = Bundle.main.infoDictionary!["CFBundleName"] as! String
     
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("settingsSleep")) {
+                Section(footer: Text(appleHealthConnected ? "We use data from Apple Health to give you info and advice in realtime." : "We can use data from Apple Health to give you info and advice in realtime.")) {
+                    if appleHealthConnected {
+                        HStack {
+                            Text("Apple Health")
+                            
+                            Spacer()
+                            
+                            Text("Connected")
+                                .foregroundColor(.secondary)
+                        }
+                    } else {
+                        Button("Connect Apple Health") {
+                            HealthManager.shared.requestAuthorization { (success, error) in
+                                if error != nil || !success {
+                                    appleHealthConnected = false
+                                    showAppleHealthAlert = true
+                                    
+                                    return
+                                }
+                                
+                                appleHealthConnected = true
+                                showAppleHealthAlert = false
+                            }
+                        }
+                        .alert(isPresented: $showAppleHealthAlert) {
+                            Alert(title: Text(NSLocalizedString("appleHealthAuthErrorAlertTitle", comment: "")), message: Text(NSLocalizedString("appleHealthAuthErrorAlertMessage", comment: "")), dismissButton: .default(Text(NSLocalizedString("appleHealthAuthErrorAlertButton", comment: ""))))
+                        }
+                    }
+                }
+                
+                Section(footer: Text("We tailor drug and dosage information in regards to your pregnancy.")) {
+                    Toggle("Pregnancy Mode", isOn: $pregnancyMode)
+                }
+                
+                Section() {
                     HStack {
                         Text("settingsGoToSleep")
                         
                         Spacer()
                         
-                        DatePicker(NSLocalizedString("settingsGoToSleep", comment: ""), selection: $goToSleepTime, displayedComponents: .hourAndMinute)
+                        DatePicker(NSLocalizedString("settingsGoToSleep", comment: ""), selection: $bedtime, displayedComponents: .hourAndMinute)
                             .datePickerStyle(GraphicalDatePickerStyle())
                     }
                     
@@ -32,7 +70,7 @@ struct SettingsView: View {
                         
                         Spacer()
                         
-                        DatePicker(NSLocalizedString("settingsWakeUp", comment: ""), selection: $wakeUpTime, displayedComponents: .hourAndMinute)
+                        DatePicker(NSLocalizedString("settingsWakeUp", comment: ""), selection: $waketime, displayedComponents: .hourAndMinute)
                             .datePickerStyle(GraphicalDatePickerStyle())
                     }
                 }

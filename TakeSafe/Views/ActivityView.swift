@@ -22,9 +22,7 @@ struct ActivityView: View {
                 if activeDrugs.isEmpty {
                     EmptyState(title: "profileEmptyTitle".localized(), description: "profileEmptyDescription".localized())
                 } else {
-                    Form {
-                        ActiveDrugList(activeDrugs: activeDrugs)
-                    }
+                    ActiveDrugList(activeDrugs: $activeDrugs)
                 }
             }
             .navigationBarTitle("profileTitle".localized(), displayMode: .inline)

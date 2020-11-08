@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ActiveDrugList: View {
-    var activeDrugs: [ActiveDrug]
+    @Binding var activeDrugs: [ActiveDrug]
     
     var body: some View {
         List {
@@ -16,8 +16,14 @@ struct ActiveDrugList: View {
                 ActiveDrugListItem(activeDrug: activeDrug)
             }
             .onDelete(perform: { indexSet in
-                
+                indexSet.forEach { (index) in
+                    let drug = activeDrugs[index]
+                    
+                    DrugManager.removeActiveDrug(activeDrug: drug)
+                    activeDrugs.remove(at: index)
+                }
             })
         }
+        .listStyle(InsetGroupedListStyle())
     }
 }

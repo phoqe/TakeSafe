@@ -15,6 +15,7 @@ struct TakeDrugView: View {
     @State var dose: Int = 0
     @State var showMedianLethalDoseAlert = false
     @State var showBioavailabilityAlert = false
+    @State var showRdiAlert = false
     @Binding var presented: Bool
     
     init(drug: Drug, presented: Binding<Bool>) {
@@ -36,12 +37,25 @@ struct TakeDrugView: View {
         NavigationView {
             Form {
                 Section() {
-                    HStack {
-                        Text("rdi")
-                        
-                        Spacer()
-                        
-                        Text("\(drug.rdi) \(drug.massUnit.symbol)")
+                    if let rdi = drug.rdi {
+                        HStack {
+                            Text("rdi")
+                            
+                            Spacer()
+                            
+                            Text("\(rdi) \(drug.massUnit.symbol)")
+                            
+                            Button(action: {
+                                showRdiAlert = true
+                            }, label: {
+                                Image(systemName: "info.circle")
+                            })
+                            .buttonStyle(PlainButtonStyle())
+                            .foregroundColor(.accentColor)
+                            .alert(isPresented: $showRdiAlert) {
+                                Alert(title: Text(NSLocalizedString("referenceDailyIntake", comment: "")), message: Text(NSLocalizedString("referenceDailyIntakeMessage", comment: "")), dismissButton: .default(Text("ok".localized())))
+                            }
+                        }
                     }
                     
                     HStack {
@@ -65,16 +79,23 @@ struct TakeDrugView: View {
                 }
                 
                 Section(header: Text("takeDrugDosage"), footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.name.lowercased(), administrationRoute.bioavailability))) {
-                    Picker(selection: $administrationRoute, label: Text("takeDrugRouteOfAdministration")) {
-                        ForEach(drug.administrationRoutes) { administrationRoute in
-                            Text(administrationRoute.localizedName)
-                                .tag(administrationRoute)
+                    HStack {
+                        Text("takeDrugRouteOfAdministration")
+
+                        Spacer()
+
+                        Picker(selection: $administrationRoute, label: Text(administrationRoute.localizedName).fixedSize()) {
+                            ForEach(drug.administrationRoutes) { administrationRoute in
+                                Text(administrationRoute.localizedName)
+                                    .tag(administrationRoute)
+                            }
                         }
+                        .pickerStyle(MenuPickerStyle())
                     }
                     
                     Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: 0...Int.max, step: drug.doseStep)
                 }
-
+                
                 if dose != 0 {
                     Section() {
                         Button(action: takeDrug) {

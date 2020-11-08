@@ -50,6 +50,7 @@
 "ok" = "OK";
 "remove" = "Remove";
 "rdi" = "RDI";
+"Remove" = "Remove";
 
 // Drugs
 "drugsTitle" = "Drugs";
@@ -82,6 +83,8 @@
 "takeDrugRouteOfAdministration" = "Route";
 "takeDrugDosage" = "Dosage";
 "takeDrugDosageFooter" = "Your body will absorb around %d %@ of %@ due to its %d%% bioavailability in the selected administration route.";
+"referenceDailyIntake" = "Reference Daily Intake";
+"referenceDailyIntakeMessage" = "The daily intake level of a nutrient that is considered to be sufficient to meet the requirements of 97–98% of healthy individuals.";
 
 // Profile
 "profileTitle" = "Activity";
@@ -94,6 +97,19 @@
 "settingsWakeUp" = "Wake up";
 "settingsAbout" = "About";
 "settingsSleep" = "Sleep";
+"Pregnancy Mode" = "Pregnancy Mode";
+"We tailor drug and dosage information in regards to your pregnancy." = "We can tailor drug and dosage information with regards to your pregnancy.";
+"Apple Health" = "Apple Health";
+"Connected" = "Connected";
+"Not Connected" = "Not Connected";
+"Connect Apple Health..." = "Connect Apple Health...";
+"We can use data from Apple Health to give you info and advice in realtime." = "We can use data from Apple Health to give you info and advice in realtime.";
+"We use data from Apple Health to give you info and advice in realtime." = "We use data from Apple Health to give you info and advice in realtime.";
+
+// Apple Health View
+"Connect Apple Health" = "Connect Apple Health";
+"Connect us with Apple Health." = "Connect us with Apple Health.";
+"We can use data from Apple Health to give you info and advice in realtime. For example, we’ll tell you if a drug will disturb your sleep before you take it." = "We can use data from Apple Health to give you info and advice in realtime. For example, we’ll tell you if a drug will disturb your sleep before you take it.";
 
 // About
 "aboutTitle" = "About";
@@ -123,3 +139,18 @@
 "enema" = "Enema";
 "rectal" = "Rectal";
 "intravenous" = "Intravenous";
+
+// Drug Interactions
+"minor" = "Minor";
+"moderate" = "Moderate";
+"major" = "Major";
+
+// Active Drug View
+"Remove active drug?" = "Remove “%@”?";
+"You will no longer be able to track this drug." = "You will no longer be able to track this drug.";
+
+// Notifications
+"Onset" = "Onset";
+"You’ll start to feel the effects shortly." = "You’ll start to feel the effects shortly.";
+"Excretion" = "Excretion";
+"The effects have worn off." = "The effects have worn off.";
