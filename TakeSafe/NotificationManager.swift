@@ -8,10 +8,16 @@
 import Foundation
 import UserNotifications
 
-struct NotificationManager {
+class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     static let shared = NotificationManager()
     
     let center = UNUserNotificationCenter.current()
+
+    override init() {
+        super.init()
+
+        center.delegate = self
+    }
     
     func requestAuthorization(completion: @escaping (Bool, Error?) -> Void) {
         center.requestAuthorization(options: [.alert, .badge, .provisional, .carPlay]) { (granted, error) in
@@ -29,7 +35,7 @@ struct NotificationManager {
                 return
             }
 
-            center.add(request) { (error) in
+            self.center.add(request) { (error) in
                 completion(error)
             }
         }
