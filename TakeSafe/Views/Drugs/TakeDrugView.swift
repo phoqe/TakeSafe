@@ -79,11 +79,18 @@ struct TakeDrugView: View {
                 }
                 
                 Section(header: Text("takeDrugDosage"), footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.name.lowercased(), administrationRoute.bioavailability))) {
-                    Picker(selection: $administrationRoute, label: Text("takeDrugRouteOfAdministration")) {
-                        ForEach(drug.administrationRoutes) { administrationRoute in
-                            Text(administrationRoute.localizedName)
-                                .tag(administrationRoute)
+                    HStack {
+                        Text("takeDrugRouteOfAdministration")
+
+                        Spacer()
+
+                        Picker(selection: $administrationRoute, label: Text(administrationRoute.localizedName).fixedSize()) {
+                            ForEach(drug.administrationRoutes) { administrationRoute in
+                                Text(administrationRoute.localizedName)
+                                    .tag(administrationRoute)
+                            }
                         }
+                        .pickerStyle(MenuPickerStyle())
                     }
                     
                     Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: 0...Int.max, step: drug.doseStep)
