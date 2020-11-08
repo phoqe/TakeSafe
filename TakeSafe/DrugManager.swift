@@ -75,8 +75,14 @@ struct DrugManager {
         content.title = activeDrug.name
         content.subtitle = "Onset".localized()
         content.body = "You’ll start to feel the effects shortly.".localized()
+
+        #if DEBUG
+        let timeInterval: Double = 5
+        #else
+        let timeInterval: Double = activeDrug.onset * 3600
+        #endif
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: activeDrug.onset * 3600, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
         
         NotificationManager.shared.schedule(content: content, trigger: trigger, completion: { _ in })
     }
@@ -88,7 +94,13 @@ struct DrugManager {
         content.subtitle = "Excretion".localized()
         content.body = "The effects have worn off.".localized()
 
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: activeDrug.duration * 3600, repeats: false)
+        #if DEBUG
+        let timeInterval: Double = 10
+        #else
+        let timeInterval: Double = activeDrug.duration * 3600
+        #endif
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
 
         NotificationManager.shared.schedule(content: content, trigger: trigger, completion: { _ in })
     }
