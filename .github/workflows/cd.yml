@@ -18,4 +18,4 @@ jobs:
           ruby-version: 2.6
           bundler-cache: true
 
-      - run: bundle install
+      - run: bundle exec fastlane beta
