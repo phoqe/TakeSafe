@@ -25,9 +25,9 @@ struct SettingsView: View {
                     if appleHealthConnected {
                         HStack {
                             Text("Apple Health")
-                            
+
                             Spacer()
-                            
+
                             Text("Connected")
                                 .foregroundColor(.secondary)
                         }
@@ -37,10 +37,10 @@ struct SettingsView: View {
                                 if error != nil || !success {
                                     appleHealthConnected = false
                                     showAppleHealthAlert = true
-                                    
+
                                     return
                                 }
-                                
+
                                 appleHealthConnected = true
                                 showAppleHealthAlert = false
                             }
@@ -56,23 +56,12 @@ struct SettingsView: View {
                 }
                 
                 Section() {
-                    HStack {
-                        Text("settingsGoToSleep")
-                        
-                        Spacer()
-                        
-                        DatePicker(NSLocalizedString("settingsGoToSleep", comment: ""), selection: $bedtime, displayedComponents: .hourAndMinute)
-                            .datePickerStyle(GraphicalDatePickerStyle())
-                    }
-                    
-                    HStack {
-                        Text("settingsWakeUp")
-                        
-                        Spacer()
-                        
-                        DatePicker(NSLocalizedString("settingsWakeUp", comment: ""), selection: $waketime, displayedComponents: .hourAndMinute)
-                            .datePickerStyle(GraphicalDatePickerStyle())
-                    }
+                    DatePicker(NSLocalizedString("settingsGoToSleep", comment: ""), selection: $bedtime, displayedComponents: .hourAndMinute)
+                        .datePickerStyle(CompactDatePickerStyle())
+
+
+                    DatePicker(NSLocalizedString("settingsWakeUp", comment: ""), selection: $waketime, displayedComponents: .hourAndMinute)
+                        .datePickerStyle(CompactDatePickerStyle())
                 }
                 
                 NavigationLink(destination: AboutView()) {
