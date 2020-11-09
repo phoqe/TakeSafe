@@ -90,3 +90,7 @@ fastlane/test_output
 iOSInjectionProject/
 
 .DS_Store
+*.mobileprovision
+*.cer
+*.certSigningRequest
+*.p12
