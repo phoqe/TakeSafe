@@ -15,14 +15,6 @@ struct ActiveDrugList: View {
             ForEach(activeDrugs) { activeDrug in
                 ActiveDrugListItem(activeDrug: activeDrug)
             }
-            .onDelete(perform: { indexSet in
-                indexSet.forEach { (index) in
-                    let drug = activeDrugs[index]
-                    
-                    DrugManager.removeActiveDrug(activeDrug: drug)
-                    activeDrugs.remove(at: index)
-                }
-            })
         }
         .listStyle(InsetGroupedListStyle())
     }
