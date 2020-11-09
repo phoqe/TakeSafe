@@ -8,8 +8,13 @@ on:
 jobs:
   upload-to-testflight:
     name: Upload to TestFlight
-    
     runs-on: macos-latest
+    env:
+      FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+      FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+      FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+      LANG: en_US.UTF-8
+      LC_ALL: en_US.UTF-8
     
     steps:
       - uses: actions/checkout@v2
@@ -18,10 +23,5 @@ jobs:
           ruby-version: 2.6
           bundler-cache: true
 
+      - run: fastlane spaceauth -u $FASTLANE_USER >> $FIREBASE_SESSION
       - run: bundle exec fastlane beta
-        env:
-          FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
-          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
-          LANG: en_US.UTF-8
-          LC_ALL: en_US.UTF-8
