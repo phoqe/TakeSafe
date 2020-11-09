@@ -23,5 +23,5 @@ jobs:
           ruby-version: 2.6
           bundler-cache: true
 
-      - run: fastlane spaceauth -u $FASTLANE_USER >> $FIREBASE_SESSION
+      - run: bundle exec fastlane spaceauth -u $FASTLANE_USER >> $FASTLANE_SESSION
       - run: bundle exec fastlane beta
