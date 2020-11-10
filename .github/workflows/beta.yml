@@ -13,6 +13,8 @@ jobs:
       FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
       FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
       FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+      LANG: en_US.UTF-8
+      LC_ALL: en_US.UTF-8
 
     steps:
       - uses: actions/checkout@v2
