@@ -23,5 +23,4 @@ jobs:
       - run: bundle update --bundler
       - run: bundle config path vendor/bundle
       - run: bundle install --jobs 4 --retry 3
-
-
+      - run: bundle exec fastlane beta
