@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ActivityView: View {
-    @ObservedObject var activeDrugs: ActiveDrugs = ActiveDrugs(items: [])
+    @ObservedObject var activeDrugs = ActiveDrugs(items: [])
     
     func getActiveDrugs() {
         if let activeDrugs = DrugManager.activeDrugs() {

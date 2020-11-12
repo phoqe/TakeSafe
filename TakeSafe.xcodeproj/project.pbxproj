@@ -53,6 +53,12 @@
 		9FD46F28252CDA5700FB5754 /* Dependence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD46F27252CDA5700FB5754 /* Dependence.swift */; };
 		9FD46F2B252CDB1000FB5754 /* Addiction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD46F2A252CDB1000FB5754 /* Addiction.swift */; };
 		9FDBD90425588DD5002F4A37 /* DrugPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDBD90325588DD5002F4A37 /* DrugPhase.swift */; };
+		9FE23821255DDC790055A1C1 /* LicenseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE23820255DDC790055A1C1 /* LicenseList.swift */; };
+		9FE23828255DDD330055A1C1 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE23827255DDD330055A1C1 /* Package.swift */; };
+		9FE23830255DDDE60055A1C1 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2382F255DDDE60055A1C1 /* Meta.swift */; };
+		9FE23839255DE06D0055A1C1 /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE23838255DE06D0055A1C1 /* LicenseView.swift */; };
+		9FE2383C255DE0DE0055A1C1 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2383B255DE0DE0055A1C1 /* License.swift */; };
+		9FE2383F255DE61F0055A1C1 /* LicenseListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2383E255DE61F0055A1C1 /* LicenseListItem.swift */; };
 		9FF4B3542539F9BD0040720A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4B3532539F9BD0040720A /* API.swift */; };
 		9FF4B357253A23650040720A /* DrugManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4B356253A23650040720A /* DrugManager.swift */; };
 		9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD215625069AF5002F01B9 /* ContainedButton.swift */; };
@@ -112,6 +118,12 @@
 		9FD46F27252CDA5700FB5754 /* Dependence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependence.swift; sourceTree = "<group>"; };
 		9FD46F2A252CDB1000FB5754 /* Addiction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addiction.swift; sourceTree = "<group>"; };
 		9FDBD90325588DD5002F4A37 /* DrugPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugPhase.swift; sourceTree = "<group>"; };
+		9FE23820255DDC790055A1C1 /* LicenseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseList.swift; sourceTree = "<group>"; };
+		9FE23827255DDD330055A1C1 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		9FE2382F255DDDE60055A1C1 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		9FE23838255DE06D0055A1C1 /* LicenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseView.swift; sourceTree = "<group>"; };
+		9FE2383B255DE0DE0055A1C1 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		9FE2383E255DE61F0055A1C1 /* LicenseListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseListItem.swift; sourceTree = "<group>"; };
 		9FF4B3532539F9BD0040720A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9FF4B356253A23650040720A /* DrugManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugManager.swift; sourceTree = "<group>"; };
 		9FFD215625069AF5002F01B9 /* ContainedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedButton.swift; sourceTree = "<group>"; };
@@ -164,6 +176,7 @@
 		9FA381D0250629840053C3F4 /* TakeSafe */ = {
 			isa = PBXGroup;
 			children = (
+				9FE23823255DDD100055A1C1 /* Data */,
 				9FC633092537953600DA145B /* Extensions */,
 				9FD46F1F252CC1B800FB5754 /* Models */,
 				9F84D9BA25079197006C1B77 /* Localization */,
@@ -176,7 +189,6 @@
 				9FFD21672506DA3F002F01B9 /* AppDelegate.swift */,
 				9FF4B3532539F9BD0040720A /* API.swift */,
 				9FF4B356253A23650040720A /* DrugManager.swift */,
-				9F5372BB253AF30A0043375D /* SampleData.swift */,
 				9FAD9D36253DE8E8007E016F /* HealthManager.swift */,
 				9F074F2F2551383B00894ED9 /* NotificationManager.swift */,
 			);
@@ -206,6 +218,9 @@
 				9FB630EB2535A87900397152 /* EmptyState.swift */,
 				9FC632EE2537459C00DA145B /* Timeline.swift */,
 				9F2011E2253B720D00B47701 /* IconImage.swift */,
+				9FE23820255DDC790055A1C1 /* LicenseList.swift */,
+				9FE23838255DE06D0055A1C1 /* LicenseView.swift */,
+				9FE2383E255DE61F0055A1C1 /* LicenseListItem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,8 +287,19 @@
 				9FA282F02541C899005021FC /* DrugInteractionSeverity.swift */,
 				9FDBD90325588DD5002F4A37 /* DrugPhase.swift */,
 				9F4D1374255DA13D0098B5D0 /* ActiveDrugs.swift */,
+				9FE23827255DDD330055A1C1 /* Package.swift */,
+				9FE2383B255DE0DE0055A1C1 /* License.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9FE23823255DDD100055A1C1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9F5372BB253AF30A0043375D /* SampleData.swift */,
+				9FE2382F255DDDE60055A1C1 /* Meta.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		9FFD215525069ADB002F01B9 /* Buttons */ = {
@@ -373,6 +399,7 @@
 			files = (
 				9F6A0B282531006600872936 /* SettingsView.swift in Sources */,
 				9FC632F925374F9300DA145B /* DrugsView.swift in Sources */,
+				9FE2383F255DE61F0055A1C1 /* LicenseListItem.swift in Sources */,
 				9FD46F2B252CDB1000FB5754 /* Addiction.swift in Sources */,
 				9F73F6D4253CBB1500B93569 /* ActiveDrugList.swift in Sources */,
 				9FA282F12541C899005021FC /* DrugInteractionSeverity.swift in Sources */,
@@ -390,22 +417,27 @@
 				9F2011E6253B733B00B47701 /* Icon.swift in Sources */,
 				9F4D1375255DA13D0098B5D0 /* ActiveDrugs.swift in Sources */,
 				9F5372B8253AEA6B0043375D /* ActiveDrug.swift in Sources */,
+				9FE23821255DDC790055A1C1 /* LicenseList.swift in Sources */,
 				9F73F6D7253CC1A600B93569 /* ActiveDrugView.swift in Sources */,
 				9FFD21682506DA3F002F01B9 /* AppDelegate.swift in Sources */,
 				9FD46F25252CD7D200FB5754 /* DrugClass.swift in Sources */,
+				9FE23828255DDD330055A1C1 /* Package.swift in Sources */,
 				9FC6330B2537954200DA145B /* StringExtension.swift in Sources */,
 				9FC633072537918000DA145B /* LD50.swift in Sources */,
+				9FE23830255DDDE60055A1C1 /* Meta.swift in Sources */,
 				9FA381ED25064E0B0053C3F4 /* PageViewController.swift in Sources */,
 				9FDBD90425588DD5002F4A37 /* DrugPhase.swift in Sources */,
 				9FAD9D37253DE8E8007E016F /* HealthManager.swift in Sources */,
 				9FA381E525062CB50053C3F4 /* OnboardingView.swift in Sources */,
 				9F074F302551383B00894ED9 /* NotificationManager.swift in Sources */,
+				9FE2383C255DE0DE0055A1C1 /* License.swift in Sources */,
 				9FD29B312534725700F90F04 /* AboutView.swift in Sources */,
 				9FC5B42D2508D06700DDF30A /* SetupPageViewController.swift in Sources */,
 				9FFD21662506D327002F01B9 /* IntroPageView.swift in Sources */,
 				9F9E6BDE252DFB9D0091ABAF /* TakeDrugView.swift in Sources */,
 				9FA381D4250629840053C3F4 /* ContentView.swift in Sources */,
 				9FFD21712506E577002F01B9 /* OnboardingState.swift in Sources */,
+				9FE23839255DE06D0055A1C1 /* LicenseView.swift in Sources */,
 				9FF4B3542539F9BD0040720A /* API.swift in Sources */,
 				9FC632F625374F6A00DA145B /* DrugList.swift in Sources */,
 				9FF4B357253A23650040720A /* DrugManager.swift in Sources */,

@@ -118,6 +118,10 @@
 "aboutWebsite" = "Hemsida";
 "aboutTermsOfService" = "Användarvillkor";
 "aboutPrivacyPolicy" = "Integritetspolicy";
+"Licenses" = "Licenser";
+
+// Licenses
+"By" = "Av %@";
 
 // Drug Classes
 "drugClassStimulant" = "Stimulant";

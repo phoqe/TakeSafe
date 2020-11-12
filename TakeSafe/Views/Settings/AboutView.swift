@@ -29,6 +29,8 @@ struct AboutView: View {
                 .buttonStyle(PlainButtonStyle())
                 .foregroundColor(.secondary)
             }
+
+            NavigationLink("Licenses", destination: LicenseList())
             
             Section(header: Text(NSLocalizedString("aboutLinks", comment: ""))) {
                 Button(action: {

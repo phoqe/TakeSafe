@@ -118,6 +118,10 @@
 "aboutWebsite" = "Website";
 "aboutTermsOfService" = "Terms of Service";
 "aboutPrivacyPolicy" = "Privacy Policy";
+"Licenses" = "Licenses";
+
+// Licenses
+"By" = "By %@";
 
 // Drug Classes
 "drugClassStimulant" = "Stimulant";
