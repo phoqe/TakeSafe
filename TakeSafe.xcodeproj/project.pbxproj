@@ -11,6 +11,7 @@
 		9F2011E0253B545400B47701 /* ActiveDrugListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2011DF253B545400B47701 /* ActiveDrugListItem.swift */; };
 		9F2011E3253B720D00B47701 /* IconImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2011E2253B720D00B47701 /* IconImage.swift */; };
 		9F2011E6253B733B00B47701 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2011E5253B733B00B47701 /* Icon.swift */; };
+		9F4D1375255DA13D0098B5D0 /* ActiveDrugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D1374255DA13D0098B5D0 /* ActiveDrugs.swift */; };
 		9F5372B8253AEA6B0043375D /* ActiveDrug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5372B7253AEA6B0043375D /* ActiveDrug.swift */; };
 		9F5372BC253AF30A0043375D /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5372BB253AF30A0043375D /* SampleData.swift */; };
 		9F5C67BC2538CE0E0025FE15 /* UnitMassExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C67BB2538CE0E0025FE15 /* UnitMassExtension.swift */; };
@@ -66,6 +67,7 @@
 		9F2011DF253B545400B47701 /* ActiveDrugListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDrugListItem.swift; sourceTree = "<group>"; };
 		9F2011E2253B720D00B47701 /* IconImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconImage.swift; sourceTree = "<group>"; };
 		9F2011E5253B733B00B47701 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		9F4D1374255DA13D0098B5D0 /* ActiveDrugs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDrugs.swift; sourceTree = "<group>"; };
 		9F5372B7253AEA6B0043375D /* ActiveDrug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDrug.swift; sourceTree = "<group>"; };
 		9F5372BB253AF30A0043375D /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		9F5C67BB2538CE0E0025FE15 /* UnitMassExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitMassExtension.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				9FA282ED2541C835005021FC /* DrugInteraction.swift */,
 				9FA282F02541C899005021FC /* DrugInteractionSeverity.swift */,
 				9FDBD90325588DD5002F4A37 /* DrugPhase.swift */,
+				9F4D1374255DA13D0098B5D0 /* ActiveDrugs.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				9FC632EF2537459C00DA145B /* Timeline.swift in Sources */,
 				9FD46F28252CDA5700FB5754 /* Dependence.swift in Sources */,
 				9F2011E6253B733B00B47701 /* Icon.swift in Sources */,
+				9F4D1375255DA13D0098B5D0 /* ActiveDrugs.swift in Sources */,
 				9F5372B8253AEA6B0043375D /* ActiveDrug.swift in Sources */,
 				9F73F6D7253CC1A600B93569 /* ActiveDrugView.swift in Sources */,
 				9FFD21682506DA3F002F01B9 /* AppDelegate.swift in Sources */,

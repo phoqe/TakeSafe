@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct ActivityView: View {
-    @State var activeDrugs: [ActiveDrug] = []
+    @ObservedObject var activeDrugs: ActiveDrugs = ActiveDrugs(items: [])
     
     func getActiveDrugs() {
         if let activeDrugs = DrugManager.activeDrugs() {
-            self.activeDrugs = activeDrugs
+            self.activeDrugs.items = activeDrugs
         }
     }
     
     var body: some View {
         NavigationView {
             Group {
-                if activeDrugs.isEmpty {
+                if activeDrugs.items.isEmpty {
                     EmptyState(title: "profileEmptyTitle".localized(), description: "profileEmptyDescription".localized())
                 } else {
-                    ActiveDrugList(activeDrugs: $activeDrugs)
+                    ActiveDrugList(activeDrugs: activeDrugs)
                 }
             }
             .navigationBarTitle("profileTitle".localized(), displayMode: .inline)

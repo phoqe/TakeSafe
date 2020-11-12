@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ActiveDrugView: View {
     var activeDrug: ActiveDrug
-    
+
+    @EnvironmentObject var activeDrugs: ActiveDrugs
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var showRemoveAlert = false
     
@@ -23,6 +24,7 @@ struct ActiveDrugView: View {
                 Alert(title: Text(String(format: "Remove active drug?".localized(), activeDrug.name)), message: Text("You will no longer be able to track this drug."), primaryButton: .destructive(Text("Remove")) {
                     DrugManager.removeActiveDrug(activeDrug: activeDrug)
                     presentationMode.wrappedValue.dismiss()
+                    activeDrugs.items = activeDrugs.items.filter { $0.id != activeDrug.id }
                 }, secondaryButton: .cancel())
             }
         }

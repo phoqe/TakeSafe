@@ -11,6 +11,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         registerUserDefaults()
 
+        // TODO: Request in Onboarding.
         NotificationManager.shared.requestAuthorization { (granted, error) in
             
         }

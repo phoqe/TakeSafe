@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ActiveDrugList: View {
-    @Binding var activeDrugs: [ActiveDrug]
+    var activeDrugs: ActiveDrugs
     
     var body: some View {
         List {
-            ForEach(activeDrugs) { activeDrug in
+            ForEach(activeDrugs.items) { activeDrug in
                 ActiveDrugListItem(activeDrug: activeDrug)
+                    .environmentObject(activeDrugs)
             }
         }
         .listStyle(InsetGroupedListStyle())

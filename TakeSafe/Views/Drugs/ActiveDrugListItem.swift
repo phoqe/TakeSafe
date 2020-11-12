@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ActiveDrugListItem: View {
     var activeDrug: ActiveDrug
+
+    @EnvironmentObject var activeDrugs: ActiveDrugs
     
     var body: some View {
-        NavigationLink(destination: ActiveDrugView(activeDrug: activeDrug)) {
+        NavigationLink(destination: ActiveDrugView(activeDrug: activeDrug).environmentObject(activeDrugs)) {
             IconImage(icon: activeDrug.icon)
                 .padding(.trailing, 7.5)
             
@@ -32,11 +34,5 @@ struct ActiveDrugListItem: View {
                 .foregroundColor(.secondary)
         }
         .padding(.vertical)
-    }
-}
-
-struct ActiveDrugListItem_Previews: PreviewProvider {
-    static var previews: some View {
-        ActiveDrugListItem(activeDrug: SampleData.activeDrug)
     }
 }
