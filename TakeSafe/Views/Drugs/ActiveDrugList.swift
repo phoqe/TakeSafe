@@ -16,6 +16,14 @@ struct ActiveDrugList: View {
                 ActiveDrugListItem(activeDrug: activeDrug)
                     .environmentObject(activeDrugs)
             }
+            .onDelete(perform: { indexSet in
+                indexSet.forEach { (index) in
+                    let drug = activeDrugs.items[index]
+
+                    DrugManager.removeActiveDrug(activeDrug: drug)
+                    activeDrugs.items.remove(at: index)
+                }
+            })
         }
         .listStyle(InsetGroupedListStyle())
     }
