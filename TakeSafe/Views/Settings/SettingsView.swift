@@ -50,9 +50,11 @@ struct SettingsView: View {
                         }
                     }
                 }
-                
-                Section(footer: Text("We tailor drug and dosage information in regards to your pregnancy.")) {
-                    Toggle("Pregnancy Mode", isOn: $pregnancyMode)
+
+                if appleHealthConnected {
+                    Section(footer: Text("We tailor drug and dosage information in regards to your pregnancy.")) {
+                        Toggle("Pregnancy Mode", isOn: $pregnancyMode)
+                    }
                 }
                 
                 Section() {
