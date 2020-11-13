@@ -13,4 +13,10 @@ class ActiveDrugs: ObservableObject {
     init(items: [ActiveDrug]) {
         self.items = items
     }
+
+    func get() {
+        if let activeDrugs = DrugManager.activeDrugs() {
+            self.items = activeDrugs
+        }
+    }
 }

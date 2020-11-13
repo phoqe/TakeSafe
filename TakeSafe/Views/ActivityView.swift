@@ -10,12 +10,6 @@ import SwiftUI
 struct ActivityView: View {
     @ObservedObject var activeDrugs = ActiveDrugs(items: [])
     
-    func getActiveDrugs() {
-        if let activeDrugs = DrugManager.activeDrugs() {
-            self.activeDrugs.items = activeDrugs
-        }
-    }
-    
     var body: some View {
         NavigationView {
             Group {
@@ -27,6 +21,8 @@ struct ActivityView: View {
             }
             .navigationBarTitle("profileTitle".localized(), displayMode: .inline)
         }
-        .onAppear(perform: getActiveDrugs)
+        .onAppear(perform: {
+            activeDrugs.get()
+        })
     }
 }

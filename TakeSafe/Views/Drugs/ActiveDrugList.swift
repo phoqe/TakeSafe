@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ActiveDrugList: View {
-    var activeDrugs: ActiveDrugs
+    @ObservedObject var activeDrugs: ActiveDrugs
     
     var body: some View {
         List {
