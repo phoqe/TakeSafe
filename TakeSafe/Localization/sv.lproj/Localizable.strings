@@ -84,6 +84,7 @@
 "takeDrugDosageFooter" = "Din kropp kommer absorbera omkring %d %@ av %@ på grund av dess %d%% biotillgänglighet i den valda administreringsvägen.";
 "referenceDailyIntake" = "Rekommenderat dagligt intag";
 "referenceDailyIntakeMessage" = "Ett mått på hur mycket av vitaminer och mineralämnen en person bör äta varje dag.";
+"Interactions" = "Interaktioner";
 
 // Timeline
 "timelineOnset" = "Början";

@@ -12,6 +12,7 @@
 		9F2011E3253B720D00B47701 /* IconImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2011E2253B720D00B47701 /* IconImage.swift */; };
 		9F2011E6253B733B00B47701 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2011E5253B733B00B47701 /* Icon.swift */; };
 		9F4D1375255DA13D0098B5D0 /* ActiveDrugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D1374255DA13D0098B5D0 /* ActiveDrugs.swift */; };
+		9F4F13FF2560188E001D9ABD /* InteractionGroupBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F13FE2560188E001D9ABD /* InteractionGroupBox.swift */; };
 		9F5372B8253AEA6B0043375D /* ActiveDrug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5372B7253AEA6B0043375D /* ActiveDrug.swift */; };
 		9F5372BC253AF30A0043375D /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5372BB253AF30A0043375D /* SampleData.swift */; };
 		9F5C67BC2538CE0E0025FE15 /* UnitMassExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C67BB2538CE0E0025FE15 /* UnitMassExtension.swift */; };
@@ -74,6 +75,7 @@
 		9F2011E2253B720D00B47701 /* IconImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconImage.swift; sourceTree = "<group>"; };
 		9F2011E5253B733B00B47701 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		9F4D1374255DA13D0098B5D0 /* ActiveDrugs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDrugs.swift; sourceTree = "<group>"; };
+		9F4F13FE2560188E001D9ABD /* InteractionGroupBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionGroupBox.swift; sourceTree = "<group>"; };
 		9F5372B7253AEA6B0043375D /* ActiveDrug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDrug.swift; sourceTree = "<group>"; };
 		9F5372BB253AF30A0043375D /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		9F5C67BB2538CE0E0025FE15 /* UnitMassExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitMassExtension.swift; sourceTree = "<group>"; };
@@ -147,6 +149,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F4F13FD2560187D001D9ABD /* Group Boxes */ = {
+			isa = PBXGroup;
+			children = (
+				9F4F13FE2560188E001D9ABD /* InteractionGroupBox.swift */,
+			);
+			path = "Group Boxes";
+			sourceTree = "<group>";
+		};
 		9F84D9BA25079197006C1B77 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +216,7 @@
 		9FA381E0250629FB0053C3F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F4F13FD2560187D001D9ABD /* Group Boxes */,
 				9FD003B2253396420038E549 /* Settings */,
 				9FD46F1B252CC18A00FB5754 /* Drugs */,
 				9FFD215525069ADB002F01B9 /* Buttons */,
@@ -437,6 +448,7 @@
 				9F9E6BDE252DFB9D0091ABAF /* TakeDrugView.swift in Sources */,
 				9FA381D4250629840053C3F4 /* ContentView.swift in Sources */,
 				9FFD21712506E577002F01B9 /* OnboardingState.swift in Sources */,
+				9F4F13FF2560188E001D9ABD /* InteractionGroupBox.swift in Sources */,
 				9FE23839255DE06D0055A1C1 /* LicenseView.swift in Sources */,
 				9FF4B3542539F9BD0040720A /* API.swift in Sources */,
 				9FC632F625374F6A00DA145B /* DrugList.swift in Sources */,

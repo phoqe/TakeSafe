@@ -77,6 +77,12 @@ struct TakeDrugView: View {
                         }
                     }
                 }
+
+                if let interactions = drug.interactions {
+                    Section(header: Text("Interactions")) {
+
+                    }
+                }
                 
                 Section(header: Text("takeDrugDosage"), footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.name.lowercased(), administrationRoute.bioavailability))) {
                     HStack {
