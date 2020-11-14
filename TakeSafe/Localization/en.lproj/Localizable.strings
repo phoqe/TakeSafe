@@ -86,6 +86,7 @@
 "referenceDailyIntake" = "Reference Daily Intake";
 "referenceDailyIntakeMessage" = "The daily intake level of a nutrient that is considered to be sufficient to meet the requirements of 97–98% of healthy individuals.";
 "Interactions" = "Interactions";
+"May not cover all drug interactions. Check with a physician if you have health questions or concerns." = "May not cover all drug interactions. Check with a physician if you have health questions or concerns.";
 
 // Profile
 "profileTitle" = "Activity";

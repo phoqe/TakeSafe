@@ -85,6 +85,7 @@
 "referenceDailyIntake" = "Rekommenderat dagligt intag";
 "referenceDailyIntakeMessage" = "Ett mått på hur mycket av vitaminer och mineralämnen en person bör äta varje dag.";
 "Interactions" = "Interaktioner";
+"May not cover all drug interactions. Check with a physician if you have health questions or concerns." = "Detta täcker inte alla läkemedelsinteraktioner. Kontrollera med en läkare om du har hälsofrågor eller problem.";
 
 // Timeline
 "timelineOnset" = "Början";

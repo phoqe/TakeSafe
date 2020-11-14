@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DrugInteraction: Codable {
+struct DrugInteraction: Codable, Identifiable {
     let id: String
     let name: String
     let severity: DrugInteractionSeverity

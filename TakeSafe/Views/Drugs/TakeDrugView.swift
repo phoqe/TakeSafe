@@ -79,8 +79,10 @@ struct TakeDrugView: View {
                 }
 
                 if let interactions = drug.interactions {
-                    Section(header: Text("Interactions")) {
-
+                    Section(footer: Text("May not cover all drug interactions. Check with a physician if you have health questions or concerns.")) {
+                        NavigationLink(destination: InteractionList(interactions: interactions)) {
+                            Text("Interactions")
+                        }
                     }
                 }
                 
