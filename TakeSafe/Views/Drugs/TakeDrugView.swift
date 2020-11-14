@@ -77,14 +77,6 @@ struct TakeDrugView: View {
                         }
                     }
                 }
-
-                if let interactions = drug.interactions {
-                    Section(footer: Text("May not cover all drug interactions. Check with a physician if you have health questions or concerns.")) {
-                        NavigationLink(destination: InteractionList(interactions: interactions)) {
-                            Text("Interactions")
-                        }
-                    }
-                }
                 
                 Section(header: Text("takeDrugDosage"), footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.name.lowercased(), administrationRoute.bioavailability))) {
                     HStack {

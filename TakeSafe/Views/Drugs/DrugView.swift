@@ -86,6 +86,14 @@ struct DrugView: View {
                 Timeline(onset: drug.onset, duration: drug.duration)
                     .padding(.vertical)
             }
+
+            if let interactions = drug.interactions {
+                Section() {
+                    NavigationLink(destination: InteractionList(interactions: interactions)) {
+                        Text("Interactions")
+                    }
+                }
+            }
             
             Section() {
                 Button(String(format: NSLocalizedString("drugTakeDrug", comment: ""), drug.name)) {
