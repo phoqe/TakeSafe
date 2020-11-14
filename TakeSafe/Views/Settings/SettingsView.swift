@@ -9,12 +9,9 @@ import SwiftUI
 import HealthKit
 
 struct SettingsView: View {
-    @State var bedtime = UserDefaults.standard.object(forKey: "bedtime") as! Date
-    @State var waketime = UserDefaults.standard.object(forKey: "waketime") as! Date
+    @ObservedObject var settings = Settings()
     @State var appleHealthConnected = UserDefaults.standard.bool(forKey: "appleHealthConnected")
     @State var showAppleHealthAlert = false
-    
-    @AppStorage("pregnancyMode") var pregnancyMode: Bool = UserDefaults.standard.bool(forKey: "pregnancyMode")
     
     let name = Bundle.main.infoDictionary!["CFBundleName"] as! String
     
@@ -53,16 +50,16 @@ struct SettingsView: View {
 
                 if appleHealthConnected {
                     Section(footer: Text("We tailor drug and dosage information in regards to your pregnancy.")) {
-                        Toggle("Pregnancy Mode", isOn: $pregnancyMode)
+                        Toggle("Pregnancy Mode", isOn: $settings.pregnancyMode)
                     }
                 }
                 
                 Section() {
-                    DatePicker(NSLocalizedString("settingsGoToSleep", comment: ""), selection: $bedtime, displayedComponents: .hourAndMinute)
+                    DatePicker(NSLocalizedString("settingsGoToSleep", comment: ""), selection: $settings.bedtime, displayedComponents: .hourAndMinute)
                         .datePickerStyle(CompactDatePickerStyle())
 
 
-                    DatePicker(NSLocalizedString("settingsWakeUp", comment: ""), selection: $waketime, displayedComponents: .hourAndMinute)
+                    DatePicker(NSLocalizedString("settingsWakeUp", comment: ""), selection: $settings.waketime, displayedComponents: .hourAndMinute)
                         .datePickerStyle(CompactDatePickerStyle())
                 }
                 
