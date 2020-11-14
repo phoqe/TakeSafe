@@ -67,7 +67,7 @@ struct DrugManager {
             return nil
         }
         
-        return activeDrugs
+        return activeDrugs.filter { !$0.excreted() }
     }
     
     private static func scheduleOnsetNotification(activeDrug: ActiveDrug) {

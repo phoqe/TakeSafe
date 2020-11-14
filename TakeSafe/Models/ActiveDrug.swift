@@ -57,4 +57,12 @@ class ActiveDrug: Drug {
         try container.encode(rdi, forKey: .rdi)
         try container.encode(interactions, forKey: .interactions)
     }
+
+    func excreted() -> Bool {
+        if let difference = Calendar.current.dateComponents([.hour], from: ingestion, to: Date()).hour, difference > Int(duration) {
+            return true
+        }
+
+        return false
+    }
 }
