@@ -57,10 +57,6 @@ struct SettingsView: View {
                 Section() {
                     DatePicker(NSLocalizedString("settingsGoToSleep", comment: ""), selection: $settings.bedtime, displayedComponents: .hourAndMinute)
                         .datePickerStyle(CompactDatePickerStyle())
-
-
-                    DatePicker(NSLocalizedString("settingsWakeUp", comment: ""), selection: $settings.waketime, displayedComponents: .hourAndMinute)
-                        .datePickerStyle(CompactDatePickerStyle())
                 }
                 
                 NavigationLink(destination: AboutView()) {

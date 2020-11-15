@@ -24,11 +24,4 @@ class Settings: ObservableObject {
             objectWillChange.send()
         }
     }
-
-    @UserDefault("waketime")
-    var waketime: Date {
-        willSet {
-            objectWillChange.send()
-        }
-    }
 }
