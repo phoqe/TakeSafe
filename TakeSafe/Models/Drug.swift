@@ -133,7 +133,23 @@ class Drug: Codable, Identifiable {
             return false
         }
 
-        // TODO: Fix that shit.
+        var date1 = Date(timeIntervalSinceReferenceDate: 0)
+        var date2 = Date(timeIntervalSinceReferenceDate: 0)
+        let bedtime = Settings().bedtime
+        let now = Date()
+        let calendar = Calendar.current
+        let dateComponents1 = calendar.dateComponents([.hour, .minute], from: bedtime)
+        let dateComponents2 = calendar.dateComponents([.hour, .minute], from: now)
+
+        date1 = calendar.date(byAdding: dateComponents1, to: date1)!
+        date2 = calendar.date(byAdding: dateComponents2, to: date2)!
+
+        let difference = calendar.dateComponents([.second], from: date1, to: date2).second!
+        let threshold = warnBeforeBedtime * 3600
+
+        if difference <= threshold {
+            return true
+        }
 
         return false
     }
