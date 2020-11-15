@@ -127,4 +127,14 @@ class Drug: Codable, Identifiable {
         try container.encodeIfPresent(interactions, forKey: .interactions)
         try container.encodeIfPresent(warnBeforeBedtime, forKey: .warnBeforeBedtime)
     }
+
+    func mayDisturbSleep() -> Bool {
+        guard let warnBeforeBedtime = warnBeforeBedtime else {
+            return false
+        }
+
+        // TODO: Fix that shit.
+
+        return false
+    }
 }

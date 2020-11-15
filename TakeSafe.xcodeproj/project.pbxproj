@@ -66,6 +66,7 @@
 		9FE2383F255DE61F0055A1C1 /* LicenseListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2383E255DE61F0055A1C1 /* LicenseListItem.swift */; };
 		9FF4B3542539F9BD0040720A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4B3532539F9BD0040720A /* API.swift */; };
 		9FF4B357253A23650040720A /* DrugManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4B356253A23650040720A /* DrugManager.swift */; };
+		9FFCB7632561940B00716769 /* WarningListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFCB7622561940B00716769 /* WarningListItem.swift */; };
 		9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD215625069AF5002F01B9 /* ContainedButton.swift */; };
 		9FFD215E2506CB34002F01B9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFD215D2506CB34002F01B9 /* HealthKit.framework */; };
 		9FFD21662506D327002F01B9 /* IntroPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD21652506D327002F01B9 /* IntroPageView.swift */; };
@@ -136,6 +137,7 @@
 		9FE2383E255DE61F0055A1C1 /* LicenseListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseListItem.swift; sourceTree = "<group>"; };
 		9FF4B3532539F9BD0040720A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9FF4B356253A23650040720A /* DrugManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugManager.swift; sourceTree = "<group>"; };
+		9FFCB7622561940B00716769 /* WarningListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningListItem.swift; sourceTree = "<group>"; };
 		9FFD215625069AF5002F01B9 /* ContainedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedButton.swift; sourceTree = "<group>"; };
 		9FFD215B2506CB34002F01B9 /* TakeSafe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TakeSafe.entitlements; sourceTree = "<group>"; };
 		9FFD215D2506CB34002F01B9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -240,6 +242,7 @@
 				9FE23820255DDC790055A1C1 /* LicenseList.swift */,
 				9FE23838255DE06D0055A1C1 /* LicenseView.swift */,
 				9FE2383E255DE61F0055A1C1 /* LicenseListItem.swift */,
+				9FFCB7622561940B00716769 /* WarningListItem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				9FF4B3542539F9BD0040720A /* API.swift in Sources */,
 				9FC632F625374F6A00DA145B /* DrugList.swift in Sources */,
 				9FF4B357253A23650040720A /* DrugManager.swift in Sources */,
+				9FFCB7632561940B00716769 /* WarningListItem.swift in Sources */,
 				9FB630F02535E86600397152 /* DrugListItem.swift in Sources */,
 				9F73F6D1253C3F6A00B93569 /* AdministrationRoute.swift in Sources */,
 				9F2011E3253B720D00B47701 /* IconImage.swift in Sources */,

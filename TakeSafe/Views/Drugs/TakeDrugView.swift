@@ -32,10 +32,24 @@ struct TakeDrugView: View {
         
         presented = false
     }
+
+    func shortBedtime() -> String {
+        let formatter = DateFormatter()
+
+        formatter.timeStyle = .short
+
+        return formatter.string(from: Settings().bedtime)
+    }
     
     var body: some View {
         NavigationView {
             Form {
+                if drug.mayDisturbSleep() {
+                    Section() {
+                        WarningListItem(title: "May Disturb Your Sleep".localized(), message: String(format: "This drug may disturb your sleep at %@ if taken now.".localized(), shortBedtime()))
+                    }
+                }
+
                 Section() {
                     if let rdi = drug.rdi {
                         HStack {
