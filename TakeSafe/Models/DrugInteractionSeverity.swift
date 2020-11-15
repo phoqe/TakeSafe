@@ -7,12 +7,23 @@
 
 import SwiftUI
 
-enum DrugInteractionSeverity: String, Codable {
+enum DrugInteractionSeverity: String, Codable, Comparable {
     case minor
     case moderate
     case major
     
     var localizedName: LocalizedStringKey { LocalizedStringKey(rawValue) }
+
+    private var priority: Int {
+        switch self {
+            case .minor:
+                return 0
+            case .moderate:
+                return 1
+            case .major:
+                return 2
+        }
+    }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -31,5 +42,13 @@ enum DrugInteractionSeverity: String, Codable {
             default:
                 fatalError()
         }
+    }
+
+    static func ==(lhs: DrugInteractionSeverity, rhs: DrugInteractionSeverity) -> Bool {
+        return lhs.priority == rhs.priority
+    }
+
+    static func <(lhs: DrugInteractionSeverity, rhs: DrugInteractionSeverity) -> Bool {
+        return lhs.priority < rhs.priority
     }
 }

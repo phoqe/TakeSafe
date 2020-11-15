@@ -12,7 +12,7 @@ struct InteractionList: View {
 
     var body: some View {
         List {
-            ForEach(interactions) { interaction in
+            ForEach(interactions.sorted { $0.severity > $1.severity }) { interaction in
                 InteractionListItem(interaction: interaction)
             }
         }
