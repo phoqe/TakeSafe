@@ -99,12 +99,12 @@ struct TakeDrugView: View {
                 if dose != 0 {
                     Section() {
                         Button(action: takeDrug) {
-                            Text(String(format: NSLocalizedString("takeDrugTake", comment: ""), dose, drug.massUnit.symbol))
+                            Text(String(format: NSLocalizedString("Administer mass", comment: ""), dose, drug.massUnit.symbol))
                         }
                     }
                 }
             }
-            .navigationBarTitle(String(format: NSLocalizedString("drugTakeDrug", comment: ""), drug.name), displayMode: .inline)
+            .navigationBarTitle(String(format: NSLocalizedString("Administer", comment: ""), drug.name), displayMode: .inline)
             .navigationBarItems(leading: Button(NSLocalizedString("takeDrugCancel", comment: "")) {
                 presented = false
             })

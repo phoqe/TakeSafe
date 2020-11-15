@@ -68,6 +68,7 @@
 "drugAddictionName" = "Missbruk";
 "drugAddictionDescription" = "Ett missbruk är felanvändning av exempelvis droger, förtroenden eller andra saker som anses skadligt eller sjukligt.";
 "drugTakeDrug" = "Ta %@";
+"Administer" = "Administrera";
 
 // Take Drug
 "takeDrugBioavailabilityName" = "Biotillgänglighet";
@@ -78,6 +79,7 @@
 "takeDrugMedianLethalDoseName" = "LD\U2085\U2080";
 "takeDrugMedianLethalDoseDescription" = "Värdet en specifik substans erhålls genom att i djurförsök utsätta olika grupper av försöksdjur för varierande doser av substansen, varpå en del av försöksdjuren dör.";
 "takeDrugTake" = "Ta %d %@";
+"Administer mass" = "Administrera %d %@";
 "takeDrugCancel" = "Avbryt";
 "takeDrugRouteOfAdministration" = "Administreringsväg";
 "takeDrugDosage" = "Dosering";

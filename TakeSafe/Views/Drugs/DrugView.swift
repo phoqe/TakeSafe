@@ -96,7 +96,7 @@ struct DrugView: View {
             }
             
             Section() {
-                Button(String(format: NSLocalizedString("drugTakeDrug", comment: ""), drug.name)) {
+                Button(String(format: NSLocalizedString("Administer", comment: ""), drug.name)) {
                     showTakeDrugView = true
                 }
             }

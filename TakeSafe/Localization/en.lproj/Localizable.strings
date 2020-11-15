@@ -66,6 +66,7 @@
 "drugAddictionName" = "Addiction";
 "drugAddictionDescription" = "Addiction is a brain disorder characterized by compulsive engagement in rewarding stimuli despite adverse consequences.";
 "drugTakeDrug" = "Take %@";
+"Administer" = "Administer";
 
 // Timeline
 "timelineOnset" = "Onset";
@@ -79,6 +80,7 @@
 "takeDrugMedianLethalDoseName" = "LD\U2085\U2080";
 "takeDrugMedianLethalDoseDescription" = "The dose required to kill half the members of a tested population after a specified test duration.";
 "takeDrugTake" = "Take %d %@";
+"Administer mass" = "Administer %d %@";
 "takeDrugCancel" = "Cancel";
 "takeDrugRouteOfAdministration" = "Route";
 "takeDrugDosage" = "Dosage";
