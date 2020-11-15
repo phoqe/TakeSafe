@@ -53,6 +53,7 @@
 "remove" = "Ta bort";
 "rdi" = "RDI";
 "Remove" = "Ta bort";
+"Info" = "Info";
 
 // Drugs
 "drugsTitle" = "Läkemedel";

@@ -50,7 +50,7 @@ struct TakeDrugView: View {
                     }
                 }
 
-                Section() {
+                Section(header: Text("Info")) {
                     if let rdi = drug.rdi {
                         HStack {
                             Text("rdi")

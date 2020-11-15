@@ -51,6 +51,7 @@
 "remove" = "Remove";
 "rdi" = "RDI";
 "Remove" = "Remove";
+"Info" = "Info";
 
 // Drugs
 "drugsTitle" = "Drugs";
