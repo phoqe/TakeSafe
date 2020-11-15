@@ -150,6 +150,9 @@
 "minor" = "Lindrig";
 "moderate" = "Måttlig";
 "major" = "Allvarlig";
+"Do not take this combination." = "Ta inte denna kombination!";
+"Be cautious with this combination." = "Var försiktig med denna kombination.";
+"Be watchful with this combination." = "Var uppmärksam med denna kombination.";
 
 // Active Drug View
 "Remove active drug?" = "Ta bort “%@”?";

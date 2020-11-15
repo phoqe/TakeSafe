@@ -24,7 +24,22 @@ struct InteractionListItem: View {
     var body: some View {
         DisclosureGroup(
             content: {
-                Text(interaction.description)
+                VStack(alignment: .leading) {
+                    Text(interaction.description)
+                        .padding(.bottom, 7.5)
+
+                    Label(
+                        title: {
+                            Text(interaction.severity.localizedPrompt())
+                                .bold()
+                                .foregroundColor(foregroundColor())
+                        },
+                        icon: {
+                            Image(systemName: "exclamationmark.triangle.fill")
+                                .foregroundColor(foregroundColor())
+                        }
+                    )
+                }
             },
             label: {
                 HStack {

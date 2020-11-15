@@ -51,4 +51,15 @@ enum DrugInteractionSeverity: String, Codable, Comparable {
     static func <(lhs: DrugInteractionSeverity, rhs: DrugInteractionSeverity) -> Bool {
         return lhs.priority < rhs.priority
     }
+
+    func localizedPrompt() -> String {
+        switch self {
+            case .minor:
+                return "Be watchful with this combination.".localized()
+            case .moderate:
+                return "Be cautious with this combination.".localized()
+            case .major:
+                return "Do not take this combination.".localized()
+        }
+    }
 }

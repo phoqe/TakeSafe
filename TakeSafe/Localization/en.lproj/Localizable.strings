@@ -150,6 +150,9 @@
 "minor" = "Minor";
 "moderate" = "Moderate";
 "major" = "Major";
+"Do not take this combination." = "Do not take this combination!";
+"Be cautious with this combination." = "Be cautious with this combination.";
+"Be watchful with this combination." = "Be watchful with this combination.";
 
 // Active Drug View
 "Remove active drug?" = "Remove “%@”?";
