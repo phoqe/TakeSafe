@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Sentry
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         registerUserDefaults()
-
+        initSentry()
+        
         // TODO: Request in Onboarding.
         NotificationManager.shared.requestAuthorization { (granted, error) in
             
@@ -31,5 +33,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             "activeDrugs": [],
             "appleHealthConnected": false
         ])
+    }
+    
+    private func initSentry() {
+        SentrySDK.start { options in
+            options.dsn = "https://c240b52932dd44fea8881c923b247919@o477651.ingest.sentry.io/5519014"
+            options.debug = true
+        }
     }
 }

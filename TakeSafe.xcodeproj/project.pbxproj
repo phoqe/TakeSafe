@@ -24,6 +24,7 @@
 		9F73F6D1253C3F6A00B93569 /* AdministrationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73F6D0253C3F6A00B93569 /* AdministrationRoute.swift */; };
 		9F73F6D4253CBB1500B93569 /* ActiveDrugList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73F6D3253CBB1500B93569 /* ActiveDrugList.swift */; };
 		9F73F6D7253CC1A600B93569 /* ActiveDrugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73F6D6253CC1A600B93569 /* ActiveDrugView.swift */; };
+		9F843AFB25631D2800D1B3E1 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 9F843AFA25631D2800D1B3E1 /* Sentry */; };
 		9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84D9AE2507809D006C1B77 /* SetupPageView.swift */; };
 		9F84D9B625079153006C1B77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F84D9B825079153006C1B77 /* InfoPlist.strings */; };
 		9F9E6BDA252DF3050091ABAF /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 9F9E6BD9252DF3050091ABAF /* BetterSafariView */; };
@@ -153,6 +154,7 @@
 			files = (
 				9FFD215E2506CB34002F01B9 /* HealthKit.framework in Frameworks */,
 				9F9E6BDA252DF3050091ABAF /* BetterSafariView in Frameworks */,
+				9F843AFB25631D2800D1B3E1 /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +364,7 @@
 			name = TakeSafe;
 			packageProductDependencies = (
 				9F9E6BD9252DF3050091ABAF /* BetterSafariView */,
+				9F843AFA25631D2800D1B3E1 /* Sentry */,
 			);
 			productName = TakeSafe;
 			productReference = 9FA381CE250629840053C3F4 /* TakeSafe.app */;
@@ -393,6 +396,7 @@
 			mainGroup = 9FA381C5250629840053C3F4;
 			packageReferences = (
 				9F9E6BD8252DF3050091ABAF /* XCRemoteSwiftPackageReference "BetterSafariView" */,
+				9F843AF925631D2800D1B3E1 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 			);
 			productRefGroup = 9FA381CF250629840053C3F4 /* Products */;
 			projectDirPath = "";
@@ -706,6 +710,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9F843AF925631D2800D1B3E1 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.9;
+			};
+		};
 		9F9E6BD8252DF3050091ABAF /* XCRemoteSwiftPackageReference "BetterSafariView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stleamist/BetterSafariView.git";
@@ -717,6 +729,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9F843AFA25631D2800D1B3E1 /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F843AF925631D2800D1B3E1 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
+		};
 		9F9E6BD9252DF3050091ABAF /* BetterSafariView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9F9E6BD8252DF3050091ABAF /* XCRemoteSwiftPackageReference "BetterSafariView" */;
