@@ -25,9 +25,6 @@ struct InteractionListItem: View {
         DisclosureGroup(
             content: {
                 VStack(alignment: .leading) {
-                    Text(interaction.description)
-                        .padding(.bottom, 7.5)
-
                     Label(
                         title: {
                             Text(interaction.severity.localizedPrompt())
@@ -39,6 +36,9 @@ struct InteractionListItem: View {
                                 .foregroundColor(foregroundColor())
                         }
                     )
+                    .padding(.bottom, 7.5)
+                    
+                    Text(interaction.description)
                 }
             },
             label: {
