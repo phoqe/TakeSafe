@@ -12,12 +12,16 @@ struct LicenseListItem: View {
 
     var body: some View {
         NavigationLink(destination: LicenseView(package: package)) {
-            VStack(alignment: .leading) {
+            if let author = package.author {
+                VStack(alignment: .leading) {
+                    Text(package.name)
+                        .padding(.bottom, -2.5)
+                    
+                    Text(author)
+                        .foregroundColor(.secondary)
+                }
+            } else {
                 Text(package.name)
-                    .padding(.bottom, -2.5)
-                
-                Text(package.author)
-                    .foregroundColor(.secondary)
             }
 
             Spacer()

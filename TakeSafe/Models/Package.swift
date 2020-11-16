@@ -10,6 +10,6 @@ import Foundation
 struct Package: Identifiable {
     let id: String
     let name: String
-    let author: String
+    let author: String?
     let license: License
 }
