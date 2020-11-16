@@ -144,10 +144,9 @@ class Drug: Codable, Identifiable {
         date1 = calendar.date(byAdding: dateComponents1, to: date1)!
         date2 = calendar.date(byAdding: dateComponents2, to: date2)!
 
-        let difference = calendar.dateComponents([.second], from: date1, to: date2).second!
-        let threshold = warnBeforeBedtime * 3600
+        let difference = calendar.dateComponents([.hour], from: date1, to: date2).hour!
 
-        if difference <= threshold {
+        if difference <= warnBeforeBedtime {
             return true
         }
 
