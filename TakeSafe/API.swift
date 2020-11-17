@@ -8,7 +8,11 @@
 import Foundation
 
 struct API {
+    #if DEBUG
     static let baseUrl = URL(string: "https://dev.takesafe.app/api/")!
+    #else
+    static let baseUrl = URL(string: "https://takesafe.app/api/")!
+    #endif
     
     static func drugsUrl() -> URL {
         let endpointUrl = baseUrl.appendingPathComponent("drugs")

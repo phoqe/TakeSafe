@@ -36,9 +36,16 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     private func initSentry() {
+        #if DEBUG
         SentrySDK.start { options in
             options.dsn = "https://c240b52932dd44fea8881c923b247919@o477651.ingest.sentry.io/5519014"
             options.debug = true
         }
+        #else
+        SentrySDK.start { options in
+            options.dsn = "https://c240b52932dd44fea8881c923b247919@o477651.ingest.sentry.io/5519014"
+            options.debug = false
+        }
+        #endif
     }
 }
