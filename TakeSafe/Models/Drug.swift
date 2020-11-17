@@ -145,8 +145,8 @@ class Drug: Codable, Identifiable {
         date2 = calendar.date(byAdding: dateComponents2, to: date2)!
 
         let difference = calendar.dateComponents([.hour], from: date1, to: date2).hour!
-
-        if difference <= warnBeforeBedtime {
+        
+        if difference >= warnBeforeBedtime {
             return true
         }
 
