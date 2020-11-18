@@ -50,7 +50,7 @@ struct TakeDrugView: View {
                     }
                 }
 
-                Section(header: Text("Info")) {
+                Section() {
                     if let rdi = drug.rdi {
                         HStack {
                             Text("rdi")
@@ -92,7 +92,7 @@ struct TakeDrugView: View {
                     }
                 }
                 
-                Section(header: Text("takeDrugDosage"), footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.name.lowercased(), administrationRoute.bioavailability))) {
+                Section(footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.name.lowercased(), administrationRoute.bioavailability))) {
                     HStack {
                         Text("takeDrugRouteOfAdministration")
 
