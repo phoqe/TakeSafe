@@ -111,8 +111,12 @@ struct TakeDrugView: View {
                         }
                         .pickerStyle(MenuPickerStyle())
                     }
-                    
-                    Stepper("\(dose) \(drug.massUnit.symbol)", value: $dose, in: 0...Int.max, step: drug.doseStep)
+
+                    Stepper(value: $dose, in: 0...Int.max, step: drug.doseStep) {
+                        Text("\(dose) \(drug.massUnit.symbol)")
+                            .font(.title3)
+                    }
+                    .padding(.vertical)
                 }
                 
                 if dose != 0 {
