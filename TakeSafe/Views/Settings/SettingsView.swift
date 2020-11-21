@@ -48,7 +48,7 @@ struct SettingsView: View {
                     }
                 }
 
-                if appleHealthConnected {
+                if let healthStore = HealthManager.shared.healthStore, let biologicalSex = try? healthStore.biologicalSex().biologicalSex, biologicalSex == .female {
                     Section(footer: Text("We tailor drug and dosage information in regards to your pregnancy.")) {
                         Toggle("Pregnancy Mode", isOn: $settings.pregnancyMode)
                     }
