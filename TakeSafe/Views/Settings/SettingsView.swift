@@ -18,7 +18,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(footer: Text(appleHealthConnected ? "We use data from Apple Health to give you info and advice in realtime." : "We can use data from Apple Health to give you info and advice in realtime.")) {
+                Section() {
                     if appleHealthConnected {
                         HStack {
                             Text("Apple Health")
