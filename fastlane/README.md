@@ -21,6 +21,11 @@ or alternatively using `brew install fastlane`
 fastlane ios beta
 ```
 
+### ios upload_symbols
+```
+fastlane ios upload_symbols
+```
+
 
 ----
 
