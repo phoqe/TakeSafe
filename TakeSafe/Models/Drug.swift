@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import HealthKit
 
 class Drug: Codable, Identifiable {
     let id: String
@@ -151,5 +152,30 @@ class Drug: Codable, Identifiable {
         }
 
         return false
+    }
+
+    func personalizedLd50(completion: @escaping (_ ld50: Double?) -> Void) {
+        guard let healthStore = HealthManager.shared.healthStore,
+              let sampleType = HKQuantityType.quantityType(forIdentifier: .bodyMass) else {
+            completion(nil)
+
+            return
+        }
+
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
+        let query = HKSampleQuery(sampleType: sampleType, predicate: nil, limit: 1, sortDescriptors: [sortDescriptor]) { (query, results, error) in
+            guard let samples = results as? [HKQuantitySample], let sample = samples.first else {
+                completion(nil)
+
+                return
+            }
+
+            let bodyMass = sample.quantity.doubleValue(for: HKUnit.gramUnit(with: .kilo))
+            let ld50 = bodyMass * self.ld50.value
+
+            completion(ld50)
+        }
+
+        healthStore.execute(query)
     }
 }

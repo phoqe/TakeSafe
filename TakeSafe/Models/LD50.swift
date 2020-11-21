@@ -8,17 +8,17 @@
 import Foundation
 
 struct LD50: Codable {
-    let value: Int
+    let value: Double
     let unitDividend: UnitMass
     let unitDivisor: UnitMass
-    
+
     enum CodingKeys: String, CodingKey {
         case value
         case unitDividend = "unit_dividend"
         case unitDivisor = "unit_divisor"
     }
     
-    init(value: Int, unitDividend: UnitMass, unitDivisor: UnitMass) {
+    init(value: Double, unitDividend: UnitMass, unitDivisor: UnitMass) {
         self.value = value
         self.unitDividend = unitDividend
         self.unitDivisor = unitDivisor
@@ -27,7 +27,7 @@ struct LD50: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        value = try container.decode(Int.self, forKey: .value)
+        value = try container.decode(Double.self, forKey: .value)
         unitDividend = try container.decode(String.self, forKey: .unitDividend).unitMass()!
         unitDivisor = try container.decode(String.self, forKey: .unitDivisor).unitMass()!
     }

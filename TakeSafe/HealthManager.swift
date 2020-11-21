@@ -29,7 +29,8 @@ struct HealthManager {
     
     init() {
         types = Set([
-            biologicalSex!
+            biologicalSex!,
+            bodyMass!
         ])
 
         if !HKHealthStore.isHealthDataAvailable() {

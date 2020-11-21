@@ -10,7 +10,8 @@ import Foundation
 
 struct TakeDrugView: View {
     var drug: Drug
-    
+
+    @State var personalizedLd50: Double?
     @State var administrationRoute: AdministrationRoute
     @State var dose: Int = 0
     @State var showMedianLethalDoseAlert = false
@@ -76,9 +77,13 @@ struct TakeDrugView: View {
                         Text("takeDrugMedianLethalDoseName")
                         
                         Spacer()
-                        
-                        Text("\(drug.ld50.value) \(drug.ld50.unitDividend.symbol)/\(drug.ld50.unitDivisor.symbol)")
-                        
+
+                        if let personalizedLd50 = personalizedLd50 {
+                            Text("\(Int(personalizedLd50)) \(drug.ld50.unitDividend.symbol)")
+                        } else {
+                            Text("\(Int(drug.ld50.value)) \(drug.ld50.unitDividend.symbol)/\(drug.ld50.unitDivisor.symbol)")
+                        }
+
                         Button(action: {
                             showMedianLethalDoseAlert = true
                         }, label: {
@@ -122,6 +127,13 @@ struct TakeDrugView: View {
             .navigationBarItems(leading: Button(NSLocalizedString("takeDrugCancel", comment: "")) {
                 presented = false
             })
+        }
+        .onAppear {
+            drug.personalizedLd50 { (ld50) in
+                if let ld50 = ld50 {
+                    self.personalizedLd50 = ld50
+                }
+            }
         }
     }
 }
