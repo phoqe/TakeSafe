@@ -99,7 +99,7 @@ class Drug: Codable, Identifiable {
         doseStep = try container.decode(Int.self, forKey: .doseStep)
         commonDoses = try container.decode([Int].self, forKey: .commonDoses)
         administrationRoutes = try container.decode([AdministrationRoute].self, forKey: .administrationRoutes)
-        rdi = try container.decode(Int.self, forKey: .rdi)
+        rdi = try container.decodeIfPresent(Int.self, forKey: .rdi)
         interactions = try container.decodeIfPresent([DrugInteraction].self, forKey: .interactions)
         warnBeforeBedtime = try container.decodeIfPresent(Int.self, forKey: .warnBeforeBedtime)
     }
@@ -124,7 +124,7 @@ class Drug: Codable, Identifiable {
         try container.encode(doseStep, forKey: .doseStep)
         try container.encode(commonDoses, forKey: .commonDoses)
         try container.encode(administrationRoutes, forKey: .administrationRoutes)
-        try container.encode(rdi, forKey: .rdi)
+        try container.encodeIfPresent(rdi, forKey: .rdi)
         try container.encodeIfPresent(interactions, forKey: .interactions)
         try container.encodeIfPresent(warnBeforeBedtime, forKey: .warnBeforeBedtime)
     }

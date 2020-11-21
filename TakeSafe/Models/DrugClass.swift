@@ -8,7 +8,8 @@
 import SwiftUI
 
 enum DrugClass: String, Codable {
-    case stimulant = "drugClassStimulant"
+    case stimulant
+    case hallucinogen
     
     var localizedName: LocalizedStringKey { LocalizedStringKey(rawValue) }
     
@@ -17,8 +18,10 @@ enum DrugClass: String, Codable {
         let drugClass = try container.decode(String.self)
         
         switch drugClass {
-            case "stimulant", "drugClassStimulant":
+            case "stimulant":
                 self = .stimulant
+            case "hallucinogen":
+                self = .hallucinogen
             default:
                 fatalError()
         }

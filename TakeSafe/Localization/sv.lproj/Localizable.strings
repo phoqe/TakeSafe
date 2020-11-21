@@ -133,6 +133,8 @@
 // Drug Classes
 "drugClassStimulant" = "Stimulant";
 "drugClassStimulantDescription" = "Preparaten i denna grupp förstärker så väl sinnesförnimmelser som tankar och beteenden.";
+"stimulant" = "Stimulant";
+"hallucinogen" = "Hallucinogen";
 
 // Addiction
 "addictionLow" = "Låg";
@@ -150,6 +152,7 @@
 "enema" = "Lavemang";
 "rectal" = "Rektal";
 "intravenous" = "Intravenöst";
+"sublingual" = "Sublingual";
 
 // Drug Interactions
 "minor" = "Lindrig";

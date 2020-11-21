@@ -133,6 +133,8 @@
 // Drug Classes
 "drugClassStimulant" = "Stimulant";
 "drugClassStimulantDescription" = "A substance that raises levels of physiological or nervous activity in the body.";
+"stimulant" = "Stimulant";
+"hallucinogen" = "Hallucinogen";
 
 // Addiction
 "addictionLow" = "Low";
@@ -150,6 +152,7 @@
 "enema" = "Enema";
 "rectal" = "Rectal";
 "intravenous" = "Intravenous";
+"sublingual" = "Sublingual";
 
 // Drug Interactions
 "minor" = "Minor";

@@ -22,6 +22,8 @@ extension String {
                 return UnitMass.milligrams
             case "kilograms":
                 return UnitMass.kilograms
+            case "micrograms":
+                return UnitMass.micrograms
             default:
                 return nil
         }

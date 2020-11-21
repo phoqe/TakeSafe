@@ -54,7 +54,7 @@ class ActiveDrug: Drug {
         try container.encode(doseStep, forKey: .doseStep)
         try container.encode(commonDoses, forKey: .commonDoses)
         try container.encode(administrationRoutes, forKey: .administrationRoutes)
-        try container.encode(rdi, forKey: .rdi)
+        try container.encodeIfPresent(rdi, forKey: .rdi)
         try container.encodeIfPresent(interactions, forKey: .interactions)
         try container.encodeIfPresent(warnBeforeBedtime, forKey: .warnBeforeBedtime)
     }
