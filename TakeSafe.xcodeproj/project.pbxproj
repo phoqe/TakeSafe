@@ -40,6 +40,8 @@
 		9FA381E725062CC70053C3F4 /* IntroPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381E625062CC70053C3F4 /* IntroPage.swift */; };
 		9FA381ED25064E0B0053C3F4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA381EC25064E0B0053C3F4 /* PageViewController.swift */; };
 		9FAA2F5B256AC8A7006F0479 /* DrugInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAA2F5A256AC8A7006F0479 /* DrugInfo.swift */; };
+		9FAA2F5E256AD94B006F0479 /* Legality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAA2F5D256AD94B006F0479 /* Legality.swift */; };
+		9FAA2F61256AE03A006F0479 /* Jurisdiction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAA2F60256AE03A006F0479 /* Jurisdiction.swift */; };
 		9FAD9D37253DE8E8007E016F /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAD9D36253DE8E8007E016F /* HealthManager.swift */; };
 		9FB630EC2535A87900397152 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB630EB2535A87900397152 /* EmptyState.swift */; };
 		9FB630F02535E86600397152 /* DrugListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB630EF2535E86600397152 /* DrugListItem.swift */; };
@@ -111,6 +113,8 @@
 		9FA381E625062CC70053C3F4 /* IntroPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPage.swift; sourceTree = "<group>"; };
 		9FA381EC25064E0B0053C3F4 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		9FAA2F5A256AC8A7006F0479 /* DrugInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugInfo.swift; sourceTree = "<group>"; };
+		9FAA2F5D256AD94B006F0479 /* Legality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Legality.swift; sourceTree = "<group>"; };
+		9FAA2F60256AE03A006F0479 /* Jurisdiction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jurisdiction.swift; sourceTree = "<group>"; };
 		9FAD9D36253DE8E8007E016F /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		9FB630EB2535A87900397152 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		9FB630EF2535E86600397152 /* DrugListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugListItem.swift; sourceTree = "<group>"; };
@@ -320,6 +324,8 @@
 				9FE2383B255DE0DE0055A1C1 /* License.swift */,
 				9F26200725602DFA004202F6 /* UserDefault.swift */,
 				9F26200E25602E58004202F6 /* Settings.swift */,
+				9FAA2F5D256AD94B006F0479 /* Legality.swift */,
+				9FAA2F60256AE03A006F0479 /* Jurisdiction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -442,6 +448,7 @@
 				9FA282EE2541C835005021FC /* DrugInteraction.swift in Sources */,
 				9FFD215725069AF5002F01B9 /* ContainedButton.swift in Sources */,
 				9FC04666250655EF000B2AAC /* PageControl.swift in Sources */,
+				9FAA2F5E256AD94B006F0479 /* Legality.swift in Sources */,
 				9F84D9AF2507809D006C1B77 /* SetupPageView.swift in Sources */,
 				9F4F140325601E0C001D9ABD /* InteractionList.swift in Sources */,
 				9F5372BC253AF30A0043375D /* SampleData.swift in Sources */,
@@ -466,6 +473,7 @@
 				9FDBD90425588DD5002F4A37 /* DrugPhase.swift in Sources */,
 				9FAD9D37253DE8E8007E016F /* HealthManager.swift in Sources */,
 				9FA381E525062CB50053C3F4 /* OnboardingView.swift in Sources */,
+				9FAA2F61256AE03A006F0479 /* Jurisdiction.swift in Sources */,
 				9F074F302551383B00894ED9 /* NotificationManager.swift in Sources */,
 				9FE2383C255DE0DE0055A1C1 /* License.swift in Sources */,
 				9FD29B312534725700F90F04 /* AboutView.swift in Sources */,

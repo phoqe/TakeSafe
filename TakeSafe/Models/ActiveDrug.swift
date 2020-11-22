@@ -17,7 +17,7 @@ class ActiveDrug: Drug {
         self.ingestion = ingestion
         self.administrationRoute = administrationRoute
         
-        super.init(id: UUID().uuidString, name: drug.name, aliases: drug.aliases, description: drug.description, learnMoreUrl: drug.learnMoreUrl, icon: drug.icon, drugClass: drug.drugClass, dependence: drug.dependence, addiction: drug.addiction, onset: drug.onset, duration: drug.duration, massUnit: drug.massUnit, ld50: drug.ld50, defaultDose: drug.defaultDose, doseStep: drug.doseStep, commonDoses: drug.commonDoses, administrationRoutes: drug.administrationRoutes, rdi: drug.rdi, interactions: drug.interactions, warnBeforeBedtime: drug.warnBeforeBedtime, legal: drug.legal)
+        super.init(id: UUID().uuidString, name: drug.name, aliases: drug.aliases, description: drug.description, learnMoreUrl: drug.learnMoreUrl, icon: drug.icon, drugClass: drug.drugClass, dependence: drug.dependence, addiction: drug.addiction, onset: drug.onset, duration: drug.duration, massUnit: drug.massUnit, ld50: drug.ld50, defaultDose: drug.defaultDose, doseStep: drug.doseStep, commonDoses: drug.commonDoses, administrationRoutes: drug.administrationRoutes, rdi: drug.rdi, interactions: drug.interactions, warnBeforeBedtime: drug.warnBeforeBedtime, legal: drug.legal, legality: drug.legality)
     }
     
     required init(from decoder: Decoder) throws {
@@ -58,6 +58,7 @@ class ActiveDrug: Drug {
         try container.encodeIfPresent(interactions, forKey: .interactions)
         try container.encodeIfPresent(warnBeforeBedtime, forKey: .warnBeforeBedtime)
         try container.encode(legal, forKey: .legal)
+        try container.encodeIfPresent(legality, forKey: .legality)
     }
 
     func excreted() -> Bool {
