@@ -97,7 +97,7 @@ struct TakeDrugView: View {
                     }
                 }
                 
-                Section(footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.name.lowercased(), administrationRoute.bioavailability))) {
+                Section(footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.name, administrationRoute.bioavailability))) {
                     HStack {
                         Text("takeDrugRouteOfAdministration")
 
@@ -122,7 +122,7 @@ struct TakeDrugView: View {
                 if dose != 0 {
                     Section() {
                         Button(action: takeDrug) {
-                            Text(String(format: NSLocalizedString("Administer mass", comment: ""), dose, drug.massUnit.symbol))
+                            Text("Administer")
                         }
                     }
                 }
