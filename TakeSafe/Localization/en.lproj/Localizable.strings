@@ -52,6 +52,8 @@
 "rdi" = "RDI";
 "Remove" = "Remove";
 "Info" = "Info";
+"Yes" = "Yes";
+"No" = "No";
 
 // Drugs
 "drugsTitle" = "Drugs";
@@ -70,6 +72,7 @@
 "drugAddictionDescription" = "Addiction is a brain disorder characterized by compulsive engagement in rewarding stimuli despite adverse consequences.";
 "drugTakeDrug" = "Take %@";
 "Administer" = "Administer";
+"Legal" = "Legal";
 
 // Timeline
 "timelineOnset" = "Onset";

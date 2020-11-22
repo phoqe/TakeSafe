@@ -42,10 +42,38 @@ struct DrugView: View {
                     
                     Text(drug.drugClass.localizedName)
                 }
+
+                HStack {
+                    HStack {
+                        Image(systemName: "a.circle.fill")
+
+                        Text(NSLocalizedString("drugAddictionName", comment: ""))
+                            .bold()
+                    }
+
+                    Spacer()
+
+                    Text(drug.addiction.localizedName)
+
+                    Button(action: {
+                        showAddictionAlert = true
+                    }, label: {
+                        Image(systemName: "info.circle")
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                    .foregroundColor(.accentColor)
+                    .alert(isPresented: $showAddictionAlert) {
+                        Alert(title: Text(NSLocalizedString("drugAddictionName", comment: "")), message: Text(NSLocalizedString("drugAddictionDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
+                    }
+                }
                 
                 HStack {
-                    Text(NSLocalizedString("drugDependenceName", comment: ""))
-                        .bold()
+                    HStack {
+                        Image(systemName: "d.circle.fill")
+
+                        Text(NSLocalizedString("drugDependenceName", comment: ""))
+                            .bold()
+                    }
                     
                     Spacer()
                     
@@ -62,25 +90,18 @@ struct DrugView: View {
                         Alert(title: Text(NSLocalizedString("drugDependenceName", comment: "")), message: Text(NSLocalizedString("drugDependenceDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
                     }
                 }
-                
+
                 HStack {
-                    Text(NSLocalizedString("drugAddictionName", comment: ""))
-                        .bold()
-                    
-                    Spacer()
-                    
-                    Text(drug.addiction.localizedName)
-                    
-                    Button(action: {
-                        showAddictionAlert = true
-                    }, label: {
-                        Image(systemName: "info.circle")
-                    })
-                    .buttonStyle(PlainButtonStyle())
-                    .foregroundColor(.accentColor)
-                    .alert(isPresented: $showAddictionAlert) {
-                        Alert(title: Text(NSLocalizedString("drugAddictionName", comment: "")), message: Text(NSLocalizedString("drugAddictionDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
+                    HStack {
+                        Image(systemName: "l.circle.fill")
+
+                        Text("Legal")
+                            .bold()
                     }
+
+                    Spacer()
+
+                    Text(drug.legal ? "Yes" : "No")
                 }
                 
                 Timeline(onset: drug.onset, duration: drug.duration)

@@ -54,6 +54,8 @@
 "rdi" = "RDI";
 "Remove" = "Ta bort";
 "Info" = "Info";
+"Yes" = "Ja";
+"No" = "Nej";
 
 // Drugs
 "drugsTitle" = "Läkemedel";
@@ -72,6 +74,7 @@
 "drugAddictionDescription" = "Ett missbruk är felanvändning av exempelvis droger, förtroenden eller andra saker som anses skadligt eller sjukligt.";
 "drugTakeDrug" = "Ta %@";
 "Administer" = "Administrera";
+"Legal" = "Laglig";
 
 // Take Drug
 "takeDrugBioavailabilityName" = "Biotillgänglighet";
