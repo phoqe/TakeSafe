@@ -29,6 +29,7 @@ class Drug: Codable, Identifiable {
     let rdi: Int?
     let interactions: [DrugInteraction]?
     let warnBeforeBedtime: Int?
+    let legal: Bool
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -54,9 +55,10 @@ class Drug: Codable, Identifiable {
         case rdi
         case interactions
         case warnBeforeBedtime = "warn_before_bedtime"
+        case legal
     }
     
-    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, icon: Icon, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int], administrationRoutes: [AdministrationRoute], rdi: Int?, interactions: [DrugInteraction]?, warnBeforeBedtime: Int?) {
+    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, icon: Icon, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int], administrationRoutes: [AdministrationRoute], rdi: Int?, interactions: [DrugInteraction]?, warnBeforeBedtime: Int?, legal: Bool) {
         self.id = id
         self.name = name
         self.aliases = aliases
@@ -77,6 +79,7 @@ class Drug: Codable, Identifiable {
         self.rdi = rdi
         self.interactions = interactions
         self.warnBeforeBedtime = warnBeforeBedtime
+        self.legal = legal
     }
     
     required init(from decoder: Decoder) throws {
@@ -102,6 +105,7 @@ class Drug: Codable, Identifiable {
         rdi = try container.decodeIfPresent(Int.self, forKey: .rdi)
         interactions = try container.decodeIfPresent([DrugInteraction].self, forKey: .interactions)
         warnBeforeBedtime = try container.decodeIfPresent(Int.self, forKey: .warnBeforeBedtime)
+        legal = try container.decode(Bool.self, forKey: .legal)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -127,6 +131,7 @@ class Drug: Codable, Identifiable {
         try container.encodeIfPresent(rdi, forKey: .rdi)
         try container.encodeIfPresent(interactions, forKey: .interactions)
         try container.encodeIfPresent(warnBeforeBedtime, forKey: .warnBeforeBedtime)
+        try container.encode(legal, forKey: .legal)
     }
 
     func mayDisturbSleep() -> Bool {

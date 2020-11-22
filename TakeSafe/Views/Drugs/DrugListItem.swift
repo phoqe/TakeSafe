@@ -18,11 +18,9 @@ struct DrugListItem: View {
             VStack(alignment: .leading) {
                 Text(drug.name)
                     .bold()
-                    .foregroundColor(.accentColor)
                     .padding(.bottom, -2.5)
-                
-                Text(drug.drugClass.localizedName)
-                    .foregroundColor(.secondary)
+
+                DrugInfo(drug: drug)
             }
         }
         .padding(.vertical)
