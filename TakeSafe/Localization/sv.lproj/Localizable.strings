@@ -61,6 +61,8 @@
 "drugsErrorDescription" = "Någonting gick fel. Försök igen senare.";
 "drugsEmptyTitle" = "Inga läkemedel i lager.";
 "drugsEmptyDescription" = "Det verkar inte finnas några läkemedel inlagda.";
+"Stimulants" = "Stimulanter";
+"Hallucinogens" = "Hallucinogener";
 
 // Drug
 "drugDrugClass" = "Drogklass";

@@ -59,6 +59,8 @@
 "drugsErrorDescription" = "Something went wrong. Try again later.";
 "drugsEmptyTitle" = "No drugs in store.";
 "drugsEmptyDescription" = "Looks like there are no drugs available.";
+"Stimulants" = "Stimulants";
+"Hallucinogens" = "Hallucinogens";
 
 // Drug
 "drugDrugClass" = "Drug class";
