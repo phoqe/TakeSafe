@@ -73,6 +73,7 @@
 "drugTakeDrug" = "Take %@";
 "Administer" = "Administer";
 "Legal" = "Legal";
+"Legality" = "Legality";
 
 // Timeline
 "timelineOnset" = "Onset";

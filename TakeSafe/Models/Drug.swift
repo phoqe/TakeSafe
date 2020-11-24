@@ -29,7 +29,6 @@ class Drug: Codable, Identifiable {
     let rdi: Int?
     let interactions: [DrugInteraction]?
     let warnBeforeBedtime: Int?
-    let legal: Bool
     let legality: [Legality]?
     
     enum CodingKeys: String, CodingKey {
@@ -56,11 +55,10 @@ class Drug: Codable, Identifiable {
         case rdi
         case interactions
         case warnBeforeBedtime = "warn_before_bedtime"
-        case legal
         case legality
     }
     
-    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, icon: Icon, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int], administrationRoutes: [AdministrationRoute], rdi: Int?, interactions: [DrugInteraction]?, warnBeforeBedtime: Int?, legal: Bool, legality: [Legality]?) {
+    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, icon: Icon, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int], administrationRoutes: [AdministrationRoute], rdi: Int?, interactions: [DrugInteraction]?, warnBeforeBedtime: Int?, legality: [Legality]?) {
         self.id = id
         self.name = name
         self.aliases = aliases
@@ -81,7 +79,6 @@ class Drug: Codable, Identifiable {
         self.rdi = rdi
         self.interactions = interactions
         self.warnBeforeBedtime = warnBeforeBedtime
-        self.legal = legal
         self.legality = legality
     }
     
@@ -108,7 +105,6 @@ class Drug: Codable, Identifiable {
         rdi = try container.decodeIfPresent(Int.self, forKey: .rdi)
         interactions = try container.decodeIfPresent([DrugInteraction].self, forKey: .interactions)
         warnBeforeBedtime = try container.decodeIfPresent(Int.self, forKey: .warnBeforeBedtime)
-        legal = try container.decode(Bool.self, forKey: .legal)
         legality = try container.decodeIfPresent([Legality].self, forKey: .legality)
     }
     
@@ -135,7 +131,6 @@ class Drug: Codable, Identifiable {
         try container.encodeIfPresent(rdi, forKey: .rdi)
         try container.encodeIfPresent(interactions, forKey: .interactions)
         try container.encodeIfPresent(warnBeforeBedtime, forKey: .warnBeforeBedtime)
-        try container.encode(legal, forKey: .legal)
         try container.encodeIfPresent(legality, forKey: .legality)
     }
 
@@ -187,5 +182,24 @@ class Drug: Codable, Identifiable {
         }
 
         healthStore.execute(query)
+    }
+
+    func regionalizedLegality() -> Legality? {
+        guard let legality = legality else {
+            return nil
+        }
+
+        // We don’t want to provide misleading information.
+        guard let regionCode = Locale.current.regionCode else {
+            return nil
+        }
+
+        let regionalizedLegalities = legality.filter { $0.jurisdiction == regionCode }
+
+        if let regionalizedLegality = regionalizedLegalities.first {
+            return regionalizedLegality
+        }
+
+        return nil
     }
 }

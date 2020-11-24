@@ -75,6 +75,7 @@
 "drugTakeDrug" = "Ta %@";
 "Administer" = "Administrera";
 "Legal" = "Laglig";
+"Legality" = "Laglighet";
 
 // Take Drug
 "takeDrugBioavailabilityName" = "Biotillgänglighet";

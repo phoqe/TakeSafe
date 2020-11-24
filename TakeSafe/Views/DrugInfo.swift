@@ -33,10 +33,6 @@ struct DrugInfo: View {
     }
 
     func legalityForegroundColor() -> Color {
-        if drug.legal {
-            return .blue
-        }
-
         return .red
     }
 

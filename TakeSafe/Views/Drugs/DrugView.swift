@@ -91,17 +91,19 @@ struct DrugView: View {
                     }
                 }
 
-                HStack {
+                if let legality = drug.regionalizedLegality() {
                     HStack {
-                        Image(systemName: "l.circle.fill")
+                        HStack {
+                            Image(systemName: "l.circle.fill")
 
-                        Text("Legal")
-                            .bold()
+                            Text("Legality")
+                                .bold()
+                        }
+
+                        Spacer()
+
+                        Text(legality.statute)
                     }
-
-                    Spacer()
-
-                    Text(drug.legal ? "Yes" : "No")
                 }
                 
                 Timeline(onset: drug.onset, duration: drug.duration)

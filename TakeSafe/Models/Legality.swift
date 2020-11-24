@@ -8,7 +8,7 @@
 import Foundation
 
 struct Legality: Codable {
-    let jurisdiction: Jurisdiction
+    let jurisdiction: String
     let statute: String
     let statuteShort: String
 
@@ -18,7 +18,7 @@ struct Legality: Codable {
         case statuteShort = "statute_short"
     }
 
-    init(jurisdiction: Jurisdiction, statute: String, statuteShort: String) {
+    init(jurisdiction: String, statute: String, statuteShort: String) {
         self.jurisdiction = jurisdiction
         self.statute = statute
         self.statuteShort = statuteShort
@@ -27,7 +27,7 @@ struct Legality: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        jurisdiction = try container.decode(Jurisdiction.self, forKey: .jurisdiction)
+        jurisdiction = try container.decode(String.self, forKey: .jurisdiction)
         statute = try container.decode(String.self, forKey: .statute)
         statuteShort = try container.decode(String.self, forKey: .statuteShort)
     }
