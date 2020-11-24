@@ -44,8 +44,10 @@ struct DrugInfo: View {
             Image(systemName: "d.circle.fill")
                 .foregroundColor(dependenceForegroundColor())
 
-            Image(systemName: "l.circle.fill")
-                .foregroundColor(legalityForegroundColor())
+            if let legality = drug.regionalizedLegality() {
+                Text(legality.statuteShort)
+                    .foregroundColor(legalityForegroundColor())
+            }
         }
     }
 }
