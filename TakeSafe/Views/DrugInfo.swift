@@ -10,44 +10,13 @@ import SwiftUI
 struct DrugInfo: View {
     var drug: Drug
 
-    func addictionForegroundColor() -> Color {
-        switch drug.addiction {
-            case .low:
-                return .blue
-            case .moderate:
-                return .orange
-            case .high:
-                return .red
-        }
-    }
-
-    func dependenceForegroundColor() -> Color {
-        switch drug.dependence {
-            case .low:
-                return .blue
-            case .moderate:
-                return .orange
-            case .high:
-                return .red
-        }
-    }
-
-    func legalityForegroundColor() -> Color {
-        return .red
-    }
-
     var body: some View {
         HStack {
             Image(systemName: "a.circle.fill")
-                .foregroundColor(addictionForegroundColor())
+                .foregroundColor(drug.addictionForegroundColor())
 
             Image(systemName: "d.circle.fill")
-                .foregroundColor(dependenceForegroundColor())
-
-            if let legality = drug.regionalizedLegality() {
-                Text(legality.statuteShort)
-                    .foregroundColor(legalityForegroundColor())
-            }
+                .foregroundColor(drug.dependenceForegroundColor())
         }
     }
 }

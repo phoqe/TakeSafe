@@ -7,6 +7,7 @@
 
 import Foundation
 import HealthKit
+import SwiftUI
 
 class Drug: Codable, Identifiable {
     let id: String
@@ -201,5 +202,27 @@ class Drug: Codable, Identifiable {
         }
 
         return nil
+    }
+
+    func addictionForegroundColor() -> Color {
+        switch addiction {
+            case .low:
+                return .blue
+            case .moderate:
+                return .orange
+            case .high:
+                return .red
+        }
+    }
+
+    func dependenceForegroundColor() -> Color {
+        switch dependence {
+            case .low:
+                return .blue
+            case .moderate:
+                return .orange
+            case .high:
+                return .red
+        }
     }
 }

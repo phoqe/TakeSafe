@@ -46,6 +46,7 @@ struct DrugView: View {
                 HStack {
                     HStack {
                         Image(systemName: "a.circle.fill")
+                            .foregroundColor(drug.addictionForegroundColor())
 
                         Text(NSLocalizedString("drugAddictionName", comment: ""))
                             .bold()
@@ -70,6 +71,7 @@ struct DrugView: View {
                 HStack {
                     HStack {
                         Image(systemName: "d.circle.fill")
+                            .foregroundColor(drug.dependenceForegroundColor())
 
                         Text(NSLocalizedString("drugDependenceName", comment: ""))
                             .bold()
