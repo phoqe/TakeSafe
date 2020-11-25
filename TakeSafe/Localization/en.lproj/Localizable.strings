@@ -98,6 +98,7 @@
 "May not cover all drug interactions. Check with a physician if you have health questions or concerns." = "The list may not cover all drug interactions. Check with a physician if you have health questions or concerns.";
 "May Disturb Your Sleep" = "May Disturb Your Sleep";
 "This drug may disturb your sleep at %@ if taken now." = "This drug may disturb your sleep at %@ if taken now.";
+"LD50" = "LD\U2085\U2080";
 
 // Profile
 "profileTitle" = "Activity";

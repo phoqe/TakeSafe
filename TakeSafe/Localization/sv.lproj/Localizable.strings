@@ -97,6 +97,7 @@
 "May not cover all drug interactions. Check with a physician if you have health questions or concerns." = "Detta täcker inte alla läkemedelsinteraktioner. Kontrollera med en läkare om du har hälsofrågor eller problem.";
 "May Disturb Your Sleep" = "Kan störa din sömn";
 "This drug may disturb your sleep at %@ if taken now." = "Detta läkemedel kan störa din sömn vid %@ om det tas nu.";
+"LD50" = "LD\U2085\U2080";
 
 // Timeline
 "timelineOnset" = "Början";

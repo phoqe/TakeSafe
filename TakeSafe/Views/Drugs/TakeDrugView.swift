@@ -11,6 +11,7 @@ import Foundation
 struct TakeDrugView: View {
     var drug: Drug
 
+    @State var showPersonalizedLd50 = false
     @State var personalizedLd50: Double?
     @State var administrationRoute: AdministrationRoute
     @State var dose: Int = 0
@@ -79,7 +80,11 @@ struct TakeDrugView: View {
                         Spacer()
 
                         if let personalizedLd50 = personalizedLd50 {
-                            Text("\(Int(personalizedLd50)) \(drug.ld50.unitDividend.symbol)")
+                            Button(showPersonalizedLd50 ? "\(Int(personalizedLd50)) \(drug.ld50.unitDividend.symbol)" : "\(Int(drug.ld50.value)) \(drug.ld50.unitDividend.symbol)/\(drug.ld50.unitDivisor.symbol)") {
+                                showPersonalizedLd50.toggle()
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            .foregroundColor(.accentColor)
                         } else {
                             Text("\(Int(drug.ld50.value)) \(drug.ld50.unitDividend.symbol)/\(drug.ld50.unitDivisor.symbol)")
                         }
@@ -92,7 +97,7 @@ struct TakeDrugView: View {
                         .buttonStyle(PlainButtonStyle())
                         .foregroundColor(.accentColor)
                         .alert(isPresented: $showMedianLethalDoseAlert) {
-                            Alert(title: Text(NSLocalizedString("takeDrugMedianLethalDoseName", comment: "")), message: Text(NSLocalizedString("takeDrugMedianLethalDoseDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
+                            Alert(title: Text("LD50"), message: Text(NSLocalizedString("takeDrugMedianLethalDoseDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
                         }
                     }
                 }
