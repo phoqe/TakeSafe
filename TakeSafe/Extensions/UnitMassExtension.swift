@@ -14,6 +14,8 @@ extension UnitMass {
                 return "milligrams"
             case .kilograms:
                 return "kilograms"
+            case .micrograms:
+                return "micrograms"
             default:
                 return nil
         }
