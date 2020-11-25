@@ -83,7 +83,7 @@
 "takeDrugDose" = "Dos";
 "takeDrugCommonDoses" = "Vanliga doser";
 "takeDrugInCirculation" = "Cirkulation";
-"takeDrugMedianLethalDoseName" = "LD\U2085\U2080";
+"takeDrugMedianLethalDoseName" = "LD\U2085\U2080 (%@, %@)";
 "takeDrugMedianLethalDoseDescription" = "Värdet en specifik substans erhålls genom att i djurförsök utsätta olika grupper av försöksdjur för varierande doser av substansen, varpå en del av försöksdjuren dör.";
 "takeDrugTake" = "Ta %d %@";
 "Administer mass" = "Administrera %d %@";

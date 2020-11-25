@@ -74,7 +74,7 @@ struct TakeDrugView: View {
                     }
                     
                     HStack {
-                        Text("takeDrugMedianLethalDoseName")
+                        Text(String(format: "takeDrugMedianLethalDoseName".localized(), drug.ld50.animal, drug.ld50.route))
                         
                         Spacer()
 
