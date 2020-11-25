@@ -18,14 +18,6 @@ struct DrugList: View {
 
     var body: some View {
         List {
-            if !stimulants.isEmpty {
-                Section(header: Text("Stimulants").textCase(.none)) {
-                    ForEach(stimulants) { stimulant in
-                        DrugListItem(drug: stimulant)
-                    }
-                }
-            }
-
             if !hallucinogens.isEmpty {
                 Section(header: Text("Hallucinogens").textCase(.none)) {
                     ForEach(hallucinogens) { hallucinogen in
@@ -33,8 +25,15 @@ struct DrugList: View {
                     }
                 }
             }
+            
+            if !stimulants.isEmpty {
+                Section(header: Text("Stimulants").textCase(.none)) {
+                    ForEach(stimulants) { stimulant in
+                        DrugListItem(drug: stimulant)
+                    }
+                }
+            }
         }
-        .padding(.top)
         .listStyle(InsetGroupedListStyle())
     }
 }

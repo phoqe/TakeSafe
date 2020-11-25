@@ -11,7 +11,7 @@ struct DrugInfo: View {
     var drug: Drug
 
     var body: some View {
-        HStack {
+        HStack(spacing: 2.5) {
             Image(systemName: "a.circle.fill")
                 .foregroundColor(drug.addictionForegroundColor())
 
