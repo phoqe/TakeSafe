@@ -84,7 +84,7 @@
 "takeDrugDose" = "Dose";
 "takeDrugCommonDoses" = "Common doses";
 "takeDrugInCirculation" = "Circulation";
-"takeDrugMedianLethalDoseName" = "LD\U2085\U2080";
+"takeDrugMedianLethalDoseName" = "LD\U2085\U2080 (%@, %@)";
 "takeDrugMedianLethalDoseDescription" = "The dose required to kill half the members of a tested population after a specified test duration.";
 "takeDrugTake" = "Take %d %@";
 "Administer mass" = "Administer %d %@";
