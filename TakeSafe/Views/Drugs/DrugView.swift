@@ -44,13 +44,8 @@ struct DrugView: View {
                 }
 
                 HStack {
-                    HStack {
-                        Image(systemName: "a.circle.fill")
-                            .foregroundColor(drug.addictionForegroundColor())
-
-                        Text(NSLocalizedString("drugAddictionName", comment: ""))
-                            .bold()
-                    }
+                    Text(NSLocalizedString("drugAddictionName", comment: ""))
+                        .bold()
 
                     Spacer()
 
@@ -69,13 +64,8 @@ struct DrugView: View {
                 }
                 
                 HStack {
-                    HStack {
-                        Image(systemName: "d.circle.fill")
-                            .foregroundColor(drug.dependenceForegroundColor())
-
-                        Text(NSLocalizedString("drugDependenceName", comment: ""))
-                            .bold()
-                    }
+                    Text(NSLocalizedString("drugDependenceName", comment: ""))
+                        .bold()
                     
                     Spacer()
                     
@@ -95,12 +85,8 @@ struct DrugView: View {
 
                 if let legality = drug.regionalizedLegality() {
                     HStack {
-                        HStack {
-                            Image(systemName: "l.circle.fill")
-
-                            Text("Legality")
-                                .bold()
-                        }
+                        Text("Legality")
+                            .bold()
 
                         Spacer()
 
