@@ -19,6 +19,11 @@ struct DrugView: View {
     var body: some View {
         List {
             Section() {
+                if drug.legality != nil {
+                    Text("This drug may be illegal in your jurisdiction.")
+                        .listRowBackground(Color.orange)
+                }
+
                 Button(action: {
                     showLearnMore = true
                 }, label: {

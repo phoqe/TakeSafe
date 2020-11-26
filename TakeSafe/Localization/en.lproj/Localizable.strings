@@ -74,6 +74,7 @@
 "Administer" = "Administer";
 "Legal" = "Legal";
 "Legality" = "Legality";
+"This drug may be illegal in your jurisdiction." = "This drug may be illegal in your jurisdiction.";
 
 // Timeline
 "timelineOnset" = "Onset";
