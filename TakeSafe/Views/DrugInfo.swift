@@ -11,12 +11,17 @@ struct DrugInfo: View {
     var drug: Drug
 
     var body: some View {
-        HStack(spacing: 2.5) {
+        HStack(spacing: 5) {
             Image(systemName: "a.circle.fill")
                 .foregroundColor(drug.addictionForegroundColor())
 
             Image(systemName: "d.circle.fill")
                 .foregroundColor(drug.dependenceForegroundColor())
+
+            if drug.legality != nil {
+                Image(systemName: "exclamationmark.triangle.fill")
+                    .foregroundColor(.orange)
+            }
         }
     }
 }
