@@ -40,7 +40,8 @@ struct InfoSheet: View {
 
             Spacer()
         }
-        .padding(.vertical)
+        .padding(.top, 30)
+        .padding(.bottom)
     }
 }
 
