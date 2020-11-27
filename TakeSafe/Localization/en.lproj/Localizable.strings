@@ -75,7 +75,7 @@
 "Legal" = "Legal";
 "Legality" = "Legality";
 "This drug may be illegal in your jurisdiction." = "This drug may be illegal in your jurisdiction.";
-"Addiction Profile" = "Addiction Profile";
+"Addiction Profile" = "Addiction Profile for %@";
 
 // Timeline
 "timelineOnset" = "Onset";

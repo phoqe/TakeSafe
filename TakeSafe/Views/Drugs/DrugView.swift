@@ -74,7 +74,7 @@ struct DrugView: View {
                     .buttonStyle(PlainButtonStyle())
                     .foregroundColor(.accentColor)
                     .sheet(isPresented: $addictionSheetPresented) {
-                        let title = "Addiction Profile".localized()
+                        let title = String(format: "Addiction Profile".localized(), drug.name)
                         let text = drug.addictionProfile
 
                         InfoSheet(image: "Doctors", title: title, text: text)

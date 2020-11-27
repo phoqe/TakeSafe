@@ -77,7 +77,7 @@
 "Legal" = "Laglig";
 "Legality" = "Laglighet";
 "This drug may be illegal in your jurisdiction." = "Detta läkemedel kan vara olagligt i din jurisdiktion.";
-"Addiction Profile" = "Missbruksprofil";
+"Addiction Profile" = "Missbruksprofil för %@";
 
 // Take Drug
 "takeDrugBioavailabilityName" = "Biotillgänglighet";
