@@ -135,7 +135,7 @@ struct DrugView: View {
             }
 
             if activeSheet == .addiction {
-                let title = "Addiction Profile"
+                let title = "Addiction Profile".localized()
                 let text = drug.addictionProfile
 
                 InfoSheet(image: "Doctors", title: title, text: text)

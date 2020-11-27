@@ -37,6 +37,8 @@ struct InfoSheet: View {
             Text(text)
                 .padding(.horizontal, 30)
                 .lineSpacing(5)
+
+            Spacer()
         }
         .padding(.vertical)
     }
