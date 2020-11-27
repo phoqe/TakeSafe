@@ -18,12 +18,12 @@ struct TakeDrugView: View {
     @State var showMedianLethalDoseAlert = false
     @State var showBioavailabilityAlert = false
     @State var showRdiAlert = false
-    @Binding var presented: Bool
+    @Binding var activeSheet: ActiveSheet?
     
-    init(drug: Drug, presented: Binding<Bool>) {
+    init(drug: Drug, activeSheet: Binding<ActiveSheet?>) {
         self.drug = drug
         
-        _presented = presented
+        _activeSheet = activeSheet
         _administrationRoute = State(initialValue: drug.administrationRoutes[0])
     }
     
@@ -32,7 +32,7 @@ struct TakeDrugView: View {
         
         DrugManager.addActiveDrug(activeDrug: activeDrug)
         
-        presented = false
+        activeSheet = nil
     }
 
     func shortBedtime() -> String {
@@ -134,7 +134,7 @@ struct TakeDrugView: View {
             }
             .navigationBarTitle(String(format: NSLocalizedString("Administer", comment: ""), drug.name), displayMode: .inline)
             .navigationBarItems(leading: Button(NSLocalizedString("takeDrugCancel", comment: "")) {
-                presented = false
+                activeSheet = nil
             })
         }
         .onAppear {
@@ -144,11 +144,5 @@ struct TakeDrugView: View {
                 }
             }
         }
-    }
-}
-
-struct TakeDrugView_Previews: PreviewProvider {
-    static var previews: some View {
-        TakeDrugView(drug: SampleData.drug, presented: .constant(true))
     }
 }

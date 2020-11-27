@@ -19,8 +19,20 @@ struct DrugInfo: View {
                 .foregroundColor(drug.dependenceForegroundColor())
 
             if drug.legality != nil {
-                Image(systemName: "exclamationmark.triangle.fill")
-                    .foregroundColor(.orange)
+                if let legality = drug.regionalizedLegality() {
+                    HStack(spacing: 4) {
+                        Image(systemName: "exclamationmark.triangle.fill")
+                            .foregroundColor(.orange)
+
+                        Text(legality.statuteShort)
+                            .font(.caption2)
+                            .fontWeight(.bold)
+                            .foregroundColor(.orange)
+                    }
+                } else {
+                    Image(systemName: "exclamationmark.triangle.fill")
+                        .foregroundColor(.orange)
+                }
             }
         }
     }

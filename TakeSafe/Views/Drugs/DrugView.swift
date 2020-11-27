@@ -8,13 +8,21 @@
 import SwiftUI
 import BetterSafariView
 
+enum ActiveSheet: Identifiable {
+    case administer
+    case addiction
+
+    var id: Int {
+        hashValue
+    }
+}
+
 struct DrugView: View {
     var drug: Drug
     
     @State var showLearnMore = false
     @State var showDependenceAlert = false
-    @State var showAddictionAlert = false
-    @State var showTakeDrugView = false
+    @State var activeSheet: ActiveSheet?
     
     var body: some View {
         List {
@@ -57,15 +65,12 @@ struct DrugView: View {
                     Text(drug.addiction.localizedName)
 
                     Button(action: {
-                        showAddictionAlert = true
+                        activeSheet = .addiction
                     }, label: {
                         Image(systemName: "info.circle")
                     })
                     .buttonStyle(PlainButtonStyle())
                     .foregroundColor(.accentColor)
-                    .alert(isPresented: $showAddictionAlert) {
-                        Alert(title: Text(NSLocalizedString("drugAddictionName", comment: "")), message: Text(NSLocalizedString("drugAddictionDescription", comment: "")), dismissButton: .default(Text("ok".localized())))
-                    }
                 }
                 
                 HStack {
@@ -113,7 +118,7 @@ struct DrugView: View {
             
             Section() {
                 Button(String(format: NSLocalizedString("Administer", comment: ""), drug.name)) {
-                    showTakeDrugView = true
+                    activeSheet = .administer
                 }
             }
         }
@@ -124,8 +129,18 @@ struct DrugView: View {
                 entersReaderIfAvailable: true
             ))
         }
-        .sheet(isPresented: $showTakeDrugView) {
-            TakeDrugView(drug: drug, presented: $showTakeDrugView)
+        .sheet(item: $activeSheet) { _ in
+            if activeSheet == .administer {
+                TakeDrugView(drug: drug, activeSheet: $activeSheet)
+            }
+
+            if activeSheet == .addiction {
+                let title = "Addiction Profile"
+                let subtitle = "A brain disorder characterized by compulsive engagement."
+                let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Ut ornare lectus sit amet est placerat in egestas. Laoreet id donec ultrices tincidunt arcu non sodales neque sodales. Risus nec feugiat in fermentum posuere urna nec tincidunt praesent. Duis at tellus at urna condimentum mattis. Viverra orci sagittis eu volutpat odio facilisis mauris. Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis. Nisl purus in mollis nunc sed id semper risus in. Fusce id velit ut tortor pretium. Et ultrices neque ornare aenean. Aliquam sem fringilla ut morbi tincidunt augue interdum. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Auctor urna nunc id cursus metus aliquam eleifend. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Vulputate eu scelerisque felis imperdiet."
+
+                InfoSheet(image: "Doctors", title: title, subtitle: subtitle, text: text)
+            }
         }
     }
 }
