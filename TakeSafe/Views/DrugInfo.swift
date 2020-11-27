@@ -21,7 +21,7 @@ struct DrugInfo: View {
             if drug.legality != nil {
                 if let legality = drug.regionalizedLegality() {
                     HStack(spacing: 4) {
-                        Image(systemName: "exclamationmark.triangle.fill")
+                        Image(systemName: "exclamationmark.circle.fill")
                             .foregroundColor(.orange)
 
                         Text(legality.statuteShort)
@@ -30,7 +30,7 @@ struct DrugInfo: View {
                             .foregroundColor(.orange)
                     }
                 } else {
-                    Image(systemName: "exclamationmark.triangle.fill")
+                    Image(systemName: "exclamationmark.circle.fill")
                         .foregroundColor(.orange)
                 }
             }
