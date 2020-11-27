@@ -23,6 +23,8 @@ struct DrugView: View {
     @State var showLearnMore = false
     @State var showDependenceAlert = false
     @State var activeSheet: ActiveSheet?
+    @State var addictionSheetPresented = false
+    @State var administerSheetPresented = false
     
     var body: some View {
         List {
@@ -65,12 +67,18 @@ struct DrugView: View {
                     Text(drug.addiction.localizedName)
 
                     Button(action: {
-                        activeSheet = .addiction
+                        addictionSheetPresented = true
                     }, label: {
                         Image(systemName: "info.circle")
                     })
                     .buttonStyle(PlainButtonStyle())
                     .foregroundColor(.accentColor)
+                    .sheet(isPresented: $addictionSheetPresented) {
+                        let title = "Addiction Profile".localized()
+                        let text = drug.addictionProfile
+
+                        InfoSheet(image: "Doctors", title: title, text: text)
+                    }
                 }
                 
                 HStack {
@@ -118,7 +126,10 @@ struct DrugView: View {
             
             Section() {
                 Button(String(format: NSLocalizedString("Administer", comment: ""), drug.name)) {
-                    activeSheet = .administer
+                    administerSheetPresented = true
+                }
+                .sheet(isPresented: $administerSheetPresented) {
+                    TakeDrugView(drug: drug, presented: $administerSheetPresented)
                 }
             }
         }
@@ -128,18 +139,6 @@ struct DrugView: View {
             SafariView(url: drug.learnMoreUrl, configuration: SafariView.Configuration(
                 entersReaderIfAvailable: true
             ))
-        }
-        .sheet(item: $activeSheet) { _ in
-            if activeSheet == .administer {
-                TakeDrugView(drug: drug, activeSheet: $activeSheet)
-            }
-
-            if activeSheet == .addiction {
-                let title = "Addiction Profile".localized()
-                let text = drug.addictionProfile
-
-                InfoSheet(image: "Doctors", title: title, text: text)
-            }
         }
     }
 }
