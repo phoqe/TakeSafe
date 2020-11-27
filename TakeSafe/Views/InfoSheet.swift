@@ -32,7 +32,7 @@ struct InfoSheet: View {
                 }
             }
             .padding(.horizontal, 20)
-            .padding(.bottom, 20)
+            .padding(.bottom, 10)
 
             Text(text)
                 .padding(.horizontal, 30)
@@ -46,7 +46,7 @@ struct InfoSheet_Previews: PreviewProvider {
     static var previews: some View {
         let image = "Doctors"
         let title = "The Neuropsychology of Addiction"
-        let subtitle = "A brain disorder characterized by compulsive engagement."
+        let subtitle = "TL;DR LSD is not addictive."
         let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Ut ornare lectus sit amet est placerat in egestas. Laoreet id donec ultrices tincidunt arcu non sodales neque sodales. Risus nec feugiat in fermentum posuere urna nec tincidunt praesent."
 
         InfoSheet(image: image, title: title, subtitle: subtitle, text: text)

@@ -136,10 +136,9 @@ struct DrugView: View {
 
             if activeSheet == .addiction {
                 let title = "Addiction Profile"
-                let subtitle = "A brain disorder characterized by compulsive engagement."
-                let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Ut ornare lectus sit amet est placerat in egestas. Laoreet id donec ultrices tincidunt arcu non sodales neque sodales. Risus nec feugiat in fermentum posuere urna nec tincidunt praesent. Duis at tellus at urna condimentum mattis. Viverra orci sagittis eu volutpat odio facilisis mauris. Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis. Nisl purus in mollis nunc sed id semper risus in. Fusce id velit ut tortor pretium. Et ultrices neque ornare aenean. Aliquam sem fringilla ut morbi tincidunt augue interdum. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Auctor urna nunc id cursus metus aliquam eleifend. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Vulputate eu scelerisque felis imperdiet."
+                let text = drug.addictionProfile
 
-                InfoSheet(image: "Doctors", title: title, subtitle: subtitle, text: text)
+                InfoSheet(image: "Doctors", title: title, text: text)
             }
         }
     }
