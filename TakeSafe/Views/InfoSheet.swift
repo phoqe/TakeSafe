@@ -13,27 +13,29 @@ struct InfoSheet: View {
     var text: String
 
     var body: some View {
-        VStack {
-            Image(image)
-                .resizable()
-                .frame(width: 300, height: 225)
-                .padding(.bottom, 10)
-
+        ScrollView() {
             VStack {
-                Text(title)
-                    .font(.title2)
-                    .fontWeight(.bold)
+                Image(image)
+                    .resizable()
+                    .frame(width: 300, height: 225)
                     .padding(.bottom, 10)
 
-                Text(text)
-                    .lineSpacing(5)
-            }
-            .padding(.horizontal, 30)
+                VStack {
+                    Text(title)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding(.bottom, 10)
 
-            Spacer()
+                    Text(text)
+                        .lineSpacing(5)
+                }
+                .padding(.horizontal, 30)
+
+                Spacer()
+            }
+            .padding(.top, 30)
+            .padding(.bottom)
         }
-        .padding(.top, 30)
-        .padding(.bottom)
     }
 }
 
