@@ -10,7 +10,6 @@ import SwiftUI
 struct InfoSheet: View {
     var image: String
     var title: String
-    var subtitle: String?
     var text: String
 
     var body: some View {
@@ -18,25 +17,18 @@ struct InfoSheet: View {
             Image(image)
                 .resizable()
                 .frame(width: 300, height: 225)
-                .padding(.bottom)
+                .padding(.bottom, 10)
 
             VStack {
                 Text(title)
                     .font(.title2)
                     .fontWeight(.bold)
+                    .padding(.bottom, 10)
 
-                if let subtitle = subtitle {
-                    Text(subtitle)
-                        .font(.body)
-                        .padding(.top, 5)
-                }
+                Text(text)
+                    .lineSpacing(5)
             }
-            .padding(.horizontal, 20)
-            .padding(.bottom, 10)
-
-            Text(text)
-                .padding(.horizontal, 30)
-                .lineSpacing(5)
+            .padding(.horizontal, 30)
 
             Spacer()
         }
@@ -52,6 +44,6 @@ struct InfoSheet_Previews: PreviewProvider {
         let subtitle = "TL;DR LSD is not addictive."
         let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Ut ornare lectus sit amet est placerat in egestas. Laoreet id donec ultrices tincidunt arcu non sodales neque sodales. Risus nec feugiat in fermentum posuere urna nec tincidunt praesent."
 
-        InfoSheet(image: image, title: title, subtitle: subtitle, text: text)
+        InfoSheet(image: image, title: title, text: text)
     }
 }
