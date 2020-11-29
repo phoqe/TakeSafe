@@ -102,7 +102,7 @@ struct TakeDrugView: View {
                     }
                 }
                 
-                Section(footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.name, administrationRoute.bioavailability))) {
+                Section(footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.sentenceName, administrationRoute.bioavailability))) {
                     HStack {
                         Text("takeDrugRouteOfAdministration")
 
