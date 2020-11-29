@@ -13,7 +13,7 @@ struct InfoSheet: View {
     var text: String
 
     var body: some View {
-        ScrollView() {
+        ScrollView(showsIndicators: false) {
             VStack {
                 Image(image)
                     .resizable()
