@@ -74,10 +74,11 @@ struct DrugView: View {
                     .buttonStyle(PlainButtonStyle())
                     .foregroundColor(.accentColor)
                     .sheet(isPresented: $addictionSheetPresented) {
-                        let title = String(format: "Addiction Profile".localized(), drug.name)
-                        let text = drug.addictionProfile
-
-                        InfoSheet(image: "Doctors", title: title, text: text)
+                        if let languageCode = Locale.current.languageCode, languageCode == "sv" {
+                            InfoSheet(image: "Doctors", title: String(format: "Addiction Profile".localized(), drug.sentenceName), text: drug.addictionProfile)
+                        } else {
+                            InfoSheet(image: "Doctors", title: String(format: "Addiction Profile".localized(), drug.name), text: drug.addictionProfile)
+                        }
                     }
                 }
                 
