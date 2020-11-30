@@ -112,9 +112,6 @@ struct DrugView: View {
                         Text(legality.statute)
                     }
                 }
-                
-                Timeline(onset: drug.onset, duration: drug.duration)
-                    .padding(.vertical)
             }
 
             if let interactions = drug.interactions {
