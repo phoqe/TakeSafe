@@ -5,7 +5,7 @@
 //  Created by Linus Långberg on 2020-11-29.
 //
 
-import Foundation
+import SwiftUI
 
 enum DurationType: String, Codable {
     case total
@@ -14,6 +14,8 @@ enum DurationType: String, Codable {
     case peak
     case offset
     case afterEffects
+
+    var localizedName: LocalizedStringKey { LocalizedStringKey(rawValue) }
 
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
