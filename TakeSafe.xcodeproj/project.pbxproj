@@ -51,7 +51,6 @@
 		9FC04666250655EF000B2AAC /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC04665250655EF000B2AAC /* PageControl.swift */; };
 		9FC0466F250664EF000B2AAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FC04671250664EF000B2AAC /* Localizable.strings */; };
 		9FC5B42D2508D06700DDF30A /* SetupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5B42C2508D06700DDF30A /* SetupPageViewController.swift */; };
-		9FC632EF2537459C00DA145B /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC632EE2537459C00DA145B /* Timeline.swift */; };
 		9FC632F625374F6A00DA145B /* DrugList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC632F525374F6A00DA145B /* DrugList.swift */; };
 		9FC632F925374F9300DA145B /* DrugsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC632F825374F9300DA145B /* DrugsView.swift */; };
 		9FC633072537918000DA145B /* LD50.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC633062537918000DA145B /* LD50.swift */; };
@@ -128,7 +127,6 @@
 		9FC04670250664EF000B2AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9FC04672250664F8000B2AAC /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9FC5B42C2508D06700DDF30A /* SetupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageViewController.swift; sourceTree = "<group>"; };
-		9FC632EE2537459C00DA145B /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		9FC632F525374F6A00DA145B /* DrugList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugList.swift; sourceTree = "<group>"; };
 		9FC632F825374F9300DA145B /* DrugsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsView.swift; sourceTree = "<group>"; };
 		9FC633062537918000DA145B /* LD50.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LD50.swift; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 				9FC04665250655EF000B2AAC /* PageControl.swift */,
 				9FC76C592531F47800603314 /* ActivityView.swift */,
 				9FB630EB2535A87900397152 /* EmptyState.swift */,
-				9FC632EE2537459C00DA145B /* Timeline.swift */,
 				9F2011E2253B720D00B47701 /* IconImage.swift */,
 				9FE23820255DDC790055A1C1 /* LicenseList.swift */,
 				9FE23838255DE06D0055A1C1 /* LicenseView.swift */,
@@ -463,7 +460,6 @@
 				9F5372BC253AF30A0043375D /* SampleData.swift in Sources */,
 				9F2011E0253B545400B47701 /* ActiveDrugListItem.swift in Sources */,
 				9FD46F21252CC1C700FB5754 /* Drug.swift in Sources */,
-				9FC632EF2537459C00DA145B /* Timeline.swift in Sources */,
 				9F26200F25602E58004202F6 /* Settings.swift in Sources */,
 				9FD46F28252CDA5700FB5754 /* Dependence.swift in Sources */,
 				9F29CBAD2574073100DBCEB6 /* DurationType.swift in Sources */,
