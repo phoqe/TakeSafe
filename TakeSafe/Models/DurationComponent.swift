@@ -18,6 +18,12 @@ struct DurationComponent: Codable, Hashable {
         case end
     }
 
+    init(type: DurationType, start: Double, end: Double) {
+        self.type = type
+        self.start = start
+        self.end = end
+    }
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
