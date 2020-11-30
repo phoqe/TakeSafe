@@ -10,7 +10,7 @@ import SwiftUI
 struct AdministrationRoute: Codable, Identifiable, Hashable {
     let id: String
     let bioavailability: Int
-    let duration: [Duration]?
+    let duration: [DurationComponent]?
     
     var localizedName: LocalizedStringKey { LocalizedStringKey(id) }
     
@@ -20,7 +20,7 @@ struct AdministrationRoute: Codable, Identifiable, Hashable {
         case duration
     }
     
-    init(id: String, bioavailability: Int, duration: [Duration]?) {
+    init(id: String, bioavailability: Int, duration: [DurationComponent]?) {
         self.id = id
         self.bioavailability = bioavailability
         self.duration = duration
@@ -31,7 +31,7 @@ struct AdministrationRoute: Codable, Identifiable, Hashable {
         
         id = try container.decode(String.self, forKey: .id)
         bioavailability = try container.decode(Int.self, forKey: .bioavailability)
-        duration = try container.decodeIfPresent([Duration].self, forKey: .duration)
+        duration = try container.decodeIfPresent([DurationComponent].self, forKey: .duration)
     }
     
     func encode(to encoder: Encoder) throws {

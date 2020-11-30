@@ -1,5 +1,5 @@
 //
-//  Duration.swift
+//  DurationComponent.swift
 //  TakeSafe
 //
 //  Created by Linus Långberg on 2020-11-29.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Duration: Codable, Hashable {
+struct DurationComponent: Codable, Hashable {
     let type: DurationType
     let start: Double
     let end: Double
