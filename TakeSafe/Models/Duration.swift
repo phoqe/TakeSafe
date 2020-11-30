@@ -1,0 +1,36 @@
+//
+//  Duration.swift
+//  TakeSafe
+//
+//  Created by Linus Långberg on 2020-11-29.
+//
+
+import Foundation
+
+struct Duration: Codable, Hashable {
+    let type: DurationType
+    let start: Double
+    let end: Double
+
+    enum CodingKeys: String, CodingKey {
+        case type
+        case start
+        case end
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        type = try container.decode(DurationType.self, forKey: .type)
+        start = try container.decode(Double.self, forKey: .start)
+        end = try container.decode(Double.self, forKey: .end)
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+
+        try container.encode(type, forKey: .type)
+        try container.encode(start, forKey: .start)
+        try container.encode(end, forKey: .end)
+    }
+}

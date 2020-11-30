@@ -13,6 +13,8 @@
 		9F2011E6253B733B00B47701 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2011E5253B733B00B47701 /* Icon.swift */; };
 		9F26200825602DFA004202F6 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26200725602DFA004202F6 /* UserDefault.swift */; };
 		9F26200F25602E58004202F6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26200E25602E58004202F6 /* Settings.swift */; };
+		9F29CBAA2574069900DBCEB6 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F29CBA92574069900DBCEB6 /* Duration.swift */; };
+		9F29CBAD2574073100DBCEB6 /* DurationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F29CBAC2574073100DBCEB6 /* DurationType.swift */; };
 		9F4D1375255DA13D0098B5D0 /* ActiveDrugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D1374255DA13D0098B5D0 /* ActiveDrugs.swift */; };
 		9F4F13FF2560188E001D9ABD /* InteractionGroupBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F13FE2560188E001D9ABD /* InteractionGroupBox.swift */; };
 		9F4F140325601E0C001D9ABD /* InteractionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F140225601E0C001D9ABD /* InteractionList.swift */; };
@@ -86,6 +88,8 @@
 		9F2011E5253B733B00B47701 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		9F26200725602DFA004202F6 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		9F26200E25602E58004202F6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		9F29CBA92574069900DBCEB6 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		9F29CBAC2574073100DBCEB6 /* DurationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationType.swift; sourceTree = "<group>"; };
 		9F4D1374255DA13D0098B5D0 /* ActiveDrugs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDrugs.swift; sourceTree = "<group>"; };
 		9F4F13FE2560188E001D9ABD /* InteractionGroupBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionGroupBox.swift; sourceTree = "<group>"; };
 		9F4F140225601E0C001D9ABD /* InteractionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionList.swift; sourceTree = "<group>"; };
@@ -329,6 +333,8 @@
 				9F26200E25602E58004202F6 /* Settings.swift */,
 				9FAA2F5D256AD94B006F0479 /* Legality.swift */,
 				9FAA2F60256AE03A006F0479 /* Jurisdiction.swift */,
+				9F29CBA92574069900DBCEB6 /* Duration.swift */,
+				9F29CBAC2574073100DBCEB6 /* DurationType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -460,6 +466,7 @@
 				9FC632EF2537459C00DA145B /* Timeline.swift in Sources */,
 				9F26200F25602E58004202F6 /* Settings.swift in Sources */,
 				9FD46F28252CDA5700FB5754 /* Dependence.swift in Sources */,
+				9F29CBAD2574073100DBCEB6 /* DurationType.swift in Sources */,
 				9F2011E6253B733B00B47701 /* Icon.swift in Sources */,
 				9F4D1375255DA13D0098B5D0 /* ActiveDrugs.swift in Sources */,
 				9F5372B8253AEA6B0043375D /* ActiveDrug.swift in Sources */,
@@ -499,6 +506,7 @@
 				9FB630EC2535A87900397152 /* EmptyState.swift in Sources */,
 				9FC76C5A2531F47800603314 /* ActivityView.swift in Sources */,
 				9F5C67BC2538CE0E0025FE15 /* UnitMassExtension.swift in Sources */,
+				9F29CBAA2574069900DBCEB6 /* Duration.swift in Sources */,
 				9FA381D2250629840053C3F4 /* TakeSafeApp.swift in Sources */,
 				9FB75788253845CB002EBB0E /* DateComponentsExtension.swift in Sources */,
 			);

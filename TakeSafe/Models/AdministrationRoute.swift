@@ -10,17 +10,20 @@ import SwiftUI
 struct AdministrationRoute: Codable, Identifiable, Hashable {
     let id: String
     let bioavailability: Int
+    let duration: [Duration]?
     
     var localizedName: LocalizedStringKey { LocalizedStringKey(id) }
     
     enum CodingKeys: String, CodingKey {
         case id
         case bioavailability
+        case duration
     }
     
-    init(id: String, bioavailability: Int) {
+    init(id: String, bioavailability: Int, duration: [Duration]?) {
         self.id = id
         self.bioavailability = bioavailability
+        self.duration = duration
     }
     
     init(from decoder: Decoder) throws {
@@ -28,6 +31,7 @@ struct AdministrationRoute: Codable, Identifiable, Hashable {
         
         id = try container.decode(String.self, forKey: .id)
         bioavailability = try container.decode(Int.self, forKey: .bioavailability)
+        duration = try container.decodeIfPresent([Duration].self, forKey: .duration)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -35,5 +39,6 @@ struct AdministrationRoute: Codable, Identifiable, Hashable {
         
         try container.encode(id, forKey: .id)
         try container.encode(bioavailability, forKey: .bioavailability)
+        try container.encodeIfPresent(duration, forKey: .duration)
     }
 }
