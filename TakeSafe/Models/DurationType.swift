@@ -44,4 +44,21 @@ enum DurationType: String, Codable {
                 fatalError()
         }
     }
+
+    func foregroundColor() -> Color? {
+        switch self {
+            case .total:
+                return nil
+            case .onset:
+                return .blue
+            case .comeUp:
+                return .orange
+            case .peak:
+                return .red
+            case .offset:
+                return .yellow
+            case .afterEffects:
+                return nil
+        }
+    }
 }
