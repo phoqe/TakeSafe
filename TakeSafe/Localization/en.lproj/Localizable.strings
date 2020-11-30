@@ -183,3 +183,11 @@
 
 // Animals
 "rat" = "rat";
+
+// Duration
+"total" = "Total";
+"onset" = "Onset";
+"comeUp" = "Come up";
+"peak" = "Peak";
+"offset" = "Offset";
+"afterEffects" = "After Effects";
