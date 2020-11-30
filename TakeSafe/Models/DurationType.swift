@@ -44,8 +44,4 @@ enum DurationType: String, Codable {
                 fatalError()
         }
     }
-
-    func encode(to encoder: Encoder) throws {
-
-    }
 }
