@@ -101,6 +101,12 @@ struct TakeDrugView: View {
                         }
                     }
                 }
+
+                if let duration = administrationRoute.duration {
+                    Section() {
+                        Timeline(duration: duration)
+                    }
+                }
                 
                 Section(footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.sentenceName, administrationRoute.bioavailability))) {
                     HStack {
