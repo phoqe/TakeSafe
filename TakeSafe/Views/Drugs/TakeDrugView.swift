@@ -105,6 +105,7 @@ struct TakeDrugView: View {
                 if let duration = administrationRoute.duration {
                     Section(header: Text("Timeline")) {
                         Timeline(duration: duration)
+                            .padding(.vertical)
                     }
                 }
                 

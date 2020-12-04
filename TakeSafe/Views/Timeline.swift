@@ -19,8 +19,8 @@ struct Timeline: View {
     }
 
     var body: some View {
-        VStack {
-            HStack() {
+        VStack(spacing: 15) {
+            HStack {
                 Text("0")
 
                 HStack(spacing: 0) {
@@ -28,10 +28,11 @@ struct Timeline: View {
                         let rounded = durationComponent == filteredDuration.last || durationComponent == filteredDuration.first
 
                         Rectangle()
-                            .frame(width: 100, height: 10)
+                            .frame(minWidth: 0, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxHeight: 10)
                             .foregroundColor(durationComponent.type.foregroundColor())
                     }
                 }
+                .padding(.horizontal)
 
                 Text("\(Int(totalComponent.end))")
             }
@@ -39,14 +40,8 @@ struct Timeline: View {
             HStack {
                 ForEach(filteredDuration, id: \.type) { durationComponent in
                     Label(title: {
-                        if durationComponent == filteredDuration.last {
-                            Text(durationComponent.type.localizedName)
-                                .font(.footnote)
-                        } else {
-                            Text(durationComponent.type.localizedName)
-                                .font(.footnote)
-                                .padding(.trailing)
-                        }
+                        Text(durationComponent.type.localizedName)
+                            .font(.footnote)
                     }, icon: {
                         Image(systemName: "circle.fill")
                             .resizable()
