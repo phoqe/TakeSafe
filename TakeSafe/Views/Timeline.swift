@@ -27,9 +27,15 @@ struct Timeline: View {
                     ForEach(filteredDuration, id: \.type) { durationComponent in
                         let rounded = durationComponent == filteredDuration.last || durationComponent == filteredDuration.first
 
-                        Rectangle()
-                            .frame(minWidth: 0, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxHeight: 10)
-                            .foregroundColor(durationComponent.type.foregroundColor())
+                        VStack(spacing: 5) {
+                            Text("\(Int(durationComponent.start * 60))")
+                                .font(.footnote)
+                                .foregroundColor(durationComponent.type.foregroundColor())
+
+                            Rectangle()
+                                .frame(minWidth: 0, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxHeight: 10)
+                                .foregroundColor(durationComponent.type.foregroundColor())
+                        }
                     }
                 }
                 .padding(.horizontal)
