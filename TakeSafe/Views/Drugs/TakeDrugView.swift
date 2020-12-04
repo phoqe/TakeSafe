@@ -52,7 +52,7 @@ struct TakeDrugView: View {
                     }
                 }
 
-                Section() {
+                Section(header: Text("Info")) {
                     if let rdi = drug.rdi {
                         HStack {
                             Text("rdi")
@@ -103,12 +103,12 @@ struct TakeDrugView: View {
                 }
 
                 if let duration = administrationRoute.duration {
-                    Section() {
+                    Section(header: Text("Timeline")) {
                         Timeline(duration: duration)
                     }
                 }
                 
-                Section(footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.sentenceName, administrationRoute.bioavailability))) {
+                Section(header: Text("Administration"), footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.sentenceName, administrationRoute.bioavailability))) {
                     HStack {
                         Text("takeDrugRouteOfAdministration")
 
@@ -150,5 +150,11 @@ struct TakeDrugView: View {
                 }
             }
         }
+    }
+}
+
+struct TakeDrugView_Preview: PreviewProvider {
+    static var previews: some View {
+        TakeDrugView(drug: SampleData.drug, presented: Binding.constant(true))
     }
 }

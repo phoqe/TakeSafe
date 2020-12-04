@@ -100,6 +100,8 @@
 "May Disturb Your Sleep" = "Kan störa din sömn";
 "This drug may disturb your sleep at %@ if taken now." = "Detta läkemedel kan störa din sömn vid %@ om det tas nu.";
 "LD50" = "LD\U2085\U2080";
+"Timeline" = "Tidslinje";
+"Administration" = "Administration";
 
 // Timeline
 "timelineOnset" = "Början";

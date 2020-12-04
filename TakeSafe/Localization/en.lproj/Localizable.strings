@@ -101,6 +101,8 @@
 "May Disturb Your Sleep" = "May Disturb Your Sleep";
 "This drug may disturb your sleep at %@ if taken now." = "This drug may disturb your sleep at %@ if taken now.";
 "LD50" = "LD\U2085\U2080";
+"Timeline" = "Timeline";
+"Administration" = "Administration";
 
 // Profile
 "profileTitle" = "Activity";
