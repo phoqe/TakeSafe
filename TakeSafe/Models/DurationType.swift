@@ -28,7 +28,7 @@ enum DurationType: String, Codable {
             case "onset":
                 self = .onset
 
-            case "come_up":
+            case "comeUp", "come_up":
                 self = .comeUp
 
             case "peak":
@@ -37,7 +37,7 @@ enum DurationType: String, Codable {
             case "offset":
                 self = .offset
 
-            case "after_effects":
+            case "afterEffects", "after_effects":
                 self = .afterEffects
 
             default:
