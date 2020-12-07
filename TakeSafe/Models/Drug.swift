@@ -15,7 +15,7 @@ class Drug: Codable, Identifiable {
     let aliases: [String]?
     let description: String
     let learnMoreUrl: URL
-    let icon: Icon
+    let icon: String
     let drugClass: DrugClass
     let dependence: Dependence
     let addiction: Addiction
@@ -63,7 +63,7 @@ class Drug: Codable, Identifiable {
         case sentenceName = "sentence_name"
     }
     
-    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, icon: Icon, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int], administrationRoutes: [AdministrationRoute], rdi: Int?, interactions: [DrugInteraction]?, warnBeforeBedtime: Int?, legality: [Legality]?, addictionProfile: String, sentenceName: String) {
+    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, icon: String, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int], administrationRoutes: [AdministrationRoute], rdi: Int?, interactions: [DrugInteraction]?, warnBeforeBedtime: Int?, legality: [Legality]?, addictionProfile: String, sentenceName: String) {
         self.id = id
         self.name = name
         self.aliases = aliases
@@ -97,7 +97,7 @@ class Drug: Codable, Identifiable {
         aliases = try container.decodeIfPresent([String].self, forKey: .aliases)
         description = try container.decode(String.self, forKey: .description)
         learnMoreUrl = try container.decode(URL.self, forKey: .learnMoreUrl)
-        icon = try container.decode(Icon.self, forKey: .icon)
+        icon = try container.decode(String.self, forKey: .icon)
         drugClass = try container.decode(DrugClass.self, forKey: .drugClass)
         dependence = try container.decode(Dependence.self, forKey: .dependence)
         addiction = try container.decode(Addiction.self, forKey: .addiction)

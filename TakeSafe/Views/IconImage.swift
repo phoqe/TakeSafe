@@ -7,15 +7,11 @@
 
 import SwiftUI
 
-extension Image {
-    
-}
-
 struct IconImage: View {
-    var icon: Icon
+    var icon: String
     
     var body: some View {
-        Image(icon.imageName())
+        Image(icon)
             .resizable()
             .frame(width: 40, height: 40)
     }
@@ -23,6 +19,6 @@ struct IconImage: View {
 
 struct IconImage_Previews: PreviewProvider {
     static var previews: some View {
-        IconImage(icon: .energy)
+        IconImage(icon: "Energy")
     }
 }
