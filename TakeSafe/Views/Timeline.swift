@@ -17,16 +17,31 @@ struct Timeline: View {
         self.filteredDuration = duration.filter { $0.type != .total && $0.type != .afterEffects }
         self.totalComponent = duration.filter { $0.type == .total }.first!
     }
+    
+    func durationString() -> String? {
+        guard let component = duration.filter({ $0.type == .total }).first else {
+            return nil
+        }
+        
+        let start = Int(component.start)
+        let end = Int(component.end)
+        
+        return "\(start)–\(end) \(UnitDuration.hours.symbol)"
+    }
 
     var body: some View {
         VStack(spacing: 15) {
-            VStack {
-                Text("Duration")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-
-                    Text("8–12 hours")
-                        .font(.largeTitle)
+            if let duration = durationString() {
+                VStack {
+                    Text("Duration")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .padding(.bottom, -5)
+                    
+                    Text(duration)
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                }
             }
 
             HStack(spacing: 0) {
@@ -34,7 +49,7 @@ struct Timeline: View {
                     let rounded = durationComponent == filteredDuration.last || durationComponent == filteredDuration.first
 
                     VStack(spacing: 5) {
-                        Text("\(Int(durationComponent.start * 60))")
+                        Text("\(Int(durationComponent.start * 60)) \(UnitDuration.minutes.symbol)")
                             .font(.footnote)
                             .foregroundColor(durationComponent.type.foregroundColor())
 
