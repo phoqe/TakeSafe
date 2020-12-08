@@ -20,28 +20,32 @@ struct Timeline: View {
 
     var body: some View {
         VStack(spacing: 15) {
-            HStack {
-                Text("0")
+            VStack {
+                Text("Duration")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
 
-                HStack(spacing: 0) {
-                    ForEach(filteredDuration, id: \.type) { durationComponent in
-                        let rounded = durationComponent == filteredDuration.last || durationComponent == filteredDuration.first
+                    Text("8–12 hours")
+                        .font(.largeTitle)
+            }
 
-                        VStack(spacing: 5) {
-                            Text("\(Int(durationComponent.start * 60))")
-                                .font(.footnote)
-                                .foregroundColor(durationComponent.type.foregroundColor())
+            HStack(spacing: 0) {
+                ForEach(filteredDuration, id: \.type) { durationComponent in
+                    let rounded = durationComponent == filteredDuration.last || durationComponent == filteredDuration.first
 
-                            Rectangle()
-                                .frame(minWidth: 0, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxHeight: 10)
-                                .foregroundColor(durationComponent.type.foregroundColor())
-                        }
+                    VStack(spacing: 5) {
+                        Text("\(Int(durationComponent.start * 60))")
+                            .font(.footnote)
+                            .foregroundColor(durationComponent.type.foregroundColor())
+
+                        Rectangle()
+                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 10)
+                            .foregroundColor(durationComponent.type.foregroundColor())
                     }
                 }
-                .padding(.horizontal)
-
-                Text("\(Int(totalComponent.end))")
             }
+            .padding(.horizontal)
+
 
             HStack {
                 ForEach(filteredDuration, id: \.type) { durationComponent in
