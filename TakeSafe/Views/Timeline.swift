@@ -23,58 +23,76 @@ struct Timeline: View {
             return nil
         }
         
-        let start = Int(component.start)
-        let end = Int(component.end)
+        let start = component.start.format(using: [.hour, .minute])
+        let end = component.end.format(using: [.hour, .minute])
         
-        return "\(start)–\(end) \(UnitDuration.hours.symbol)"
+        return "\(start)–\(end)"
+    }
+    
+    func afterEffectsString() -> String? {
+        guard let component = duration.filter({ $0.type == .afterEffects }).first else {
+            return nil
+        }
+        
+        let start = component.start.format(using: [.hour, .minute])
+        let end = component.end.format(using: [.hour, .minute])
+        
+        return "\(start)–\(end)"
     }
 
     var body: some View {
         VStack(spacing: 15) {
-            if let duration = durationString() {
-                VStack {
-                    Text("Duration")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                        .padding(.bottom, -5)
-                    
-                    Text(duration)
-                        .font(.title3)
-                        .fontWeight(.semibold)
+            HStack(spacing: 25) {
+                if let duration = durationString() {
+                    VStack {
+                        Text("Duration")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                            .padding(.bottom, -5)
+                        
+                        Text(duration)
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                    }
+                }
+                
+                if let afterEffects = afterEffectsString() {
+                    VStack {
+                        Text("afterEffects")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                            .padding(.bottom, -5)
+                        
+                        Text(afterEffects)
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                    }
                 }
             }
 
             HStack(spacing: 0) {
                 ForEach(filteredDuration, id: \.type) { durationComponent in
                     let rounded = durationComponent == filteredDuration.last || durationComponent == filteredDuration.first
-
-                    VStack(spacing: 5) {
-                        Text("\(Int(durationComponent.start * 60)) \(UnitDuration.minutes.symbol)")
+                    let start = durationComponent.start.format(using: [.hour, .minute])
+                    let end = durationComponent.end.format(using: [.hour, .minute])
+                    
+                    VStack(spacing: 10) {
+                        Text("\(start)–\(end)")
                             .font(.footnote)
                             .foregroundColor(durationComponent.type.foregroundColor())
 
                         Rectangle()
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 10)
                             .foregroundColor(durationComponent.type.foregroundColor())
+                        
+                        Text(durationComponent.type.localizedName)
+                            .font(.footnote)
+                            .fontWeight(.semibold)
+                            .foregroundColor(durationComponent.type.foregroundColor())
                     }
                 }
             }
             .padding(.horizontal)
-
-
-            HStack {
-                ForEach(filteredDuration, id: \.type) { durationComponent in
-                    Label(title: {
-                        Text(durationComponent.type.localizedName)
-                            .font(.footnote)
-                    }, icon: {
-                        Image(systemName: "circle.fill")
-                            .resizable()
-                            .frame(width: 7.5, height: 7.5)
-                            .foregroundColor(durationComponent.type.foregroundColor())
-                    })
-                }
-            }
         }
     }
 }
@@ -82,12 +100,12 @@ struct Timeline: View {
 struct Timeline_Previews: PreviewProvider {
     static var previews: some View {
         let duration: [DurationComponent] = [
-            DurationComponent(type: .total, start: 8.0, end: 12.0),
-            DurationComponent(type: .onset, start: 0.25, end: 0.5),
-            DurationComponent(type: .comeUp, start: 0.75, end: 1.5),
-            DurationComponent(type: .peak, start: 3.0, end: 5.0),
-            DurationComponent(type: .offset, start: 3.0, end: 5.0),
-            DurationComponent(type: .afterEffects, start: 12.0, end: 48.0)
+            DurationComponent(type: .total, start: 28800, end: 43200),
+            DurationComponent(type: .onset, start: 900, end: 1800),
+            DurationComponent(type: .comeUp, start: 2700, end: 5400),
+            DurationComponent(type: .peak, start: 10800, end: 18000),
+            DurationComponent(type: .offset, start: 10800, end: 18000),
+            DurationComponent(type: .afterEffects, start: 43200, end: 48.0)
         ]
 
         Timeline(duration: duration)

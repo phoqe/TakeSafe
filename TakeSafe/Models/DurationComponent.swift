@@ -9,8 +9,8 @@ import Foundation
 
 struct DurationComponent: Codable, Hashable {
     let type: DurationType
-    let start: Double
-    let end: Double
+    let start: TimeInterval
+    let end: TimeInterval
 
     enum CodingKeys: String, CodingKey {
         case type
@@ -28,8 +28,8 @@ struct DurationComponent: Codable, Hashable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
         type = try container.decode(DurationType.self, forKey: .type)
-        start = try container.decode(Double.self, forKey: .start)
-        end = try container.decode(Double.self, forKey: .end)
+        start = try container.decode(TimeInterval.self, forKey: .start)
+        end = try container.decode(TimeInterval.self, forKey: .end)
     }
 
     func encode(to encoder: Encoder) throws {
@@ -38,5 +38,12 @@ struct DurationComponent: Codable, Hashable {
         try container.encode(type, forKey: .type)
         try container.encode(start, forKey: .start)
         try container.encode(end, forKey: .end)
+    }
+    
+    func interval() -> DateInterval {
+        let startDate = Date(timeInterval: start, since: Date())
+        let endDate = Date(timeInterval: end, since: startDate)
+        
+        return DateInterval(start: startDate, end: endDate)
     }
 }

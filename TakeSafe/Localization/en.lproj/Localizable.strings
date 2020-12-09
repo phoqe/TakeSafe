@@ -103,6 +103,7 @@
 "LD50" = "LD\U2085\U2080";
 "Timeline" = "Timeline";
 "Administration" = "Administration";
+"Duration" = "Duration";
 
 // Profile
 "profileTitle" = "Activity";

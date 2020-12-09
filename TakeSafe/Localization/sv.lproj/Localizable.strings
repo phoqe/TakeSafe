@@ -102,6 +102,7 @@
 "LD50" = "LD\U2085\U2080";
 "Timeline" = "Tidslinje";
 "Administration" = "Administration";
+"Duration" = "Varaktighet";
 
 // Timeline
 "timelineOnset" = "Början";
@@ -192,4 +193,4 @@
 "comeUp" = "Come up";
 "peak" = "Peak";
 "offset" = "Offset";
-"afterEffects" = "After Effects";
+"afterEffects" = "Eftereffekter";
