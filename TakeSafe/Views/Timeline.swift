@@ -41,14 +41,13 @@ struct Timeline: View {
     }
 
     var body: some View {
-        VStack(spacing: 15) {
-            HStack(spacing: 25) {
+        VStack(spacing: 20) {
+            HStack(spacing: 50) {
                 if let duration = durationString() {
-                    VStack {
+                    VStack(spacing: 5) {
                         Text("Duration")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
-                            .padding(.bottom, -5)
                         
                         Text(duration)
                             .font(.title3)
@@ -57,11 +56,10 @@ struct Timeline: View {
                 }
                 
                 if let afterEffects = afterEffectsString() {
-                    VStack {
+                    VStack(spacing: 5) {
                         Text("afterEffects")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
-                            .padding(.bottom, -5)
                         
                         Text(afterEffects)
                             .font(.title3)
