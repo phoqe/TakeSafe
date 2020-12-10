@@ -82,7 +82,7 @@ struct Timeline: View {
                             .foregroundColor(durationComponent.type.foregroundColor())
 
                         Rectangle()
-                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 10)
+                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 5)
                             .foregroundColor(durationComponent.type.foregroundColor())
                         
                         Text(durationComponent.type.localizedName)
