@@ -92,7 +92,6 @@ struct Timeline: View {
                     }
                 }
             }
-            .padding(.horizontal)
         }
     }
 }
