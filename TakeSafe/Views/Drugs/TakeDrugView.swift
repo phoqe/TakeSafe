@@ -101,20 +101,13 @@ struct TakeDrugView: View {
                         }
                     }
                 }
-
-                if let duration = administrationRoute.duration {
-                    Section(header: Text("Timeline")) {
-                        Timeline(duration: duration)
-                            .padding(.vertical, 10)
-                    }
-                }
                 
-                Section(header: Text("Administration"), footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.sentenceName, administrationRoute.bioavailability))) {
+                Section(header: Text("Administration")) {
                     HStack {
                         Text("takeDrugRouteOfAdministration")
-
+                        
                         Spacer()
-
+                        
                         Picker(selection: $administrationRoute, label: Text(administrationRoute.localizedName).fixedSize()) {
                             ForEach(drug.administrationRoutes) { administrationRoute in
                                 Text(administrationRoute.localizedName)
@@ -123,7 +116,16 @@ struct TakeDrugView: View {
                         }
                         .pickerStyle(MenuPickerStyle())
                     }
+                }
 
+                if let duration = administrationRoute.duration {
+                    Section(header: Text("Timeline")) {
+                        Timeline(duration: duration)
+                            .padding(.vertical, 10)
+                    }
+                }
+                
+                Section(header: Text("Dosage"), footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.sentenceName, administrationRoute.bioavailability))) {
                     Stepper(value: $dose, in: 0...Int.max, step: drug.doseStep) {
                         Text("\(dose) \(drug.massUnit.symbol)")
                             .font(.title3)

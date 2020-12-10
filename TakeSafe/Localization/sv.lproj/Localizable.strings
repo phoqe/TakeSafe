@@ -103,6 +103,7 @@
 "Timeline" = "Tidslinje";
 "Administration" = "Administration";
 "Duration" = "Varaktighet";
+"Dosage" = "Dosering";
 
 // Timeline
 "timelineOnset" = "Början";

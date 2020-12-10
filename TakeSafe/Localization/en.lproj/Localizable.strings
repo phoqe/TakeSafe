@@ -104,6 +104,7 @@
 "Timeline" = "Timeline";
 "Administration" = "Administration";
 "Duration" = "Duration";
+"Dosage" = "Dosage";
 
 // Profile
 "profileTitle" = "Activity";
