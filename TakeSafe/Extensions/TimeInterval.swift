@@ -13,7 +13,7 @@ extension TimeInterval {
         
         formatter.allowedUnits = allowedUnits
         formatter.unitsStyle = .abbreviated
-        formatter.maximumUnitCount = 1
+        formatter.maximumUnitCount = 2
         
         return formatter.string(from: self)!
     }
