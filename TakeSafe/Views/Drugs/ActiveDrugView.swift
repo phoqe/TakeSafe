@@ -16,16 +16,11 @@ struct ActiveDrugView: View {
     
     var body: some View {
         Form {
-            Button("remove") {
-                showRemoveAlert = true
-            }
-            .foregroundColor(.red)
-            .alert(isPresented: $showRemoveAlert) {
-                Alert(title: Text(String(format: "Remove active drug?".localized(), activeDrug.name)), message: Text("You will no longer be able to track this drug."), primaryButton: .destructive(Text("Remove")) {
-                    DrugManager.removeActiveDrug(activeDrug: activeDrug)
-                    presentationMode.wrappedValue.dismiss()
-                    activeDrugs.items = activeDrugs.items.filter { $0.id != activeDrug.id }
-                }, secondaryButton: .cancel())
+            if let duration = activeDrug.administrationRoute.duration {
+                Section() {
+                    Timeline(duration: duration)
+                        .padding(.vertical, 10)
+                }
             }
         }
         .navigationBarTitle(activeDrug.name)

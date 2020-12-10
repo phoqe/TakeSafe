@@ -73,6 +73,7 @@
 		9FE2383C255DE0DE0055A1C1 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2383B255DE0DE0055A1C1 /* License.swift */; };
 		9FE2383F255DE61F0055A1C1 /* LicenseListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2383E255DE61F0055A1C1 /* LicenseListItem.swift */; };
 		9FF2481725703E980072650F /* InfoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF2481625703E980072650F /* InfoSheet.swift */; };
+		9FF4A6F82582BBFE004F4FC7 /* PhaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A6F72582BBFE004F4FC7 /* PhaseView.swift */; };
 		9FF4B3542539F9BD0040720A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4B3532539F9BD0040720A /* API.swift */; };
 		9FF4B357253A23650040720A /* DrugManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4B356253A23650040720A /* DrugManager.swift */; };
 		9FFCB7632561940B00716769 /* WarningListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFCB7622561940B00716769 /* WarningListItem.swift */; };
@@ -152,6 +153,7 @@
 		9FE2383B255DE0DE0055A1C1 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		9FE2383E255DE61F0055A1C1 /* LicenseListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseListItem.swift; sourceTree = "<group>"; };
 		9FF2481625703E980072650F /* InfoSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSheet.swift; sourceTree = "<group>"; };
+		9FF4A6F72582BBFE004F4FC7 /* PhaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseView.swift; sourceTree = "<group>"; };
 		9FF4B3532539F9BD0040720A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9FF4B356253A23650040720A /* DrugManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugManager.swift; sourceTree = "<group>"; };
 		9FFCB7622561940B00716769 /* WarningListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningListItem.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				9FAA2F5A256AC8A7006F0479 /* DrugInfo.swift */,
 				9FF2481625703E980072650F /* InfoSheet.swift */,
 				9F7B4FE225755754002D7969 /* Timeline.swift */,
+				9FF4A6F72582BBFE004F4FC7 /* PhaseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				9FC632F625374F6A00DA145B /* DrugList.swift in Sources */,
 				9FF4B357253A23650040720A /* DrugManager.swift in Sources */,
 				9FFCB7632561940B00716769 /* WarningListItem.swift in Sources */,
+				9FF4A6F82582BBFE004F4FC7 /* PhaseView.swift in Sources */,
 				9FB630F02535E86600397152 /* DrugListItem.swift in Sources */,
 				9F73F6D1253C3F6A00B93569 /* AdministrationRoute.swift in Sources */,
 				9F2011E3253B720D00B47701 /* IconImage.swift in Sources */,
