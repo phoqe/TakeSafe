@@ -104,7 +104,7 @@ struct Timeline_Previews: PreviewProvider {
             DurationComponent(type: .comeUp, start: 2700, end: 5400),
             DurationComponent(type: .peak, start: 10800, end: 18000),
             DurationComponent(type: .offset, start: 10800, end: 18000),
-            DurationComponent(type: .afterEffects, start: 43200, end: 48.0)
+            DurationComponent(type: .afterEffects, start: 43200, end: 172800)
         ]
 
         Timeline(duration: duration)
