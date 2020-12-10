@@ -72,7 +72,6 @@ struct Timeline: View {
 
             HStack(spacing: 0) {
                 ForEach(filteredDuration, id: \.type) { durationComponent in
-                    let rounded = durationComponent == filteredDuration.last || durationComponent == filteredDuration.first
                     let start = durationComponent.start.format(using: [.hour, .minute])
                     let end = durationComponent.end.format(using: [.hour, .minute])
                     
