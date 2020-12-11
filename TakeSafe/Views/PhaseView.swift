@@ -16,28 +16,28 @@ struct PhaseView: View {
         self.type = durationComponent.type
     }
     
-    func image() -> String {
+    func image() -> (String, CGFloat, CGFloat) {
         switch type {
             case .total:
-                return ""
+                return ("", 0, 0)
             case .onset:
-                return "To the Stars"
+                return ("To the Stars", 175, 125)
             case .comeUp:
-                return "Outer Space"
+                return ("Outer Space", 175, 125)
             case .peak:
-                return "Launch Day"
+                return ("Launch Day", 150, 125)
             case .offset:
-                return "To the Moon"
+                return ("To the Moon", 175, 150)
             case .afterEffects:
-                return "Relaunch Day"
+                return ("Relaunch Day", 150, 125)
         }
     }
     
     var body: some View {
         VStack(spacing: 25) {
-            Image(image())
+            Image(image().0)
                 .resizable()
-                .frame(width: 175, height: 125)
+                .frame(width: image().1, height: image().2)
             
             VStack(spacing: 20) {
                 HStack(spacing: 20) {
