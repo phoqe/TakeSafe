@@ -21,15 +21,15 @@ struct PhaseView: View {
             case .total:
                 return ""
             case .onset:
-                return ""
+                return "To the Stars"
             case .comeUp:
-                return ""
+                return "Outer Space"
             case .peak:
-                return ""
+                return "Launch Day"
             case .offset:
-                return "Chilling"
+                return "To the Moon"
             case .afterEffects:
-                return ""
+                return "Relaunch Day"
         }
     }
     
@@ -46,7 +46,7 @@ struct PhaseView: View {
                         .fontWeight(.semibold)
                         .foregroundColor(.secondary)
                     
-                    Text("Offset")
+                    Text(type.localizedName)
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(type.foregroundColor())
@@ -66,6 +66,10 @@ struct PhaseView: View {
 
 struct PhaseView_Previews: PreviewProvider {
     static var previews: some View {
+        PhaseView(durationComponent: DurationComponent(type: .onset, start: 3600, end: 36000))
+        PhaseView(durationComponent: DurationComponent(type: .comeUp, start: 3600, end: 36000))
+        PhaseView(durationComponent: DurationComponent(type: .peak, start: 3600, end: 36000))
         PhaseView(durationComponent: DurationComponent(type: .offset, start: 3600, end: 36000))
+        PhaseView(durationComponent: DurationComponent(type: .afterEffects, start: 3600, end: 36000))
     }
 }
