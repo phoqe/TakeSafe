@@ -58,7 +58,7 @@ enum DurationType: String, Codable {
             case .offset:
                 return .yellow
             case .afterEffects:
-                return nil
+                return .purple
         }
     }
 }

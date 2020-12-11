@@ -57,7 +57,7 @@ struct PhaseView: View {
                         .foregroundColor(.secondary)
                 }
                 
-                Text("You‘re in the Offset phase. The effects will begin to diminish.")
+                Text("You’re in the Onset phase.")
                     .padding(.horizontal)
             }
         }
