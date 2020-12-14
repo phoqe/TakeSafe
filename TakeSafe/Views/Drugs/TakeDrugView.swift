@@ -11,7 +11,7 @@ import Foundation
 struct TakeDrugView: View {
     var drug: Drug
 
-    @State var showPersonalizedLd50 = false
+    @State var showPersonalizedLd50 = true
     @State var personalizedLd50: Double?
     @State var administrationRoute: AdministrationRoute
     @State var dose: Int = 0
@@ -52,7 +52,7 @@ struct TakeDrugView: View {
                     }
                 }
 
-                Section(header: Text("Info")) {
+                Section(header: Text("Info"), footer: personalizedLd50 != nil ? Text("We have calculated values marked in blue from your data provided by Apple Health.") : nil) {
                     if let rdi = drug.rdi {
                         HStack {
                             Text("rdi")

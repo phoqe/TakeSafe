@@ -104,6 +104,7 @@
 "Administration" = "Administration";
 "Duration" = "Varaktighet";
 "Dosage" = "Dosering";
+"We have calculated values marked in blue from your data provided by Apple Health." = "Vi har beräknat värdena markerade i blått med din data från Apple Health. Tryck på den för att se den exakta mätningen.";
 
 // Timeline
 "timelineOnset" = "Början";

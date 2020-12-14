@@ -105,6 +105,7 @@
 "Administration" = "Administration";
 "Duration" = "Duration";
 "Dosage" = "Dosage";
+"We have calculated values marked in blue from your data provided by Apple Health." = "We have calculated the values in blue with your data provided by Apple Health. Tap on it to see the exact measurement.";
 
 // Profile
 "profileTitle" = "Activity";
