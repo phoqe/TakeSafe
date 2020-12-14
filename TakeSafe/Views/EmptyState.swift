@@ -13,11 +13,11 @@ struct EmptyState: View {
     var description: String?
     
     var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             if let imageName = imageName {
                 Image(imageName)
                     .resizable()
-                    .frame(width: 200, height: 125)
+                    .frame(width: 200, height: 200)
                     .padding(.bottom)
             }
             
@@ -47,5 +47,6 @@ struct EmptyState: View {
 struct EmptyState_Previews: PreviewProvider {
     static var previews: some View {
         EmptyState(title: "Couldn’t fetch drug list.", description: "Something went wrong when retrieving the drug list. Try again later.")
+        EmptyState(imageName: "No Data", title: "Couldn’t fetch drug list.", description: "Something went wrong when retrieving the drug list. Try again later.")
     }
 }
