@@ -18,19 +18,22 @@ struct AboutView: View {
     
     var body: some View {
         Form {
-            HStack {
-                Text(NSLocalizedString("aboutVersion", comment: ""))
-                
-                Spacer()
-                
-                Button(showBuild ? "\(version) (\(build))" : version) {
-                    showBuild.toggle()
+            Section() {
+                HStack {
+                    Text(NSLocalizedString("aboutVersion", comment: ""))
+                    
+                    Spacer()
+                    
+                    Button(showBuild ? "\(version) (\(build))" : version) {
+                        showBuild.toggle()
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .foregroundColor(.secondary)
                 }
-                .buttonStyle(PlainButtonStyle())
-                .foregroundColor(.secondary)
-            }
+                
+                NavigationLink("Licenses", destination: LicenseList())
 
-            NavigationLink("Licenses", destination: LicenseList())
+            }
             
             Section(header: Text(NSLocalizedString("aboutLinks", comment: "")), footer: Text("By using TakeSafe you agree to our Terms of Service and Privacy Policy.")) {
                 Button(action: {
