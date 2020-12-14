@@ -15,6 +15,7 @@
 		9F26200F25602E58004202F6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26200E25602E58004202F6 /* Settings.swift */; };
 		9F29CBAA2574069900DBCEB6 /* DurationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F29CBA92574069900DBCEB6 /* DurationComponent.swift */; };
 		9F29CBAD2574073100DBCEB6 /* DurationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F29CBAC2574073100DBCEB6 /* DurationType.swift */; };
+		9F3E3E952587FC4000C06480 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3E3E942587FC4000C06480 /* MailView.swift */; };
 		9F4D1375255DA13D0098B5D0 /* ActiveDrugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D1374255DA13D0098B5D0 /* ActiveDrugs.swift */; };
 		9F4F13FF2560188E001D9ABD /* InteractionGroupBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F13FE2560188E001D9ABD /* InteractionGroupBox.swift */; };
 		9F4F140325601E0C001D9ABD /* InteractionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F140225601E0C001D9ABD /* InteractionList.swift */; };
@@ -93,6 +94,7 @@
 		9F26200E25602E58004202F6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		9F29CBA92574069900DBCEB6 /* DurationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationComponent.swift; sourceTree = "<group>"; };
 		9F29CBAC2574073100DBCEB6 /* DurationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationType.swift; sourceTree = "<group>"; };
+		9F3E3E942587FC4000C06480 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		9F4D1374255DA13D0098B5D0 /* ActiveDrugs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDrugs.swift; sourceTree = "<group>"; };
 		9F4F13FE2560188E001D9ABD /* InteractionGroupBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionGroupBox.swift; sourceTree = "<group>"; };
 		9F4F140225601E0C001D9ABD /* InteractionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionList.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				9FF2481625703E980072650F /* InfoSheet.swift */,
 				9F7B4FE225755754002D7969 /* Timeline.swift */,
 				9FF4A6F72582BBFE004F4FC7 /* PhaseView.swift */,
+				9F3E3E942587FC4000C06480 /* MailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				9F29CBAD2574073100DBCEB6 /* DurationType.swift in Sources */,
 				9F91C19B25813426007B9605 /* TimeInterval.swift in Sources */,
 				9F2011E6253B733B00B47701 /* Icon.swift in Sources */,
+				9F3E3E952587FC4000C06480 /* MailView.swift in Sources */,
 				9F4D1375255DA13D0098B5D0 /* ActiveDrugs.swift in Sources */,
 				9F5372B8253AEA6B0043375D /* ActiveDrug.swift in Sources */,
 				9FE23821255DDC790055A1C1 /* LicenseList.swift in Sources */,

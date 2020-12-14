@@ -7,10 +7,13 @@
 
 import SwiftUI
 import BetterSafariView
+import MessageUI
 
 struct AboutView: View {
     @State var showBuild = false
     @State var safariView = (isPresented: false, url: URL(string: "https://takesafe.app")!)
+    @State var result: Result<MFMailComposeResult, Error>? = nil
+    @State var isPresentingMailView = false
     
     let name = Bundle.main.infoDictionary!["CFBundleName"] as! String
     let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
@@ -33,6 +36,17 @@ struct AboutView: View {
                 
                 NavigationLink("Licenses", destination: LicenseList())
 
+            }
+            
+            if MFMailComposeViewController.canSendMail() {
+                Section() {
+                    Button("Send Feedback...") {
+                        isPresentingMailView = true
+                    }
+                    .sheet(isPresented: $isPresentingMailView) {
+                        MailView(result: $result)
+                    }
+                }
             }
             
             Section(header: Text(NSLocalizedString("aboutLinks", comment: "")), footer: Text("By using TakeSafe you agree to our Terms of Service and Privacy Policy.")) {
