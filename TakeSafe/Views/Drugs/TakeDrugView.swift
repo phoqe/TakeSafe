@@ -119,7 +119,7 @@ struct TakeDrugView: View {
                 }
 
                 if let duration = administrationRoute.duration {
-                    Section(header: Text("Timeline")) {
+                    Section(header: Text("Timeline"), footer: Text("This timeline only applies to the selected administration route.")) {
                         Timeline(duration: duration)
                             .padding(.vertical, 10)
                     }
