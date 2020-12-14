@@ -143,6 +143,7 @@
 "aboutTermsOfService" = "Användarvillkor";
 "aboutPrivacyPolicy" = "Integritetspolicy";
 "Licenses" = "Licenser";
+"By using TakeSafe you agree to our Terms of Service and Privacy Policy." = "Genom att använda TakeSafe godkänner du våra användarvillkor och sekretesspolicy.";
 
 // Licenses
 "By" = "Av %@";

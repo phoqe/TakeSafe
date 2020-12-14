@@ -143,6 +143,7 @@
 "aboutTermsOfService" = "Terms of Service";
 "aboutPrivacyPolicy" = "Privacy Policy";
 "Licenses" = "Licenses";
+"By using TakeSafe you agree to our Terms of Service and Privacy Policy." = "By using TakeSafe you agree to our Terms of Service and Privacy Policy.";
 
 // Licenses
 "By" = "By %@";

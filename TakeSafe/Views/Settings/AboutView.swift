@@ -32,7 +32,7 @@ struct AboutView: View {
 
             NavigationLink("Licenses", destination: LicenseList())
             
-            Section(header: Text(NSLocalizedString("aboutLinks", comment: ""))) {
+            Section(header: Text(NSLocalizedString("aboutLinks", comment: "")), footer: Text("By using TakeSafe you agree to our Terms of Service and Privacy Policy.")) {
                 Button(action: {
                     safariView = (isPresented: true, url: URL(string: "https://takesafe.app")!)
                 }, label: {
