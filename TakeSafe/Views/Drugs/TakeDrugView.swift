@@ -125,7 +125,7 @@ struct TakeDrugView: View {
                     }
                 }
                 
-                Section(header: Text("Dosage"), footer: Text(dose == 0 ? "" : String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.sentenceName, administrationRoute.bioavailability))) {
+                Section(header: Text("Dosage")) {
                     Stepper(value: $dose, in: 0...Int.max, step: drug.doseStep) {
                         Text("\(dose) \(drug.massUnit.symbol)")
                             .font(.title3)
@@ -138,6 +138,9 @@ struct TakeDrugView: View {
                         Button(action: takeDrug) {
                             Text("Administer")
                         }
+                        
+                        Text(String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.sentenceName, administrationRoute.bioavailability))
+                            .padding(.vertical, 10)
                     }
                 }
             }
