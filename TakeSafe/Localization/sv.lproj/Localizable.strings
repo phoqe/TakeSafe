@@ -128,6 +128,8 @@
 "Connect Apple Health..." = "Anslut Apple Health...";
 "We can use data from Apple Health to give you info and advice in realtime." = "Vi kan använda data från Apple Health för att ge dig information och råd i realtid.";
 "We use data from Apple Health to give you info and advice in realtime." = "Vi använder data från Apple Health för att ge dig information och råd i realtid.";
+"Connect to Apple Health for tailored pharmacological values and insights on active drugs." = "Anslut till Apple Health för skräddarsydda farmakologiska värden och insikter om aktiva läkemedel.";
+"We are using your data from Apple Health for personalized pharmacological values and insights on active drugs." = "Vi använder din data från Apple Health för personliga farmakologiska värden och insikter om aktiva läkemedel.";
 
 // Apple Health View
 "Connect Apple Health" = "Anslut Apple Health";

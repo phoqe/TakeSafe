@@ -126,6 +126,8 @@
 "Connect Apple Health..." = "Connect Apple Health...";
 "We can use data from Apple Health to give you info and advice in realtime." = "We can use data from Apple Health to give you info and advice in realtime.";
 "We use data from Apple Health to give you info and advice in realtime." = "We use data from Apple Health to give you info and advice in realtime.";
+"Connect to Apple Health for tailored pharmacological values and insights on active drugs." = "Connect to Apple Health for tailored pharmacological values and insights on active drugs.";
+"We are using your data from Apple Health for personalized pharmacological values and insights on active drugs." = "We are using your data from Apple Health for personalized pharmacological values and insights on active drugs.";
 
 // Apple Health View
 "Connect Apple Health" = "Connect Apple Health";
