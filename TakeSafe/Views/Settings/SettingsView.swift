@@ -54,7 +54,7 @@ struct SettingsView: View {
                     }
                 }
                 
-                Section() {
+                Section(footer: Text("If a drug disturbs your sleep, we’ll warn you.")) {
                     DatePicker(NSLocalizedString("settingsGoToSleep", comment: ""), selection: $settings.bedtime, displayedComponents: .hourAndMinute)
                         .datePickerStyle(CompactDatePickerStyle())
                 }
