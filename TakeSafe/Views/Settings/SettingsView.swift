@@ -47,12 +47,6 @@ struct SettingsView: View {
                         }
                     }
                 }
-
-                if let healthStore = HealthManager.shared.healthStore, let biologicalSex = try? healthStore.biologicalSex().biologicalSex, biologicalSex == .female {
-                    Section(footer: Text("We tailor drug and dosage information in regards to your pregnancy.")) {
-                        Toggle("Pregnancy Mode", isOn: $settings.pregnancyMode)
-                    }
-                }
                 
                 Section(footer: Text("If a drug disturbs your sleep, we’ll warn you.")) {
                     DatePicker(NSLocalizedString("settingsGoToSleep", comment: ""), selection: $settings.bedtime, displayedComponents: .hourAndMinute)
