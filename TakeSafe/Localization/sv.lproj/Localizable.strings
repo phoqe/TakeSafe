@@ -106,6 +106,7 @@
 "Dosage" = "Dosering";
 "We have calculated values marked in blue from your data provided by Apple Health." = "Vi har beräknat värdena markerade i blått med din data från Apple Health. Tryck på den för att se den exakta mätningen.";
 "This timeline only applies to the selected administration route." = "Denna tidslinje gäller endast för den valda administreringsvägen.";
+"Bioavailability" = "Biotillgänglighet";
 
 // Timeline
 "timelineOnset" = "Början";

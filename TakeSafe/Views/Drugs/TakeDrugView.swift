@@ -116,6 +116,14 @@ struct TakeDrugView: View {
                         }
                         .pickerStyle(MenuPickerStyle())
                     }
+                    
+                    HStack {
+                        Text("Bioavailability")
+                        
+                        Spacer()
+                        
+                        Text("\(administrationRoute.bioavailability)%")
+                    }
                 }
 
                 if let duration = administrationRoute.duration {
@@ -138,9 +146,6 @@ struct TakeDrugView: View {
                         Button(action: takeDrug) {
                             Text("Administer")
                         }
-                        
-                        Text(String(format: "takeDrugDosageFooter".localized(), administrationRoute.bioavailability * dose / 100, drug.massUnit.symbol, drug.sentenceName, administrationRoute.bioavailability))
-                            .padding(.vertical, 10)
                     }
                 }
             }
