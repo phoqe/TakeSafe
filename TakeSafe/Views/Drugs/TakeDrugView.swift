@@ -135,8 +135,13 @@ struct TakeDrugView: View {
                 
                 Section(header: Text("Dosage")) {
                     Stepper(value: $dose, in: 0...Int.max, step: drug.doseStep) {
-                        Text("\(dose) \(drug.massUnit.symbol)")
-                            .font(.title3)
+                        VStack(alignment: .leading, spacing: 7.5) {
+                            Text("\(dose) \(drug.massUnit.symbol)")
+                                .font(.title3)
+                            
+                            Text("BA ≈ \(administrationRoute.bioavailability * dose / 100) \(drug.massUnit.symbol)")
+                                .foregroundColor(.secondary)
+                        }
                     }
                     .padding(.vertical)
                 }
