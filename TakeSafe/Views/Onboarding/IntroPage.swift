@@ -8,29 +8,27 @@
 import SwiftUI
 
 struct IntroPage: View {
-    var image: String
+    var image: (String, CGFloat, CGFloat)
     var title: String
     var description: String
     
     var body: some View {
-        VStack {
-            Image(image)
+        VStack(spacing: 30) {
+            Image(image.0)
                 .resizable()
-                .frame(width: 275, height: 200)
+                .frame(width: image.1, height: image.2)
             
-            VStack {
+            VStack(spacing: 20) {
                 Text(title)
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.primary)
-                    .padding(.bottom)
                 
                 Text(description)
-                    .font(.body)
                     .foregroundColor(.secondary)
+                    .lineSpacing(5)
             }
-            .padding(.top)
-            .padding(.horizontal)
+            .padding(.horizontal, 30)
         }
     }
 }
@@ -41,7 +39,7 @@ struct IntroPage_Previews: PreviewProvider {
         let title = "Ready to get started?"
         let description = "Because we are! We want to help you catch the day, perform at your best, and go to sleep unscathed. Let’s get to know each other!"
         
-        IntroPage(image: image, title: title, description: description)
-        IntroPage(image: image, title: title, description: description).preferredColorScheme(.dark)
+        IntroPage(image: (image, 275, 200), title: title, description: description)
+        IntroPage(image: (image, 275, 200), title: title, description: description).preferredColorScheme(.dark)
     }
 }
