@@ -76,6 +76,7 @@
 "Legality" = "Legality";
 "This drug may be illegal in your jurisdiction." = "This drug may be illegal in your jurisdiction.";
 "Addiction Profile" = "Addiction Profile for %@";
+"Always consult a physician before administering a new drug." = "Always consult a physician before administering a new drug.";
 
 // Timeline
 "timelineOnset" = "Onset";

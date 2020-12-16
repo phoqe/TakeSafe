@@ -96,7 +96,7 @@ struct SetupPageView<Page: View>: View {
     }
     
     func finish() {
-        UserDefaults.standard.set(true, forKey: "hasOnboarded")
+        UserDefaults.standard.set(true, forKey: "onboarded")
         
         onboardingState = .finished
     }
