@@ -115,6 +115,7 @@ struct TakeDrugView: View {
                             }
                         }
                         .pickerStyle(MenuPickerStyle())
+                        .disabled(drug.administrationRoutes.count == 1)
                     }
                     
                     HStack {
