@@ -122,7 +122,7 @@ struct TakeDrugView: View {
                         
                         Spacer()
                         
-                        Text("\(administrationRoute.bioavailability)%")
+                        Text("\(administrationRoute.bioavailability.bioavailabilityPercentageString())")
                     }
                 }
 
@@ -139,8 +139,10 @@ struct TakeDrugView: View {
                             Text("\(dose) \(drug.massUnit.symbol)")
                                 .font(.title3)
                             
-                            Text("BA ≈ \(administrationRoute.bioavailability * dose / 100) \(drug.massUnit.symbol)")
-                                .foregroundColor(.secondary)
+                            if administrationRoute.bioavailability.start == administrationRoute.bioavailability.end {
+                                Text("BA ≈ \(administrationRoute.bioavailability.start * dose / 100) \(drug.massUnit.symbol)")
+                                    .foregroundColor(.secondary)
+                            }
                         }
                     }
                     .padding(.vertical)
