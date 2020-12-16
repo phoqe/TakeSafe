@@ -9,9 +9,9 @@ import Foundation
 
 struct API {
     #if DEBUG
-    static let baseUrl = URL(string: "https://dev.takesafe.app/api/")!
+    static let baseUrl = URL(string: "https://dev.api.takesafe.app/api/")!
     #else
-    static let baseUrl = URL(string: "https://takesafe.app/api/")!
+    static let baseUrl = URL(string: "https://api.takesafe.app/api/")!
     #endif
     
     static func drugsUrl() -> URL {
