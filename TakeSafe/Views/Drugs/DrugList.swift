@@ -18,16 +18,6 @@ struct DrugList: View {
 
     var body: some View {
         List {
-            HStack(spacing: 20) {
-                Image(systemName: "exclamationmark.triangle.fill")
-                    .foregroundColor(.orange)
-                
-                Text("Always consult a physician before administering a new drug.")
-                    .bold()
-                    .foregroundColor(.orange)
-            }
-            .padding(.vertical, 10)
-            
             if !hallucinogens.isEmpty {
                 Section(header: Text("Hallucinogens").textCase(.none)) {
                     ForEach(hallucinogens) { hallucinogen in
