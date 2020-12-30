@@ -85,7 +85,7 @@ struct DrugManager {
 
         content.title = activeDrug.name
         content.subtitle = "\(durationComponent.type.rawValue)".localized()
-        content.body = "TODO.".localized()
+        content.body = "\(durationComponent.type.rawValue)-description".localized()
 
         #if DEBUG
         let timeInterval: Double = 5

@@ -204,3 +204,8 @@
 "peak" = "Peak";
 "offset" = "Offset";
 "afterEffects" = "After Effects";
+
+"onset-description" = "The drug’s first effects will begin shortly.";
+"comeUp-description" = "The drug’s effects are starting to take hold.";
+"peak-description" = "The intensity of the drug’s effect is at its height.";
+"offset-description" = "The drug’s effects are beginning to diminish.";

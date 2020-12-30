@@ -16,6 +16,7 @@ enum DurationType: String, Codable, CaseIterable {
     case afterEffects
 
     var localizedName: LocalizedStringKey { LocalizedStringKey(rawValue) }
+    var localizedDescription: LocalizedStringKey { LocalizedStringKey("\(rawValue)-description") }
 
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
