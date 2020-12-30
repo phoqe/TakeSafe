@@ -92,7 +92,7 @@ struct DrugManager {
         #else
         let start = durationComponent.start
         let end = durationComponent.end
-        let timeInterval: Double = abs(end - start) * 3600
+        let timeInterval: Double = start
         #endif
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
