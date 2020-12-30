@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum DurationType: String, Codable {
+enum DurationType: String, Codable, CaseIterable {
     case total
     case onset
     case comeUp
