@@ -33,6 +33,7 @@ class Drug: Codable, Identifiable {
     let legality: [Legality]?
     let addictionProfile: String
     let sentenceName: String
+    let metabolites: [String]?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -61,9 +62,10 @@ class Drug: Codable, Identifiable {
         case legality
         case addictionProfile = "addiction_profile"
         case sentenceName = "sentence_name"
+        case metabolites
     }
     
-    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, icon: String, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int], administrationRoutes: [AdministrationRoute], rdi: Int?, interactions: [DrugInteraction]?, warnBeforeBedtime: Int?, legality: [Legality]?, addictionProfile: String, sentenceName: String) {
+    init(id: String, name: String, aliases: [String]?, description: String, learnMoreUrl: URL, icon: String, drugClass: DrugClass, dependence: Dependence, addiction: Addiction, onset: Double, duration: Double, massUnit: UnitMass, ld50: LD50, defaultDose: Int, doseStep: Int, commonDoses: [Int], administrationRoutes: [AdministrationRoute], rdi: Int?, interactions: [DrugInteraction]?, warnBeforeBedtime: Int?, legality: [Legality]?, addictionProfile: String, sentenceName: String, metabolites: [String]?) {
         self.id = id
         self.name = name
         self.aliases = aliases
@@ -87,6 +89,7 @@ class Drug: Codable, Identifiable {
         self.legality = legality
         self.addictionProfile = addictionProfile
         self.sentenceName = sentenceName
+        self.metabolites = metabolites
     }
     
     required init(from decoder: Decoder) throws {
@@ -115,6 +118,7 @@ class Drug: Codable, Identifiable {
         legality = try container.decodeIfPresent([Legality].self, forKey: .legality)
         addictionProfile = try container.decode(String.self, forKey: .addictionProfile)
         sentenceName = try container.decode(String.self, forKey: .sentenceName)
+        metabolites = try container.decode([String].self, forKey: .metabolites)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -143,6 +147,7 @@ class Drug: Codable, Identifiable {
         try container.encodeIfPresent(legality, forKey: .legality)
         try container.encode(addictionProfile, forKey: .addictionProfile)
         try container.encode(sentenceName, forKey: .sentenceName)
+        try container.encode(metabolites, forKey: .metabolites)
     }
 
     func mayDisturbSleep() -> Bool {

@@ -17,7 +17,7 @@ class ActiveDrug: Drug {
         self.ingestion = ingestion
         self.administrationRoute = administrationRoute
         
-        super.init(id: UUID().uuidString, name: drug.name, aliases: drug.aliases, description: drug.description, learnMoreUrl: drug.learnMoreUrl, icon: drug.icon, drugClass: drug.drugClass, dependence: drug.dependence, addiction: drug.addiction, onset: drug.onset, duration: drug.duration, massUnit: drug.massUnit, ld50: drug.ld50, defaultDose: drug.defaultDose, doseStep: drug.doseStep, commonDoses: drug.commonDoses, administrationRoutes: drug.administrationRoutes, rdi: drug.rdi, interactions: drug.interactions, warnBeforeBedtime: drug.warnBeforeBedtime, legality: drug.legality, addictionProfile: drug.addictionProfile, sentenceName: drug.sentenceName)
+        super.init(id: UUID().uuidString, name: drug.name, aliases: drug.aliases, description: drug.description, learnMoreUrl: drug.learnMoreUrl, icon: drug.icon, drugClass: drug.drugClass, dependence: drug.dependence, addiction: drug.addiction, onset: drug.onset, duration: drug.duration, massUnit: drug.massUnit, ld50: drug.ld50, defaultDose: drug.defaultDose, doseStep: drug.doseStep, commonDoses: drug.commonDoses, administrationRoutes: drug.administrationRoutes, rdi: drug.rdi, interactions: drug.interactions, warnBeforeBedtime: drug.warnBeforeBedtime, legality: drug.legality, addictionProfile: drug.addictionProfile, sentenceName: drug.sentenceName, metabolites: drug.metabolites)
     }
     
     required init(from decoder: Decoder) throws {
@@ -60,6 +60,7 @@ class ActiveDrug: Drug {
         try container.encodeIfPresent(legality, forKey: .legality)
         try container.encode(addictionProfile, forKey: .addictionProfile)
         try container.encode(sentenceName, forKey: .sentenceName)
+        try container.encode(metabolites, forKey: .metabolites)
     }
 
     func excreted() -> Bool {
