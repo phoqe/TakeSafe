@@ -200,7 +200,7 @@
 // Duration
 "total" = "Total";
 "onset" = "Onset";
-"comeUp" = "Come up";
+"comeUp" = "Come Up";
 "peak" = "Peak";
 "offset" = "Offset";
 "afterEffects" = "After Effects";
