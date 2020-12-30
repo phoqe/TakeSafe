@@ -60,7 +60,7 @@ class ActiveDrug: Drug {
         try container.encodeIfPresent(legality, forKey: .legality)
         try container.encode(addictionProfile, forKey: .addictionProfile)
         try container.encode(sentenceName, forKey: .sentenceName)
-        try container.encode(metabolites, forKey: .metabolites)
+        try container.encodeIfPresent(metabolites, forKey: .metabolites)
     }
 
     func excreted() -> Bool {

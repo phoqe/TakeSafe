@@ -118,7 +118,7 @@ class Drug: Codable, Identifiable {
         legality = try container.decodeIfPresent([Legality].self, forKey: .legality)
         addictionProfile = try container.decode(String.self, forKey: .addictionProfile)
         sentenceName = try container.decode(String.self, forKey: .sentenceName)
-        metabolites = try container.decode([String].self, forKey: .metabolites)
+        metabolites = try container.decodeIfPresent([String].self, forKey: .metabolites)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -147,7 +147,7 @@ class Drug: Codable, Identifiable {
         try container.encodeIfPresent(legality, forKey: .legality)
         try container.encode(addictionProfile, forKey: .addictionProfile)
         try container.encode(sentenceName, forKey: .sentenceName)
-        try container.encode(metabolites, forKey: .metabolites)
+        try container.encodeIfPresent(metabolites, forKey: .metabolites)
     }
 
     func mayDisturbSleep() -> Bool {
