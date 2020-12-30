@@ -35,8 +35,7 @@ struct DrugManager {
             UserDefaults.standard.set(newActiveDrugs, forKey: activeDrugsUserDefaultsKey)
         }
 
-        scheduleOnsetNotification(activeDrug: activeDrug)
-        scheduleExcretionNotification(activeDrug: activeDrug)
+        schedulePhaseNotifications(activeDrug: activeDrug)
     }
     
     static func removeActiveDrug(activeDrug: ActiveDrug) {
@@ -69,38 +68,31 @@ struct DrugManager {
         
         return activeDrugs.filter { !$0.excreted() }
     }
-    
-    private static func scheduleOnsetNotification(activeDrug: ActiveDrug) {
-        let identifier = notificationId(activeDrug: activeDrug, phase: .onset)
+
+    private static func schedulePhaseNotifications(activeDrug: ActiveDrug) {
+        guard let duration = activeDrug.administrationRoute.duration else {
+            return
+        }
+
+        for durationComponent in duration.filter({ $0.type != .total && $0.type != .afterEffects }) {
+            schedulePhaseNotification(activeDrug: activeDrug, durationComponent: durationComponent)
+        }
+    }
+
+    private static func schedulePhaseNotification(activeDrug: ActiveDrug, durationComponent: DurationComponent) {
+        let identifier = notificationId(activeDrug: activeDrug, phase: durationComponent.type)
         let content = UNMutableNotificationContent()
-        
+
         content.title = activeDrug.name
-        content.subtitle = "Onset".localized()
-        content.body = "You’ll start to feel the effects shortly.".localized()
+        content.subtitle = "\(durationComponent.type.rawValue)".localized()
+        content.body = "TODO.".localized()
 
         #if DEBUG
         let timeInterval: Double = 5
         #else
-        let timeInterval: Double = activeDrug.onset * 3600
-        #endif
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
-        
-        NotificationManager.shared.schedule(withIdentifier: identifier, content: content, trigger: trigger, completion: { _ in })
-    }
-
-    private static func scheduleExcretionNotification(activeDrug: ActiveDrug) {
-        let identifier = notificationId(activeDrug: activeDrug, phase: .excretion)
-        let content = UNMutableNotificationContent()
-
-        content.title = activeDrug.name
-        content.subtitle = "Excretion".localized()
-        content.body = "The effects have worn off.".localized()
-
-        #if DEBUG
-        let timeInterval: Double = 10
-        #else
-        let timeInterval: Double = activeDrug.duration * 3600
+        let start = durationComponent.start
+        let end = durationComponent.end
+        let timeInterval: Double = abs(end - start) * 3600
         #endif
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
@@ -108,14 +100,14 @@ struct DrugManager {
         NotificationManager.shared.schedule(withIdentifier: identifier, content: content, trigger: trigger, completion: { _ in })
     }
 
-    private static func notificationId(activeDrug: ActiveDrug, phase: DrugPhase) -> String {
+    private static func notificationId(activeDrug: ActiveDrug, phase: DurationType) -> String {
         return "\(activeDrug.id)-\(activeDrug.ingestion.timeIntervalSince1970)-\(phase.rawValue)"
     }
 
     private static func notificationIdentifiers(activeDrug: ActiveDrug) -> [String] {
         var identifiers: [String] = []
 
-        for phase in DrugPhase.allCases {
+        for phase in DurationType.allCases {
             identifiers.append(notificationId(activeDrug: activeDrug, phase: phase))
         }
 
