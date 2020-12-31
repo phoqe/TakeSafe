@@ -57,7 +57,7 @@ struct PhaseView: View {
                         .foregroundColor(.secondary)
                 }
                 
-                Text("You’re in the Onset phase.")
+                Text("\(type.rawValue)-description".localized())
                     .padding(.horizontal)
             }
         }
