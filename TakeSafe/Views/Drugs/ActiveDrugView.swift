@@ -15,12 +15,9 @@ struct ActiveDrugView: View {
     @State var showRemoveAlert = false
     
     var body: some View {
-        Form {
-            if let duration = activeDrug.administrationRoute.duration {
-                Section() {
-                    Timeline(duration: duration)
-                        .padding(.vertical, 10)
-                }
+        Group {
+            if let currentDurationComponent = activeDrug.currentDurationComponent() {
+                PhaseView(durationComponent: currentDurationComponent)
             }
         }
         .navigationBarTitle(activeDrug.name)
