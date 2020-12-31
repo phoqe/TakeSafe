@@ -14,7 +14,7 @@ struct ActivityView: View {
         NavigationView {
             Group {
                 if activeDrugs.items.isEmpty {
-                    EmptyState(imageName: "No Data", title: "profileEmptyTitle".localized(), description: "profileEmptyDescription".localized())
+                    EmptyState(title: "profileEmptyTitle".localized(), description: "profileEmptyDescription".localized())
                 } else {
                     ActiveDrugList(activeDrugs: activeDrugs)
                 }
