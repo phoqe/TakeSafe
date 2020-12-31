@@ -70,4 +70,15 @@ class ActiveDrug: Drug {
 
         return false
     }
+
+    func currentDurationComponent() -> DurationComponent? {
+        guard let duration = administrationRoute.duration else {
+            return nil
+        }
+
+        let diff = Date().timeIntervalSince(ingestion)
+        let durationComponents = duration.filter() { $0.type != .total && $0.start...$0.end ~= round(diff) }
+
+        return durationComponents.first
+    }
 }
