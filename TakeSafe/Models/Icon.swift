@@ -9,6 +9,7 @@ import Foundation
 
 enum Icon: String, Codable {
     case energy
+    case vision
     
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -17,6 +18,8 @@ enum Icon: String, Codable {
         switch icon {
             case "energy":
                 self = .energy
+            case "vision":
+                self = .vision
             default:
                 fatalError()
         }
@@ -26,6 +29,8 @@ enum Icon: String, Codable {
         switch self {
             case .energy:
                 return "Energy"
+            case .vision:
+                return "Vision"
         }
     }
 }
