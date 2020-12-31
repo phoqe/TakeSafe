@@ -204,3 +204,8 @@
 "peak" = "Peak";
 "offset" = "Offset";
 "afterEffects" = "Eftereffekter";
+
+"onset-description" = "Läkemedlets första effekter börjar snart.";
+"comeUp-description" = "Läkemedlets effekter börjar ta tag.";
+"peak-description" = "Intensiteten av läkemedlets effekt är på sin höjd.";
+"offset-description" = "Läkemedlets effekter börjar minska.";
