@@ -77,7 +77,7 @@ class ActiveDrug: Drug {
         }
 
         let diff = Date().timeIntervalSince(ingestion)
-        let durationComponents = duration.filter() { $0.type != .total && $0.start...$0.end ~= round(diff) }
+        let durationComponents = duration.filter() { $0.type != .total && $0.start...$0.end ~= diff }
 
         return durationComponents.first
     }
