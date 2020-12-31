@@ -15,10 +15,8 @@ struct ActiveDrugView: View {
     @State var showRemoveAlert = false
     
     var body: some View {
-        Group {
-            if let currentDurationComponent = activeDrug.currentDurationComponent() {
-                PhaseView(durationComponent: currentDurationComponent)
-            }
+        VStack {
+
         }
         .navigationBarTitle(activeDrug.name)
     }
