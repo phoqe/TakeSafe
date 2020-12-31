@@ -12,18 +12,37 @@ struct ActiveDrugList: View {
     
     var body: some View {
         List {
-            ForEach(activeDrugs.items) { activeDrug in
-                ActiveDrugListItem(activeDrug: activeDrug)
-                    .environmentObject(activeDrugs)
-            }
-            .onDelete(perform: { indexSet in
-                indexSet.forEach { (index) in
-                    let drug = activeDrugs.items[index]
-
-                    DrugManager.removeActiveDrug(activeDrug: drug)
-                    activeDrugs.items.remove(at: index)
+            Section(header: Text("Active Drugs")) {
+                ForEach(activeDrugs.items) { activeDrug in
+                    ActiveDrugListItem(activeDrug: activeDrug)
+                        .environmentObject(activeDrugs)
                 }
-            })
+                .onDelete(perform: { indexSet in
+                    indexSet.forEach { (index) in
+                        let drug = activeDrugs.items[index]
+
+                        DrugManager.removeActiveDrug(activeDrug: drug)
+                        activeDrugs.items.remove(at: index)
+                    }
+                })
+            }
+            .textCase(nil)
+
+            Section(header: Text("Excreted Drugs")) {
+                ForEach(activeDrugs.items) { activeDrug in
+                    ActiveDrugListItem(activeDrug: activeDrug)
+                        .environmentObject(activeDrugs)
+                }
+                .onDelete(perform: { indexSet in
+                    indexSet.forEach { (index) in
+                        let drug = activeDrugs.items[index]
+
+                        DrugManager.removeActiveDrug(activeDrug: drug)
+                        activeDrugs.items.remove(at: index)
+                    }
+                })
+            }
+            .textCase(nil)
         }
         .listStyle(InsetGroupedListStyle())
     }
