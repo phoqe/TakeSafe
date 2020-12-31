@@ -209,3 +209,7 @@
 "comeUp-description" = "Läkemedlets effekter börjar ta tag.";
 "peak-description" = "Intensiteten av läkemedlets effekt är på sin höjd.";
 "offset-description" = "Läkemedlets effekter börjar minska.";
+
+// Activity
+"Active Drugs" = "Aktiva läkemedel";
+"Excreted Drugs" = "Utsöndrade läkemedel";
