@@ -65,7 +65,7 @@
 "Hallucinogens" = "Hallucinogens";
 
 // Drug
-"drugDrugClass" = "Drug class";
+"drugDrugClass" = "Class";
 "drugDependenceName" = "Dependence";
 "drugDependenceDescription" = "Dependence is an adaptive state that develops from repeated drug administration and results in withdrawal upon cessation of drug use.";
 "drugAddictionName" = "Addiction";

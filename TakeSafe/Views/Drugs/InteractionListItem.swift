@@ -39,6 +39,8 @@ struct InteractionListItem: View {
                     .padding(.bottom, 7.5)
                     
                     Text(interaction.description)
+                        .font(.subheadline)
+                        .lineSpacing(5.0)
                 }
             },
             label: {

@@ -67,7 +67,7 @@
 "Hallucinogens" = "Hallucinogener";
 
 // Drug
-"drugDrugClass" = "Drogklass";
+"drugDrugClass" = "Klass";
 "drugDependenceName" = "Beroende";
 "drugDependenceDescription" = "Beroende är ett fenomen som innebär de fysiska och psykiska mekanismerna bakom att en person återkommande utsätter sig för något som den vet är skadligt.";
 "drugAddictionName" = "Missbruk";

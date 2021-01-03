@@ -12,10 +12,13 @@ struct InteractionList: View {
 
     var body: some View {
         List {
+            WarningText(content: "Always consult a physician before administering a new drug.")
+
             ForEach(interactions.sorted { $0.severity > $1.severity }) { interaction in
                 InteractionListItem(interaction: interaction)
             }
         }
+        .listStyle(InsetGroupedListStyle())
         .navigationBarTitle("Interactions", displayMode: .inline)
     }
 }

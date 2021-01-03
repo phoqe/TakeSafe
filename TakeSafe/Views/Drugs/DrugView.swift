@@ -30,8 +30,7 @@ struct DrugView: View {
         List {
             Section() {
                 if drug.legality != nil {
-                    Text("This drug may be illegal in your jurisdiction.")
-                        .listRowBackground(Color.orange)
+                    WarningText(content: "This drug may be illegal in your jurisdiction.")
                 }
 
                 Button(action: {
