@@ -52,7 +52,7 @@ struct TakeDrugView: View {
                     }
                 }
 
-                Section(header: Text("Info"), footer: personalizedLd50 != nil ? Text("We have calculated values marked in blue from your data provided by Apple Health.") : nil) {
+                Section(header: Text("Info").textCase(.none), footer: personalizedLd50 != nil ? Text("We have calculated values marked in blue from your data provided by Apple Health.") : nil) {
                     if let rdi = drug.rdi {
                         HStack {
                             Text("rdi")
@@ -102,7 +102,7 @@ struct TakeDrugView: View {
                     }
                 }
                 
-                Section(header: Text("Administration")) {
+                Section(header: Text("Administration").textCase(.none)) {
                     HStack {
                         Text("takeDrugRouteOfAdministration")
                         
@@ -128,13 +128,13 @@ struct TakeDrugView: View {
                 }
 
                 if let duration = administrationRoute.duration {
-                    Section(header: Text("Timeline"), footer: Text("This timeline only applies to the selected administration route.")) {
+                    Section(header: Text("Timeline").textCase(.none), footer: Text("This timeline only applies to the selected administration route.")) {
                         Timeline(duration: duration)
                             .padding(.vertical, 10)
                     }
                 }
                 
-                Section(header: Text("Dosage")) {
+                Section(header: Text("Dosage").textCase(.none)) {
                     Stepper(value: $dose, in: 0...Int.max, step: drug.doseStep) {
                         VStack(alignment: .leading, spacing: 7.5) {
                             Text("\(dose) \(drug.massUnit.symbol)")
