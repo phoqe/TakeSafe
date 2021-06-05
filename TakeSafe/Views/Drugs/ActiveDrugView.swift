@@ -16,7 +16,9 @@ struct ActiveDrugView: View {
     
     var body: some View {
         VStack {
-
+            if let durationComp = activeDrug.currentDurationComponent() {
+                PhaseView(durationComponent: durationComp)
+            }
         }
         .navigationBarTitle(activeDrug.name)
     }
