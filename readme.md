@@ -13,6 +13,11 @@ There are some missing components to TakeSafe. They are easy to fix if one puts 
 - Visual illustration of drug in body
 - Timeline combined with heart rate and more metrics
 
+## Structure
+
+TakeSafe retrieves data from the [TakeSafe API](https://api.takesafe.app).
+If you want the source code for the API, contact me.
+
 ## License
 
 MIT
