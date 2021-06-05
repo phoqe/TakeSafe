@@ -18,6 +18,10 @@ There are some missing components to TakeSafe. They are easy to fix if one puts 
 TakeSafe retrieves data from the [TakeSafe API](https://api.takesafe.app).
 If you want the source code for the API, contact me.
 
+## Sentry
+
+TakeSafe uses Sentry for crash reporting. The original organization has removed from Sentry but you can setup your own and change `fastlane/Fastfile`.
+
 ## License
 
 MIT
