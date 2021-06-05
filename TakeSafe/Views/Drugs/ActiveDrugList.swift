@@ -30,17 +30,12 @@ struct ActiveDrugList: View {
 
             Section(header: Text("Excreted Drugs")) {
                 ForEach(activeDrugs.items) { activeDrug in
-                    ActiveDrugListItem(activeDrug: activeDrug)
-                        .environmentObject(activeDrugs)
-                }
-                .onDelete(perform: { indexSet in
-                    indexSet.forEach { (index) in
-                        let drug = activeDrugs.items[index]
-
-                        DrugManager.removeActiveDrug(activeDrug: drug)
-                        activeDrugs.items.remove(at: index)
+                    if activeDrug.excreted() {
+                        ActiveDrugListItem(activeDrug: activeDrug)
+                            .disabled(true)
+                            .environmentObject(activeDrugs)
                     }
-                })
+                }
             }
             .textCase(nil)
         }
